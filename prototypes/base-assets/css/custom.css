@@ -1467,7 +1467,7 @@ header .close {
 
 #jtbs{
 
-     background:url(../../content/img/bg/jtbsBG.jpg);
+     background:url(../img/bg/jtbsBG.jpg);
     }
 
 #jtbsQuestion{
@@ -1564,7 +1564,7 @@ header .close {
 /* Interactive timer - questions page*/
 
 #timedQuestion{
-         background:url(../../content/img/bg/jtbsBG.jpg);
+         background:url(../img/bg/jtbsBG.jpg);
 }
 
 #timedQuestion .nhs-radiobtn__label{
