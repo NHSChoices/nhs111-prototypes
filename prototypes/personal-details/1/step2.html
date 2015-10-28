@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NHS 111</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    <link href="../../base-assets/styles/vendor/normalize.css" rel="stylesheet" media="all">
+
+    <!-- For legacy support (IE 6/7, Firefox < 4, and Safari < 5) use normalize-legacy.css instead -->
+    <!--<link href="../../content/styles/vendor/normalize-legacy.css" rel="stylesheet" media="all">-->
+    <!--site styles-->
+
+    <link href="../../base-assets/styles/layout.css" rel="stylesheet" media="all">
+    <link href="../../base-assets/styles/site.css" rel="stylesheet" media="all">
+    <link href="../../base-assets/styles/responsive.css" rel="stylesheet" media="all">
+    <!-- Include the HTML5 shiv print polyfill for Internet Explorer browsers 8 and below -->
+    <!--[if lt IE 9]><script src="../../content/scripts/vendor/html5shiv-printshiv.js" media="all"></script><![endif]-->
+    <script src="../../base-assets/Js/vendor/html5shiv.js"></script>
+    <script src="../../base-assets/Js/vendor/jquery-2.1.3.js"></script>
+    <script src="../../base-assets/Js/vendor/jquery-ui.min.js"></script>
+    <script src="../../base-assets/Js/site.js"></script>
+
+
+
+</head>
+<body id="orangeBG">
+
+    <div id="HeaderWrapper">
+        <header id="MainHeader">
+            <a href="/"><img alt="MED" src="../../base-assets/_assets/img/med-logo.png" class="siteLogo"></a>
+
+        </header>
+    </div>
+
+
+    <script src="../../base-assets/Js/vendor/spin.min.js"></script>
+    <link rel="stylesheet" href="../../base-assets/styles/vendor/jquery-ui.css">
+    <div id="loading">
+        <div id="loadingcontent">
+            <p id="loadingspinner">
+                Searching for available healthcare providers...
+            </p>
+        </div>
+    </div>
+
+    <form action="/Outcome/ServiceDetails" method="post">
+        <input id="Id" name="Id" type="hidden" value="Dx05" /><input id="JourneyJson" name="JourneyJson" type="hidden" value="{&quot;steps&quot;:[{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you had an injury to your head in the last 7 days?&quot;,&quot;questionNo&quot;:&quot;Tx1506&quot;,&quot;questionId&quot;:&quot;PW755.0&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you fainted or passed out in the last 24 hours?&quot;,&quot;questionNo&quot;:&quot;Tx220054&quot;,&quot;questionId&quot;:&quot;PW755.100&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Are you feeling very ill and you also have new marks under your skin that look like bruising or bleeding?&quot;,&quot;questionNo&quot;:&quot;Tx1054&quot;,&quot;questionId&quot;:&quot;PW755.200&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:5},&quot;questionTitle&quot;:&quot;Have you had any of these symptoms, even if they have gone away?&quot;,&quot;questionNo&quot;:&quot;Tx221858&quot;,&quot;questionId&quot;:&quot;PW755.800&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Was there sudden weakness in one leg only, even if it has gone away?&quot;,&quot;questionNo&quot;:&quot;Tx223376&quot;,&quot;questionId&quot;:&quot;PW755.14500&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;Are you very ill and experiencing any of these symptoms?&quot;,&quot;questionNo&quot;:&quot;Tx1039&quot;,&quot;questionId&quot;:&quot;PW755.2400&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Do you have a really bad headache that came on very suddenly, like being hit with a brick?&quot;,&quot;questionNo&quot;:&quot;Tx1456&quot;,&quot;questionId&quot;:&quot;PW755.2300&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you breathed in anything hot or poisonous in the last 24 hours?&quot;,&quot;questionNo&quot;:&quot;Tx1037&quot;,&quot;questionId&quot;:&quot;PW755.2600&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Do you have any new changes to your eyesight?&quot;,&quot;questionNo&quot;:&quot;Tx3431&quot;,&quot;questionId&quot;:&quot;PW755.4900&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;4003&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Have you suddenly become confused or more confused than usual?&quot;,&quot;questionNo&quot;:&quot;Tx1213&quot;,&quot;questionId&quot;:&quot;PW755.4800&quot;,&quot;jtbs&quot;:false}]}" /><input id="PathwayId" name="PathwayId" type="hidden" value="P1180" /><input id="PathwayNo" name="PathwayNo" type="hidden" value="PW755" /><input id="SymptomGroup" name="SymptomGroup" type="hidden" value="1112" /><input data-val="true" data-val-number="The field Age must be a number." data-val-required="The Age field is required." id="UserInfo_Age" name="UserInfo.Age" type="hidden" value="69" /><input id="UserInfo_Gender" name="UserInfo.Gender" type="hidden" value="Female" /><input id="SymptomDiscriminator" name="SymptomDiscriminator" type="hidden" value="4003" /><input id="Title" name="Title" type="hidden" value="contact a clinician about your symptoms within the next 2 hours" /><input data-val="true" data-val-required="The UserId field is required." id="UserId" name="UserId" type="hidden" value="66bb2f04-e884-4aff-92b5-2cb0eeb617d1" />    <div class="site" id="PersonalDetails">
+            <div id="ProgressBar">
+                <ul>
+                    <li class="firstChild"><span class="left">01 What's wrong </span> <img src="../../base-assets/images/icons/breadcrumbOne.png" alt="" class="right"></li>
+                    <li class="secondChild"><span class="left">02 Tell us more </span><img src="../../base-assets/images/icons/breadcrumbTwo.png" alt="" class="right"></li>
+                    <li class="lastChild"><span class="left">03 YOU ARE HERE . Next steps </span></li>
+                </ul>
+            </div>
+            <div id="ContentWrapper">
+                <div id="SubHeadWrapper">
+                    <section>
+                        <h2><!--<span class="roundNumbers">1</span>--> Find a healthcare provider</h2>
+                        <p>Please provide these details so we can find you an available healthcare provider</p>
+                    </section>
+                </div>
+                <div id="AboutYou">
+                    <img src="../../base-assets/images/icons/blueArrow.png" class="arrowDown" alt="">
+                    <section>
+                        <div id="FormWrapper">
+
+                            <div class="row">
+                                <h3>About you</h3>
+                            </div>
+                            <div class="row large">
+                                <label>
+                                    <span>First name</span>
+                                    <input Value="John" class="example" id="UserInfo_FirstName" name="UserInfo.FirstName" placeholder="First name" type="text" value="" />
+                                </label>
+                            </div>
+                            <div class="row large">
+                                <label>
+                                    <span>Last name</span>
+                                    <input Value="Blue" id="UserInfo_LastName" name="UserInfo.LastName" placeholder="Last name" type="text" value="" />
+                                </label>
+                            </div>
+                            <div class="row" id="DOB">
+                                <label>
+                                    <span>Date of birth</span>
+                                    <input Value="05" class="dd" data-val="true" data-val-number="The field Day must be a number." id="UserInfo_Day" name="UserInfo.Day" placeholder="dd" type="text" value="" />
+                                    <input Value="08" class="mm" data-val="true" data-val-number="The field Month must be a number." id="UserInfo_Month" name="UserInfo.Month" placeholder="mm" type="text" value="" />
+                                    <input Value="1970" class="yy" data-val="true" data-val-number="The field Year must be a number." id="UserInfo_Year" name="UserInfo.Year" placeholder="yyyy" type="text" value="" />
+                                </label>
+                            </div>
+                            <div class="row">
+                                <h3>Your contact information</h3>
+                            </div>
+                            <div class="row medium">
+                                <label>
+                                    <span>Contact number</span>
+                                    <input Value="020334455677" id="UserInfo_TelephoneNumber" name="UserInfo.TelephoneNumber" placeholder="Contact number" type="text" value="" />
+                                </label>
+                            </div>
+                            <div class="row medium">
+                                <label>
+                                    <span>Email address</span>
+                                    <input Value="john.blue@gmail.com" id="UserInfo_Email" name="UserInfo.Email" placeholder="Email address" type="text" value="" />
+                                </label>
+                            </div>
+                            <div class="row sectionHead">
+                                <p class="title">Home address</p>
+                            </div>
+
+                            <script src="../../base-assets/Js/vendor/spin.min.js"></script>
+                            <link rel="stylesheet" href="../../base-assets//styles/vendor/jquery-ui.css">
+
+                            <div>
+                                <div class="row medium" id="PC">
+                                    <label>
+                                        <input class="postcode" id="AddressSearchViewModel_PostCode" name="AddressSearchViewModel.PostCode" placeholder="Enter current postcode" type="text" value="" />
+                                        <input type="button" class="button submitButton searchPostcode" name="TempDosResults" value=" search" id="btnSearchPostcode">
+                                    </label>
+                                </div>
+
+
+                                <div class="row" id="AddressList">
+                                    <label>
+                                        <span>Pick an address</span>
+                                        <select id="AddressSelect"></select>
+                                    </label>
+                                </div>
+
+                                <div class="row enterManually">
+                                    <a href="#" class="links manualEntry">I don't know my current postcode</a>
+                                </div>
+                            </div>
+                            <!--Spinner script-->
+                            <script type="text/javascript">
+    $(function () {
+        $("#AddressList").hide();
+        $("#AddressDetails").hide();
+        var addresses = [];
+        $("#btnSearchPostcode").click(function () {
+            $("#loadingPostcode").fadeIn();
+            var opts = {
+                lines: 12, // The number of lines to draw
+                length: 7, // The length of each line
+                width: 4, // The line thickness
+                radius: 10, // The radius of the inner circle
+                color: '#000', // #rgb or #rrggbb
+                speed: 1, // Rounds per second
+                trail: 60, // Afterglow percentage
+                shadow: false, // Whether to render a shadow
+                hwaccel: false // Whether to use hardware acceleration
+            };
+            var postcode = $("#AddressSearchViewModel_PostCode").val();
+            $("#postcodeSpan").text(postcode.toUpperCase());
+            var target = document.getElementById('loadingPostcode');
+            var spinner = new Spinner(opts).spin(target);
+            $.ajax({
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                type: "GET",
+                url: "https://locationservicesstaging.azure-api.net/location/postcode/" + postcode,
+                headers: {
+                    "Ocp-Apim-Subscription-Key": "204d2c50138145b9b357046ac17d7fda"
+                },
+                success: function (response) {
+                    addresses = response;
+                    var select = $("#AddressSelect");
+                    select.empty();
+                    select.append($("<option />").val(0).text("Please choose..."));
+                    $.each(response, function () {
+                        var text = this.AddressLines[0];
+                        if (this.BuildingName != "")
+                            text = this.AddressLines[1];
+                        select.append($("<option />").val(this.UPRN).text(text));
+                    });
+                    select.change(function () {
+                        var selectedAddress = $("#AddressSelect option:selected").attr("value");
+                        if (selectedAddress == "0")
+                            return;
+                        var result = $.grep(addresses, function (e) { return e.UPRN == selectedAddress; });
+                        if (result.length < 1) {
+                            console.error("Address selected with id " + selectedAddress + " which isn't in list of addresses.");
+                            return;
+                        }
+                        $("#UserInfo_HomeAddress_HouseNumber").val(result[0].HouseNumber);
+                        $("#UserInfo_HomeAddress_AddressLine1").val(result[0].StreetDescription);
+                        $("#UserInfo_HomeAddress_AddressLine2").val(result[0].TownName);
+                        $("#UserInfo_HomeAddress_City").val(result[0].PostTown);
+                        $("#UserInfo_HomeAddress_County").val(result[0].AdministrativeArea);
+                        $("#UserInfo_HomeAddress_PostCode").val(result[0].Postcode);
+                        $("#UserInfo_CurrentAddress_HouseNumber").val(result[0].HouseNumber);
+                        $("#UserInfo_CurrentAddress_AddressLine1").val(result[0].StreetDescription);
+                        $("#UserInfo_CurrentAddress_AddressLine2").val(result[0].TownName);
+                        $("#UserInfo_CurrentAddress_City").val(result[0].PostTown);
+                        $("#UserInfo_CurrentAddress_County").val(result[0].AdministrativeArea);
+                        $("#UserInfo_CurrentAddress_PostCode").val(result[0].Postcode);
+                        $("#AddressDetails").show();
+                    });
+                    $("#AddressList").show();
+                    spinner.stop();
+                    $("#loadingPostcode").fadeOut();
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    console.error("Status: " + textStatus); alert("Error: " + errorThrown);
+                    $("#AddressList").hide();
+                    $("#AddressDetails").hide();
+                }
+            });
+        });
+    });
+                            </script>
+                            <div id="AddressDetails">
+
+                                <div id="ManualEntryHome" class="row">
+                                    <div class="row small">
+                                        <label>
+                                            <span>House Number</span>
+                                            <input Value="12" id="UserInfo_HomeAddress_HouseNumber" name="UserInfo.HomeAddress.HouseNumber" placeholder="House number" type="text" value="" />
+                                        </label>
+                                    </div>
+                                    <div class="row">
+                                        <label>
+                                            <span>Address Line 1</span>
+                                            <input Value="Flat 1" id="UserInfo_HomeAddress_AddressLine1" name="UserInfo.HomeAddress.AddressLine1" placeholder="Address line 1" type="text" value="" />
+                                        </label>
+                                    </div>
+                                    <div class="row">
+                                        <label>
+                                            <span>Address Line 2</span>
+                                            <input Value="Piccadilly Circus" id="UserInfo_HomeAddress_AddressLine2" name="UserInfo.HomeAddress.AddressLine2" placeholder="Address line 2" type="text" value="" />
+                                        </label>
+                                    </div>
+                                    <div class="row medium">
+                                        <label>
+                                            <span>City</span>
+                                            <input Value="London" id="UserInfo_HomeAddress_City" name="UserInfo.HomeAddress.City" placeholder="City" type="text" value="" />
+                                        </label>
+                                    </div>
+                                    <div class="row medium">
+                                        <label>
+                                            <span>County</span>
+                                            <input Value="London" id="UserInfo_HomeAddress_County" name="UserInfo.HomeAddress.County" placeholder="County" type="text" value="" />
+                                        </label>
+                                    </div>
+                                    <div class="row medium">
+                                        <label>
+                                            <span>Postcode</span>
+                                            <input Value="EC1A 4JQ" id="UserInfo_HomeAddress_PostCode" name="UserInfo.HomeAddress.PostCode" placeholder="Postcode" type="text" value="" />
+                                        </label>
+                                    </div>
+                                </div>
+
+
+                                <div class="row sectionHead">
+                                    <p class="title">Current location</p>
+                                </div>
+
+                                <div id="SectionBlock" class="row bgColor">
+                                    <div class="row">
+                                        <label class="left radio firstChild">
+                                            <input type="radio" name="athome" class="yesAtHome" id="AtHome">
+                                            I am at home
+                                        </label>
+                                    </div>
+
+                                    <div class="row">
+                                        <label class="left radio">
+                                            <input type="radio" name="athome" value="No" class="notAtHome" id="NotAtHome">
+                                            I am at another address
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div id="AdditionalInfo" class="row">
+                                    <div class="row small">
+                                        <label>
+                                            <span>House Number</span>
+                                            <input Value="44" id="UserInfo_CurrentAddress_HouseNumber" name="UserInfo.CurrentAddress.HouseNumber" placeholder="House number" type="text" value="" />
+                                        </label>
+                                    </div>
+                                    <div class="row">
+                                        <label>
+                                            <span>Address Line 1</span>
+                                            <input Value="Flat 3" id="UserInfo_CurrentAddress_AddressLine1" name="UserInfo.CurrentAddress.AddressLine1" placeholder="Address line 1" type="text" value="" />
+                                        </label>
+                                    </div>
+                                    <div class="row">
+                                        <label>
+                                            <span>Address Line 2</span>
+                                            <input Value="Oxford Circus" id="UserInfo_CurrentAddress_AddressLine2" name="UserInfo.CurrentAddress.AddressLine2" placeholder="Address line 2" type="text" value="" />
+                                        </label>
+                                    </div>
+                                    <div class="row medium">
+                                        <label>
+                                            <span>City</span>
+                                            <input Value="London" id="UserInfo_CurrentAddress_City" name="UserInfo.CurrentAddress.City" placeholder="City" type="text" value="" />
+                                        </label>
+                                    </div>
+                                    <div class="row medium">
+                                        <label>
+                                            <span>County</span>
+                                            <input Value="London" id="UserInfo_CurrentAddress_County" name="UserInfo.CurrentAddress.County" placeholder="County" type="text" value="" />
+                                        </label>
+                                    </div>
+                                    <div class="row medium">
+                                        <label>
+                                            <span>Postcode</span>
+                                            <input Value="EC1A 4JQ" id="UserInfo_CurrentAddress_PostCode" name="UserInfo.CurrentAddress.PostCode" placeholder="Postcode" type="text" value="" />
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <h3>Your registered GP practice</h3>
+                            </div>
+                            <div class="row">
+                                <div class="searchBox">
+                                    <label for="FindGP">
+
+
+                                        <span>Find your GP practice</span>
+
+
+                                        <input type="hidden" id="FindGPId" name="SurgeryViewModel.SelectedSurgery" />
+                                        <input type="text" id="FindGP" placeholder="Type your GP practice name" class="searchInput">
+
+                                    </label>
+                                </div>
+                            </div>
+
+                            <script>
+    $(function () {
+        $("#FindGP").click(function () {
+            $("#FindGP").val("");
+            $("#FindGPId").val("");
+        }
+        );
+        $("#FindGP").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: '/Outcome/SearchSurgery',
+                    type: "post",
+                    data: { input: $("#FindGP").val() },
+                    success: function (data) {
+                        response(data);
+                    },
+                    error: function (textStatus, errorThrown) {
+                        return null;
+                    }
+                });
+            },
+            focus: function (event, ui) {
+                $("#FindGP").val(ui.item.Name);
+                return false;
+            },
+            select: function (event, ui) {
+                $("#FindGP").val(ui.item.Name);
+                $("#FindGPId").val(ui.item.SurgeryId);
+                $("#Next[type=submit]").removeAttr('disabled');
+                return false;
+            }
+        })
+            .autocomplete("instance")._renderItem = function (ul, item) {
+                return $("<li>")
+                    .append("<a>" + item.Name + "</a>")
+                    .appendTo(ul);
+            };
+
+    });
+
+                            </script>
+
+                            <div class="row" id="enableDisable">
+                                <input type="submit" class="button nextPage" name="DosResults" id="Next" value="Find available healthcare providers">
+                            </div>
+                        </div> <!--/FormWrapper-->
+                    </section>
+                </div> <!--/AboutYou-->
+            </div> <!--/ContentWrapper-->
+            <div id="FooterWrapper">
+                <footer>
+                    <!-- Copyright information -->
+                </footer>
+            </div>
+        </div> <!-- /site -->
+        <script type="text/javascript">
+    $(function () {
+        $("#Next").click(function () {
+            $("#loading").fadeIn();
+            var opts = {
+                lines: 12, // The number of lines to draw
+                length: 7, // The length of each line
+                width: 4, // The line thickness
+                radius: 10, // The radius of the inner circle
+                color: '#000', // #rgb or #rrggbb
+                speed: 1, // Rounds per second
+                trail: 60, // Afterglow percentage
+                shadow: false, // Whether to render a shadow
+                hwaccel: false // Whether to use hardware acceleration
+            };
+            var target = document.getElementById('loading');
+            var spinner = new Spinner(opts).spin(target);
+        });
+    });
+        </script>
+    </form>
+</body>
+</html>
