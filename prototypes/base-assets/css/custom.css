@@ -13,7 +13,7 @@ input[type="submit"], button[type="submit"]{
  }
 
 body {	
-	color:#fff;
+	color:black;
 }
 
 .caps{text-transform:uppercase;}
@@ -30,7 +30,7 @@ p {
 }
 
 a{
-	color:#fff;
+	color:black;
 	text-decoration:none;
 }
 
@@ -69,8 +69,8 @@ body ul {
 	position:relative;
 }
 .global-header {
-	background:#fff;
-	color: #fff;
+	background:whitesmoke;
+	color: whitesmoke;
     height:85px;    
     /*full width fix*/
     margin: 0 auto;
@@ -1552,7 +1552,7 @@ header .close {
 }
 
 #timedQuestion span.red{
-       clear: both;
+    clear: both;
     color: #fff;
     display: block;
     font-size: 18px;
@@ -1564,7 +1564,8 @@ header .close {
 /* Interactive timer - questions page*/
 
 #timedQuestion{
-         background:url(../img/bg/jtbsBG.jpg);
+         /*background:url(../img/bg/jtbsBG.jpg);*/
+    background-color: whitesmoke;
 }
 
 #timedQuestion .nhs-radiobtn__label{
@@ -1580,7 +1581,7 @@ header .close {
  }
 
 #timedQuestion .nhs-the-question{
-    color: #fff;
+    color: black;
     font-size: 30px;
     margin-bottom: 20px;
     text-align: center;
@@ -1603,9 +1604,9 @@ header .close {
 
 #timedQuestion #nextScreen,
 #timedQuestion #previousScreen {
-    background: none repeat scroll 0 0 #8c3433;
+    background: none repeat scroll 0 0 #007aaa;
     border-radius: 5px;
-    box-shadow: 0 2px 0 #7c2a26;
+    box-shadow: 0 2px 0 #007aaa;
     font-size: 20px;
     padding: 14px 0 10px;
     text-decoration: none;
@@ -1613,9 +1614,9 @@ header .close {
     width: 235px;
 }
 
-.nhs-page-navigation{
+/*.nhs-page-navigation{
     background:#ea5455;
-}
+}*/
 
 .nhs-first-page .nhs-navtriangle{
     border-bottom: 1em solid #fe6565;
@@ -1849,7 +1850,7 @@ background-size:21px;
 
 #timedQuestion .nhs-page-navigation{
     padding-bottom:0.8em;
-     border-bottom: 2px solid #da4d4e;
+     border-bottom: 2px solid darkgrey;
    
 }
 
@@ -1937,7 +1938,7 @@ input[disabled], button[disabled]{
 .meter { 
 	height: 20px;  /* Can be anything */
 	position: relative;
-	background:#e28b8c;
+	background:darkgrey;
 	-moz-border-radius: 25px;
 	-webkit-border-radius: 25px;
 	border-radius: 25px;
@@ -1955,8 +1956,8 @@ input[disabled], button[disabled]{
 }
 
 .nhsBlue > span {
-  background:#007aaa;
-  background-image: linear-gradient(to bottom, #007aaa, #007aaa);
+  background:whitesmoke;
+  background-image: linear-gradient(to bottom, whitesmoke, whitesmoke);
 }
 
 #timedQuestion .nhs-pagenav-container{
@@ -1969,7 +1970,7 @@ input[disabled], button[disabled]{
 
 .guideText{
   
-       color:#fff;
+       color:darkgrey;
        font-weight:bold;
        font-size:18px;
        margin-top:30px;
