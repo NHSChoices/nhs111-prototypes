@@ -81,17 +81,17 @@
                             <div class="row medium" id="PC">
                                 <label>
                                     <input class="postcode" id="AddressSearchViewModel_PostCode" name="AddressSearchViewModel.PostCode" placeholder="Enter current postcode" type="text" value=""/>
-                                    <input type="button" class="button submitButton searchPostcode" name="TempDosResults" value="search" id="btnSearchPostcode" style="padding: 10px 14px; width: 119px;">
+                                    <!--<input type="button" class="button submitButton searchPostcode" name="TempDosResults" value="search" id="btnSearchPostcode" style="padding: 10px 14px; width: 119px;">-->
                                 </label>
                             </div>
 
 
-                            <div class="row" id="AddressList">
+                            <!--<div class="row" id="AddressList">
                                 <label>
                                     <span>Pick an address</span>
                                     <select id="AddressSelect"></select>
                                 </label>
-                            </div>
+                            </div>-->
 
                             <div class="row enterManually">
                                 <a href="#" class="links manualEntry">I don't know my current postcode</a>
@@ -119,188 +119,6 @@
 
                             <div class="row" id="enableDisable">
                                 <input type="button" class="button nextPage" name="DosResults" id="Next" value="Find available healthcare providers" onclick="location = 'step2.html'">
-                            </div>
-
-
-                        <!--Spinner script-->
-                            <script type="text/javascript">
-    $(function () {
-        $("#AddressList").hide();
-        $("#AddressDetails").hide();
-        var addresses = [];
-        $("#btnSearchPostcode").click(function () {
-            $("#loadingPostcode").fadeIn();
-            var opts = {
-                lines: 12, // The number of lines to draw
-                length: 7, // The length of each line
-                width: 4, // The line thickness
-                radius: 10, // The radius of the inner circle
-                color: '#000', // #rgb or #rrggbb
-                speed: 1, // Rounds per second
-                trail: 60, // Afterglow percentage
-                shadow: false, // Whether to render a shadow
-                hwaccel: false // Whether to use hardware acceleration
-            };
-            var postcode = $("#AddressSearchViewModel_PostCode").val();
-            $("#postcodeSpan").text(postcode.toUpperCase());
-            var target = document.getElementById('loadingPostcode');
-            var spinner = new Spinner(opts).spin(target);
-            $.ajax({
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                type: "GET",
-                url: "https://locationservicesstaging.azure-api.net/location/postcode/" + postcode,
-                headers: {
-                    "Ocp-Apim-Subscription-Key": "204d2c50138145b9b357046ac17d7fda"
-                },
-                success: function (response) {
-                    addresses = response;
-                    var select = $("#AddressSelect");
-                    select.empty();
-                    select.append($("<option />").val(0).text("Please choose..."));
-                    $.each(response, function () {
-                        var text = this.AddressLines[0];
-                        if (this.BuildingName != "")
-                            text = this.AddressLines[1];
-                        select.append($("<option />").val(this.UPRN).text(text));
-                    });
-                    select.change(function () {
-                        var selectedAddress = $("#AddressSelect option:selected").attr("value");
-                        if (selectedAddress == "0")
-                            return;
-                        var result = $.grep(addresses, function (e) { return e.UPRN == selectedAddress; });
-                        if (result.length < 1) {
-                            console.error("Address selected with id " + selectedAddress + " which isn't in list of addresses.");
-                            return;
-                        }
-                        $("#UserInfo_HomeAddress_HouseNumber").val(result[0].HouseNumber);
-                        $("#UserInfo_HomeAddress_AddressLine1").val(result[0].StreetDescription);
-                        $("#UserInfo_HomeAddress_AddressLine2").val(result[0].TownName);
-                        $("#UserInfo_HomeAddress_City").val(result[0].PostTown);
-                        $("#UserInfo_HomeAddress_County").val(result[0].AdministrativeArea);
-                        $("#UserInfo_HomeAddress_PostCode").val(result[0].Postcode);
-                        $("#UserInfo_CurrentAddress_HouseNumber").val(result[0].HouseNumber);
-                        $("#UserInfo_CurrentAddress_AddressLine1").val(result[0].StreetDescription);
-                        $("#UserInfo_CurrentAddress_AddressLine2").val(result[0].TownName);
-                        $("#UserInfo_CurrentAddress_City").val(result[0].PostTown);
-                        $("#UserInfo_CurrentAddress_County").val(result[0].AdministrativeArea);
-                        $("#UserInfo_CurrentAddress_PostCode").val(result[0].Postcode);
-                        $("#AddressDetails").show();
-                    });
-                    $("#AddressList").show();
-                    spinner.stop();
-                    $("#loadingPostcode").fadeOut();
-                },
-                error: function (XMLHttpRequest, textStatus, errorThrown) {
-                    console.error("Status: " + textStatus); alert("Error: " + errorThrown);
-                    $("#AddressList").hide();
-                    $("#AddressDetails").hide();
-                }
-            });
-        });
-    });
-                            </script>
-                            <div id="AddressDetails">
-
-                                <div id="ManualEntryHome" class="row">
-                                    <div class="row small">
-                                        <label>
-                                            <span>House Number</span>
-                                            <input Value="12" id="UserInfo_HomeAddress_HouseNumber" name="UserInfo.HomeAddress.HouseNumber" placeholder="House number" type="text" value="" />
-                                        </label>
-                                    </div>
-                                    <div class="row">
-                                        <label>
-                                            <span>Address Line 1</span>
-                                            <input Value="Flat 1" id="UserInfo_HomeAddress_AddressLine1" name="UserInfo.HomeAddress.AddressLine1" placeholder="Address line 1" type="text" value="" />
-                                        </label>
-                                    </div>
-                                    <div class="row">
-                                        <label>
-                                            <span>Address Line 2</span>
-                                            <input Value="Piccadilly Circus" id="UserInfo_HomeAddress_AddressLine2" name="UserInfo.HomeAddress.AddressLine2" placeholder="Address line 2" type="text" value="" />
-                                        </label>
-                                    </div>
-                                    <div class="row medium">
-                                        <label>
-                                            <span>City</span>
-                                            <input Value="London" id="UserInfo_HomeAddress_City" name="UserInfo.HomeAddress.City" placeholder="City" type="text" value="" />
-                                        </label>
-                                    </div>
-                                    <div class="row medium">
-                                        <label>
-                                            <span>County</span>
-                                            <input Value="London" id="UserInfo_HomeAddress_County" name="UserInfo.HomeAddress.County" placeholder="County" type="text" value="" />
-                                        </label>
-                                    </div>
-                                    <div class="row medium">
-                                        <label>
-                                            <span>Postcode</span>
-                                            <input Value="EC1A 4JQ" id="UserInfo_HomeAddress_PostCode" name="UserInfo.HomeAddress.PostCode" placeholder="Postcode" type="text" value="" />
-                                        </label>
-                                    </div>
-                                </div>
-
-
-                                <div class="row sectionHead">
-                                    <p class="title">Current location</p>
-                                </div>
-
-                                <div id="SectionBlock" class="row bgColor">
-                                    <div class="row">
-                                        <label class="left radio firstChild">
-                                            <input type="radio" name="athome" class="yesAtHome" id="AtHome">
-                                            I am at home
-                                        </label>
-                                    </div>
-
-                                    <div class="row">
-                                        <label class="left radio">
-                                            <input type="radio" name="athome" value="No" class="notAtHome" id="NotAtHome">
-                                            I am at another address
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <div id="AdditionalInfo" class="row">
-                                    <div class="row small">
-                                        <label>
-                                            <span>House Number</span>
-                                            <input Value="44" id="UserInfo_CurrentAddress_HouseNumber" name="UserInfo.CurrentAddress.HouseNumber" placeholder="House number" type="text" value="" />
-                                        </label>
-                                    </div>
-                                    <div class="row">
-                                        <label>
-                                            <span>Address Line 1</span>
-                                            <input Value="Flat 3" id="UserInfo_CurrentAddress_AddressLine1" name="UserInfo.CurrentAddress.AddressLine1" placeholder="Address line 1" type="text" value="" />
-                                        </label>
-                                    </div>
-                                    <div class="row">
-                                        <label>
-                                            <span>Address Line 2</span>
-                                            <input Value="Oxford Circus" id="UserInfo_CurrentAddress_AddressLine2" name="UserInfo.CurrentAddress.AddressLine2" placeholder="Address line 2" type="text" value="" />
-                                        </label>
-                                    </div>
-                                    <div class="row medium">
-                                        <label>
-                                            <span>City</span>
-                                            <input Value="London" id="UserInfo_CurrentAddress_City" name="UserInfo.CurrentAddress.City" placeholder="City" type="text" value="" />
-                                        </label>
-                                    </div>
-                                    <div class="row medium">
-                                        <label>
-                                            <span>County</span>
-                                            <input Value="London" id="UserInfo_CurrentAddress_County" name="UserInfo.CurrentAddress.County" placeholder="County" type="text" value="" />
-                                        </label>
-                                    </div>
-                                    <div class="row medium">
-                                        <label>
-                                            <span>Postcode</span>
-                                            <input Value="EC1A 4JQ" id="UserInfo_CurrentAddress_PostCode" name="UserInfo.CurrentAddress.PostCode" placeholder="Postcode" type="text" value="" />
-                                        </label>
-                                    </div>
-                                </div>
-
                             </div>
 
 

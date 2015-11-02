@@ -76,21 +76,21 @@
                             <div class="row large">
                                 <label>
                                     <span>First name</span>
-                                    <input Value="John" class="example" id="UserInfo_FirstName" name="UserInfo.FirstName" placeholder="First name" type="text" value="" />
+                                    <input class="example" id="UserInfo_FirstName" name="UserInfo.FirstName" placeholder="First name" type="text" value="" />
                                 </label>
                             </div>
                             <div class="row large">
                                 <label>
                                     <span>Last name</span>
-                                    <input Value="Blue" id="UserInfo_LastName" name="UserInfo.LastName" placeholder="Last name" type="text" value="" />
+                                    <input id="UserInfo_LastName" name="UserInfo.LastName" placeholder="Last name" type="text" value="" />
                                 </label>
                             </div>
                             <div class="row" id="DOB">
                                 <label>
                                     <span>Date of birth</span>
-                                    <input Value="05" class="dd" data-val="true" data-val-number="The field Day must be a number." id="UserInfo_Day" name="UserInfo.Day" placeholder="dd" type="text" value="" />
-                                    <input Value="08" class="mm" data-val="true" data-val-number="The field Month must be a number." id="UserInfo_Month" name="UserInfo.Month" placeholder="mm" type="text" value="" />
-                                    <input Value="1970" class="yy" data-val="true" data-val-number="The field Year must be a number." id="UserInfo_Year" name="UserInfo.Year" placeholder="yyyy" type="text" value="" />
+                                    <input class="dd" data-val="true" data-val-number="The field Day must be a number." id="UserInfo_Day" name="UserInfo.Day" placeholder="dd" type="text" value="" />
+                                    <input class="mm" data-val="true" data-val-number="The field Month must be a number." id="UserInfo_Month" name="UserInfo.Month" placeholder="mm" type="text" value="" />
+                                    <input class="yy" data-val="true" data-val-number="The field Year must be a number." id="UserInfo_Year" name="UserInfo.Year" placeholder="yyyy" type="text" value="" />
                                 </label>
                             </div>
                             <div class="row">
@@ -99,70 +99,76 @@
                             <div class="row medium">
                                 <label>
                                     <span>Contact number</span>
-                                    <input Value="020334455677" id="UserInfo_TelephoneNumber" name="UserInfo.TelephoneNumber" placeholder="Contact number" type="text" value="" />
+                                    <input id="UserInfo_TelephoneNumber" name="UserInfo.TelephoneNumber" placeholder="Contact number" type="text" value="" />
                                 </label>
                             </div>
                             <div class="row medium">
                                 <label>
                                     <span>Email address</span>
-                                    <input Value="john.blue@gmail.com" id="UserInfo_Email" name="UserInfo.Email" placeholder="Email address" type="text" value="" />
+                                    <input id="UserInfo_Email" name="UserInfo.Email" placeholder="Email address" type="text" value="" />
                                 </label>
                             </div>
                             <div class="row sectionHead">
                                 <p class="title">Home address</p>
+                                
+                            </div>
+
+                            <div>
+                                <div class="row" id="AddressList" style="display: block;">
+                                    <label>
+                                         <select id="AddressSelect"><option value="0">Please choose...</option><option value="95509827">Tesco Express</option><option value="95511342">William Hill</option><option value="5300000738">107 Aldersgate Street</option><option value="5300000793">123 Aldersgate Street</option><option value="5300000794">123 Aldersgate Street</option><option value="5300000799">127 Aldersgate Street</option><option value="5300100480">120 Aldersgate Street</option><option value="5300100481">120 Aldersgate Street</option><option value="5300100484">120 Aldersgate Street</option><option value="5300100485">120 Aldersgate Street</option><option value="5300100486">120 Aldersgate Street</option><option value="5300100487">120 Aldersgate Street</option><option value="5300100488">120 Aldersgate Street</option><option value="10001297103">127 Aldersgate Street</option><option value="10007028282">108 Aldersgate Street</option><option value="10007028286">108 Aldersgate Street</option><option value="10008977711">125 Aldersgate Street</option><option value="10008978387">129 Aldersgate Street</option><option value="10008978389">126 Aldersgate Street</option><option value="10010438073">126 Aldersgate Street</option></select>
+                                    </label>
+                                </div>
                             </div>
 
                             <script src="../../base-assets/Js/vendor/spin.min.js"></script>
                             <link rel="stylesheet" href="../../base-assets//styles/vendor/jquery-ui.css">
 
-
+                            
 
                             <div id="AddressDetails">
-
                                 <div id="ManualEntryHome" class="row">
                                     <div class="row small">
                                         <label>
                                             <span>House Number</span>
-                                            <input Value="12" id="UserInfo_HomeAddress_HouseNumber" name="UserInfo.HomeAddress.HouseNumber" placeholder="House number" type="text" value="" />
+                                            <input value="12" id="UserInfo_HomeAddress_HouseNumber" name="UserInfo.HomeAddress.HouseNumber" placeholder="House number" type="text" value="" />
                                         </label>
                                     </div>
                                     <div class="row">
                                         <label>
                                             <span>Address Line 1</span>
-                                            <input Value="Flat 1" id="UserInfo_HomeAddress_AddressLine1" name="UserInfo.HomeAddress.AddressLine1" placeholder="Address line 1" type="text" value="" />
+                                            <input value="Flat 1" id="UserInfo_HomeAddress_AddressLine1" name="UserInfo.HomeAddress.AddressLine1" placeholder="Address line 1" type="text" value="" />
                                         </label>
                                     </div>
                                     <div class="row">
                                         <label>
                                             <span>Address Line 2</span>
-                                            <input Value="Piccadilly Circus" id="UserInfo_HomeAddress_AddressLine2" name="UserInfo.HomeAddress.AddressLine2" placeholder="Address line 2" type="text" value="" />
+                                            <input value="Piccadilly Circus" id="UserInfo_HomeAddress_AddressLine2" name="UserInfo.HomeAddress.AddressLine2" placeholder="Address line 2" type="text" value="" />
                                         </label>
                                     </div>
                                     <div class="row medium">
                                         <label>
                                             <span>City</span>
-                                            <input Value="London" id="UserInfo_HomeAddress_City" name="UserInfo.HomeAddress.City" placeholder="City" type="text" value="" />
+                                            <input value="London" id="UserInfo_HomeAddress_City" name="UserInfo.HomeAddress.City" placeholder="City" type="text" value="" />
                                         </label>
                                     </div>
                                     <div class="row medium">
                                         <label>
                                             <span>County</span>
-                                            <input Value="London" id="UserInfo_HomeAddress_County" name="UserInfo.HomeAddress.County" placeholder="County" type="text" value="" />
+                                            <input value="London" id="UserInfo_HomeAddress_County" name="UserInfo.HomeAddress.County" placeholder="County" type="text" value="" />
                                         </label>
                                     </div>
                                     <div class="row medium">
                                         <label>
                                             <span>Postcode</span>
-                                            <input Value="EC1A 4JQ" id="UserInfo_HomeAddress_PostCode" name="UserInfo.HomeAddress.PostCode" placeholder="Postcode" type="text" value="" />
+                                            <input value="EC1A 4JQ" id="UserInfo_HomeAddress_PostCode" name="UserInfo.HomeAddress.PostCode" placeholder="Postcode" type="text" value="" />
                                         </label>
                                     </div>
                                 </div>
 
-
                                 <div class="row sectionHead">
                                     <p class="title">Current location</p>
                                 </div>
-
                                 <div id="SectionBlock" class="row bgColor">
                                     <div class="row">
                                         <label class="left radio firstChild">
@@ -170,7 +176,6 @@
                                             I am at home
                                         </label>
                                     </div>
-
                                     <div class="row">
                                         <label class="left radio">
                                             <input type="radio" name="athome" value="No" class="notAtHome" id="NotAtHome">
@@ -178,51 +183,55 @@
                                         </label>
                                     </div>
                                 </div>
-
                                 <div id="AdditionalInfo" class="row">
                                     <div class="row small">
                                         <label>
                                             <span>House Number</span>
-                                            <input Value="44" id="UserInfo_CurrentAddress_HouseNumber" name="UserInfo.CurrentAddress.HouseNumber" placeholder="House number" type="text" value="" />
+                                            <input value="44" id="UserInfo_CurrentAddress_HouseNumber" name="UserInfo.CurrentAddress.HouseNumber" placeholder="House number" type="text" value="" />
                                         </label>
                                     </div>
                                     <div class="row">
                                         <label>
                                             <span>Address Line 1</span>
-                                            <input Value="Flat 3" id="UserInfo_CurrentAddress_AddressLine1" name="UserInfo.CurrentAddress.AddressLine1" placeholder="Address line 1" type="text" value="" />
+                                            <input value="Flat 3" id="UserInfo_CurrentAddress_AddressLine1" name="UserInfo.CurrentAddress.AddressLine1" placeholder="Address line 1" type="text" value="" />
                                         </label>
                                     </div>
                                     <div class="row">
                                         <label>
                                             <span>Address Line 2</span>
-                                            <input Value="Oxford Circus" id="UserInfo_CurrentAddress_AddressLine2" name="UserInfo.CurrentAddress.AddressLine2" placeholder="Address line 2" type="text" value="" />
+                                            <input value="Oxford Circus" id="UserInfo_CurrentAddress_AddressLine2" name="UserInfo.CurrentAddress.AddressLine2" placeholder="Address line 2" type="text" value="" />
                                         </label>
                                     </div>
                                     <div class="row medium">
                                         <label>
                                             <span>City</span>
-                                            <input Value="London" id="UserInfo_CurrentAddress_City" name="UserInfo.CurrentAddress.City" placeholder="City" type="text" value="" />
+                                            <input value="London" id="UserInfo_CurrentAddress_City" name="UserInfo.CurrentAddress.City" placeholder="City" type="text" value="" />
                                         </label>
                                     </div>
                                     <div class="row medium">
                                         <label>
                                             <span>County</span>
-                                            <input Value="London" id="UserInfo_CurrentAddress_County" name="UserInfo.CurrentAddress.County" placeholder="County" type="text" value="" />
+                                            <input value="London" id="UserInfo_CurrentAddress_County" name="UserInfo.CurrentAddress.County" placeholder="County" type="text" value="" />
                                         </label>
                                     </div>
                                     <div class="row medium">
                                         <label>
                                             <span>Postcode</span>
-                                            <input Value="EC1A 4JQ" id="UserInfo_CurrentAddress_PostCode" name="UserInfo.CurrentAddress.PostCode" placeholder="Postcode" type="text" value="" />
+                                            <input value="EC1A 4JQ" id="UserInfo_CurrentAddress_PostCode" name="UserInfo.CurrentAddress.PostCode" placeholder="Postcode" type="text" value="" />
                                         </label>
                                     </div>
                                 </div>
-
                             </div>
 
 
                             <script>
     $(function () {
+        $("#AddressDetails").hide();
+        $("#AddressSelect").change(function () {
+           
+            $("#AddressDetails").show();
+        });
+        $("#AddressList").show();
         $("#FindGP").click(function () {
             $("#FindGP").val("");
             $("#FindGPId").val("");
