@@ -49,7 +49,7 @@
         </div>
     </div>
 
-    <form action="/Outcome/ServiceDetails" method="post">
+    <form action="/Outcome/ServiceDetails" method="post" id="OutcomeOne">
         <input id="Id" name="Id" type="hidden" value="Dx05" /><input id="JourneyJson" name="JourneyJson" type="hidden" value="{&quot;steps&quot;:[{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you had an injury to your head in the last 7 days?&quot;,&quot;questionNo&quot;:&quot;Tx1506&quot;,&quot;questionId&quot;:&quot;PW755.0&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you fainted or passed out in the last 24 hours?&quot;,&quot;questionNo&quot;:&quot;Tx220054&quot;,&quot;questionId&quot;:&quot;PW755.100&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Are you feeling very ill and you also have new marks under your skin that look like bruising or bleeding?&quot;,&quot;questionNo&quot;:&quot;Tx1054&quot;,&quot;questionId&quot;:&quot;PW755.200&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:5},&quot;questionTitle&quot;:&quot;Have you had any of these symptoms, even if they have gone away?&quot;,&quot;questionNo&quot;:&quot;Tx221858&quot;,&quot;questionId&quot;:&quot;PW755.800&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Was there sudden weakness in one leg only, even if it has gone away?&quot;,&quot;questionNo&quot;:&quot;Tx223376&quot;,&quot;questionId&quot;:&quot;PW755.14500&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;Are you very ill and experiencing any of these symptoms?&quot;,&quot;questionNo&quot;:&quot;Tx1039&quot;,&quot;questionId&quot;:&quot;PW755.2400&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Do you have a really bad headache that came on very suddenly, like being hit with a brick?&quot;,&quot;questionNo&quot;:&quot;Tx1456&quot;,&quot;questionId&quot;:&quot;PW755.2300&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you breathed in anything hot or poisonous in the last 24 hours?&quot;,&quot;questionNo&quot;:&quot;Tx1037&quot;,&quot;questionId&quot;:&quot;PW755.2600&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Do you have any new changes to your eyesight?&quot;,&quot;questionNo&quot;:&quot;Tx3431&quot;,&quot;questionId&quot;:&quot;PW755.4900&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;4003&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Have you suddenly become confused or more confused than usual?&quot;,&quot;questionNo&quot;:&quot;Tx1213&quot;,&quot;questionId&quot;:&quot;PW755.4800&quot;,&quot;jtbs&quot;:false}]}" /><input id="PathwayId" name="PathwayId" type="hidden" value="P1180" /><input id="PathwayNo" name="PathwayNo" type="hidden" value="PW755" /><input id="SymptomGroup" name="SymptomGroup" type="hidden" value="1112" /><input data-val="true" data-val-number="The field Age must be a number." data-val-required="The Age field is required." id="UserInfo_Age" name="UserInfo.Age" type="hidden" value="69" /><input id="UserInfo_Gender" name="UserInfo.Gender" type="hidden" value="Female" /><input id="SymptomDiscriminator" name="SymptomDiscriminator" type="hidden" value="4003" /><input id="Title" name="Title" type="hidden" value="contact a clinician about your symptoms within the next 2 hours" /><input data-val="true" data-val-required="The UserId field is required." id="UserId" name="UserId" type="hidden" value="66bb2f04-e884-4aff-92b5-2cb0eeb617d1" />    <div class="site" id="PersonalDetails">
             <div id="ProgressBar">
                 <ul>
@@ -61,10 +61,75 @@
             <div id="ContentWrapper">
                 <div id="SubHeadWrapper">
                     <section>
-                        <h2><!--<span class="roundNumbers">1</span>--> Find a healthcare provider</h2>
-                        <p>Please provide these details so we can find you an available healthcare provider</p>
+                        <div class="headImage thirty">
+                            <!--<img src="~/content/images/icons/outcomeHeader.png" alt="" class="left">-->
+                            &nbsp;
+                        </div>
+                        <div class="headText seventy">
+                            <h2>Thank you!</h2>
+
+                            <h3>From your answers, we recommend you speak to a clinician about your headache.</h3>
+                            <!--<p class="outcomeMsg">A clinician can contact a clinician about your symptoms within 24 hours.</p>-->
+
+                        </div>
                     </section>
                 </div>
+                <!--<div id="OutcomeQuestion">
+                    <img src="../../base-assets/images/icons/blueArrow.png" class="arrowDown" alt="">
+                    <section>
+                        <h3>Would you like us to put you in touch with a suitable clinician?</h3>
+                        <form action="/Outcome/DispositionSelection" method="post">
+                            <input id="Id" name="Id" type="hidden" value="Dx11">
+                            <input id="JourneyJson" name="JourneyJson" type="hidden" value="{&quot;steps&quot;:[{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Has the individual been told to follow a particular course of action when they are ill?&quot;,&quot;questionNo&quot;:&quot;Tx222207&quot;,&quot;questionId&quot;:&quot;PW1750.0&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;Contact the doctor (specify)&quot;,&quot;symptomDiscriminator&quot;:&quot;4003&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;What course of action has been recommended?&quot;,&quot;questionNo&quot;:&quot;Tx220067&quot;,&quot;questionId&quot;:&quot;PA99.0&quot;,&quot;jtbs&quot;:false}]}">
+                            <input id="PathwayId" name="PathwayId" type="hidden" value="P1214">
+                            <input id="PathwayNo" name="PathwayNo" type="hidden" value="PW1750">
+                            <input id="PathwayTitle" name="PathwayTitle" type="hidden" value="Known Mental Health Problems Worsening">
+                            <input id="SymptomGroup" name="SymptomGroup" type="hidden" value="1140">
+                            <input data-val="true" data-val-number="The field Age must be a number." data-val-required="The Age field is required." id="UserInfo_Age" name="UserInfo.Age" type="hidden" value="45">
+                            <input id="UserInfo_Gender" name="UserInfo.Gender" type="hidden" value="Female">
+                            <input id="SymptomDiscriminator" name="SymptomDiscriminator" type="hidden" value="4003">
+                            <input id="Title" name="Title" type="hidden" value="speak to a Primary Care Service within 1 hour">
+                            <input id="UserInfo_FirstName" name="UserInfo.FirstName" type="hidden" value="">
+                            <input id="UserInfo_LastName" name="UserInfo.LastName" type="hidden" value="">
+                            <input data-val="true" data-val-date="The field DoB must be a date." id="UserInfo_DoB" name="UserInfo.DoB" type="hidden" value="">
+                            <input id="UserInfo_TelephoneNumber" name="UserInfo.TelephoneNumber" type="hidden" value="">
+                            <input data-val="true" data-val-required="The UserId field is required." id="UserId" name="UserId" type="hidden" value="b14c0904-aff6-4662-bdfc-179845f5827b">
+                            <input id="StateJson" name="StateJson" type="hidden" value="{&quot;PATIENT_AGE&quot;:&quot;33&quot;,&quot;PATIENT_GENDER&quot;:&quot;\&quot;M\&quot;&quot;,&quot;PATIENT_PARTY&quot;:&quot;1&quot;}">
+                            <input id="PreviousStateJson" name="PreviousStateJson" type="hidden" value="{&quot;PATIENT_AGE&quot;:&quot;33&quot;,&quot;PATIENT_GENDER&quot;:&quot;\&quot;M\&quot;&quot;,&quot;PATIENT_PARTY&quot;:&quot;1&quot;}">
+
+
+                            <div class="row">
+                                <input type="submit" class="button buttonLeft" name="PersonalDetails" id="Agree" value="Yes, please ">
+                                <input type="submit" class="textLink" name="DispositionNo" id="DispositionNo" value="No, thank you.">
+                            </div>
+                        </form>
+
+                        <form action="/Question/Navigation" method="post">
+                            <input id="Id" name="Id" type="hidden" value="Dx11">
+                            <input id="JourneyJson" name="JourneyJson" type="hidden" value="{&quot;steps&quot;:[{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Has the individual been told to follow a particular course of action when they are ill?&quot;,&quot;questionNo&quot;:&quot;Tx222207&quot;,&quot;questionId&quot;:&quot;PW1750.0&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;Contact the doctor (specify)&quot;,&quot;symptomDiscriminator&quot;:&quot;4003&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;What course of action has been recommended?&quot;,&quot;questionNo&quot;:&quot;Tx220067&quot;,&quot;questionId&quot;:&quot;PA99.0&quot;,&quot;jtbs&quot;:false}]}">
+                            <input id="PathwayId" name="PathwayId" type="hidden" value="P1214">
+                            <input id="PathwayNo" name="PathwayNo" type="hidden" value="PW1750">
+                            <input id="PathwayTitle" name="PathwayTitle" type="hidden" value="Known Mental Health Problems Worsening">
+                            <input id="SymptomGroup" name="SymptomGroup" type="hidden" value="1140">
+                            <input data-val="true" data-val-number="The field Age must be a number." data-val-required="The Age field is required." id="UserInfo_Age" name="UserInfo.Age" type="hidden" value="45">
+                            <input id="UserInfo_Gender" name="UserInfo.Gender" type="hidden" value="Female">
+                            <input id="SymptomDiscriminator" name="SymptomDiscriminator" type="hidden" value="4003">
+                            <input id="Title" name="Title" type="hidden" value="speak to a Primary Care Service within 1 hour">
+                            <input id="UserInfo_FirstName" name="UserInfo.FirstName" type="hidden" value="">
+                            <input id="UserInfo_LastName" name="UserInfo.LastName" type="hidden" value="">
+                            <input data-val="true" data-val-date="The field DoB must be a date." id="UserInfo_DoB" name="UserInfo.DoB" type="hidden" value="">
+                            <input id="UserInfo_TelephoneNumber" name="UserInfo.TelephoneNumber" type="hidden" value="">
+                            <input data-val="true" data-val-required="The UserId field is required." id="UserId" name="UserId" type="hidden" value="b14c0904-aff6-4662-bdfc-179845f5827b">
+                            <input id="StateJson" name="StateJson" type="hidden" value="{&quot;PATIENT_AGE&quot;:&quot;33&quot;,&quot;PATIENT_GENDER&quot;:&quot;\&quot;M\&quot;&quot;,&quot;PATIENT_PARTY&quot;:&quot;1&quot;}">
+                            <input id="PreviousStateJson" name="PreviousStateJson" type="hidden" value="{&quot;PATIENT_AGE&quot;:&quot;33&quot;,&quot;PATIENT_GENDER&quot;:&quot;\&quot;M\&quot;&quot;,&quot;PATIENT_PARTY&quot;:&quot;1&quot;}">
+
+
+                            <div class="row">
+                                <input class="textLink" type="submit" name="PreviousQuestion" value="Change my answers.">
+                            </div>
+                        </form>
+                    </section>
+                </div>-->
                 <div id="AboutYou">
                     <img src="../../base-assets/images/icons/blueArrow.png" class="arrowDown" alt="">
                     <section>
@@ -119,8 +184,16 @@
 
                             <div class="row" id="enableDisable">
                                 <input type="button" class="button nextPage" name="DosResults" id="Next" value="Find available healthcare providers" onclick="location = 'step2.html'">
+                                
                             </div>
 
+
+                            <div class="row">
+                                <input type="button" class="textLink" name="button1" id="button1" value="No, thank you">
+                            </div>
+                            <div class="row">
+                                <input class="textLink" type="button" name="PreviousQuestion" value="Change my answers">
+                            </div>
 
                             <script>
     $(function () {
