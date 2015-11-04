@@ -2,7 +2,7 @@
 /* Site template layout styles */
 
 html {
-    color: #004877;
+    color: black;
     font-size: 18px;
 }
 
@@ -107,7 +107,7 @@ input:active, input:focus, button:active, button:focus {
 #AboutYou .links,
 #AboutYou .links:active,
 #AboutYou .links:visited {
-    color: #003366;
+    color: black;
     text-decoration: underline;
     font-size: 15px;
 }
@@ -163,7 +163,7 @@ h5 {
 }
 
 #HeaderWrapper {
-    background: #fff;
+    background: whitesmoke;
 }
 
 header,
@@ -194,7 +194,7 @@ footer,
 }
 
 #MainHeader {
-    background: #fff;
+    background: whitesmoke;
 }
 
 #ProgressBar {
@@ -291,7 +291,7 @@ footer,
 }
 
 .row label {
-    color: #003366;
+    color: black;
 }
 
 /*Spinner styles*/

@@ -232,42 +232,6 @@
             $("#AddressDetails").show();
         });
         $("#AddressList").show();
-        $("#FindGP").click(function () {
-            $("#FindGP").val("");
-            $("#FindGPId").val("");
-        }
-        );
-        $("#FindGP").autocomplete({
-            source: function (request, response) {
-                $.ajax({
-                    url: '/Outcome/SearchSurgery',
-                    type: "post",
-                    data: { input: $("#FindGP").val() },
-                    success: function (data) {
-                        response(data);
-                    },
-                    error: function (textStatus, errorThrown) {
-                        return null;
-                    }
-                });
-            },
-            focus: function (event, ui) {
-                $("#FindGP").val(ui.item.Name);
-                return false;
-            },
-            select: function (event, ui) {
-                $("#FindGP").val(ui.item.Name);
-                $("#FindGPId").val(ui.item.SurgeryId);
-                $("#Next[type=submit]").removeAttr('disabled');
-                return false;
-            }
-        })
-            .autocomplete("instance")._renderItem = function (ul, item) {
-                return $("<li>")
-                    .append("<a>" + item.Name + "</a>")
-                    .appendTo(ul);
-            };
-
     });
 
                             </script>
@@ -285,26 +249,6 @@
                 </footer>
             </div>
         </div> <!-- /site -->
-        <script type="text/javascript">
-    $(function () {
-        $("#Next").click(function () {
-            $("#loading").fadeIn();
-            var opts = {
-                lines: 12, // The number of lines to draw
-                length: 7, // The length of each line
-                width: 4, // The line thickness
-                radius: 10, // The radius of the inner circle
-                color: '#000', // #rgb or #rrggbb
-                speed: 1, // Rounds per second
-                trail: 60, // Afterglow percentage
-                shadow: false, // Whether to render a shadow
-                hwaccel: false // Whether to use hardware acceleration
-            };
-            var target = document.getElementById('loading');
-            var spinner = new Spinner(opts).spin(target);
-        });
-    });
-        </script>
     </form>
 </body>
 </html>

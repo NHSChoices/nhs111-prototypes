@@ -77,9 +77,7 @@ button, .button, input.button{
 #OutcomeOne #ContentWrapper{padding:0;}
 #OutcomeOne #SubHeadWrapper section {text-align:left;}
 #SubHeadWrapper{
-    /*background:#a14103;*/
-    background:#00aad6;
-    padding:25px 0;
+    background-color: darkgray;
     
 }
 
@@ -154,7 +152,7 @@ button, .button, input.button{
 
 #AboutYou h3{
     font-size:25px;
-    color:#003366;
+    color: black;
     margin:0;
 }
 
@@ -170,11 +168,10 @@ button, .button, input.button{
 }
 
 #orangeBG{
-    background:url(../images/bg/blueBG.png) repeat;
+    background-color: whitesmoke;
 }
 
 #OutcomeQuestion{
-
     text-align:center;
     position:relative;
     padding-top:0;
@@ -220,14 +217,14 @@ button, .button, input.button{
 }
 
 #ProgressBar li.lastChild span{
-    color:#fff;
+    color: black;
 
 }
 
 
 #SubHeadWrapper h2 {
     font-size:25px;
-    color:#fff;
+    color:black;
     margin-bottom:0;
         
 }
@@ -394,7 +391,7 @@ button.changeAddress:hover{
 }
 
 .searchInput,.searchInput:focus{
-    border:0;
+    border: darkgrey 1px solid;
     outline:0;
     width:95%;
 
@@ -512,6 +509,7 @@ button.changeAddress:hover{
 
 #AboutYou .medium input{
     width:280px;
+    border: darkgrey 1px solid;
 }
 
 #AboutYou .small input{
@@ -539,7 +537,7 @@ button.changeAddress:hover{
 }
 
 #PersonalDetails #AboutYou h3{
-    border-bottom: 1px solid #003366;
+    border-bottom: 1px solid darkgray;
     margin-top:20px;
 }
 
@@ -1022,7 +1020,7 @@ ul.firstChild li, ul.lastChild li{
 }
 
 #SubHeadWrapper .seventy h3{
-    color:#fff;
+    color:black;
 }
 
 #orangeBG .emergencyOutcome{
