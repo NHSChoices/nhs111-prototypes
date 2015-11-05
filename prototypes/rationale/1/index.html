@@ -172,16 +172,16 @@
             }
 
             $("#arrow").click(function (event) {
-              $("#arrow-Text").toggle();
+              
 
               if ($("#arrow-Text").is(':visible'))
               {
-                DoRotate(180, "#arrow-div");
-              } else {
+                $("#arrow-Text").fadeOut();
                 DoRotate(0, "#arrow-div");
+              } else {
+                $("#arrow-Text").fadeIn();
+                DoRotate(180, "#arrow-div");
               }
-              
-
             });
 
         });
