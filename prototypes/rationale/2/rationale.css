@@ -1,5 +1,5 @@
 .icon {
-     position:absolute;
+    position:absolute;
     background: url(info_32x32.png);
     width: 32px;
     height: 32px;
@@ -13,7 +13,7 @@
     bottom: -32px;
     right: -32px;
     width: 400px;
-    background: darkgray;
+    background: white;
     font-size: medium;
     color: darkred;
 }
