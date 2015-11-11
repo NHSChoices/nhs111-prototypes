@@ -3,7 +3,7 @@ html {
      overflow: -moz-scrollbars-vertical;
      overflow: scroll;
      background-image:none;
-     background:none;
+     background:lightgrey;
      outline:none;
 }
 
@@ -21,17 +21,23 @@ body {
 .content-container{
     max-width:1020px;
     margin:0 auto;
-
 }
 
 p {
 	margin:0 0 20px 0;
 	padding:0;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: black;
+}
+
+h3 {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 a{
-	color:black;
 	text-decoration:none;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+
 }
 
 a:hover{
@@ -50,7 +56,7 @@ body ul {
 	padding:0;
 }
 #homePage #wrapper{
-      background:#00b8e7;
+      background:whitesmoke;
 }
 
 #wrapper {
@@ -62,7 +68,6 @@ body ul {
 }
 .global-header__wrapper {
 	padding:0 30px;
-	
 	margin: 0 auto;
 	max-width: 1020px;
 	overflow: hidden;
@@ -88,6 +93,7 @@ h1 {
 h2 {
 	font-size:22px;
 	color:#31420c;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 .standout {
 	font-size:25px;
@@ -568,7 +574,7 @@ clear: both;
 }
 .search {
 	width:60%;
-	background: url("../img/bg/searchGlass.jpg") no-repeat scroll 99% 10px white;
+	/*background: url("../img/bg/searchGlass.jpg") no-repeat scroll 99% 10px white;*/
 	border:1px solid #d9d9d9;
 	border-bottom:2px solid #d9d9d9;
 	border-radius:5px;
@@ -580,7 +586,9 @@ clear: both;
 	
 }
 .go {
-	background: none repeat scroll 0 0 #007ec0;
+  background: url("../img/bg/searchGlass.jpg") no-repeat scroll 99%  white;
+  background-position: center; 
+  /*background: none repeat scroll 0 0 #007ec0;*/
 	border:0;
 	border-bottom: 2px solid #015998;
 	border-radius: 5px;
@@ -591,8 +599,8 @@ clear: both;
 	font-size: 17px;
 	font-weight: bold;
 	 margin: 0 8px 0 6px;
-    padding: 14px 10px 10px;
-	width: 57px;
+   
+	width: 45px;
     text-align:center;
 }
 #linkBodySearch {
@@ -1327,7 +1335,7 @@ header .close {
 
 /*Home page styles*/
 #homePage{
-    background:#13aae1;
+    background:smokewhite;
 
 }
 
@@ -1342,13 +1350,15 @@ header .close {
     margin: 7px 0 20px;
     text-align: center;
     text-transform: uppercase;
+    background: whitesmoke;
 }
 
 #homePage #threeColumnBlock{
     clear:both;
     width:100%;
-    margin-top:80px;
+    margin-top:10px;
     text-align:center;
+
 }
 
 #homePage #columnOne{
@@ -1436,7 +1446,7 @@ header .close {
 }
 
 #footerColumnThree a{
-    color:#fff;
+    
     
 }
 
@@ -1756,7 +1766,8 @@ input.predict[type="search"] {
 }
 
 #homePage .global-header{
-    height:115px;
+    /*height:115px;*/
+  background: lightgrey;
 }
 
 #FindGP{
