@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en-GB" class="no-js not-ie8">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>NHS 111</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link href="../../base-assets/css/main.css" media="all" rel="stylesheet" type="text/css">
+  <!--<![endif]-->
+  <!--[if lte IE 8]><link href="../../base-assets/css/main-ie8.css" media="all" rel="stylesheet" type="text/css"><![endif]-->
+  <!--[if lte IE 8]>
+      <link href="../../base-assets/css/fonts-ie8.css" media="all" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <!--[if gte IE 9]><!-->
+  <!--<link href="../../base-assets/css/fonts.css" media="all" rel="stylesheet" type="text/css">
+  <link href="../../base-assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+      -->
+  <!--<![endif]-->
+  <!--<link rel="shortcut icon" href="../../base-assets/img/favicon.ico" type="image/x-icon">-->
+
+  <link rel="stylesheet" href="../../base-assets/css/jquery-ui.css">
+  <!-- STYLES -->
+  <link href="../../base-assets/css/skins/flat/yellow.css" media="all" rel="stylesheet" type="text/css">
+
+  <link href="../../base-assets/css/custom.css" media="all" rel="stylesheet" type="text/css">
+  <link href="../../base-assets/styles/vendor/jquery.nouislider.css" media="all" rel="stylesheet" type="text/css">
+  <link href="../../base-assets/styles/site.css" media="all" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../../base-assets/css/responsive.css">
+
+
+  <script src="../../base-assets/scripts/vendor/modernizr-custom.js"></script>
+  <script src="../../base-assets/scripts/jquery2.1.1.min.js"></script>
+  <script src="../../base-assets/scripts/mobileScroller.js"></script>
+
+
+
+  <script src="../../base-assets/scripts/jquery2.1.1.min.js"></script>
+  <script src="../../base-assets/scripts/jquery1.11.2-ui.min.js"></script>
+  <script src="../../base-assets/scripts/jquery.blockUI.js"></script>
+
+  <script src="../../base-assets/scripts/custom.js"></script>
+
+
+
+</head>
+
+
+
+
+<body id="homePage" class="homePageNew">
+  <div id="wrapper">
+    <header role="banner" class="global-header">
+      <div class="global-header__wrapper">
+        <div class="global-header__logo">
+          <a href="/" title="Go to Homepage" class="logo"> <img src="../../base-assets/img/med-logo.png" alt="MED"> </a>
+        </div>
+        <!--<div id="logStatus"> <span title="Logged in as Kevin">Welcome back <strong>Kevin</strong></span> </div>-->
+      </div>
+    </header>
+    <div class="content-container">
+      <div id="content">
+        <form id="outerContent" action="/Question/Gender" method="POST">
+          <div id="threeColumnBlock">
+            <img src="logo.png" alt="" class="homeBanner">
+
+
+            <!--Search-->
+            <!--<div id="linkBodySearch"> <a href="#" title="Try our body search instead"><span title="Try our body search" class="left">Try our body</span> <span class="bgIcon"></span> <span class="left">search instead </span></a>
+            </div>-->
+            <input type="hidden" id="pathwayNo" name="pathwayNo" value="" />
+            
+            <div class="searchWrap">
+              <div>
+                <p>We will ask you a series of questions to assess your symptoms and immediately direct you to the best medical care</p>
+                <hr />
+                <label for="searchTags">
+                  <input type="text" class="search left rounded" id="searchTags" autocomplete="off" name="searchTags" placeholder="Search for conditions and symptoms" style="margin-left: 150px"/>
+                </label>
+                <input type="submit" class="go button search left rounded" value="" id="submitSearch">
+
+              </div>
+              <!--
+              <input type="submit" class="go button" value="Answer questions" id="submitSearch">
+              -->
+            </div>
+            <div >
+              <h3 style="font-size: 90%;">Common symptoms</h3style>
+              <ul id="commonConditions" style="font-size: 90%;">
+                <li><a href="#">Abdominal pain</a></li>
+                <li><a href="#">Fever for under 5 year olds</a></li>
+                <li><a href="#">Diarrhoea and vomiting</a></li>
+                <li><a href="#">Colds and flu</a></li>
+                <li><a href="#">Dental - toothache and dental trauma</a></li>
+
+              </ul>
+            </div>
+            <br/>
+            <hr/>
+            <div id="SearchResults">
+              <p style="font-size: 80%;">For more information about your condition or see what the N.H.S. can do for you <a href="http://www.nhs.uk/" target="_blank">visit NHS.uk</a></p>
+            </div>
+
+            <!--content end-->
+            <!--End of Search-->
+            <!--<input type="submit" class="button" id="getHelpBtn" value="Start here">
+              -->
+          </div><!--/threeColumnBlock-->
+        </form>
+
+      </div>
+      <!--content end-->
+    </div>
+    <footer>
+
+    </footer>
+  </div>
+  <!--wrapper ends-->
+  <div id="mobileScroller">
+    <div style="display:none;" class="nav_up" id="nav_up"></div>
+    <div style="display:none;" class="nav_down" id="nav_down"></div>
+  </div>
+</body>
+
+
+</html>
