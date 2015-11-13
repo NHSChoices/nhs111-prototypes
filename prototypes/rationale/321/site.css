@@ -11,6 +11,12 @@ body {
 }
 
 /* STRUCTURE */
+#HeaderWrapper {
+    padding-bottom: 0.8em;
+    border-bottom: 2px solid darkgrey;
+    background-color: #fff;
+    margin-bottom: 25px;
+}
 
 #pagewrap {
 	padding: 5px;
