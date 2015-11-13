@@ -1,9 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
-/*html {
+html {
     background-color: #fff;
     background-image: none;
-}*/
+}
 
 body { 
   font-family: 'Open Sans', sans-serif;
@@ -181,7 +181,7 @@ header, #content, #middle, #sidebar {
 
 #radio-demo {
   max-width:400px;
-  margin:75px auto 0 auto;
+  margin:25px auto 0 auto;
 }
 
 #radio-demo input[type="radio"] {
