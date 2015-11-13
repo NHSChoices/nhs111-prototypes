@@ -13,6 +13,7 @@
     <link href="../../base-assets/styles/layout.css" rel="stylesheet" media="all">
     <link href="../../base-assets/css/custom.css" media="all" rel="stylesheet" type="text/css">
     <link href="site.css" media="all" rel="stylesheet" type="text/css">
+    <link href="rationale.css" media="all" rel="stylesheet" type="text/css">
     <script src="../../base-assets/_assets/js/vendor/jquery-1.11.1.min.js"></script>
 </head>
 
@@ -25,16 +26,31 @@
 <div id="pagewrap">
 
     <section id="content">
-        <h2>Why are we asking?</h2>
+        <div class="icon-rationale"></div>
+
+            <div class="panel-rationale">
+                <h2>Why are we asking this?</h2>
+                <blockquote>
+                    <p>We are looking for any loss of consciousness including a seizure (fit).</p>
+                    <p>It's important to know if you've fainted or been unconscious at all, even if you feel okay now.</p>
+                </blockquote>
+            </div>
+        
+        <!--<h2>Why are we asking?</h2>
         <blockquote>
             <p>This means that a diagnosis has been made by a GP or hospital specialist.</p>
             <p>This does not mean that you simply suspect you have this condition.</p>
-        </blockquote>
+        </blockquote>-->
     </section>
 
     <section id="middle">
-        <h2>Have you ever been diagnosed with a <a href="#sidebar" onclick="clicky()" class="glossary">migraine?</a>
-        </h2>
+        <!--<h2>Have you ever been diagnosed with a <a href="#sidebar" onclick="clicky()" class="glossary">migraine?</a>
+        </h2>-->
+        <div class="icon-question"></div>
+        <div class="panel-question">
+            <h2>Have you fainted or blacked out IN THE LAST 24 HOURS?</h2>
+        </div>
+        
         <div id="radio-demo">
             <input name="SelectedAnswer" type="radio" id="Yes" value="{&quot;title&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:1}"/>
             <label for="Yes">Yes</label>
