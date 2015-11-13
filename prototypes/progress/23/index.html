@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 nhs-animatehtml  "> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en-GB" class="no-js not-ie8 nhs-animatehtml  ">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Prototype</title>
+    <link href="../../base-assets/_assets/css/main.css" media="all" rel="stylesheet" type="text/css">
+    <link href="../../base-assets/styles/layout.css" rel="stylesheet" media="all">
+    <link href="../../base-assets/css/custom.css" media="all" rel="stylesheet" type="text/css">
+    <link href="site.css" media="all" rel="stylesheet" type="text/css">
+    <link href="signpost.css" media="all" rel="stylesheet" type="text/css">
+    <script src="../../base-assets/_assets/js/vendor/jquery-1.11.1.min.js"></script>
+</head>
+
+<body>
+<div id="HeaderWrapper" style="background-color: #fff">
+    <header id="MainHeader" style="background-color: #fff">
+        <a href="/"><img alt="MED" src="../../base-assets/_assets/img/med-logo.png" class="siteLogo"></a>
+    </header>
+</div>
+<div id="pagewrap">
+
+    <section id="content">
+        <!--<h2>Why are we asking?</h2>
+        <blockquote>
+            <p>This means that a diagnosis has been made by a GP or hospital specialist.</p>
+            <p>This does not mean that you simply suspect you have this condition.</p>
+        </blockquote>-->
+        <div class="sign" id="outcomes">
+            <div class="sign-title">
+                Where you might need to go to get help
+            </div>
+        </div>
+    </section>
+
+    <section id="middle">
+        <!--<h2>Have you ever been diagnosed with a <a href="#sidebar" onclick="clicky()" class="glossary">migraine?</a>
+        </h2>
+        <div id="radio-demo">
+            <input name="SelectedAnswer" type="radio" id="Yes" value="{&quot;title&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:1}"/>
+            <label for="Yes">Yes</label>
+            <br/>
+            <input name="SelectedAnswer" type="radio" id="Notsure" value="{&quot;title&quot;:&quot;Not sure&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:2}"/>
+            <label for="Notsure">Not sure</label>
+            <br/>
+            <input name="SelectedAnswer" type="radio" id="No" value="{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3}"/>
+            <label for="No">No</label>
+        </div>-->
+        <div class="searchWrap">
+            <label for="searchTags">
+                <input type="text" class="search left rounded" id="searchTags" placeholder="Change question id">
+            </label>
+            <input type="button" class="go button" value="GO" onclick="javascript: changeQuestion();" >
+        </div>
+        <!--<div style="padding: 25px 15px; margin: 0px 5px 5px 5px;">
+            <a class="btn">Prev. question</a>
+            <a class="btn">Next question</a>
+        </div>-->
+    </section>
+
+    <aside id="sidebar">
+        <h2>Migraine</h2>
+        <blockquote>
+            <p>A severe headache usually felt on the side or front of the head.</p>
+            <p>Migraine headaches often have other symptoms such as nausea, vomiting or increased sensitivity to light, sound or smells.</p>
+        </blockquote>
+    </aside>
+
+    <!--<footer>
+        <h4>Footer</h4>
+        <p>Footer text</p>
+    </footer>-->
+
+</div>
+    <script>
+        var b = false;
+        function clicky() {
+            if (!b) $('#sidebar').fadeIn();
+            else $('#sidebar').fadeOut();
+            b = !b;
+
+        }
+
+        function changeQuestion() {
+            $(".sign-outcome").remove();
+            executeCypherQuery($("#searchTags").val());
+        }
+
+        var _outcomes = 0;
+        var _noQuestion = 1;
+        executeCypherQuery('PW1346.400');
+
+        function executeCypherQuery(questionId) {
+
+            $.ajax({
+                type: "POST",
+                url: "http://neo4j.pathways.nhs.uk:7475/db/data/cypher",
+                accepts: { json: "application/json" },
+                headers: {
+                    "Authorization": "Basic bmVvNGo6T2FrZ3JvdmUxMg=="
+                },
+                dataType: "json",
+                contentType: "application/json",
+                data: JSON.stringify({ "query": "MATCH p = (n:Question)-[a:Answer*1..10]->(o:Outcome) WHERE n.id = '" + questionId + "' RETURN DISTINCT(o) as Outcome, length(p) as NoQuestions ORDER BY length(p) DESC", "params": {} }),
+                success: function (data) {
+                    if (data.data.length === 0) return true;
+
+                    var noQuestions = data.data[0][_noQuestion];
+                    var outcomes = [];
+                    $.each(data.data, function (i, val) {
+                        
+                        if (noQuestions === val[_noQuestion]) {
+                            outcomes.push(val[_outcomes]);
+                            return true;
+                        }
+                        //outcomes.push(val[_outcomes]);
+                        $("#outcomes").append(createSignSegment(noQuestions, outcomes));
+                        noQuestions = val[_noQuestion];
+                        outcomes = [];
+                        outcomes.push(val[_outcomes]);
+                        if (i === data.data.length - 1) $("#outcomes").append(createSignSegment(noQuestions, outcomes));
+
+                    });
+                },
+                error: function () {
+                    alert('There was an error updating the settings');
+                }
+            });
+        }
+
+        function createSignSegment(noquestions, outcomes) {
+
+            var signSegment = "<div class=\"sign-outcome\">";
+            signSegment += createSignNoQuestions(noquestions);
+
+            signSegment += createOutcomeSegments(outcomes);
+
+            signSegment += "</div>";
+
+            signSegment += createSignSplitter();
+
+            return signSegment;
+        }
+
+        function createOutcomeSegments(outcomes) {
+
+            var outcomesSegment = "<div class=\"sign-outcome-cell w100\"><div class=\"sign-outcome w100\">";
+            $.each(outcomes, function (i, outcome) {
+                outcomesSegment += createOutcomeSegment(outcome);
+            });
+            outcomesSegment += "</div></div>";
+            return outcomesSegment;
+        }
+
+        function createOutcomeSegment(outcome) {
+            return "<div class=\"sign-outcome-row\"><p class=\"sign-outcome-cell " + getOutcomeState(outcome.data.id) + "\">" + outcome.data.title + "</p></div>";
+        }
+
+        function createSignNoQuestions(noQuestions) {
+            return "<div class=\"sign-questions-cell\">" + noQuestions + "</div>";
+        }
+
+        function createSignSplitter() {
+            return "<div class=\"sign-outcome\"><div class=\"sign-questions-cell-splitter\"></div><div class=\"sign-cell-splitter\"></div></div>";
+        }
+
+        function getOutcomeState(outcomeCode) {
+            switch(outcomeCode) {
+                case 'Dx011' :
+                    return 'emergency';
+                case 'Dx012' :
+                    return 'non-emergency';
+                default:
+                    return '';
+            }   
+        }
+    </script>
+</body>
+</html>
+
+
