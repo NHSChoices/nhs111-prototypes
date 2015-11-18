@@ -370,7 +370,7 @@ table th.numeric {
 .button-get-started {
   font-weight: bold;
   padding-right: 3rem;
-  background-image: url("/public/images/icon-button-start.svg");
+  background-image: url("../../base-assets/images/icon-button-start.svg");
   background-repeat: no-repeat;
   background-position: 95% 55%; }
 
