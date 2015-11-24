@@ -32,8 +32,13 @@
 <body id="orangeBG">
 
     <div id="HeaderWrapper">
-        <header id="MainHeader">
-            <a href="/"><img alt="MED" src="../../../base-assets/_assets/img/med-logo.png" class="siteLogo"></a>
+        <header role="banner" class="global-header">
+            <div class="global-header__wrapper">
+                <a href="/" title="Go to the homepage" class="logo">
+                    <img src="../../../base-assets/img/med-logo.png" alt="MED">
+                </a>
+            </div>
+
 
         </header>
     </div>
@@ -74,28 +79,28 @@
                         </div>
                     </section>
                 </div>
-                <div id="OutcomeQuestion">
-                    <img src="../../../base-assets/images/icons/blueArrow.png" class="arrowDown" alt="">
+                <!--<div id="OutcomeQuestion">
+                    <img src="../../base-assets/images/icons/blueArrow.png" class="arrowDown" alt="">
                     <section>
                         <h3>Would you like us to put you in touch with a suitable clinician?</h3>
                         <form action="/Outcome/DispositionSelection" method="post">
-                            <input id="Id" name="Id" type="hidden" value="Dx08">
-                            <input id="JourneyJson" name="JourneyJson" type="hidden" value="{&quot;steps&quot;:[{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Have you had a head injury IN THE LAST 7 DAYS?&quot;,&quot;questionNo&quot;:&quot;Tx1506&quot;,&quot;questionId&quot;:&quot;PW755.0&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Did the bang on the head break the skin?&quot;,&quot;questionNo&quot;:&quot;Tx1488&quot;,&quot;questionId&quot;:&quot;PW755.300&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you become breathless or more breathless than usual since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx100077&quot;,&quot;questionId&quot;:&quot;PW684.0&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you had a fit around the time of or since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx1486&quot;,&quot;questionId&quot;:&quot;PW684.100&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:5},&quot;questionTitle&quot;:&quot;Have you had any of these problems since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx3816&quot;,&quot;questionId&quot;:&quot;PW684.400&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:5},&quot;questionTitle&quot;:&quot;Have you had any of these symptoms since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx3815&quot;,&quot;questionId&quot;:&quot;PW684.300&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;Have you got any of these since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx220282&quot;,&quot;questionId&quot;:&quot;PW684.600&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you had non-stop neck pain since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx220278&quot;,&quot;questionId&quot;:&quot;PW684.500&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Are you much more difficult to rouse than usual?&quot;,&quot;questionNo&quot;:&quot;Tx1538&quot;,&quot;questionId&quot;:&quot;PW684.800&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have any new problems with vision been noticed?&quot;,&quot;questionNo&quot;:&quot;Tx220291&quot;,&quot;questionId&quot;:&quot;PW684.900&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;Have you got either of these since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx220281&quot;,&quot;questionId&quot;:&quot;PW684.1000&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;Was the injury caused by any of the following?&quot;,&quot;questionNo&quot;:&quot;Tx220279&quot;,&quot;questionId&quot;:&quot;PW684.1200&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you had a fall of 1 metre or more onto the head?&quot;,&quot;questionNo&quot;:&quot;Tx220280&quot;,&quot;questionId&quot;:&quot;PW684.1100&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you got bruising around an UNINJURED eye or ear?&quot;,&quot;questionNo&quot;:&quot;Tx221249&quot;,&quot;questionId&quot;:&quot;PW684.1400&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;IS THE INDIVIDUAL ABLE TO GET UP OFF THE FLOOR?&quot;,&quot;questionNo&quot;:&quot;Tx222608&quot;,&quot;questionId&quot;:&quot;PW684.2500&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:5},&quot;questionTitle&quot;:&quot;HAS THE INDIVIDUAL BEEN ASSAULTED?&quot;,&quot;questionNo&quot;:&quot;Tx47002&quot;,&quot;questionId&quot;:&quot;PW684.2900&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;Have you had either of these problems?&quot;,&quot;questionNo&quot;:&quot;Tx220289&quot;,&quot;questionId&quot;:&quot;PW684.3900&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you been affected by drugs or alcohol around the time of or since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx220293&quot;,&quot;questionId&quot;:&quot;PW684.4500&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you ever had brain surgery?&quot;,&quot;questionNo&quot;:&quot;Tx220294&quot;,&quot;questionId&quot;:&quot;PW684.4600&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you vomited since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx221228&quot;,&quot;questionId&quot;:&quot;PW684.5600&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Have you had a headache since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx222589&quot;,&quot;questionId&quot;:&quot;PW684.5800&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;Is it severe or getting worse?&quot;,&quot;questionNo&quot;:&quot;Tx221227&quot;,&quot;questionId&quot;:&quot;PW684.6000&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;Have either of the following been noticed since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx3413&quot;,&quot;questionId&quot;:&quot;PW684.5700&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Do you have a problem opening the jaw properly?&quot;,&quot;questionNo&quot;:&quot;Tx220340&quot;,&quot;questionId&quot;:&quot;PW684.6100&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you got pain or swelling that is getting worse?&quot;,&quot;questionNo&quot;:&quot;Tx3420&quot;,&quot;questionId&quot;:&quot;PW684.6200&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;Does either of these apply to the individual?&quot;,&quot;questionNo&quot;:&quot;Tx1241&quot;,&quot;questionId&quot;:&quot;PW684.6800&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Was the blow to the head enough to knock the individual to the ground?&quot;,&quot;questionNo&quot;:&quot;Tx221239&quot;,&quot;questionId&quot;:&quot;PW684.6700&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Have you had any painkillers?&quot;,&quot;questionNo&quot;:&quot;Tx220374&quot;,&quot;questionId&quot;:&quot;PW684.7200&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Has the medication helped the pain?&quot;,&quot;questionNo&quot;:&quot;Tx220375&quot;,&quot;questionId&quot;:&quot;PW684.7400&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Are there 3 or more separate injuries?&quot;,&quot;questionNo&quot;:&quot;Tx1139&quot;,&quot;questionId&quot;:&quot;PW684.8400&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;4003&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;IS THE PROBLEM DUE TO SELF-HARM?&quot;,&quot;questionNo&quot;:&quot;Tx160017&quot;,&quot;questionId&quot;:&quot;PW684.8300&quot;,&quot;jtbs&quot;:false}]}">
-                            <input id="PathwayId" name="PathwayId" type="hidden" value="P1163">
-                            <input id="PathwayNo" name="PathwayNo" type="hidden" value="PW755">
-                            <input id="PathwayTitle" name="PathwayTitle" type="hidden" value="Headache">
-                            <input id="SymptomGroup" name="SymptomGroup" type="hidden" value="1110">
-                            <input data-val="true" data-val-number="The field Age must be a number." data-val-required="The Age field is required." id="UserInfo_Age" name="UserInfo.Age" type="hidden" value="8">
-                            <input id="UserInfo_Gender" name="UserInfo.Gender" type="hidden" value="Male">
+                            <input id="Id" name="Id" type="hidden" value="Dx11">
+                            <input id="JourneyJson" name="JourneyJson" type="hidden" value="{&quot;steps&quot;:[{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Has the individual been told to follow a particular course of action when they are ill?&quot;,&quot;questionNo&quot;:&quot;Tx222207&quot;,&quot;questionId&quot;:&quot;PW1750.0&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;Contact the doctor (specify)&quot;,&quot;symptomDiscriminator&quot;:&quot;4003&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;What course of action has been recommended?&quot;,&quot;questionNo&quot;:&quot;Tx220067&quot;,&quot;questionId&quot;:&quot;PA99.0&quot;,&quot;jtbs&quot;:false}]}">
+                            <input id="PathwayId" name="PathwayId" type="hidden" value="P1214">
+                            <input id="PathwayNo" name="PathwayNo" type="hidden" value="PW1750">
+                            <input id="PathwayTitle" name="PathwayTitle" type="hidden" value="Known Mental Health Problems Worsening">
+                            <input id="SymptomGroup" name="SymptomGroup" type="hidden" value="1140">
+                            <input data-val="true" data-val-number="The field Age must be a number." data-val-required="The Age field is required." id="UserInfo_Age" name="UserInfo.Age" type="hidden" value="45">
+                            <input id="UserInfo_Gender" name="UserInfo.Gender" type="hidden" value="Female">
                             <input id="SymptomDiscriminator" name="SymptomDiscriminator" type="hidden" value="4003">
-                            <input id="Title" name="Title" type="hidden" value="contact a clinician about your symptoms within 24 hours">
+                            <input id="Title" name="Title" type="hidden" value="speak to a Primary Care Service within 1 hour">
                             <input id="UserInfo_FirstName" name="UserInfo.FirstName" type="hidden" value="">
                             <input id="UserInfo_LastName" name="UserInfo.LastName" type="hidden" value="">
                             <input data-val="true" data-val-date="The field DoB must be a date." id="UserInfo_DoB" name="UserInfo.DoB" type="hidden" value="">
                             <input id="UserInfo_TelephoneNumber" name="UserInfo.TelephoneNumber" type="hidden" value="">
-                            <input data-val="true" data-val-required="The UserId field is required." id="UserId" name="UserId" type="hidden" value="53dea7f4-c3c8-4b30-9f41-b005f72d1f1d">
-                            <input id="StateJson" name="StateJson" type="hidden" value="{&quot;PATIENT_AGE&quot;:&quot;33&quot;,&quot;PATIENT_GENDER&quot;:&quot;\&quot;M\&quot;&quot;,&quot;PATIENT_PARTY&quot;:&quot;1&quot;,&quot;Headache&quot;:&quot;\&quot;present\&quot;&quot;}">
-                            <input id="PreviousStateJson" name="PreviousStateJson" type="hidden" value="{&quot;PATIENT_AGE&quot;:&quot;33&quot;,&quot;PATIENT_GENDER&quot;:&quot;\&quot;M\&quot;&quot;,&quot;PATIENT_PARTY&quot;:&quot;1&quot;,&quot;Headache&quot;:&quot;\&quot;present\&quot;&quot;}">
+                            <input data-val="true" data-val-required="The UserId field is required." id="UserId" name="UserId" type="hidden" value="b14c0904-aff6-4662-bdfc-179845f5827b">
+                            <input id="StateJson" name="StateJson" type="hidden" value="{&quot;PATIENT_AGE&quot;:&quot;33&quot;,&quot;PATIENT_GENDER&quot;:&quot;\&quot;M\&quot;&quot;,&quot;PATIENT_PARTY&quot;:&quot;1&quot;}">
+                            <input id="PreviousStateJson" name="PreviousStateJson" type="hidden" value="{&quot;PATIENT_AGE&quot;:&quot;33&quot;,&quot;PATIENT_GENDER&quot;:&quot;\&quot;M\&quot;&quot;,&quot;PATIENT_PARTY&quot;:&quot;1&quot;}">
 
 
                             <div class="row">
@@ -105,23 +110,23 @@
                         </form>
 
                         <form action="/Question/Navigation" method="post">
-                            <input id="Id" name="Id" type="hidden" value="Dx08">
-                            <input id="JourneyJson" name="JourneyJson" type="hidden" value="{&quot;steps&quot;:[{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Have you had a head injury IN THE LAST 7 DAYS?&quot;,&quot;questionNo&quot;:&quot;Tx1506&quot;,&quot;questionId&quot;:&quot;PW755.0&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Did the bang on the head break the skin?&quot;,&quot;questionNo&quot;:&quot;Tx1488&quot;,&quot;questionId&quot;:&quot;PW755.300&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you become breathless or more breathless than usual since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx100077&quot;,&quot;questionId&quot;:&quot;PW684.0&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you had a fit around the time of or since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx1486&quot;,&quot;questionId&quot;:&quot;PW684.100&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:5},&quot;questionTitle&quot;:&quot;Have you had any of these problems since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx3816&quot;,&quot;questionId&quot;:&quot;PW684.400&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:5},&quot;questionTitle&quot;:&quot;Have you had any of these symptoms since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx3815&quot;,&quot;questionId&quot;:&quot;PW684.300&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;Have you got any of these since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx220282&quot;,&quot;questionId&quot;:&quot;PW684.600&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you had non-stop neck pain since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx220278&quot;,&quot;questionId&quot;:&quot;PW684.500&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Are you much more difficult to rouse than usual?&quot;,&quot;questionNo&quot;:&quot;Tx1538&quot;,&quot;questionId&quot;:&quot;PW684.800&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have any new problems with vision been noticed?&quot;,&quot;questionNo&quot;:&quot;Tx220291&quot;,&quot;questionId&quot;:&quot;PW684.900&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;Have you got either of these since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx220281&quot;,&quot;questionId&quot;:&quot;PW684.1000&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;Was the injury caused by any of the following?&quot;,&quot;questionNo&quot;:&quot;Tx220279&quot;,&quot;questionId&quot;:&quot;PW684.1200&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you had a fall of 1 metre or more onto the head?&quot;,&quot;questionNo&quot;:&quot;Tx220280&quot;,&quot;questionId&quot;:&quot;PW684.1100&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you got bruising around an UNINJURED eye or ear?&quot;,&quot;questionNo&quot;:&quot;Tx221249&quot;,&quot;questionId&quot;:&quot;PW684.1400&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;IS THE INDIVIDUAL ABLE TO GET UP OFF THE FLOOR?&quot;,&quot;questionNo&quot;:&quot;Tx222608&quot;,&quot;questionId&quot;:&quot;PW684.2500&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:5},&quot;questionTitle&quot;:&quot;HAS THE INDIVIDUAL BEEN ASSAULTED?&quot;,&quot;questionNo&quot;:&quot;Tx47002&quot;,&quot;questionId&quot;:&quot;PW684.2900&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;Have you had either of these problems?&quot;,&quot;questionNo&quot;:&quot;Tx220289&quot;,&quot;questionId&quot;:&quot;PW684.3900&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you been affected by drugs or alcohol around the time of or since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx220293&quot;,&quot;questionId&quot;:&quot;PW684.4500&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you ever had brain surgery?&quot;,&quot;questionNo&quot;:&quot;Tx220294&quot;,&quot;questionId&quot;:&quot;PW684.4600&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you vomited since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx221228&quot;,&quot;questionId&quot;:&quot;PW684.5600&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Have you had a headache since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx222589&quot;,&quot;questionId&quot;:&quot;PW684.5800&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;Is it severe or getting worse?&quot;,&quot;questionNo&quot;:&quot;Tx221227&quot;,&quot;questionId&quot;:&quot;PW684.6000&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;Have either of the following been noticed since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx3413&quot;,&quot;questionId&quot;:&quot;PW684.5700&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Do you have a problem opening the jaw properly?&quot;,&quot;questionNo&quot;:&quot;Tx220340&quot;,&quot;questionId&quot;:&quot;PW684.6100&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you got pain or swelling that is getting worse?&quot;,&quot;questionNo&quot;:&quot;Tx3420&quot;,&quot;questionId&quot;:&quot;PW684.6200&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;Does either of these apply to the individual?&quot;,&quot;questionNo&quot;:&quot;Tx1241&quot;,&quot;questionId&quot;:&quot;PW684.6800&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Was the blow to the head enough to knock the individual to the ground?&quot;,&quot;questionNo&quot;:&quot;Tx221239&quot;,&quot;questionId&quot;:&quot;PW684.6700&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Have you had any painkillers?&quot;,&quot;questionNo&quot;:&quot;Tx220374&quot;,&quot;questionId&quot;:&quot;PW684.7200&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Has the medication helped the pain?&quot;,&quot;questionNo&quot;:&quot;Tx220375&quot;,&quot;questionId&quot;:&quot;PW684.7400&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Are there 3 or more separate injuries?&quot;,&quot;questionNo&quot;:&quot;Tx1139&quot;,&quot;questionId&quot;:&quot;PW684.8400&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;4003&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;IS THE PROBLEM DUE TO SELF-HARM?&quot;,&quot;questionNo&quot;:&quot;Tx160017&quot;,&quot;questionId&quot;:&quot;PW684.8300&quot;,&quot;jtbs&quot;:false}]}">
-                            <input id="PathwayId" name="PathwayId" type="hidden" value="P1163">
-                            <input id="PathwayNo" name="PathwayNo" type="hidden" value="PW755">
-                            <input id="PathwayTitle" name="PathwayTitle" type="hidden" value="Headache">
-                            <input id="SymptomGroup" name="SymptomGroup" type="hidden" value="1110">
-                            <input data-val="true" data-val-number="The field Age must be a number." data-val-required="The Age field is required." id="UserInfo_Age" name="UserInfo.Age" type="hidden" value="8">
-                            <input id="UserInfo_Gender" name="UserInfo.Gender" type="hidden" value="Male">
+                            <input id="Id" name="Id" type="hidden" value="Dx11">
+                            <input id="JourneyJson" name="JourneyJson" type="hidden" value="{&quot;steps&quot;:[{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Has the individual been told to follow a particular course of action when they are ill?&quot;,&quot;questionNo&quot;:&quot;Tx222207&quot;,&quot;questionId&quot;:&quot;PW1750.0&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;Contact the doctor (specify)&quot;,&quot;symptomDiscriminator&quot;:&quot;4003&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;What course of action has been recommended?&quot;,&quot;questionNo&quot;:&quot;Tx220067&quot;,&quot;questionId&quot;:&quot;PA99.0&quot;,&quot;jtbs&quot;:false}]}">
+                            <input id="PathwayId" name="PathwayId" type="hidden" value="P1214">
+                            <input id="PathwayNo" name="PathwayNo" type="hidden" value="PW1750">
+                            <input id="PathwayTitle" name="PathwayTitle" type="hidden" value="Known Mental Health Problems Worsening">
+                            <input id="SymptomGroup" name="SymptomGroup" type="hidden" value="1140">
+                            <input data-val="true" data-val-number="The field Age must be a number." data-val-required="The Age field is required." id="UserInfo_Age" name="UserInfo.Age" type="hidden" value="45">
+                            <input id="UserInfo_Gender" name="UserInfo.Gender" type="hidden" value="Female">
                             <input id="SymptomDiscriminator" name="SymptomDiscriminator" type="hidden" value="4003">
-                            <input id="Title" name="Title" type="hidden" value="contact a clinician about your symptoms within 24 hours">
+                            <input id="Title" name="Title" type="hidden" value="speak to a Primary Care Service within 1 hour">
                             <input id="UserInfo_FirstName" name="UserInfo.FirstName" type="hidden" value="">
                             <input id="UserInfo_LastName" name="UserInfo.LastName" type="hidden" value="">
                             <input data-val="true" data-val-date="The field DoB must be a date." id="UserInfo_DoB" name="UserInfo.DoB" type="hidden" value="">
                             <input id="UserInfo_TelephoneNumber" name="UserInfo.TelephoneNumber" type="hidden" value="">
-                            <input data-val="true" data-val-required="The UserId field is required." id="UserId" name="UserId" type="hidden" value="53dea7f4-c3c8-4b30-9f41-b005f72d1f1d">
-                            <input id="StateJson" name="StateJson" type="hidden" value="{&quot;PATIENT_AGE&quot;:&quot;33&quot;,&quot;PATIENT_GENDER&quot;:&quot;\&quot;M\&quot;&quot;,&quot;PATIENT_PARTY&quot;:&quot;1&quot;,&quot;Headache&quot;:&quot;\&quot;present\&quot;&quot;}">
-                            <input id="PreviousStateJson" name="PreviousStateJson" type="hidden" value="{&quot;PATIENT_AGE&quot;:&quot;33&quot;,&quot;PATIENT_GENDER&quot;:&quot;\&quot;M\&quot;&quot;,&quot;PATIENT_PARTY&quot;:&quot;1&quot;,&quot;Headache&quot;:&quot;\&quot;present\&quot;&quot;}">
+                            <input data-val="true" data-val-required="The UserId field is required." id="UserId" name="UserId" type="hidden" value="b14c0904-aff6-4662-bdfc-179845f5827b">
+                            <input id="StateJson" name="StateJson" type="hidden" value="{&quot;PATIENT_AGE&quot;:&quot;33&quot;,&quot;PATIENT_GENDER&quot;:&quot;\&quot;M\&quot;&quot;,&quot;PATIENT_PARTY&quot;:&quot;1&quot;}">
+                            <input id="PreviousStateJson" name="PreviousStateJson" type="hidden" value="{&quot;PATIENT_AGE&quot;:&quot;33&quot;,&quot;PATIENT_GENDER&quot;:&quot;\&quot;M\&quot;&quot;,&quot;PATIENT_PARTY&quot;:&quot;1&quot;}">
 
 
                             <div class="row">
@@ -129,8 +134,117 @@
                             </div>
                         </form>
                     </section>
-                </div>
-            
+                </div>-->
+                <div id="AboutYou">
+                    <img src="../../../base-assets/images/icons/blueArrow.png" class="arrowDown" alt="">
+                    <section>
+                        <div id="FormWrapper">
+
+                            <div class="row">
+                                <h3>Home address</h3>
+                            </div>
+
+                            <script src="../../../base-assets/Js/vendor/spin.min.js"></script>
+                            <link rel="stylesheet" href="../../../base-assets//styles/vendor/jquery-ui.css">
+
+                        <div>
+                            <div class="row medium" id="PC">
+                                <label>
+                                    <input class="postcode" id="AddressSearchViewModel_PostCode" name="AddressSearchViewModel.PostCode" placeholder="Enter current postcode" type="text" value=""/>
+                                    <!--<input type="button" class="button submitButton searchPostcode" name="TempDosResults" value="search" id="btnSearchPostcode" style="padding: 10px 14px; width: 119px;">-->
+                                </label>
+                            </div>
+
+
+                            <!--<div class="row" id="AddressList">
+                                <label>
+                                    <span>Pick an address</span>
+                                    <select id="AddressSelect"></select>
+                                </label>
+                            </div>-->
+
+                            <div class="row enterManually">
+                                <a href="#" class="links manualEntry">I don't know my current postcode</a>
+                            </div>
+                        </div>
+
+
+                            <div class="row">
+                                <h3>Your registered GP practice</h3>
+                            </div>
+                        <div class="row">
+                            <div class="searchBox">
+                                <label for="FindGP">
+
+
+                                    <span>Find your GP practice</span>
+
+
+                                    <input type="hidden" id="FindGPId" name="SurgeryViewModel.SelectedSurgery"/>
+                                    <input type="text" id="FindGP" placeholder="Type your GP practice name" class="searchInput">
+
+                                </label>
+                            </div>
+                        </div>
+
+                            <div class="row" id="enableDisable">
+                                <input type="button" style="background: #007aaa;" class="button nextPage" name="DosResults" id="Next" value="Find available healthcare providers" onclick="location = 'step2.html'">
+                                
+                            </div>
+
+
+                            <div class="row">
+                                <input type="button" class="textLink" name="button1" id="button1" value="No, thank you">
+                            </div>
+                            <div class="row">
+                                <input class="textLink" type="button" name="PreviousQuestion" value="Change my answers">
+                            </div>
+
+                            <script>
+    $(function () {
+        $("#FindGP").click(function () {
+            $("#FindGP").val("");
+            $("#FindGPId").val("");
+        } 
+        );
+        $("#FindGP").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: '/Outcome/SearchSurgery',
+                    type: "post",
+                    data: { input: $("#FindGP").val() },
+                    success: function (data) {
+                        response(data);
+                    },
+                    error: function (textStatus, errorThrown) {
+                        return null;
+                    }
+                });
+            },
+            focus: function (event, ui) {
+                $("#FindGP").val(ui.item.Name);
+                return false;
+            },
+            select: function (event, ui) {
+                $("#FindGP").val(ui.item.Name);
+                $("#FindGPId").val(ui.item.SurgeryId);
+                $("#Next[type=submit]").removeAttr('disabled');
+                return false;
+            }
+        })
+            .autocomplete("instance")._renderItem = function (ul, item) {
+                return $("<li>")
+                    .append("<a>" + item.Name + "</a>")
+                    .appendTo(ul);
+            };
+
+    });
+
+                            </script>
+
+                        </div> <!--/FormWrapper-->
+                    </section>
+                </div> <!--/AboutYou-->
             </div> <!--/ContentWrapper-->
             <div id="FooterWrapper">
                 <footer>
