@@ -1,0 +1,62 @@
+ .panel-question {
+    background: transparent;
+    border-left: 7px solid #007aaa;
+    
+}
+
+ .nhs-page-navigation {
+       margin-bottom:20px;
+ }
+
+ .nhs-question-container {
+       padding-bottom: 0;
+     margin-bottom: 0;
+    
+ }
+
+  .panel-rationale {
+    background: transparent;
+    border-left: 7px solid #FFCF47;
+    padding: 0;
+
+    text-align: left;
+}
+
+.panel-rationale p{
+   margin: 1px;
+   margin-left: 15px;
+} 
+
+.panel-rationale h4{
+    margin: 1px;    
+    margin-left: 15px;
+   
+} 
+
+.icon-question {
+    background-image: url('question-mark.png');
+    width: 64px;
+    height: 64px;
+    float: left;
+    margin-left: 96px;
+    margin-top: 10px;
+}
+
+.icon-rationale {
+    background-image: url('info.png');
+    width: 64px;
+    height: 64px;
+    float: left; 
+    margin-left: 96px;
+    margin-top: 5px;
+}
+/*
+ .panel-question {
+    background: transparent;
+    border-left: none;
+    
+}
+
+   .panel-rationale {
+       display: none;
+}*/
