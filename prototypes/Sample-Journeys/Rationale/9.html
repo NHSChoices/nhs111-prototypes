@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 nhs-animatehtml  "> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en-GB" class="no-js not-ie8 nhs-animatehtml  ">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NHS 111</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <!--[if gt IE 8]><!-->
+    <link href="../../base-assets/_assets/css/main.css" media="all" rel="stylesheet" type="text/css"><!--<![endif]-->
+    <!--[if lte IE 8]><link href="~/content/_assets/css/main-ie8.css" media="all" rel="stylesheet" type="text/css"><![endif]-->
+    <!--[if lte IE 8]>
+      <link href="~/content/_assets/css/fonts-ie8.css" media="all" rel="stylesheet" type="text/css" />
+      <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <link href="../../base-assets/_assets/css/fonts.css" media="all" rel="stylesheet" type="text/css">
+    <!--<![endif]-->
+    <link rel="shortcut icon" href="../../base-assets/_assets/img/favicon.ico" type="image/x-icon">
+    <link href="../../base-assets/_assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../../base-assets/css/custom.css" media="all" rel="stylesheet" type="text/css">
+    <link href="rationale.css" media="all" rel="stylesheet" type="text/css">
+    <script>
+        var html = document.documentElement;
+        html.className += " js-enabled";
+
+        if (!('open' in document.createElement('details'))) {
+            document.documentElement.className += ' no-details';
+        }
+    </script>
+    <script src="../../base-assets/_assets/js/vendor/modernizr-custom.js"></script>
+    <script src="../../base-assets/_assets/js/vendor/jquery-1.11.1.min.js"></script>
+
+
+    <style>
+        .nhs-help-text {
+            color: darkred;
+            font-style: italic;
+            border-left: 1px darkgrey solid;
+            float: right;
+            margin-top: 127px;
+            font-size: 20px;
+            width: 650px;
+            padding-left: 20px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-right: 180px;
+            display: none;
+        }
+    </style>
+</head>
+<body id="timedQuestion" class="firstQuestion">
+    <form action="/Question/Navigation" method="post">
+        <input id="Id" name="Id" type="hidden" value="PW755.0"><input id="JourneyJson" name="JourneyJson" type="hidden" value="{&quot;steps&quot;:[]}"><input id="PathwayId" name="PathwayId" type="hidden" value="P1163"><input id="PathwayNo" name="PathwayNo" type="hidden" value="PW755"><input id="PathwayTitle" name="PathwayTitle" type="hidden" value="Headache"><input data-val="true" data-val-number="The field Age must be a number." data-val-required="The Age field is required." id="UserInfo_Age" name="UserInfo.Age" type="hidden" value="35"><input id="UserInfo_Gender" name="UserInfo.Gender" type="hidden" value="Male"><input id="Title" name="Title" type="hidden" value="Have you had a head injury IN THE LAST 7 DAYS?"><input id="SymptomDiscriminator" name="SymptomDiscriminator" type="hidden" value=""><input id="QuestionNo" name="QuestionNo" type="hidden" value="Tx1506"><input id="StateJson" name="StateJson" type="hidden" value="{&quot;PATIENT_AGE&quot;:&quot;35&quot;,&quot;PATIENT_GENDER&quot;:&quot;\&quot;M\&quot;&quot;,&quot;PATIENT_PARTY&quot;:&quot;1&quot;}"><input id="PreviousStateJson" name="PreviousStateJson" type="hidden" value="{&quot;PATIENT_AGE&quot;:&quot;35&quot;,&quot;PATIENT_GENDER&quot;:&quot;\&quot;M\&quot;&quot;,&quot;PATIENT_PARTY&quot;:&quot;1&quot;}">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" class="hidden svg-pie">
+          <symbol viewbox="0" id="svg10pc">
+            <path d="M65,65 L65,0 A65,65 0 0,1 56.682,0.534 z"></path>
+          </symbol>
+
+          <symbol viewbox="0" id="svg20pc">
+            <path d="M65,65 L65,0 A65,65 0 0,1 2.129,81.499 z"></path>
+          </symbol>
+        </svg> -->
+        <div class="skiplink-container">
+            <div>
+                <a href="#main" class="skiplink">Skip to main content</a>
+            </div>
+        </div>
+        <header role="banner" class="global-header">
+            <div class="global-header__wrapper">
+                <a href="/" title="Go to the homepage" class="logo">
+                    <img src="../../base-assets/img/med-logo.png" alt="MED">
+                </a>
+            </div>
+
+
+        </header>
+        <div class="nhs-page-navigation nhs-show-nav">
+            <div class="nhs-pagenav-container">
+
+            </div>
+        </div>
+
+        <div class="nhs-help-text" id="definition"><strong>Migraine:</strong><br />A severe headache usually felt on the side or front of the head. Migraine headaches often have other symptoms such as nausea, vomiting or increased sensitivity to light, sound or smells.</div>
+
+        <div class="content-container">
+            <main role="main" id="main">
+
+
+                <div class="nhs-body-container nhs-first-page nhs-animate-inout" >
+                    <!--<span class="nhs-navtriangle"></span>-->
+
+                    <div class="nhs-question-container  panel-info panel-question" style="padding-top: 20px">
+                        <h2 class="font-large nhs-the-question">Have you already seen a doctor about these symptoms?</h2>
+                    </div>
+
+
+                    <div class="panel-info panel-rationale">
+                        <h4 class="bold-small">Why are we asking this?</h4>
+                        <p>This means that an assessment of your symptoms has been made by a GP or a hospital specialist.</p>
+                    </div>
+
+                    <div class="nhs-answer-container">
+                        <div class="nhs-the-answer nhs-radiobtn inline">
+                            <input name="SelectedAnswer" type="radio" id="Yes" value="{&quot;title&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:1}" class=" nhs-radiobtn__input">
+                            <label for="Yes" class="nhs-radiobtn__label">Yes</label>
+                            <input name="SelectedAnswer" type="radio" id="Notsure" value="{&quot;title&quot;:&quot;Not sure&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:2}" class=" nhs-radiobtn__input">
+                            <label for="Notsure" class="nhs-radiobtn__label">Not sure</label>
+                            <input name="SelectedAnswer" type="radio" id="No" value="{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3}" class=" nhs-radiobtn__input">
+                            <label for="No" class="nhs-radiobtn__label">No</label>
+                        </div>
+                    </div>
+
+
+                    <div class="nhs-button-container">
+
+                        <a id="previousScreen" class="button" name="PreviousQuestion" value="Question" href="8.html">Prev. question</a>
+                        <a id="nextScreen" class="button" name="Question" value="Question" href="#">Next question</a>
+
+
+                    </div>
+
+                </div>
+            </main>
+        </div>
+        <!-- <div class="footer">FOOTER TEST</div> -->
+        <script src="../../base-assets/_assets/js/vendor/fastclick.js"></script>
+        <script src="../../base-assets/_assets/js/scripts.js"></script>
+        <script src="../../base-assets/_assets/js/vendor/jstorage.js"></script>
+        <!-- Prototype specific scripts -->
+        <script src="../../base-assets/_assets/js/vendor/jquery.cookie.js"></script>
+    </form>
+    <script>
+        $(document).ready(function () {
+
+            //enable disable submit button
+            $("#timedQuestion #nextScreen").attr('disabled', 'disabled');
+
+            $("#timedQuestion label").click(function () {
+                $("#nextScreen").removeAttr('disabled');
+                $("input[type=submit]").removeAttr('disabled');
+                $("#nextScreen").attr('href', "Disposition/step1.html");
+            });
+
+            $("#timedQuestion input[type=radio]").click(function () {
+                $("button[type=submit]").removeAttr('disabled');
+                $("input[type=submit]").removeAttr('disabled');
+            });
+
+
+
+
+        });
+        var b = false;
+        function clicky() {
+            if (!b) $('#definition').fadeIn();
+            else $('#definition').fadeOut();
+            b = !b;
+
+        }
+    </script>
+
+</body>
+</html>
