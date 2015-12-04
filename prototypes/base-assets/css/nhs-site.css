@@ -376,7 +376,7 @@ table th.numeric {
 
 .button-cancel {
   padding-right: 3rem;
-  background-image: url("/public/images/icon-button-cancel.svg");
+  background-image: url("../../base-assets/images/icon-button-cancel.svg");
   background-repeat: no-repeat;
   background-position: 92% 50%;
   background-color: #9B004F;
@@ -402,7 +402,7 @@ table th.numeric {
   font-size: 16px;
   font-weight: bold;
   padding-right: 2.5rem;
-  background-image: url("/public/images/icon-button-start.svg");
+  background-image: url("../../base-assets/images/icon-button-start.svg");
   background-repeat: no-repeat;
   background-position: 97.5% 57.5%; }
   .button-secondary-cta:link, .button-secondary-cta:hover, .button-secondary-cta:focus, .button-secondary-cta:visited {
@@ -955,9 +955,9 @@ details .panel-indent {
 .item-header .item-collapse-link {
   border-top: 1px solid #fff; }
   .item-header .item-collapse-link:before {
-    background-image: url('/public/images/icon-triangle-closed-black.svg'); }
+    background-image: url('../../base-assets/images/icon-triangle-closed-black.svg'); }
   .item-open .item-header .item-collapse-link:before {
-    background-image: url('/public/images/icon-triangle-open-black.svg'); }
+    background-image: url('../../base-assets/images/icon-triangle-open-black.svg'); }
 
 .item-cta .item-header .item-heading {
   background-color: #231f20; }
