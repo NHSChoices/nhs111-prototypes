@@ -20,7 +20,7 @@
 </head>
 <body class="js-enabled js-enabled">
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
-
+    
     <header role="banner" id="global-header">
         <div class="header-container">
 
@@ -37,8 +37,9 @@
 
 
     <div class="service-header">
-        <div class="service-name">
-            You’ve reached the end of your online assessment.
+        <div class="service-name" style="background: url('SteppedIcons_4.png') no-repeat center center; height: 140px; vertical-align: bottom;"></div>
+        <div class="service-name" style="padding-left: 275px;">
+            You’ve finished your online assessment.
         </div>
     </div>
 
@@ -47,13 +48,11 @@
     <main id="content" class="planner" role="main">
         <section>
             <div class="js-cards items-container">
-
-
-                <div class="item item-open" id="test-results">
-                    <div class="item-content">
+                <div class="item" id="outcome-results">
+                    <div class="item-content" style="border-bottom-color: black; padding: 1px;">
                         <div class="item-header">
                             <span class="item-heading">
-                                We recommend you contact your GP urgently.
+                                We’d like to get a clinician to speak to you about your symptoms.
                             </span>
                             <div class="item-leadin">
 
@@ -61,10 +60,105 @@
                             <div class="item-leadin-cta">
 
                             </div>
-                            <!--<a href="#" class="item-collapse-link">Show less</a>-->
+
                         </div>
 
-                        <div class="item-body item-body-collapsed" id="outcome" style="height: auto;">
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <!--<header>
+                <h2>Things to do now</h2>
+            </header>-->
+
+            <div class="js-cards items-container">
+
+
+                <div class="item item-cta" id="search" style="padding-bottom: 12px;">
+                    <div class="item-content" style="border-bottom-color: black; padding: 1px;">
+                        <div class="item-header">
+                            <span class="item-heading">
+                                Let us contact a Clinician for you
+                            </span>
+                            <div class="item-leadin">
+
+                                <div class="item-leadin-content">
+                                    Please enter your details below to help us find your local services. We’ll get you an appointment or a clinician will call you. 
+                                </div>
+                                <div class="item-leadin-content">
+                                    You will need to provide your postcode and current GP Practice.
+                                </div>
+                            </div>
+                            <div class="item-leadin-cta">
+
+                                <a href="book-blood-test?" class="button item-permanent-cta button-get-started">
+                                    Contact now
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <div class="item-body item-body-collapsed" style="height: auto;" id="search-form">
+
+                            <div class="item-body-content">
+                                <div class="form-item-wrapper">
+                                    <fieldset>
+                                        <legend class="form-label-bold">Current location</legend>
+                                        <div class="form-group">
+                                            <label class="form-label" for="first-label">
+                                                Postcode of current location
+                                            </label>
+                                            <input type="text" id="first-label" class="form-control">
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="form-item-wrapper">
+                                    <fieldset>
+                                        <legend class="form-label-bold">Your registered GP practice</legend>
+                                        <div class="form-group">
+                                            <label class="form-label" for="second-label">
+                                                Name of GP practice (optional)
+                                            </label>
+                                            <input type="text" id="second-label" class="form-control">
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="item item-cta" id="book-your-first-eye-test">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <span class="item-heading">
+                                Get health advice 
+                            </span>
+                            <div class="item-leadin">
+
+                                <div class="item-leadin-content">
+                                    Here is some information that may help your symptoms while you wait to speak to a clinician. 
+                                </div>
+
+                            </div>
+                            <!--div class="item-leadin-cta">
+
+                                <a href="book-eye-test?" class="button item-permanent-cta button-get-started">
+                                    Get advice
+                                </a>
+
+                            </div>-->
+                            <a href="#" class="item-collapse-link">
+                                Show information to help my symptoms now
+                            </a>
+                        </div>
+
+                        <div class="item-body item-body-collapsed" id="selfcare" style="height: 0px;">
                             <div class="test-results">
                                 <div class="primary">
                                     <h2>Self care advice</h2>
@@ -82,100 +176,21 @@
 
                             </div>
 
-                            <!--<div class="item-body-content">
-                                <h2>What you can do now</h2>
-
-                                <ul class="list-bullet">
-                                    <li>find an available healthcare provider</li>
-                                    <li>change your answers</li>
-                                    <li>start again</li>
-                                </ul>
-                            </div>-->
-                            <!--<div class="item-collapse" style="display: none;">
-                                <a href="#" class="item-collapse-link" tabindex="0">Show less</a>
-                            </div>-->
+                            <div class="item-collapse" style="display: none;">
+                                <a href="#" class="item-collapse-link" tabindex="0">Hide information to help my symptoms now</a>
+                            </div>
                         </div>
+
+
                     </div>
                     <div class="shadow"></div>
                 </div>
 
-
-
-            </div>
-        </section>
-
-        <section>
-            <header>
-                <h2>Things to do now</h2>
-            </header>
-
-            <div class="js-cards items-container">
-
-
-                <div class="item item-cta" id="book-your-blood-test">
-                    <div class="item-content">
-                        <div class="item-header">
-                            <span class="item-heading">
-                                Find available healthcare providers
-                            </span>
-                            <div class="item-leadin">
-
-                                <div class="item-leadin-content">
-                                    You will need to provide your postcode and current GP Practice
-                                </div>
-
-                            </div>
-                            <div class="item-leadin-cta">
-
-                                <a href="book-blood-test?" class="button item-permanent-cta button-get-started">
-                                    Find now
-                                </a>
-
-                            </div>
-                            <a href="#" class="item-collapse-link">
-                                Show more
-                            </a>
-                        </div>
-
-                        <div class="item-body item-body-collapsed" style="height: 0px;">
-
-                            <div class="item-body-content">
-                                <div class="form-item-wrapper">
-                                    <fieldset>
-                                        <legend class="form-label-bold">Home address</legend>
-                                        <div class="form-group">
-                                            <label class="form-label" for="first-label">
-                                                Enter current postcode
-                                            </label>
-                                            <input type="text" id="first-label" class="form-control">
-                                        </div>
-                                    </fieldset>
-                                </div>
-                                <div class="form-item-wrapper">
-                                    <fieldset>
-                                        <legend class="form-label-bold">Your registered GP practice</legend>
-                                        <div class="form-group">
-                                            <label class="form-label" for="second-label">
-                                                Type your GP practice name
-                                            </label>
-                                            <input type="text" id="second-label" class="form-control">
-                                        </div>
-                                    </fieldset>
-                                </div>
-                            </div>
-
-                            <div class="item-collapse">
-                                <a href="#" class="item-collapse-link" tabindex="0">Show less</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="shadow"></div>
-                </div>
 
 
 
                 <div class="item item-cta" id="book-your-first-diabetes-review">
-                    <div class="item-content">
+                    <div class="item-content" style="border-bottom-color: black; padding: 1px;">
                         <div class="item-header">
                             <span class="item-heading">
 
@@ -198,43 +213,8 @@
                         </div>
 
                     </div>
-                    <div class="shadow"></div>
+
                 </div>
-
-
-
-                <div class="item item-cta" id="book-your-first-eye-test">
-                    <div class="item-content">
-                        <div class="item-header">
-                            <span class="item-heading">
-
-                                Finish your session
-
-                            </span>
-                            <div class="item-leadin">
-
-                                <div class="item-leadin-content">
-                                    Your answers will not be saved
-                                </div>
-
-                            </div>
-                            <div class="item-leadin-cta">
-
-                                <a href="book-eye-test?" class="button item-permanent-cta button-get-started">
-                                    Finish now
-                                </a>
-
-                            </div>
-                            <!--<a href="#" class="item-collapse-link">
-                                Show more
-                            </a>-->
-                        </div>
-
-
-                    </div>
-                    <div class="shadow"></div>
-                </div>
-
 
 
 
@@ -253,7 +233,7 @@
 
                 <p>
                     <small>
-
+                        
                     </small>
                 </p>
 
@@ -266,16 +246,30 @@
 
     <div id="global-app-error" class="app-error hidden"></div>
 
-    <script>
-        $(document).ready(function () {
+<script>
+    
+    $item = $('#outcome-results');
+    $toggleLink = $item.find('.item-header .item-collapse-link');
+    $toggleLink.text('Show information to help my symptoms now');
 
-            $('#outcome').css('height', 'auto');
+    $(document).ready(function () {
 
+        $('#outcome').css('height', 'auto');
 
+        $('.items-container').on('click', '.item', function (event) {
+            //$item = $(this);
+            //$toggleLink = $item.find('.item-header .item-collapse-link');
 
-
+            if ($item.hasClass('item-open')) {
+                $toggleLink.text('Show information to help my symptoms now');
+            } else {
+                $toggleLink.text('Hide information to help my symptoms now');
+            }
         });
-    </script>
+    });
+
+
+</script>
 
 
 
