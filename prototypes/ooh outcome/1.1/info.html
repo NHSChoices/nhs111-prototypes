@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0054)http://nhsalpha.herokuapp.com/register-with-a-gp/start -->
+<html lang="">
+<script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>}Health site</title>
+    <link href="../../base-assets/css/nhs-site.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="../../base-assets/css/nhs-fonts.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" rel="icon" type="image/x-icon">
+
+    <script src="../../base-assets/_assets/js/vendor/jquery-1.11.1.min.js"></script>
+    <script src="../../base-assets/_assets/js/vendor/jquery.easing.1.3.js"></script>
+    <script src="../../base-assets/_assets/js/vendor/jquery.transit.js"></script>
+    <script src="../../base-assets/js/cards.js"></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        .telicon {
+            background: url("../../base-assets/images/bg/telephone.png") no-repeat left -2px;
+            padding-left: 30px;
+            height: 29px;
+        }
+
+        .webicon {
+            background: url("../../base-assets/images/bg/website.png") no-repeat left center;
+            padding-left: 30px;
+        }
+    </style>
+</head>
+<body class="js-enabled js-enabled">
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    
+    <header role="banner" id="global-header">
+        <div class="header-container">
+
+            <a href="/" class="header-logo" title="Go to the NHS.UK homepage">
+                <img src="../../base-assets/img/nhs-med-logo.png" alt="">
+            </a>
+            
+
+
+        </div>
+    </header>
+    <!--end header-->
+
+
+
+    <div class="service-header">
+        <div class="service-name" style="background: url('SteppedIcons_4.png') no-repeat center center; height: 140px; vertical-align: bottom;"></div>
+        <div class="service-name" style="padding-left: 275px;">
+            Contact the healthcare provider.
+        </div>
+    </div>
+
+    <main id="content" role="main">
+
+        <h1 class="heading-xlarge">
+            Enter your details
+        </h1>
+        <p class="lede">
+            These are required so we can let the healthcare provider know who you are.
+        </p>
+        <form action="" method="get" class="form">
+
+
+            <div class="form-item-wrapper">
+                <div class="form-group">
+                    <label class="form-label-bold" for="name">
+                        Full name
+                    </label>
+
+                    <input type="text" id="name" name="name" value="" class="form-control ">
+                </div>
+            </div>
+
+
+
+            <div class="form-item-wrapper">
+                <fieldset>
+                    <legend class="form-label-bold">
+                        Date of birth
+                    </legend>
+
+                    <p class="form-hint">For example 31 7 1961</p>
+
+                    <div class="inline-form-groups">
+                        <div class="form-group">
+                            <label class="form-label" for="dob-day">Day</label>
+                            <input class="form-control form-control-2-chars" id="dob-day" type="number" min="0" max="31">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="dob-month">Month</label>
+                            <input class="form-control form-control-2-chars" id="dob-month" type="number" min="0" max="12">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="dob-year">Year</label>
+                            <input class="form-control form-control-4-chars" id="dob-year" type="number" min="0">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="form-item-wrapper">
+                <div class="form-group">
+                    <label class="form-label-bold" for="telephone">
+                        Telephone number
+                    </label>
+
+                    <input type="text" id="telephone" name="telephone" value="" class="form-control ">
+                </div>
+            </div>
+            
+
+            <div class="form-item-wrapper">
+                <div class="form-group">
+                    <label class="form-label-bold" for="email">
+                        Email address
+                    </label>
+
+                    <input type="text" id="email" name="email" value="" class="form-control ">
+                </div>
+            </div>
+
+
+
+            <div class="form-item-wrapper">
+                <fieldset class="form-group">
+                    <label class="form-label-bold" for="address-1">
+                        Address (Optional)
+                    </label>
+
+                    <p class="form-hint">As you’d write it on an envelope</p>
+
+                    <input type="text" id="address-1" class="form-control form-group-related" value="">
+                    <input type="text" class="form-control form-group-related" value="">
+                    <input type="text" class="form-control form-group-related" value="">
+                    <input type="text" class="form-control form-group-related" value="">
+                    <input type="text" class="form-control form-group-related" value="">
+                    <input type="text" class="form-control" value="">
+                </fieldset>
+            </div>
+
+            
+            <div class="form-item-wrapper">
+                <div class="form-group">
+                    <label class="form-label-bold" for="nhs-number">
+                        NHS number (optional)
+                    </label>
+
+                    <p class="form-hint">If you know it — for example 943 476 5919</p>
+
+                    <input type="text" id="nhs-number" name="nhs-number" value="" class="form-control form-control-1-4">
+                </div>
+            </div>
+
+
+
+            <div class="form-item-wrapper">
+                <div class="form-group">
+
+                    <a href="confirmation.html" class="button ">Next</a>
+
+                </div>
+            </div>
+
+
+        </form>
+    </main>
+
+    <footer id="footer" role="contentinfo">
+
+        <div class="footer-wrapper">
+
+            <div class="text">
+
+                <p>
+                    <small>
+                        
+                    </small>
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <div id="global-app-error" class="app-error hidden"></div>
+
+<script>
+    
+    
+    $(document).ready(function () {
+
+        
+    });
+
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
