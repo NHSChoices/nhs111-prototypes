@@ -40,7 +40,8 @@
 
     <main id="content" class="planner" role="main">
         <section>
-            <div style="text-align: center; font-weight: 400;">You’ve finished your online assessment.</div>
+            <div style="text-align: center; font-weight: bold; padding-bottom: 0.5rem;">You’ve finished your online assessment.</div>
+            <div style="text-align: center;">We recommend that you speak to a clinician within 2 hours</div>
         </section>
         
         <section>
@@ -52,26 +53,29 @@
 
 
                 <div class="item item-cta" id="search" style="padding-bottom: 12px;">
-                    <div class="item-content" style="border: none;">
+                    <div class="item-content" style="border: none; cursor: default;">
                         <div class="item-header">
-                            <span class="item-heading" style="text-align: center; background-color: #0072C6; padding-right: 2rem;">
-                                We recommend that you speak to a clinician within 2 hours
+                            <span style="text-align: center; background-color: #0072C6; padding-top: 0.75rem; padding-right: 2rem; display: block; color: white; font-weight: bold;">
+                                Let us contact a healthcare provider near you
+                            </span>
+                            <span style="text-align: center; background-color: #0072C6; padding: 0 2rem 0.75rem 0; font-size: 1.2rem; display: block; color: white;">
+                                Please enter your details below to find a healthcare provider and they will contact you
                             </span>
                         </div>
 
                         <div class="item-body item-body-collapsed" style="height: auto;" id="search-form">
 
                             <div class="item-body-content">
-                                <div style="color: #0072C6;">Let us contact a healthcare provider near you</div>
-                                <div style="font-size: 1.1rem; font-weight: lighter;">Please enter your details below to find a healthcare provider and they will contact you</div>
-                                <div class="form-item-wrapper">
+                                <!--<div style="color: #0072C6;">Let us contact a healthcare provider near you</div>-->
+                                <!--<div style="font-size: 1.1rem; font-weight: lighter;">Please enter your details below to find a healthcare provider and they will contact you</div>-->
+                                <div class="form-item-wrapper" style="padding: 0;">
                                     <fieldset>
                                         <!--<legend class="form-label-bold">Current location</legend>-->
                                         <div class="form-group">
-                                            <!--<label class="form-label" for="first-label">
+                                            <label class="form-label" for="first-label" style="color: #0072C6;">
                                                 Postcode of current location
-                                            </label>-->
-                                            <input type="text" id="first-label" class="form-control" placeholder="Current location" style="border: 1px solid #0072C6; font-size: 1.2rem;">
+                                            </label>
+                                            <input type="text" id="first-label" class="form-control" style="border: 1px solid #0072C6; font-size: 1.2rem;">
                                             <div style="border-left: 3px solid #0072C6; margin: 10px 0 5px 0; padding: 5px;">
                                                 <div style="font-size: 1.2rem; color: #0072C6; font-weight: bold;">Why we need this</div>
                                                 <div style="font-size: 1.1rem; font-weight: normal;">So we can offer details of healthcare providers available near to where you are right now</div>
@@ -80,14 +84,14 @@
                                         
                                     </fieldset>
                                 </div>
-                                <div class="form-item-wrapper">
+                                <div class="form-item-wrapper" style="padding: 0;">
                                     <fieldset>
                                         <!--<legend class="form-label-bold">Your registered doctors practice</legend>-->
                                         <div class="form-group">
-                                            <!--<label class="form-label" for="second-label">
-                                                Name of doctors practice (optional)
-                                            </label>-->
-                                            <input type="text" id="second-label" class="form-control" placeholder="Name of your GP practice (optional)" style="border: 1px solid #0072C6; font-size: 1.2rem;">
+                                            <label class="form-label" for="first-label" style="color: #0072C6;">
+                                                Name of your GP practice (optional)
+                                            </label>
+                                            <input type="text" id="second-label" class="form-control" style="border: 1px solid #0072C6; font-size: 1.2rem;">
                                             <div style="border-left: 3px solid #0072C6; margin: 10px 0 5px 0; padding: 5px;">
                                                 <div style="font-size: 1.2rem; color: #0072C6; font-weight: bold;">Why we need this</div>
                                                 <div style="font-size: 1.1rem; font-weight: normal;">So we can offer healthcare providers which may be available through your own GP practice</div>
@@ -95,14 +99,14 @@
                                         </div>
                                     </fieldset>
 
-                                    
+
                                 </div>
 
                                 <div class="form-item-wrapper">
                                     <fieldset>
                                         <!--<legend class="form-label-bold">Your registered doctors practice</legend>-->
                                         <div class="form-group">
-                                            <a href="#" class="button button-get-started">Find available healthcare providers</a>
+                                            <a href="services.html" class="button button-get-started">Find available healthcare providers</a>
                                         </div>
                                     </fieldset>
                                 </div>

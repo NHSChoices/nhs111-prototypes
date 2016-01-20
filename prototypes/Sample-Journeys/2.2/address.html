@@ -8,6 +8,7 @@
     <title>}Health site</title>
     <link href="nhs-site.css" media="screen" rel="stylesheet" type="text/css">
     <link href="nhs-fonts.css" media="screen" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -48,7 +49,7 @@
 
 
                 <div class="item item-cta" id="search" style="padding-bottom: 12px;">
-                    <div class="item-content" style="border: none;">
+                    <div class="item-content" style="border: none; cursor: default;">
                         <div class="item-header">
                             <span class="item-heading" style="text-align: center; background-color: #0072C6;">
                                 Selected service
@@ -58,7 +59,7 @@
                         <div class="item-body item-body-collapsed" style="height: auto;" id="search-form">
 
                             <div class="item-body-content">
-                                <div style="color: #0072C6;">Hedge End Medical Centre, Southampton (Your GP)</div>
+                                <div style="font-weight: bold; font-size: 1.5rem;">Hedge End Medical Centre, Southampton (Your GP)</div>
                                 <div style="font-size: 1.1rem; font-weight: lighter;">
                                     24-28 Lower Northam Road, Hedge End, Southampton, SO30 4FQ<br/>
                                     Open today: 09:00 - 19:30
@@ -68,7 +69,7 @@
                                     <fieldset>
                                         <!--<legend class="form-label-bold">Your registered doctors practice</legend>-->
                                         <div class="form-group">
-                                            <a href="#" class="button button-get-started">Change selected service</a>
+                                            <a href="services.html" class="" style="font-size: 1.1rem; font-weight: lighter;">Choose a different service <i class="fa fa-chevron-right" style="padding-left: 2px;"></i></a>
                                         </div>
                                     </fieldset>
                                 </div>
@@ -94,7 +95,7 @@
 
 
                 <div class="item item-cta" id="search" style="padding-bottom: 12px;">
-                    <div class="item-content" style="border: none;">
+                    <div class="item-content" style="border: none; cursor: default;">
                         <div class="item-header">
                             <span class="item-heading" style="text-align: center; background-color: #0072C6;">
                                 Your contact information
@@ -126,40 +127,155 @@
                                         
                                             <div class="inline-form-groups">
                                                 <div class="form-group">
-                                                    <input class="form-control form-control-2-chars" id="dob-day" type="number" min="0" max="31" placeholder="DD" style="border: 1px solid #0072C6; font-size: 1.2rem;">
+                                                    <select class="form-control form-select" style="color: darkgrey; background: #FFF url('toggle-sprite-grey.png') no-repeat 100% -43px; border: 1px solid #0072C6; padding: 0 45px 4px 10px;">
+                                                        <option value="" disabled selected style="display: none; color: darkgrey; ">Day</option>
+                                                        <option value="opt1" style="color: black;">1</option>
+                                                        <option style="color: black;" value="opt2">2</option>
+                                                        <option style="color: black;" value="opt2">3</option>
+                                                        <option style="color: black;" value="opt2">4</option>
+                                                        <option style="color: black;" value="opt2">5</option>
+                                                        <option style="color: black;" value="opt2">6</option>
+                                                        <option style="color: black;" value="opt2">7</option>
+                                                        <option style="color: black;" value="opt2">8</option>
+                                                        <option style="color: black;" value="opt2">9</option>
+                                                        <option style="color: black;" value="opt2">10</option>
+                                                        <option style="color: black;" value="opt2">11</option>
+                                                        <option style="color: black;" value="opt2">12</option>
+                                                        <option style="color: black;" value="opt2">13</option>
+                                                        <option style="color: black;" value="opt2">14</option>
+                                                        <option style="color: black;" value="opt2">15</option>
+                                                        <option style="color: black;" value="opt2">16</option>
+                                                        <option style="color: black;" value="opt2">17</option>
+                                                        <option style="color: black;" value="opt2">18</option>
+                                                        <option style="color: black;" value="opt2">19</option>
+                                                        <option style="color: black;" value="opt2">20</option>
+                                                        <option style="color: black;" value="opt2">21</option>
+                                                        <option style="color: black;" value="opt2">22</option>
+                                                        <option style="color: black;" value="opt2">23</option>
+                                                        <option style="color: black;" value="opt2">24</option>
+                                                        <option style="color: black;" value="opt2">25</option>
+                                                        <option style="color: black;" value="opt2">26</option>
+                                                        <option style="color: black;" value="opt2">27</option>
+                                                        <option style="color: black;" value="opt2">28</option>
+                                                        <option style="color: black;" value="opt2">29</option>
+                                                        <option style="color: black;" value="opt2">30</option>
+                                                        <option style="color: black;" value="opt2">31</option>
+                                                    </select>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input class="form-control form-control-2-chars" id="dob-month" type="number" min="0" max="12" placeholder="MM" style="border: 1px solid #0072C6; font-size: 1.2rem;">
+                                                    <select class="form-control form-select" style="color: darkgrey; background: #FFF url('toggle-sprite-grey.png') no-repeat 100% -43px; border: 1px solid #0072C6; padding: 0 45px 4px 10px;">
+                                                        <option value="" disabled selected style="display: none; color: darkgrey; ">Month</option>
+                                                        <option value="opt1" style="color: black;">January</option>
+                                                        <option style="color: black;" value="opt2">February</option>
+                                                        <option style="color: black;" value="opt2">March</option>
+                                                        <option style="color: black;" value="opt2">April</option>
+                                                        <option style="color: black;" value="opt2">May</option>
+                                                        <option style="color: black;" value="opt2">June</option>
+                                                        <option style="color: black;" value="opt2">July</option>
+                                                        <option style="color: black;" value="opt2">August</option>
+                                                        <option style="color: black;" value="opt2">September</option>
+                                                        <option style="color: black;" value="opt2">October</option>
+                                                        <option style="color: black;" value="opt2">November</option>
+                                                        <option style="color: black;" value="opt2">December</option>
+                                                    </select>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input class="form-control form-control-4-chars" id="dob-year" type="number" min="0" placeholder="YYYY" style="border: 1px solid #0072C6; font-size: 1.2rem;">
+                                                    <select class="form-control form-select" style="color: darkgrey; background: #FFF url('toggle-sprite-grey.png') no-repeat 100% -43px; border: 1px solid #0072C6; padding: 0 45px 4px 10px;">
+                                                        <option value="" disabled selected style="display: none; color: darkgrey; ">Year</option>
+                                                        <option value="opt1" style="color: black;">2016</option>
+                                                        <option style="color: black;" value="opt2">2015</option>
+                                                        <option style="color: black;" value="opt2">2014</option>
+                                                        <option style="color: black;" value="opt2">2013</option>
+                                                        <option style="color: black;" value="opt2">2012</option>
+                                                        <option style="color: black;" value="opt2">2011</option>
+                                                        <option style="color: black;" value="opt2">2010</option>
+                                                        <option style="color: black;" value="opt2">2009</option>
+                                                        <option style="color: black;" value="opt2">2008</option>
+                                                        <option style="color: black;" value="opt2">2007</option>
+                                                        <option style="color: black;" value="opt2">2006</option>
+                                                        <option style="color: black;" value="opt2">2005</option>
+                                                        <option style="color: black;" value="opt2">2004</option>
+                                                        <option style="color: black;" value="opt2">2003</option>
+                                                        <option style="color: black;" value="opt2">2002</option>
+                                                        <option style="color: black;" value="opt2">2001</option>
+                                                        <option style="color: black;" value="opt2">2000</option>
+                                                        <option style="color: black;" value="opt2">1999</option>
+                                                        <option style="color: black;" value="opt2">1998</option>
+                                                        <option style="color: black;" value="opt2">1997</option>
+                                                        <option style="color: black;" value="opt2">1996</option>
+                                                        <option style="color: black;" value="opt2">1995</option>
+                                                        <option style="color: black;" value="opt2">1994</option>
+                                                        <option style="color: black;" value="opt2">1993</option>
+                                                        <option style="color: black;" value="opt2">1992</option>
+                                                        <option style="color: black;" value="opt2">1991</option>
+                                                        <option style="color: black;" value="opt2">1990</option>
+                                                        <option style="color: black;" value="opt2">1989</option>
+                                                        <option style="color: black;" value="opt2">1988</option>
+                                                        <option style="color: black;" value="opt2">1987</option>
+                                                        <option style="color: black;" value="opt2">1986</option>
+                                                        <option style="color: black;" value="opt2">1985</option>
+                                                        <option style="color: black;" value="opt2">1984</option>
+                                                        <option style="color: black;" value="opt2">1983</option>
+                                                        <option style="color: black;" value="opt2">1982</option>
+                                                        <option style="color: black;" value="opt2">1981</option>
+                                                        <option style="color: black;" value="opt2">1980</option>
+                                                        <option style="color: black;" value="opt2">1979</option>
+                                                        <option style="color: black;" value="opt2">1978</option>
+                                                        <option style="color: black;" value="opt2">1977</option>
+                                                        <option style="color: black;" value="opt2">1976</option>
+                                                        <option style="color: black;" value="opt2">1975</option>
+                                                        <option style="color: black;" value="opt2">1974</option>
+                                                        <option style="color: black;" value="opt2">1973</option>
+                                                        <option style="color: black;" value="opt2">1972</option>
+                                                        <option style="color: black;" value="opt2">1971</option>
+                                                        <option style="color: black;" value="opt2">1970</option>
+                                                        <option style="color: black;" value="opt2">1969</option>
+                                                        <option style="color: black;" value="opt2">1968</option>
+                                                        <option style="color: black;" value="opt2">1967</option>
+                                                        <option style="color: black;" value="opt2">1966</option>
+                                                        <option style="color: black;" value="opt2">1965</option>
+                                                        <option style="color: black;" value="opt2">1964</option>
+                                                        <option style="color: black;" value="opt2">1963</option>
+                                                        <option style="color: black;" value="opt2">1962</option>
+                                                        <option style="color: black;" value="opt2">1961</option>
+                                                        <option style="color: black;" value="opt2">1960</option>
+                                                        <option style="color: black;" value="opt2">1959</option>
+                                                        <option style="color: black;" value="opt2">1958</option>
+                                                        <option style="color: black;" value="opt2">1957</option>
+                                                        <option style="color: black;" value="opt2">1956</option>
+                                                        <option style="color: black;" value="opt2">1955</option>
+                                                        <option style="color: black;" value="opt2">1954</option>
+                                                        <option style="color: black;" value="opt2">1953</option>
+                                                        <option style="color: black;" value="opt2">1952</option>
+                                                        <option style="color: black;" value="opt2">1951</option>
+                                                        <option style="color: black;" value="opt2">1950</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                        
                                     </fieldset>
                                 </div>
 
+                                <div style="color: #0072C6;">Contact number</div>
                                 <div class="form-item-wrapper">
                                     <fieldset>
                                         <!--<legend class="form-label-bold">Your registered doctors practice</legend>-->
                                         <div class="form-group">
-                                            <!--<label class="form-label" for="second-label">
-                                                Name of doctors practice (optional)
-                                            </label>-->
-                                            <input type="text" id="second-label" class="form-control" placeholder="Contact number" style="border: 1px solid #0072C6; font-size: 1.2rem;">
+                                            <input type="text" id="second-label" class="form-control" placeholder="Landline or mobile number" style="border: 1px solid #0072C6; font-size: 1.2rem;">
                                         </div>
                                     </fieldset>
 
 
                                 </div>
 
-                                <div style="color: #0072C6;">Home address</div>
+                                <div style="color: #0072C6;">Postcode of home address</div>
                                 <div class="form-item-wrapper">
                                     <fieldset>
                                         <div class="form-group">
-                                                <input type="text" id="second-label" class="form-control form-control-4-chars" placeholder="Postcode" style="border: 1px solid #0072C6; font-size: 1.2rem;">
+                                            <input type="text" id="second-label" class="form-control form-control-4-chars" placeholder="eg. SE1" style="border: 1px solid #0072C6; font-size: 1.2rem; display: inline-block;">
+                                            <a href="address_find.html" class="button button-secondary-cta" style="background-color: darkgrey; border-color: dimgrey;">Find my address</a>
                                             </div>
-                                         
+                                        
                                     </fieldset>
 
 
@@ -169,7 +285,7 @@
                                     <fieldset>
                                         <!--<legend class="form-label-bold">Your registered doctors practice</legend>-->
                                         <div class="form-group">
-                                            <a href="#" class="button button-get-started">Find my address</a>
+                                            <a href="confirmation.html" class="button button-get-started">Submit my details</a>
                                         </div>
                                     </fieldset>
                                 </div>
@@ -223,15 +339,4 @@
 
 </body>
 
-</html>
-<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
-
-</body>
 </html>
