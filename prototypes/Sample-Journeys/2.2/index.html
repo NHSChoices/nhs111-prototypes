@@ -10,6 +10,12 @@
     <link href="nhs-fonts.css" media="screen" rel="stylesheet" type="text/css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        .planner section {
+            max-width: 800px;
+        }
+    </style>
 </head>
 <body class="js-enabled js-enabled" style="background-color: whitesmoke;">
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
@@ -17,7 +23,7 @@
     <header role="banner" id="global-header">
         <div class="header-container">
 
-            <a href="/" class="header-logo" title="Go to the NHS.UK homepage">
+            <a href="index.html" class="header-logo" title="Go to the NHS.UK homepage">
                 <img src="../../base-assets/img/nhs-med-logo.png" alt="">
             </a>
 
@@ -40,8 +46,8 @@
 
     <main id="content" class="planner" role="main">
         <section>
-            <div style="text-align: center; font-weight: bold; padding-bottom: 0.5rem;">You’ve finished your online assessment.</div>
-            <div style="text-align: center;">We recommend that you speak to a clinician within 2 hours</div>
+            <div style="text-align: center; padding: 0.75rem; font-size: 2rem;">You’ve finished your online assessment.</div>
+            <div style="text-align: center; padding: 0.75rem; font-size: 2rem;">We recommend that you speak to a clinician within 2 hours</div>
         </section>
         
         <section>
@@ -55,10 +61,10 @@
                 <div class="item item-cta" id="search" style="padding-bottom: 12px;">
                     <div class="item-content" style="border: none; cursor: default;">
                         <div class="item-header">
-                            <span style="text-align: center; background-color: #0072C6; padding-top: 0.75rem; padding-right: 2rem; display: block; color: white; font-weight: bold;">
+                            <span style="text-align: center; background-color: #0072C6; padding: 1.25rem 2rem 0 0; display: block; color: white; font-size: 1.75rem;">
                                 Let us contact a healthcare provider near you
                             </span>
-                            <span style="text-align: center; background-color: #0072C6; padding: 0 2rem 0.75rem 0; font-size: 1.2rem; display: block; color: white;">
+                            <span style="text-align: center; background-color: #0072C6; padding: 0 2rem 1.25rem 0; font-size: 1.2rem; display: block; color: white;">
                                 Please enter your details below to find a healthcare provider and they will contact you
                             </span>
                         </div>
@@ -72,10 +78,10 @@
                                     <fieldset>
                                         <!--<legend class="form-label-bold">Current location</legend>-->
                                         <div class="form-group">
-                                            <label class="form-label" for="first-label" style="color: #0072C6;">
+                                            <label class="form-label" for="first-label" style="font-size: 1.25rem;  font-weight: bold;">
                                                 Postcode of current location
                                             </label>
-                                            <input type="text" id="first-label" class="form-control" style="border: 1px solid #0072C6; font-size: 1.2rem;">
+                                            <input type="text" id="first-label" class="form-control" style="border: 1px solid #0072C6; font-size: 1.2rem; height: 2.75rem; line-height: 2rem;">
                                             <div style="border-left: 3px solid #0072C6; margin: 10px 0 5px 0; padding: 5px;">
                                                 <div style="font-size: 1.2rem; color: #0072C6; font-weight: bold;">Why we need this</div>
                                                 <div style="font-size: 1.1rem; font-weight: normal;">So we can offer details of healthcare providers available near to where you are right now</div>
@@ -88,10 +94,10 @@
                                     <fieldset>
                                         <!--<legend class="form-label-bold">Your registered doctors practice</legend>-->
                                         <div class="form-group">
-                                            <label class="form-label" for="first-label" style="color: #0072C6;">
+                                            <label class="form-label" for="first-label" style="font-size: 1.25rem; font-weight: bold;">
                                                 Name of your GP practice (optional)
                                             </label>
-                                            <input type="text" id="second-label" class="form-control" style="border: 1px solid #0072C6; font-size: 1.2rem;">
+                                            <input type="text" id="second-label" class="form-control" style="border: 1px solid #0072C6; font-size: 1.2rem; height: 2.75rem; line-height: 2rem;">
                                             <div style="border-left: 3px solid #0072C6; margin: 10px 0 5px 0; padding: 5px;">
                                                 <div style="font-size: 1.2rem; color: #0072C6; font-weight: bold;">Why we need this</div>
                                                 <div style="font-size: 1.1rem; font-weight: normal;">So we can offer healthcare providers which may be available through your own GP practice</div>
@@ -106,7 +112,7 @@
                                     <fieldset>
                                         <!--<legend class="form-label-bold">Your registered doctors practice</legend>-->
                                         <div class="form-group">
-                                            <a href="services.html" class="button button-get-started">Find available healthcare providers</a>
+                                            <a href="services.html" class="button button-get-started" style="background-color: #4C9C39; border-color: #5BA54A; font-size: 1.2rem; font-weight: normal; display: inline; padding-top: 0.5rem; padding-bottom: 0.5rem; background-position: 95% 100%;">Find available healthcare providers</a>
                                         </div>
                                     </fieldset>
                                 </div>
@@ -126,9 +132,9 @@
             </div>
         </section>
 
-        <section>
-            <div style="text-align: center; font-size: 1.1rem">Our advice is that you speak to a clinician, but if you choose not to, you can <a href="#" style="color: #0072C6">get advice to help with your symptoms</a> here.</div>
-        </section>
+        <!--<section>
+            <div style="text-align: center; font-size: 1.0rem">Our advice is that you speak to a clinician, but if you choose not to, you can <a href="#" style="color: #0072C6">get advice to help with your symptoms</a> here.</div>
+        </section>-->
     </main>
 
 

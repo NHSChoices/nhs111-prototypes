@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        .planner section {
+            max-width: 800px;
+        }
+    </style>
+
 </head>
 <body class="js-enabled js-enabled" style="background-color: whitesmoke;">
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
@@ -18,7 +25,7 @@
     <header role="banner" id="global-header">
         <div class="header-container">
 
-            <a href="/" class="header-logo" title="Go to the NHS.UK homepage">
+            <a href="index.html" class="header-logo" title="Go to the NHS.UK homepage">
                 <img src="../../base-assets/img/nhs-med-logo.png" alt="">
             </a>
 
@@ -51,16 +58,16 @@
                 <div class="item item-cta" id="search" style="padding-bottom: 12px;">
                     <div class="item-content" style="border: none; cursor: default;">
                         <div class="item-header">
-                            <span class="item-heading" style="text-align: center; background-color: #0072C6;">
-                                Selected service
+                            <span style="text-align: center; background-color: #0072C6; padding: 1.25rem 2rem; display: block; color: white; font-size: 1.75rem;">
+                                Your selected service
                             </span>
                         </div>
 
                         <div class="item-body item-body-collapsed" style="height: auto;" id="search-form">
 
                             <div class="item-body-content">
-                                <div style="font-weight: bold; font-size: 1.5rem;">Hedge End Medical Centre, Southampton (Your GP)</div>
-                                <div style="font-size: 1.1rem; font-weight: lighter;">
+                                <div style="font-weight: bold; font-size: 1.25rem; padding: 1.5rem 0 0 0.75rem;">Hedge End Medical Centre, Southampton (Your GP)</div>
+                                <div style="font-size: 1.0rem; font-weight: lighter; line-height: 1.5rem; padding: 0 0 0 0.75rem;">
                                     24-28 Lower Northam Road, Hedge End, Southampton, SO30 4FQ<br />
                                     Open today: 09:00 - 19:30
                                 </div>
@@ -69,7 +76,7 @@
                                     <fieldset>
                                         <!--<legend class="form-label-bold">Your registered doctors practice</legend>-->
                                         <div class="form-group">
-                                            <a href="services.html" class="" style="font-size: 1.1rem; font-weight: lighter;">Choose a different service <i class="fa fa-chevron-right" style="padding-left: 2px;"></i></a>
+                                            <a href="services.html" class="" style="font-size: 1.0rem; font-weight: lighter; padding: 0 0 0 0.75rem; text-decoration: none;">Choose a different service <i class="fa fa-chevron-right" style="padding-left: 2px;"></i></a>
                                         </div>
                                     </fieldset>
                                 </div>
@@ -97,7 +104,7 @@
                 <div class="item item-cta" id="search" style="padding-bottom: 12px;">
                     <div class="item-content" style="border: none; cursor: default;">
                         <div class="item-header">
-                            <span class="item-heading" style="text-align: center; background-color: #0072C6;">
+                            <span style="text-align: center; background-color: #0072C6; padding: 1.25rem 2rem; display: block; color: white; font-size: 1.75rem;">
                                 Your contact information
                             </span>
                         </div>
@@ -105,29 +112,33 @@
                         <div class="item-body item-body-collapsed" style="height: auto;" id="search-form">
 
                             <div class="item-body-content">
-                                <div style="color: #0072C6;">Full name</div>
+                                <label class="form-label" for="first-label" style="font-size: 1.25rem;  font-weight: bold;">
+                                    Full name
+                                </label>
                                 <div class="form-item-wrapper">
                                     <fieldset>
                                         <div class="inline-form-groups">
                                             <div class="form-group">
-                                                <input type="text" id="first-label" class="form-control form-control-4-chars" placeholder="First name" style="border: 1px solid #0072C6; font-size: 1.2rem;">
+                                                <input type="text" id="first-label" class="form-control form-control-4-chars" placeholder="First name" style="border: 1px solid #0072C6; font-size: 1.2rem; height: 2.75rem; line-height: 2rem;">
 
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" id="first-label" class="form-control form-control-4-chars" placeholder="Last name" style="border: 1px solid #0072C6; font-size: 1.2rem;">
+                                                <input type="text" id="first-label" class="form-control form-control-4-chars" placeholder="Last name" style="border: 1px solid #0072C6; font-size: 1.2rem; height: 2.75rem; line-height: 2rem;">
                                             </div>
                                         </div>
 
                                     </fieldset>
                                 </div>
 
-                                <div style="color: #0072C6;">Date of birth</div>
+                                <label class="form-label" for="first-label" style="font-size: 1.25rem;  font-weight: bold;">
+                                    Date of birth
+                                </label>
                                 <div class="form-item-wrapper">
                                     <fieldset>
 
                                         <div class="inline-form-groups">
                                             <div class="form-group">
-                                                <select class="form-control form-select" style="color: darkgrey; background: #FFF url('toggle-sprite-grey.png') no-repeat 100% -43px; border: 1px solid #0072C6; padding: 0 45px 4px 10px;">
+                                                <select class="form-control form-select" style="color: darkgrey; background: #FFF url('toggle-sprite-grey.png') no-repeat 100% -50px; border: 1px solid #0072C6; padding: 0 45px 4px 10px; height: 2.75rem; line-height: 2.5rem;">
                                                     <option value="" disabled selected style="display: none; color: darkgrey; ">Day</option>
                                                     <option value="opt1" style="color: black;">1</option>
                                                     <option style="color: black;" value="opt2">2</option>
@@ -163,7 +174,7 @@
                                                 </select>
                                             </div>
                                             <div class="form-group">
-                                                <select class="form-control form-select" style="color: darkgrey; background: #FFF url('toggle-sprite-grey.png') no-repeat 100% -43px; border: 1px solid #0072C6; padding: 0 45px 4px 10px;">
+                                                <select class="form-control form-select" style="color: darkgrey; background: #FFF url('toggle-sprite-grey.png') no-repeat 100% -50px; border: 1px solid #0072C6; padding: 0 45px 4px 10px; height: 2.75rem; line-height: 2.5rem;">
                                                     <option value="" disabled selected style="display: none; color: darkgrey; ">Month</option>
                                                     <option value="opt1" style="color: black;">January</option>
                                                     <option style="color: black;" value="opt2">February</option>
@@ -180,7 +191,7 @@
                                                 </select>
                                             </div>
                                             <div class="form-group">
-                                                <select class="form-control form-select" style="color: darkgrey; background: #FFF url('toggle-sprite-grey.png') no-repeat 100% -43px; border: 1px solid #0072C6; padding: 0 45px 4px 10px;">
+                                                <select class="form-control form-select" style="color: darkgrey; background: #FFF url('toggle-sprite-grey.png') no-repeat 100% -50px; border: 1px solid #0072C6; padding: 0 45px 4px 10px; height: 2.75rem; line-height: 2.5rem;">
                                                     <option value="" disabled selected style="display: none; color: darkgrey; ">Year</option>
                                                     <option value="opt1" style="color: black;">2016</option>
                                                     <option style="color: black;" value="opt2">2015</option>
@@ -256,27 +267,30 @@
                                     </fieldset>
                                 </div>
 
-                                <div style="color: #0072C6;">Contact number</div>
+                                <label class="form-label" for="first-label" style="font-size: 1.25rem;  font-weight: bold;">
+                                    Contact number
+                                </label>
                                 <div class="form-item-wrapper">
                                     <fieldset>
                                         <!--<legend class="form-label-bold">Your registered doctors practice</legend>-->
                                         <div class="form-group">
-                                            <input type="text" id="second-label" class="form-control" placeholder="Landline or mobile number" style="border: 1px solid #0072C6; font-size: 1.2rem;">
+                                            <input type="text" id="second-label" class="form-control" placeholder="Landline or mobile number" style="border: 1px solid #0072C6; font-size: 1.2rem; height: 2.75rem; line-height: 2rem;">
                                         </div>
                                     </fieldset>
 
 
                                 </div>
 
-                                <div style="color: #0072C6;">Postcode of home address</div>
+                                <label class="form-label" for="first-label" style="font-size: 1.25rem;  font-weight: bold;">
+                                    Postcode of home address
+                                </label>
                                 <div class="form-item-wrapper">
                                     <fieldset>
                                         <div class="form-group">
-                                            <input type="text" id="second-label" class="form-control form-control-4-chars" placeholder="eg. SE1" style="border: 1px solid #0072C6; font-size: 1.2rem; display: inline-block;">
-                                            <!--<a href="address_find.html" class="button button-secondary-cta" style="background-color: darkgrey; border-color: dimgrey;">Find my address</a>-->
+                                            <input type="text" id="second-label" class="form-control form-control-4-chars" placeholder="eg. SE1" style="border: 1px solid #0072C6; font-size: 1.2rem; display: inline-block; height: 2.75rem; line-height: 2rem;">
                                         </div>
                                         <div class="form-group">
-                                            <select class="form-control form-select" style="color: darkgrey; background: #FFF url('toggle-sprite-grey.png') no-repeat 100% -43px; border: 1px solid #0072C6; padding: 0 45px 4px 10px;">
+                                            <select class="form-control form-select" style="color: darkgrey; background: #FFF url('toggle-sprite-grey.png') no-repeat 100% -50px; border: 1px solid #0072C6; padding: 0 45px 4px 10px; height: 2.75rem; line-height: 2.5rem;">
                                                 <option value="" disabled selected style="display: none; color: darkgrey; ">Select address</option>
                                                 <option value="opt1" style="color: black;">1 London Road</option>
                                                 <option style="color: black;" value="opt2">2 London Road</option>
@@ -301,7 +315,7 @@
                                     <fieldset>
                                         <!--<legend class="form-label-bold">Your registered doctors practice</legend>-->
                                         <div class="form-group">
-                                            <a href="confirmation.html" class="button button-get-started">Submit my details</a>
+                                            <a href="confirmation.html" class="button button-get-started" style="background-color: #4C9C39; border-color: #5BA54A; font-size: 1.2rem; font-weight: normal; display: inline; padding-top: 0.5rem; padding-bottom: 0.5rem; background-position: 95% 100%;">Submit my details</a>
                                         </div>
                                     </fieldset>
                                 </div>
@@ -323,9 +337,9 @@
             </div>
         </section>
 
-        <section>
+        <!--<section>
             <div style="text-align: center; font-size: 1.1rem">Our advice is that you speak to a clinician, but if you choose not to, you can <a href="#" style="color: #0072C6">get advice to help with your symptoms</a> here.</div>
-        </section>
+        </section>-->
     </main>
 
 
