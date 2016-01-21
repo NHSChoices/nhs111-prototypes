@@ -16,6 +16,12 @@
     <script src="../../base-assets/_assets/js/vendor/jquery.transit.js"></script>
     <script src="cards.js"></script>-->
 
+    <style>
+        .planner section {
+            max-width: 800px;
+        }
+    </style>
+
     <script>
     $(function () {
         $("#accordion").accordion({
@@ -34,7 +40,7 @@
     <header role="banner" id="global-header">
         <div class="header-container">
 
-            <a href="/" class="header-logo" title="Go to the NHS.UK homepage">
+            <a href="index.html" class="header-logo" title="Go to the NHS.UK homepage">
                 <img src="../../base-assets/img/nhs-med-logo.png" alt="">
             </a>
 
@@ -67,7 +73,7 @@
                 <div class="item item-cta" id="search" style="padding-bottom: 12px;">
                     <div class="item-content" style="border: none; cursor: default;">
                         <div class="item-header">
-                            <span class="item-heading" style="text-align: center; background-color: #0072C6;">
+                            <span style="text-align: center; background-color: #0072C6; padding: 1.25rem 2rem; display: block; color: white; font-size: 1.75rem;">
                                 Recommended service
                             </span>
                         </div>
@@ -75,17 +81,17 @@
                         <div class="" style="" id="search-form">
 
                             <div class="item-body-content">
-                                <div style="font-weight: bold; font-size: 1.5rem;">Hedge End Medical Centre, Southampton (Your GP)</div>
-                                <div style="font-size: 1.1rem; font-weight: lighter;">
-                                    24-28 Lower Northam Road, Hedge End, Southampton, SO30 4FQ<br />
+                                <div style="font-weight: bold; font-size: 1.25rem; padding: 1.5rem 0 0 0.75rem;">Hedge End Medical Centre, Southampton (Your GP)</div>
+                                <div style="font-size: 1.0rem; font-weight: lighter; line-height: 1.5rem; padding: 0 0 0 0.75rem;">
+                                    24-28 Lower Northam Road, Hedge End, Southampton, SO30 4FQ<br/>
                                     Open today: 09:00 - 19:30
                                 </div>
-
+                                
                                 <div class="form-item-wrapper">
                                     <fieldset>
                                         <!--<legend class="form-label-bold">Your registered doctors practice</legend>-->
-                                        <div class="form-group">
-                                            <a href="address.html" class="button button-get-started">Request a call back</a>
+                                        <div class="form-group" style="padding: 0 0 0 0.75rem;">
+                                            <a href="address.html" class="button button-get-started" style="background-color: #4C9C39; border-color: #5BA54A; font-size: 1.2rem; font-weight: normal; display: inline; padding-top: 0.5rem; padding-bottom: 0.5rem; background-position: 95% 100%;">Request a call back</a>
                                         </div>
                                     </fieldset>
                                 </div>
@@ -108,42 +114,57 @@
                 <div class="item item-cta" id="search" style="padding-bottom: 12px;">
                     <div class="item-content" style="border: none; cursor: default;">
                         <div class="item-header">
-                            <span class="item-heading" style="text-align: center; background-color: #0072C6;">
+                            <span style="text-align: center; background-color: #0072C6; padding: 1.25rem 2rem; display: block; color: white; font-size: 1.75rem;">
                                 Other services near you
                             </span>
                         </div>
 
                         <div id="accordion">
-                            <h3 style="color: black; background-color: white; font-weight: bold; font-size: 1.5rem; padding: 0.75rem 1rem;">GP Choice - Hants - Stokewood Surgery, Eastleigh (WH) <i class="fa fa-chevron-down" style="float: right;"></i></h3>
+                            <h3 style="color: black; background-color: white; font-weight: bold; font-size: 1.25rem; padding: 1.5rem; border-bottom: 1px solid darkgray;">
+                                GP Choice - Hants - Stokewood Surgery, Eastleigh (WH) <i class="fa fa-chevron-down" style="float: right;"></i>
+                            </h3>
+
                             <div>
-                                <p style="font-size: 1.1rem; font-weight: lighter; padding: 0.75rem 1rem; margin-bottom: 0; padding-bottom: 0.75rem;">
+                                <p style="font-size: 1.0rem; font-weight: lighter; line-height: 1.5rem; padding: 0 0 0 1.5rem;">
                                     24-28 Lower Northam Road, Hedge End, Southampton, SO30 4FQ<br/>
                                     Open today: 09:00 - 19:30
-                                    <div class="form-group" style="padding-left: 1rem;">
-                                        <a href="#" class="button button-get-started">Request a call back</a>
+                                    <div class="form-group" style="padding: 0 0 0 1.5rem;">
+                                        <a href="#" class="button button-get-started" style="background-color: #4C9C39; border-color: #5BA54A; font-size: 1.2rem; font-weight: normal; display: inline; padding-top: 0.5rem; padding-bottom: 0.5rem; background-position: 95% 100%;">Request a call back</a>
                                     </div>
                                 </p>
                             </div>
-                            <h3 style="color: black; background-color: white; font-weight: bold; font-size: 1.5rem; padding: 0.75rem 1rem;">Hedge End Medical Centre, Southampton <i class="fa fa-chevron-down" style="float: right;"></i></h3>
+                            <h3 style="color: black; background-color: white; font-weight: bold; font-size: 1.25rem; padding: 1.5rem; border-bottom: 1px solid darkgray;">
+                                Hedge End Medical Centre, Southampton <i class="fa fa-chevron-down" style="float: right;"></i>
+                            </h3>
                             <div>
-                                <p style="font-size: 1.1rem; font-weight: lighter; padding: 0.75rem 1rem; margin-bottom: 0; padding-bottom: 0.75rem;">
+                                <p style="font-size: 1.0rem; font-weight: lighter; line-height: 1.5rem; padding: 0 0 0 1.5rem;">
                                     24-28 Lower Northam Road, Hedge End, Southampton, SO30 4FQ<br/>
                                     Open today: 09:00 - 19:30
                                 </p>
-                                <div class="form-group" style="padding-left: 1rem;">
-                                    <a href="#" class="button button-get-started">Request a call back</a>
+                                <div class="form-group" style="padding: 0 0 0 1.5rem;">
+                                    <a href="#" class="button button-get-started" style="background-color: #4C9C39; border-color: #5BA54A; font-size: 1.2rem; font-weight: normal; display: inline; padding-top: 0.5rem; padding-bottom: 0.5rem; background-position: 95% 100%;">Request a call back</a>
                                 </div>
                             </div>
-                            <h3 style="color: black; background-color: white; font-weight: bold; font-size: 1.5rem; padding: 0.75rem 1rem;">University Hospital, Southampton <i class="fa fa-chevron-down" style="float: right;"></i></h3>
+                            <h3 style="color: black; background-color: white; font-weight: bold; font-size: 1.25rem; padding: 1.5rem; border-bottom: 1px solid darkgray;">
+                                University Hospital, Southampton <i class="fa fa-chevron-down" style="float: right;"></i>
+                            </h3>
                             <div>
-                                <p style="font-size: 1.1rem; font-weight: lighter; padding: 0.75rem 1rem; margin-bottom: 0; padding-bottom: 0.75rem;">
+                                <p style="font-size: 1.0rem; font-weight: lighter; line-height: 1.5rem; padding: 0 0 0 1.5rem;">
                                     24-28 Lower Northam Road, Hedge End, Southampton, SO30 4FQ<br/>
                                     Open today: 09:00 - 19:30
                                 </p>
-                                <div class="form-group" style="padding-left: 1rem;">
-                                    <a href="#" class="button button-get-started">Request a call back</a>
+                                <div class="form-group" style="padding: 0 0 0 1.5rem;">
+                                    <a href="#" class="button button-get-started" style="background-color: #4C9C39; border-color: #5BA54A; font-size: 1.2rem; font-weight: normal; display: inline; padding-top: 0.5rem; padding-bottom: 0.5rem; background-position: 95% 100%;">Request a call back</a>
                                 </div>
                             </div>
+                        </div>
+                        <div class="form-item-wrapper">
+                            <fieldset>
+                                <!--<legend class="form-label-bold">Your registered doctors practice</legend>-->
+                                <div class="form-group">
+                                    <a href="services.html" class="" style="font-size: 1.0rem; font-weight: lighter; padding: 0 0 0 1.5rem; text-decoration: none;">View more healthcare providers <i class="fa fa-chevron-right" style="padding-left: 2px;"></i></a>
+                                </div>
+                            </fieldset>
                         </div>
 
                     </div>
@@ -161,7 +182,7 @@
         </section>
 
         <section>
-            <div style="text-align: center; font-size: 1.1rem">Our advice is that you speak to a clinician, but if you choose not to, you can <a href="#" style="color: #0072C6">get advice to help with your symptoms</a> here.</div>
+            <div style="text-align: center; font-size: 1.0rem">Our advice is that you speak to a clinician, but if you choose not to, you can <a href="#" style="color: #0072C6">get advice to help with your symptoms</a> here.</div>
         </section>
     </main>
 
