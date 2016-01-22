@@ -37,22 +37,48 @@
     </header>
 
     <main id="content" role="main">
-        <h1 class="heading-large">Have you had an injury to your head in the last 7 days?</h1>
+        <h1 class="heading-large">Do you have any of these problems?</h1>
+        <div class="notice" role="note" aria-label="Information">
+            <h4 class="bold-small">Why are we asking this?</h4>
+            <p>We are looking for signs of a stroke or mini-stroke (TIA) or other serious conditions which will need a further assessment.</p>
+
+        </div>
+
         <fieldset>
             <div class="form-item-wrapper">
                 <div class="form-group">
-                    <input type="radio" id="yes" name="question" value="yes">
-                    <label class="form-control-radio" for="yes">
-                        Yes
+                    <input type="radio" id="lopsided-face" name="question" value="lopsided-face">
+                    <label class="form-control-radio" for="lopsided-face">
+                        You’ve suddenly developed a lopsided-looking face
                     </label>
                 </div>
             </div>
 
             <div class="form-item-wrapper">
                 <div class="form-group">
-                    <input type="radio" id="not-sure" name="question" value="notsure">
+                    <input type="radio" id="raise-arms" name="question" value="raise-arms">
+                    <label class="form-control-radio" for="raise-arms">
+                        You’ve suddenly become unable to raise both arms and keep them there
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-item-wrapper">
+                <div class="form-group">
+                    <input type="radio" id="understanding-speech" name="question" value="understanding-speech">
+                    <label class="form-control-radio" for="understanding-speech">
+                        You’ve a new difficulty speaking or understanding speech
+                    </label>
+                </div>
+            </div>
+
+           
+
+            <div class="form-item-wrapper">
+                <div class="form-group">
+                    <input type="radio" id="not-sure" name="question" value="not-sure">
                     <label class="form-control-radio" for="not-sure">
-                        Not sure
+                        I’m not sure
                     </label>
                 </div>
             </div>
@@ -69,10 +95,9 @@
             <div class="form-item-wrapper">
                 <div class="form-group">
                     <div class="nav-buttons">
-                        <a href="../2/" class="button ">Next Question &gt;</a>
+                        <a href="../2/" class="button ">&lt; Previous Question</a>
+                        <a href="../4/" class="button ">Next Question &gt;</a>
                     </div>
-                   
-
                 </div>
             </div>
         </fieldset>

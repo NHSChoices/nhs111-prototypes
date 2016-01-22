@@ -37,7 +37,12 @@
     </header>
 
     <main id="content" role="main">
-        <h1 class="heading-large">Have you had an injury to your head in the last 7 days?</h1>
+        <h1 class="heading-large">Do you have a headache at the moment?</h1>
+        <div class="notice" role="note" aria-label="Information">
+            <h4 class="bold-small">Why are we asking this?</h4>
+            <p>This means that you still have a headache but it doesn’t mean a previous headache that has now gone.</p>
+        </div>
+
         <fieldset>
             <div class="form-item-wrapper">
                 <div class="form-group">
@@ -50,9 +55,9 @@
 
             <div class="form-item-wrapper">
                 <div class="form-group">
-                    <input type="radio" id="not-sure" name="question" value="notsure">
+                    <input type="radio" id="not-sure" name="question" value="not-sure">
                     <label class="form-control-radio" for="not-sure">
-                        Not sure
+                        I’m not sure
                     </label>
                 </div>
             </div>
@@ -69,10 +74,9 @@
             <div class="form-item-wrapper">
                 <div class="form-group">
                     <div class="nav-buttons">
-                        <a href="../2/" class="button ">Next Question &gt;</a>
+                        <a href="../3/" class="button ">&lt; Previous Question</a>
+                        <a href="../5/" class="button ">Next Question &gt;</a>
                     </div>
-                   
-
                 </div>
             </div>
         </fieldset>

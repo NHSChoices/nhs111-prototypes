@@ -1,0 +1,44 @@
+ .form-control-checkbox, .form-control-radio {
+            background-color: transparent;
+        }
+        input[type='radio']:checked + .form-control-radio:before {
+            line-height: 1.7rem;
+        }
+
+        .form-control-checkbox:hover, .form-control-radio:hover {
+
+            outline: none;
+        }
+
+        @media screen and (min-width: 40em) {.form-control-checkbox, .form-control-radio {
+            font-size: 2rem;
+        }}
+
+        .nav-buttons {
+            margin: auto;
+            width: 50%;
+        }
+
+        .nav-buttons a {
+            text-align: center;
+            width: 180px;
+        }
+
+        .heading-large {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 0;
+            line-height: 0;
+        }
+        .notice {
+            padding: 15px;
+            margin-top: 25px;
+            background: #FFFCD5;
+            border-left: 5px solid #FFED00;
+        }
+
+        .notice p {
+            font-size: 1.37rem;
+        }
