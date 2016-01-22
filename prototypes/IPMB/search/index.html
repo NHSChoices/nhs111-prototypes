@@ -14,6 +14,7 @@
 
 
     <link href="http://nhsalpha.herokuapp.com/public/stylesheets/nhs_application.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://alpha.nhs.uk/public/stylesheets/nhsuk.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="custom.css" media="screen" rel="stylesheet" type="text/css" />
 
     <!-- Javascript -->
@@ -134,14 +135,22 @@
             <div class="header-container">
 
                 <a href="/" class="header-logo" title="Go to the NHS.UK homepage">
-                    <img src="http://nhsalpha.herokuapp.com/public/images/nhs-rev-logotype.svg" alt="">
+                    <img src="http://alpha.nhs.uk/public/images/nhs-logotype.svg" alt="">
                 </a>
 
 
 
             </div>
+
         </header>
-        <!--end header-->
+        <div class="phase-banner">
+            <p>
+                <b>This is a new service.</b> We're still working on it. Send feedback to
+                <a href="mailto:alphafeedback@digital.nhs.uk">alphafeedback@digital.nhs.uk</a>
+                to help us improve it. The live service is <a href="http://www.nhs.uk">NHS.UK.</a>
+            </p>
+        </div>
+                <!--end header-->
 
 
 
@@ -182,25 +191,21 @@
 
 
 
-        <footer id="footer" role="contentinfo">
+        <footer id="global-footer" role="contentinfo">
+            <div class="footer-container">
+                <nav>
+                    <ul>
+                        <li><a href="/help/cookies">Cookies</a></li>
+                        <li><a href="/help/clinical-assurance">Clinical assurance</a></li>
+                    </ul>
+                </nav>
 
-            <div class="footer-wrapper">
-
-                <div class="text">
-
-                    <p>
-                        <small>
-                            &copy; Crown copyright<br>
-                            Content available under <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>, except where otherwise stated.
-                        </small>
-                    </p>
-
-                </div>
-
+                <p>
+                    © Crown copyright<br>
+                    Content available under <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0.</a>
+                </p>
             </div>
-
         </footer>
-
     </div>
 <div id="global-app-error" class="app-error hidden"></div>
 
