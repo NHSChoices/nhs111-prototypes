@@ -64,6 +64,7 @@
 }
 
 #disclaimerHelp li {
+    list-style-type: none;
     background: url(bullet-arrows.png) no-repeat 0 7px;
     background-size: 13px;
     margin-bottom: 15px;
@@ -130,4 +131,8 @@ header .close {
     cursor: pointer;
     opacity: .5;
     filter: alpha(opacity=50);
+}
+
+li {
+    margin-left: 1.25em;
 }
