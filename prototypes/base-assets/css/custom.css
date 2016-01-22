@@ -3,7 +3,7 @@ html {
      overflow: -moz-scrollbars-vertical;
      overflow: scroll;
      background-image:none;
-     background:none;
+     background:lightgrey;
      outline:none;
 }
 
@@ -13,7 +13,7 @@ input[type="submit"], button[type="submit"]{
  }
 
 body {	
-	color:#fff;
+	color:black;
 }
 
 .caps{text-transform:uppercase;}
@@ -21,17 +21,23 @@ body {
 .content-container{
     max-width:1020px;
     margin:0 auto;
-
 }
 
 p {
 	margin:0 0 20px 0;
 	padding:0;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: black;
+}
+
+h3 {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 a{
-	color:#fff;
 	text-decoration:none;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+
 }
 
 a:hover{
@@ -50,7 +56,7 @@ body ul {
 	padding:0;
 }
 #homePage #wrapper{
-      background:#00b8e7;
+      background:whitesmoke;
 }
 
 #wrapper {
@@ -62,15 +68,14 @@ body ul {
 }
 .global-header__wrapper {
 	padding:0 30px;
-	
 	margin: 0 auto;
 	max-width: 1020px;
 	overflow: hidden;
 	position:relative;
 }
 .global-header {
-	background:#fff;
-	color: #fff;
+	background:whitesmoke;
+	color: whitesmoke;
     height:85px;    
     /*full width fix*/
     margin: 0 auto;
@@ -88,6 +93,7 @@ h1 {
 h2 {
 	font-size:22px;
 	color:#31420c;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 .standout {
 	font-size:25px;
@@ -568,7 +574,7 @@ clear: both;
 }
 .search {
 	width:60%;
-	background: url("../img/bg/searchGlass.jpg") no-repeat scroll 99% 10px white;
+	/*background: url("../img/bg/searchGlass.jpg") no-repeat scroll 99% 10px white;*/
 	border:1px solid #d9d9d9;
 	border-bottom:2px solid #d9d9d9;
 	border-radius:5px;
@@ -580,7 +586,9 @@ clear: both;
 	
 }
 .go {
-	background: none repeat scroll 0 0 #007ec0;
+  background: url("../img/bg/searchGlass.jpg") no-repeat scroll 99%  white;
+  background-position: center; 
+  /*background: none repeat scroll 0 0 #007ec0;*/
 	border:0;
 	border-bottom: 2px solid #015998;
 	border-radius: 5px;
@@ -591,8 +599,8 @@ clear: both;
 	font-size: 17px;
 	font-weight: bold;
 	 margin: 0 8px 0 6px;
-    padding: 14px 10px 10px;
-	width: 57px;
+   
+	width: 45px;
     text-align:center;
 }
 #linkBodySearch {
@@ -1327,12 +1335,12 @@ header .close {
 
 /*Home page styles*/
 #homePage{
-    background:#13aae1;
+    background:smokewhite;
 
 }
 
 #homePage .global-header__logo {
-    text-align:center;
+    text-align:left;
     }
 
 #homePage h1{
@@ -1342,13 +1350,15 @@ header .close {
     margin: 7px 0 20px;
     text-align: center;
     text-transform: uppercase;
+    background: whitesmoke;
 }
 
 #homePage #threeColumnBlock{
     clear:both;
     width:100%;
-    margin-top:80px;
+    margin-top:10px;
     text-align:center;
+
 }
 
 #homePage #columnOne{
@@ -1436,7 +1446,7 @@ header .close {
 }
 
 #footerColumnThree a{
-    color:#fff;
+    
     
 }
 
@@ -1552,7 +1562,7 @@ header .close {
 }
 
 #timedQuestion span.red{
-       clear: both;
+    clear: both;
     color: #fff;
     display: block;
     font-size: 18px;
@@ -1564,7 +1574,8 @@ header .close {
 /* Interactive timer - questions page*/
 
 #timedQuestion{
-         background:url(../img/bg/jtbsBG.jpg);
+         /*background:url(../img/bg/jtbsBG.jpg);*/
+    background-color: whitesmoke;
 }
 
 #timedQuestion .nhs-radiobtn__label{
@@ -1580,7 +1591,7 @@ header .close {
  }
 
 #timedQuestion .nhs-the-question{
-    color: #fff;
+    color: black;
     font-size: 30px;
     margin-bottom: 20px;
     text-align: center;
@@ -1603,9 +1614,9 @@ header .close {
 
 #timedQuestion #nextScreen,
 #timedQuestion #previousScreen {
-    background: none repeat scroll 0 0 #8c3433;
+    background: none repeat scroll 0 0 #007aaa;
     border-radius: 5px;
-    box-shadow: 0 2px 0 #7c2a26;
+    box-shadow: 0 2px 0 #007aaa;
     font-size: 20px;
     padding: 14px 0 10px;
     text-decoration: none;
@@ -1613,9 +1624,9 @@ header .close {
     width: 235px;
 }
 
-.nhs-page-navigation{
+/*.nhs-page-navigation{
     background:#ea5455;
-}
+}*/
 
 .nhs-first-page .nhs-navtriangle{
     border-bottom: 1em solid #fe6565;
@@ -1755,7 +1766,8 @@ input.predict[type="search"] {
 }
 
 #homePage .global-header{
-    height:115px;
+    /*height:115px;*/
+  background: lightgrey;
 }
 
 #FindGP{
@@ -1849,7 +1861,7 @@ background-size:21px;
 
 #timedQuestion .nhs-page-navigation{
     padding-bottom:0.8em;
-     border-bottom: 2px solid #da4d4e;
+     border-bottom: 2px solid darkgrey;
    
 }
 
@@ -1937,7 +1949,7 @@ input[disabled], button[disabled]{
 .meter { 
 	height: 20px;  /* Can be anything */
 	position: relative;
-	background:#e28b8c;
+	background:darkgrey;
 	-moz-border-radius: 25px;
 	-webkit-border-radius: 25px;
 	border-radius: 25px;
@@ -1955,8 +1967,8 @@ input[disabled], button[disabled]{
 }
 
 .nhsBlue > span {
-  background:#007aaa;
-  background-image: linear-gradient(to bottom, #007aaa, #007aaa);
+  background:whitesmoke;
+  background-image: linear-gradient(to bottom, whitesmoke, whitesmoke);
 }
 
 #timedQuestion .nhs-pagenav-container{
@@ -1969,7 +1981,7 @@ input[disabled], button[disabled]{
 
 .guideText{
   
-       color:#fff;
+       color:darkgrey;
        font-weight:bold;
        font-size:18px;
        margin-top:30px;

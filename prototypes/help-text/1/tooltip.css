@@ -15,13 +15,14 @@ a.tooltip:after{
   min-width: 500px;
   padding: 5px 8px;
   z-index: 999;
-  color: #fff;
+  color: darkred;
   text-decoration: none;
   text-align: center;
   background: rgba(0,0,0,0.85);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  font-size: medium;
 }
  
 a.tooltip:before {
@@ -76,11 +77,11 @@ a.tooltip.left:before {
 a.tooltip.left:hover:before { right: 100%; bottom: 2%; }
 
 /* tooltip colors (add your own!) */
-a.tooltip.blue:after { background:#007aaa; }
-a.tooltip.blue:before { border-color: #007aaa transparent transparent transparent; }
-a.tooltip.bottom.blue:before{ border-color: transparent transparent #007aaa transparent; }
-a.tooltip.right.blue:before { border-color: transparent #007aaa transparent transparent; }
-a.tooltip.left.blue:before { border-color: transparent transparent transparent #007aaa; }
+a.tooltip.blue:after { background:white; }
+a.tooltip.blue:before { border-color: white transparent transparent transparent; }
+a.tooltip.bottom.blue:before{ border-color: transparent transparent white transparent; }
+a.tooltip.right.blue:before { border-color: transparent white transparent transparent; }
+a.tooltip.left.blue:before { border-color: transparent transparent transparent white; }
 
 a.tooltip.animate:after, a.tooltip.animate:before {
   -webkit-transition: all 0.2s ease-in-out;

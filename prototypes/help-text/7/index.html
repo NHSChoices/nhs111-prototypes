@@ -39,10 +39,10 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title"><strong>Head injury</strong></h4>
+                    <h4 class="modal-title"><strong>Migraine</strong></h4>
                 </div>
                 <div class="modal-body">
-                    <p>Any injury that results in trauma to the skull or brain can be classified as a head injury.</p>
+                    <p>A severe headache usually felt on the side or front of the head. Migraine headaches often have other symptoms such as nausea, vomiting or increased sensitivity to light, sound or smells.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -113,11 +113,11 @@
                     </div>
 
                     <div class="nhs-question-container">
-                        <h2 class="font-large nhs-the-question">Have you had a <a href="#" data-toggle="modal" data-target="#myModal" style="color: white;text-decoration: underline">head injury</a> IN THE LAST 7 DAYS?</h2>
+                        <h2 class="font-large nhs-the-question">Have you ever been diagnosed with a <a href="#" data-toggle="modal" data-target="#myModal" style="color: black;text-decoration: underline">migraine</a> ?</h2>
                     </div>
 
                     <div class="nhs-answer-container">
-                        <div class="nhs-the-answer nhs-radiobtn inline" style="color: white">
+                        <div class="nhs-the-answer nhs-radiobtn inline">
                             <input name="SelectedAnswer" type="radio" id="Yes" value="{&quot;title&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:1}" class=" nhs-radiobtn__input">
                             <label for="Yes" class="nhs-radiobtn__label" style="font-weight: normal">Yes</label>
                             <input name="SelectedAnswer" type="radio" id="Notsure" value="{&quot;title&quot;:&quot;Not sure&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:2}" class=" nhs-radiobtn__input">
@@ -132,7 +132,8 @@
 
 
 
-                        <button id="nextScreen" class="button" type="submit" name="Question" value="Question" disabled="disabled">Next question</button>
+                        <input class="button" id="previousScreen" type="submit" name="PreviousQuestion" value="Prev. question" />
+                        <button id="nextScreen" class="button" type="submit" name="Question" value="Question">Next question</button>
 
                     </div>
 

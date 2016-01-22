@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 nhs-animatehtml  "> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en-GB" class="no-js not-ie8 nhs-animatehtml  ">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Prototype</title>
+    <link href="../../base-assets/_assets/css/main.css" media="all" rel="stylesheet" type="text/css">
+    <link href="../../base-assets/styles/layout.css" rel="stylesheet" media="all">
+    <link href="../../base-assets/css/custom.css" media="all" rel="stylesheet" type="text/css">
+    <link href="site.css" media="all" rel="stylesheet" type="text/css">
+    <link href="rationale.css" media="all" rel="stylesheet" type="text/css">
+    <script src="../../base-assets/_assets/js/vendor/jquery-1.11.1.min.js"></script>
+</head>
+
+<body>
+<div id="HeaderWrapper">
+    <header id="MainHeader" style="background-color: #fff">
+        <a href="/"><img src="../../base-assets/img/med-logo.png" alt="MED"></a>
+    </header>
+</div>
+    
+<div id="pagewrap">
+
+    <section id="content">
+        <div class="icon-rationale"></div>
+
+            <div class="panel-rationale">
+                <h2>Why are we asking this?</h2>
+                <blockquote>
+                    <p>We are looking for any loss of consciousness including a seizure (fit).</p>
+                    <p>It's important to know if you've fainted or been unconscious at all, even if you feel okay now.</p>
+                </blockquote>
+            </div>
+        
+        <!--<h2>Why are we asking?</h2>
+        <blockquote>
+            <p>This means that a diagnosis has been made by a GP or hospital specialist.</p>
+            <p>This does not mean that you simply suspect you have this condition.</p>
+        </blockquote>-->
+    </section>
+
+    <section id="middle">
+        <!--<h2>Have you ever been diagnosed with a <a href="#sidebar" onclick="clicky()" class="glossary">migraine?</a>
+        </h2>-->
+        <div class="icon-question"></div>
+        <div class="panel-question">
+            <h2>Have you fainted or blacked out IN THE LAST 24 HOURS?</h2>
+        </div>
+        
+        <div id="radio-demo">
+            <input name="SelectedAnswer" type="radio" id="Yes" value="{&quot;title&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:1}"/>
+            <label for="Yes">Yes</label>
+            <br/>
+            <input name="SelectedAnswer" type="radio" id="Notsure" value="{&quot;title&quot;:&quot;Not sure&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:2}"/>
+            <label for="Notsure">Not sure</label>
+            <br/>
+            <input name="SelectedAnswer" type="radio" id="No" value="{&quot;title&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3}"/>
+            <label for="No">No</label>
+        </div>
+        <div style="padding: 25px 15px; margin: 0px 5px 5px 5px;">
+            <a class="btn">Prev. question</a>
+            <a class="btn">Next question</a>
+            <!--<input class="btn" type="submit" value="Prev. question"/>
+            <button class="btn" type="submit" value="Question">Next question</button>-->
+        </div>
+    </section>
+
+    <aside id="sidebar">
+        <h2>Migraine</h2>
+        <blockquote>
+            <p>A severe headache usually felt on the side or front of the head.</p>
+            <p>Migraine headaches often have other symptoms such as nausea, vomiting or increased sensitivity to light, sound or smells.</p>
+        </blockquote>
+    </aside>
+
+    <!--<footer>
+        <h4>Footer</h4>
+        <p>Footer text</p>
+    </footer>-->
+
+</div>
+    <script>
+        var b = false;
+        function clicky() {
+            if (!b) $('#sidebar').fadeIn();
+            else $('#sidebar').fadeOut();
+            b = !b;
+
+        }
+    </script>
+</body>
+</html>
+
+

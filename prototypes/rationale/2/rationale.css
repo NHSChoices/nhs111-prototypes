@@ -1,0 +1,19 @@
+.icon {
+    position:absolute;
+    background: url(info_32x32.png);
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+}
+.icon:hover:after {
+    content: "We are looking for any loss of consciousness including a seizure (fit).  It's important to know if you've fainted or been unconscious at all, even if you feel okay now.";
+    z-index:100;
+    display: block;
+    position: relative;
+    bottom: -32px;
+    right: -32px;
+    width: 400px;
+    background: white;
+    font-size: medium;
+    color: darkred;
+}
