@@ -826,7 +826,7 @@ input[disabled], button[disabled]{
     }
 
 #gender #columnTwo label img.selected, #gender #columnThree label img.selected{
-    border: 4px solid #d96769;
+    border: 4px solid #0072C6;
 }
 
 #sliderBottom .painDays{

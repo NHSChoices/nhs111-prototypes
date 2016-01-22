@@ -1079,9 +1079,9 @@ header .close {
 
 #gender #columnOne .largeInputBox{
      background:url(../../content/img/bg/gender-bg.gif);
-     border: 4px solid #d96769;
+     border: 4px solid #0072C6;
     clear: both;
-    color: #fff;
+    color: #000;
     display: block;
     float: left;
     font-size: 45px;
