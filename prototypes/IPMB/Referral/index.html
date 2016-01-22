@@ -1,134 +1,155 @@
 ﻿<!DOCTYPE html>
-<!-- saved from url=(0054)http://nhsalpha.herokuapp.com/register-with-a-gp/start -->
 <html lang="">
-<script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <title>NHS 111</title>
-    <link href="nhs-site.css" media="screen" rel="stylesheet" type="text/css">
-    <link href="nhs-fonts.css" media="screen" rel="stylesheet" type="text/css">
-    <link href="nhs-application.css" media="screen" rel="stylesheet" type="text/css">
-
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Blank page</title>
+    <link href="http://nhsalpha.herokuapp.com/public/stylesheets/govuk-template.css?0.12.0" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://nhsalpha.herokuapp.com/public/stylesheets/nhs_fonts.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" rel="icon" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="http://nhsalpha.herokuapp.com/public/stylesheets/nhs_application.css" media="screen" rel="stylesheet" type="text/css" />
+    <!-- Javascript -->
+    <script src="http://nhsalpha.herokuapp.com/public/javascripts/vendor/jquery-1.11.2.min.js"></script>
+    <script src="http://nhsalpha.herokuapp.com/public/javascripts/vendor/jquery-ui.min.js"></script>
+    <script src="http://nhsalpha.herokuapp.com/public/javascripts/vendor/jquery.select-to-autocomplete.js"></script>
+    <script src="http://nhsalpha.herokuapp.com/public/javascripts/vendor/jquery.sticky-kit.min.js"></script>
+    <script src="http://nhsalpha.herokuapp.com/public/javascripts/vendor/jquery.easing.1.3.js"></script>
+    <script src="http://nhsalpha.herokuapp.com/public/javascripts/vendor/jquery.transit.js"></script>
+    <script src="http://nhsalpha.herokuapp.com/public/javascripts/toggle.js"></script>
+    <script src="http://nhsalpha.herokuapp.com/public/javascripts/details.polyfill.js"></script>
+    <!--<script src="http://nhsalpha.herokuapp.com/public/javascripts/cards.js"></script>-->
+    <script src="http://nhsalpha.herokuapp.com/public/javascripts/application.js"></script>
+    <script>
+        $(function() {
+
+            $(".sticky").stick_in_parent();
+
+        });
+    </script>
 
     <!--<style>
         .planner section {
             max-width: 800px;
         }
     </style>-->
+
+
+
 </head>
-<body class="js-enabled js-enabled">
+<body class="">
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
-    
+
+    <div id="skiplink-container">
+        <div>
+            <a href="#content" class="skiplink">Skip to main content</a>
+        </div>
+    </div>
     <header role="banner" id="global-header">
         <div class="header-container">
-
-            <a href="index.html" class="header-logo" title="Go to the NHS.UK homepage">
-                <img src="../../base-assets/images/nhs-rev-logotype.svg" alt="">
+            <a href="/" class="header-logo" title="Go to the NHS.UK homepage">
+                <img src="http://nhsalpha.herokuapp.com/public/images/nhs-rev-logotype.svg" alt="">
             </a>
-
-
 
         </div>
     </header>
     <!--end header-->
 
+    <main id="content" class="planner" role="main">
+        <h2 class="heading-large" style="text-align: center;">
+            You’ve finished your online assessment.
+        </h2>
+        <h2 class="heading-large" style="text-align: center;">
+            We recommend that you speak to a clinician within 2 hours
+        </h2>
 
-<main id="content" class="planner" role="main">
-    <h2 class="heading-large" style="text-align: center;">
-        You’ve finished your online assessment.
-    </h2>
-    <h2 class="heading-large" style="text-align: center;">
-        We recommend that you speak to a clinician within 2 hours
-    </h2>
-    
-    <section>
-        <!--<header>
-            <h2>Things to do now</h2>
-        </header>-->
+        <section>
+            <!--<header>
+                <h2>Things to do now</h2>
+            </header>-->
 
-        <div class="js-cards items-container">
+            <div class="js-cards items-container" style="border: 1px solid black;">
 
-
-            <div class="item item-cta" id="search">
-                <div class="item-content" style="border: none; cursor: default;">
-                    <div class="item-header">
-                        <span style="text-align: center; background-color: #0072C6; padding: 1.25rem 2rem 0 0; display: block; color: white;">
+                <div class="item item-cta" id="search">
+                    <div class="item-content" style="border: none; cursor: default;">
+                        <div class="item-header">
+                            <h4 class="heading-small" style="text-align: center; background-color: #0072C6; color: white; margin-bottom: 0;">
                                 Let us contact a healthcare provider near you
-                            </span>
-                        <span style="text-align: center; background-color: #0072C6; padding: 0 2rem 1.25rem 0; display: block; color: white;">
+                            </h4>
+                            <p style="text-align: center; background-color: #0072C6; color: white;">
                                 Please enter your details below to find a healthcare provider and they will contact you
-                            </span>
-                    </div>
+                            </p>
+                        </div>
 
-                    <div class="item-body item-body-collapsed" style="height: auto;" id="search-form">
+                        <div class="item-body" style="height: auto;" id="search-form">
 
-                        <div class="item-body-content">
-                            <!--<div style="color: #0072C6;">Let us contact a healthcare provider near you</div>-->
-                            <!--<div style="font-size: 1.1rem; font-weight: lighter;">Please enter your details below to find a healthcare provider and they will contact you</div>-->
-                            <div class="form-item-wrapper" style="padding: 0;">
-                                <fieldset>
-                                    <!--<legend class="form-label-bold">Current location</legend>-->
-                                    <div class="form-group">
-                                        <label class="form-label" for="first-label" style="font-size: 1.25rem; font-weight: bold;">
-                                            Postcode of current location
-                                        </label>
-                                        <input type="text" id="first-label" class="form-control" style="border: 1px solid #0072C6; font-size: 1.2rem; height: 2.75rem; line-height: 2rem;">
-                                        <div style="border-left: 3px solid #0072C6; margin: 10px 0 5px 0; padding: 5px;">
-                                            <div style="font-size: 1.2rem; color: #0072C6; font-weight: bold;">Why we need this</div>
-                                            <div style="font-size: 1.1rem; font-weight: normal;">So we can offer details of healthcare providers available near to where you are right now</div>
+                            <div class="item-body-content">
+                                <!--<div style="color: #0072C6;">Let us contact a healthcare provider near you</div>-->
+                                <!--<div style="font-size: 1.1rem; font-weight: lighter;">Please enter your details below to find a healthcare provider and they will contact you</div>-->
+                                <div class="form-item-wrapper" style="padding: 0;">
+                                    <fieldset>
+                                        <!--<legend class="form-label-bold">Current location</legend>-->
+                                        <div class="form-group">
+                                            <label class="form-label" for="first-label">
+                                                Find me a service in (postcode)
+                                            </label>
+                                            <p class="form-hint">Enter the details of where you want to find local services. You may not be at home for example and need services close to where you are now.</p>
+                                            <input type="text" id="first-label" class="form-control">
+                                            <!--<div style="border-left: 3px solid #0072C6; margin: 10px 0 5px 0; padding: 5px;">
+                                        <div style="font-size: 1.2rem; color: #0072C6; font-weight: bold;">Why we need this</div>
+                                        <div style="font-size: 1.1rem; font-weight: normal;">So we can offer details of healthcare providers available near to where you are right now</div>
+                                    </div>-->
                                         </div>
-                                    </div>
 
-                                </fieldset>
-                            </div>
-                            <div class="form-item-wrapper" style="padding: 0;">
-                                <fieldset>
-                                    <!--<legend class="form-label-bold">Your registered doctors practice</legend>-->
-                                    <div class="form-group">
-                                        <label class="form-label" for="first-label" style="font-size: 1.25rem; font-weight: bold;">
-                                            Name of your GP practice (optional)
-                                        </label>
-                                        <input type="text" id="second-label" class="form-control" style="border: 1px solid #0072C6; font-size: 1.2rem; height: 2.75rem; line-height: 2rem;">
-                                        <div style="border-left: 3px solid #0072C6; margin: 10px 0 5px 0; padding: 5px;">
-                                            <div style="font-size: 1.2rem; color: #0072C6; font-weight: bold;">Why we need this</div>
-                                            <div style="font-size: 1.1rem; font-weight: normal;">So we can offer healthcare providers which may be available through your own GP practice</div>
+                                    </fieldset>
+                                </div>
+                                <div class="form-item-wrapper" style="padding: 0;">
+                                    <fieldset>
+                                        <!--<legend class="form-label-bold">Your registered doctors practice</legend>-->
+                                        <div class="form-group">
+                                            <label class="form-label" for="second-label">
+                                                Name of your GP practice (optional)
+                                            </label>
+                                            <p class="form-hint">So we can offer healthcare providers which may be available through your own GP practice</p>
+                                            <input type="text" id="second-label" class="form-control">
+                                            <!--div style="border-left: 3px solid #0072C6; margin: 10px 0 5px 0; padding: 5px;">
+                                        <div style="font-size: 1.2rem; color: #0072C6; font-weight: bold;">Why we need this</div>
+                                        <div style="font-size: 1.1rem; font-weight: normal;">So we can offer healthcare providers which may be available through your own GP practice</div>
+                                    </div>-->
                                         </div>
-                                    </div>
-                                </fieldset>
+                                    </fieldset>
 
 
-                            </div>
+                                </div>
 
-                            <div class="form-item-wrapper">
-                                <fieldset>
-                                    <!--<legend class="form-label-bold">Your registered doctors practice</legend>-->
-                                    <div class="form-group">
-                                        <a href="services.html" class="button button-get-started" style="background-color: #4C9C39; border-color: #5BA54A; font-size: 1.2rem; font-weight: normal; display: inline; padding-top: 0.5rem; padding-bottom: 0.5rem; background-position: 95% 100%;">Find available healthcare providers</a>
-                                    </div>
-                                </fieldset>
+                                <div class="form-item-wrapper">
+                                    <fieldset>
+                                        <!--<legend class="form-label-bold">Your registered doctors practice</legend>-->
+                                        <div class="form-group">
+                                            <a href="services.html" class="button button-get-started">Find available healthcare providers</a>
+                                        </div>
+                                    </fieldset>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
 
+
+
+
+
+
+
+
             </div>
+        </section>
 
-
-
-
-
-
-
-
-        </div>
-    </section>
-
-    <!--<section>
-        <div style="text-align: center; font-size: 1.0rem">Our advice is that you speak to a clinician, but if you choose not to, you can <a href="#" style="color: #0072C6">get advice to help with your symptoms</a> here.</div>
-    </section>-->
-</main>
+        <!--<section>
+            <div style="text-align: center; font-size: 1.0rem">Our advice is that you speak to a clinician, but if you choose not to, you can <a href="#" style="color: #0072C6">get advice to help with your symptoms</a> here.</div>
+        </section>-->
+    </main>
 
 
     <footer id="footer" role="contentinfo">
