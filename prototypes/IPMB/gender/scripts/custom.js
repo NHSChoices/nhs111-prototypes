@@ -151,7 +151,7 @@ $("#seizure").click(function () {
 $("#jtbs button[type=submit]").attr('disabled', 'disabled');
 $("#jtbs #nextScreen[type=submit]").attr('disabled', 'disabled');
 $("#pathwayQuestions #nextScreen[type=submit]").attr('disabled', 'disabled');
-$("#genderContent #nextScreen[type=submit]").attr('disabled', 'disabled');
+//$("#genderContent #nextScreen[type=submit]").attr('disabled', 'disabled');
 $("#timedQuestion #nextScreen[type=submit]").attr('disabled', 'disabled');
 
 

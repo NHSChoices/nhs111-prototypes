@@ -101,7 +101,7 @@ h2 {
 	padding: 10px 0;
 	vertical-align: middle;
 }
-.button {
+/*.button {
 	background-color: #384e10;
 	border: medium none;
 	border-radius: 0;
@@ -119,7 +119,7 @@ h2 {
 	text-decoration: none;
 	text-transform:uppercase;
 	font-weight:bold;
-}
+}*/
 
 #logStatus {
 	display: block;
@@ -929,7 +929,7 @@ header .close {
 
 }
 
-#gender #nextScreen{
+/*#gender #nextScreen{
  background: none repeat scroll 0 0 #8c3433;
     border-radius: 5px;
     box-shadow: 0 2px 0 #7c2a26;
@@ -939,7 +939,7 @@ header .close {
     text-transform: uppercase;
     width: 200px;
     }
-
+  */
 #gender #errmsg{
     color:red;
     font-weight:bold;

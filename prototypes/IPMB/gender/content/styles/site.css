@@ -3,7 +3,7 @@
 
 
 /* hover states */
-button, .button, input.button{
+/*button, .button, input.button{
     font-size: 20px;
     font-weight:bold;
     font-style:normal;
@@ -16,7 +16,7 @@ button, .button, input.button{
     box-shadow: 1px 1px 1px #003366;
     color:#fff;
     width:auto;
-}
+}*/
 
 
 .site a, .site a:visited, .site a:active{
@@ -750,7 +750,10 @@ button.changeAddress:hover{
 
 
 #gender #nextScreen{
-    border:0;
+    /*border:0;*/
+  height: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 #gender #columnOne .painDays span{
