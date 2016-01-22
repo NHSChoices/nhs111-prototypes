@@ -8,7 +8,8 @@
     <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" rel="icon" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="http://nhsalpha.herokuapp.com/public/stylesheets/nhs_application.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://nhsalpha.herokuapp.com/public/stylesheets/nhs_application.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="http://alpha.nhs.uk/public/stylesheets/nhsuk.css" media="screen" rel="stylesheet" type="text/css" />
     <!-- Javascript -->
     <script src="http://nhsalpha.herokuapp.com/public/javascripts/vendor/jquery-1.11.2.min.js"></script>
     <script src="http://nhsalpha.herokuapp.com/public/javascripts/vendor/jquery-ui.min.js"></script>
@@ -28,11 +29,21 @@
         });
     </script>
 
-    <!--<style>
+    <style>
         .planner section {
-            max-width: 800px;
+            max-width: 960px;
         }
-    </style>-->
+        .form-hint {
+            padding-top: 0;
+        }
+        .item-body-content {
+            max-width: 960px;
+        }
+        p {
+            margin: 0;
+            font-weight: normal;
+        }
+    </style>
 
 
 
@@ -42,24 +53,39 @@
 
     <div id="skiplink-container">
         <div>
-            <a href="#content" class="skiplink">Skip to main content</a>
+            <a href="#content">Skip to main content</a>
         </div>
     </div>
+
+    <div id="global-cookies-banner" role="alert">
+        <p>
+            NHS.UK uses cookies to make the site simpler.
+            <a href="/help/cookies">Find out more about cookies</a>
+        </p>
+    </div>
+
     <header role="banner" id="global-header">
         <div class="header-container">
             <a href="/" class="header-logo" title="Go to the NHS.UK homepage">
-                <img src="http://nhsalpha.herokuapp.com/public/images/nhs-rev-logotype.svg" alt="">
+                <img src="http://alpha.nhs.uk/public/images/nhs-logotype.svg" alt="NHS" width="90" height="36">
             </a>
-
         </div>
     </header>
+
+    <div class="phase-banner">
+        <p>
+            <b>This is a new service.</b> We're still working on it. Send feedback to
+            <a href="mailto:alphafeedback@digital.nhs.uk">alphafeedback@digital.nhs.uk</a>
+            to help us improve it. The live service is <a href="http://www.nhs.uk">NHS.UK.</a>
+        </p>
+    </div>
     <!--end header-->
 
-    <main id="content" class="planner" role="main">
-        <h2 class="heading-large" style="text-align: center;">
+    <main id="content" role="main">
+        <h2 class="heading-large" style="text-align: center; margin: 0;">
             You’ve finished your online assessment.
         </h2>
-        <h2 class="heading-large" style="text-align: center;">
+        <h2 class="heading-medium" style="text-align: center; margin-top: 0;">
             We recommend that you speak to a clinician within 2 hours
         </h2>
 
@@ -73,10 +99,10 @@
                 <div class="item item-cta" id="search">
                     <div class="item-content" style="border: none; cursor: default;">
                         <div class="item-header">
-                            <h4 class="heading-small" style="text-align: center; background-color: #0072C6; color: white; margin-bottom: 0;">
+                            <h4 class="heading-small" style="text-align: center; background-color: #0072C6; color: white; margin: 0;">
                                 Let us contact a healthcare provider near you
                             </h4>
-                            <p style="text-align: center; background-color: #0072C6; color: white;">
+                            <p style="text-align: center; background-color: #0072C6; color: white; margin: 0;">
                                 Please enter your details below to find a healthcare provider and they will contact you
                             </p>
                         </div>
@@ -84,52 +110,56 @@
                         <div class="item-body" style="height: auto;" id="search-form">
 
                             <div class="item-body-content">
-                                <!--<div style="color: #0072C6;">Let us contact a healthcare provider near you</div>-->
-                                <!--<div style="font-size: 1.1rem; font-weight: lighter;">Please enter your details below to find a healthcare provider and they will contact you</div>-->
-                                <div class="form-item-wrapper" style="padding: 0;">
-                                    <fieldset>
-                                        <!--<legend class="form-label-bold">Current location</legend>-->
-                                        <div class="form-group">
-                                            <label class="form-label" for="first-label">
-                                                Find me a service in (postcode)
-                                            </label>
-                                            <p class="form-hint">Enter the details of where you want to find local services. You may not be at home for example and need services close to where you are now.</p>
-                                            <input type="text" id="first-label" class="form-control">
-                                            <!--<div style="border-left: 3px solid #0072C6; margin: 10px 0 5px 0; padding: 5px;">
-                                        <div style="font-size: 1.2rem; color: #0072C6; font-weight: bold;">Why we need this</div>
-                                        <div style="font-size: 1.1rem; font-weight: normal;">So we can offer details of healthcare providers available near to where you are right now</div>
-                                    </div>-->
-                                        </div>
+                                <form action="/" method="POST" class="form">
+                                    <!--<div style="color: #0072C6;">Let us contact a healthcare provider near you</div>-->
+                                    <!--<div style="font-size: 1.1rem; font-weight: lighter;">Please enter your details below to find a healthcare provider and they will contact you</div>-->
+                                    <div class="form-item-wrapper" style="padding: 0;">
+                                        <fieldset>
+                                            <!--<legend class="form-label-bold">Current location</legend>-->
+                                            <div class="form-group">
+                                                <label class="form-label" for="first-label">
+                                                    Find me a service in (postcode)
+                                                </label>
+                                                <!--<p class="form-hint">Enter the details of where you want to find local services. You may not be at home for example and need services close to where you are now.</p>-->
+                                                
+                                                <input type="text" id="first-label" class="form-control">
+                                                <div style="border-left: 3px solid #0072C6; margin: 10px 0; padding-left: 5px;">
+                                                    <h4 class="heading-small" style="color: #0072C6;">Why we need this</h4>
+                                                    <p style="">So we can offer details of healthcare providers available near to where you are right now</p>
+                                                </div>
+                                            </div>
 
-                                    </fieldset>
-                                </div>
-                                <div class="form-item-wrapper" style="padding: 0;">
-                                    <fieldset>
-                                        <!--<legend class="form-label-bold">Your registered doctors practice</legend>-->
-                                        <div class="form-group">
-                                            <label class="form-label" for="second-label">
-                                                Name of your GP practice (optional)
-                                            </label>
-                                            <p class="form-hint">So we can offer healthcare providers which may be available through your own GP practice</p>
-                                            <input type="text" id="second-label" class="form-control">
-                                            <!--div style="border-left: 3px solid #0072C6; margin: 10px 0 5px 0; padding: 5px;">
-                                        <div style="font-size: 1.2rem; color: #0072C6; font-weight: bold;">Why we need this</div>
-                                        <div style="font-size: 1.1rem; font-weight: normal;">So we can offer healthcare providers which may be available through your own GP practice</div>
-                                    </div>-->
-                                        </div>
-                                    </fieldset>
+                                        </fieldset>
+                                    </div>
+                                    <div class="form-item-wrapper" style="padding: 0;">
+                                        <fieldset>
+                                            <!--<legend class="form-label-bold">Your registered doctors practice</legend>-->
+                                            <div class="form-group">
+                                                <label class="form-label" for="second-label">
+                                                    Name of your GP practice (optional)
+                                                </label>
+                                                <!--<p class="form-hint">So we can offer healthcare providers which may be available through your own GP practice</p>-->
+                                                <input type="text" id="second-label" class="form-control">
+                                                <div style="border-left: 3px solid #0072C6; margin: 10px 0; padding-left: 5px;">
+                                                    <h4 class="heading-small" style="color: #0072C6;">Why we need this</h4>
+                                                    <p style="font-weight: normal;">So we can offer healthcare providers which may be available through your own GP practice</p>
+                                                </div>
+
+                                            </div>
+                                        </fieldset>
 
 
-                                </div>
+                                    </div>
 
-                                <div class="form-item-wrapper">
-                                    <fieldset>
-                                        <!--<legend class="form-label-bold">Your registered doctors practice</legend>-->
-                                        <div class="form-group">
-                                            <a href="services.html" class="button button-get-started">Find available healthcare providers</a>
-                                        </div>
-                                    </fieldset>
-                                </div>
+                                    <div class="form-item-wrapper">
+                                        <fieldset>
+                                            <!--<legend class="form-label-bold">Your registered doctors practice</legend>-->
+                                            <div class="form-group">
+                                                <a href="services.html" class="button button-get-started">Find available healthcare providers</a>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>

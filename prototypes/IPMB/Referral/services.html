@@ -9,10 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="http://nhsalpha.herokuapp.com/public/stylesheets/nhs_application.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://alpha.nhs.uk/public/stylesheets/nhsuk.css" media="screen" rel="stylesheet" type="text/css" />
     <!-- Javascript -->
     <script src="http://nhsalpha.herokuapp.com/public/javascripts/vendor/jquery-1.11.2.min.js"></script>
-    <!--<script src="http://nhsalpha.herokuapp.com/public/javascripts/vendor/jquery-ui.min.js"></script>-->
-    <script src="../../base-assets/js/vendor/jquery-ui.js"></script>
+    <script src="http://nhsalpha.herokuapp.com/public/javascripts/vendor/jquery-ui.min.js"></script>
     <script src="http://nhsalpha.herokuapp.com/public/javascripts/vendor/jquery.select-to-autocomplete.js"></script>
     <script src="http://nhsalpha.herokuapp.com/public/javascripts/vendor/jquery.sticky-kit.min.js"></script>
     <script src="http://nhsalpha.herokuapp.com/public/javascripts/vendor/jquery.easing.1.3.js"></script>
@@ -22,21 +22,31 @@
     <!--<script src="http://nhsalpha.herokuapp.com/public/javascripts/cards.js"></script>-->
     <script src="http://nhsalpha.herokuapp.com/public/javascripts/application.js"></script>
     <script>
-        $(function() {
+        $(function () {
 
             $(".sticky").stick_in_parent();
 
         });
     </script>
-    
-    <script>
-        $(function () {
-            $("#accordion").accordion({
-                collapsible: true,
-                active: false
-            });
-        });
-    </script>
+
+    <style>
+        .planner section {
+            max-width: 960px;
+        }
+
+        .form-hint {
+            padding-top: 0;
+        }
+
+        .item-body-content {
+            max-width: 960px;
+        }
+
+        p {
+            margin: 0;
+            font-weight: normal;
+        }
+    </style>
 
 
 
@@ -46,20 +56,35 @@
 
     <div id="skiplink-container">
         <div>
-            <a href="#content" class="skiplink">Skip to main content</a>
+            <a href="#content">Skip to main content</a>
         </div>
     </div>
+
+    <div id="global-cookies-banner" role="alert">
+        <p>
+            NHS.UK uses cookies to make the site simpler.
+            <a href="/help/cookies">Find out more about cookies</a>
+        </p>
+    </div>
+
     <header role="banner" id="global-header">
         <div class="header-container">
             <a href="/" class="header-logo" title="Go to the NHS.UK homepage">
-                <img src="http://nhsalpha.herokuapp.com/public/images/nhs-rev-logotype.svg" alt="">
+                <img src="http://alpha.nhs.uk/public/images/nhs-logotype.svg" alt="NHS" width="90" height="36">
             </a>
-
         </div>
     </header>
+
+    <div class="phase-banner">
+        <p>
+            <b>This is a new service.</b> We're still working on it. Send feedback to
+            <a href="mailto:alphafeedback@digital.nhs.uk">alphafeedback@digital.nhs.uk</a>
+            to help us improve it. The live service is <a href="http://www.nhs.uk">NHS.UK.</a>
+        </p>
+    </div>
     <!--end header-->
-    
-    <main id="content" class="planner" role="main">
+
+    <main id="content" role="main">
         <section>
             <!--<header>
                 <h2>Things to do now</h2>
@@ -70,7 +95,7 @@
                 <div class="item item-cta" id="search">
                     <div class="item-content" style="border: none; cursor: default;">
                         <div class="item-header">
-                            <h4 class="heading-small" style="text-align: center; background-color: #0072C6; color: white;">
+                            <h4 class="heading-small" style="text-align: center; background-color: #0072C6; color: white; margin: 0;">
                                 Recommended service
                             </h4>
 
@@ -79,7 +104,7 @@
                         <div class="item-body" style="" id="search-form">
 
                             <div class="item-body-content">
-                                <h4 class="heading-small">Hedge End Medical Centre, Southampton (Your GP)</h4>
+                                <h4 class="heading-small" style="margin: 0;">Hedge End Medical Centre, Southampton (Your GP)</h4>
                                 <p>
                                     24-28 Lower Northam Road, Hedge End, Southampton, SO30 4FQ<br />
                                     Open today: 09:00 - 19:30
@@ -112,7 +137,7 @@
                 <div class="item item-cta" id="search">
                     <div class="item-content" style="border: none; cursor: default;">
                         <div class="item-header">
-                            <h4 class="heading-small" style="text-align: center; background-color: #0072C6; color: white;">
+                            <h4 class="heading-small" style="text-align: center; background-color: #0072C6; color: white; margin: 0;">
                                 Other services near you
                             </h4>
 
@@ -121,7 +146,7 @@
                         <div class="" style="" id="search-form">
 
                             <div class="item-body-content">
-                                <h4 class="heading-small">
+                                <h4 class="heading-small" style="margin: 0;">
                                     GP Choice - Hants - Stokewood Surgery, Eastleigh (WH)
                                 </h4>
                                 <p>
@@ -142,7 +167,7 @@
                         <div class="" id="search-form" style="border-top: 4px solid #bfdbf0;">
 
                             <div class="item-body-content">
-                                <h4 class="heading-small">
+                                <h4 class="heading-small" style="margin: 0;">
                                     University Hospital, Southampton
                                 </h4>
                                 <p>
@@ -166,19 +191,15 @@
                 </div>
 
             </div>
-
-            <ul>
-
-                <li>
-                    <a href="services.html">
-                        View more healthcare providers
-                    </a>
-                </li>
-
-            </ul>
             
-        </section>
+            
 
+        </section>
+        <div style="border-top: 1px solid #b9d2dc; padding-bottom: 1rem; padding-top: 1rem">
+            <p>
+                <a href="services.html" style="color: #0072C6"><b>View more healthcare providers</b></a>
+            </p>
+        </div>
         <section>
             <div style="text-align: center; font-size: 1.0rem">Our advice is that you speak to a clinician, but if you choose not to, you can <a href="#" style="color: #0072C6">get advice to help with your symptoms</a> here.</div>
         </section>

@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="http://nhsalpha.herokuapp.com/public/stylesheets/nhs_application.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://alpha.nhs.uk/public/stylesheets/nhsuk.css" media="screen" rel="stylesheet" type="text/css" />
     <!-- Javascript -->
     <script src="http://nhsalpha.herokuapp.com/public/javascripts/vendor/jquery-1.11.2.min.js"></script>
     <script src="http://nhsalpha.herokuapp.com/public/javascripts/vendor/jquery-ui.min.js"></script>
@@ -28,11 +29,24 @@
         });
     </script>
 
-    <!--<style>
+    <style>
         .planner section {
-            max-width: 800px;
+            max-width: 960px;
         }
-    </style>-->
+
+        .form-hint {
+            padding-top: 0;
+        }
+
+        .item-body-content {
+            max-width: 960px;
+        }
+
+        p {
+            margin: 0;
+            font-weight: normal;
+        }
+    </style>
 
 
 
@@ -42,22 +56,37 @@
 
     <div id="skiplink-container">
         <div>
-            <a href="#content" class="skiplink">Skip to main content</a>
+            <a href="#content">Skip to main content</a>
         </div>
     </div>
+
+    <div id="global-cookies-banner" role="alert">
+        <p>
+            NHS.UK uses cookies to make the site simpler.
+            <a href="/help/cookies">Find out more about cookies</a>
+        </p>
+    </div>
+
     <header role="banner" id="global-header">
         <div class="header-container">
             <a href="/" class="header-logo" title="Go to the NHS.UK homepage">
-                <img src="http://nhsalpha.herokuapp.com/public/images/nhs-rev-logotype.svg" alt="">
+                <img src="http://alpha.nhs.uk/public/images/nhs-logotype.svg" alt="NHS" width="90" height="36">
             </a>
-
         </div>
     </header>
+
+    <div class="phase-banner">
+        <p>
+            <b>This is a new service.</b> We're still working on it. Send feedback to
+            <a href="mailto:alphafeedback@digital.nhs.uk">alphafeedback@digital.nhs.uk</a>
+            to help us improve it. The live service is <a href="http://www.nhs.uk">NHS.UK.</a>
+        </p>
+    </div>
     <!--end header-->
 
 
 
-    <main id="content" class="planner" role="main">
+    <main id="content" role="main">
         <section>
             <!--<header>
                 <h2>Things to do now</h2>
@@ -69,7 +98,7 @@
                 <div class="item item-cta" id="search">
                     <div class="item-content" style="border: none; cursor: default;">
                         <div class="item-header">
-                            <h4 class="heading-small" style="text-align: center; background-color: #0072C6; color: white;">
+                            <h4 class="heading-small" style="text-align: center; background-color: #0072C6; color: white; margin: 0;">
                                 Service booking confirmed
                             </h4>
                         </div>
@@ -80,7 +109,7 @@
                         <div class="item-body item-body-collapsed" id="search-form">
 
                             <div class="item-body-content">
-                                <h4 class="heading-small">Hedge End Medical Centre, Southampton (Your GP)</h4>
+                                <h4 class="heading-small" style="margin: 0;">Hedge End Medical Centre, Southampton (Your GP)</h4>
                                 <p>
                                     24-28 Lower Northam Road, Hedge End, Southampton, SO30 4FQ<br />
                                     Open today: 09:00 - 19:30
@@ -112,33 +141,34 @@
                 <div class="item item-cta" id="search">
                     <div class="item-content" style="border: none; cursor: default;">
                         <div class="item-header">
-                            <h4 class="heading-small" style="text-align: center; background-color: #0072C6; color: white;">
+                            <h4 class="heading-small" style="text-align: center; background-color: #0072C6; color: white; margin: 0;">
                                 Worsening and self care advice
                             </h4>
                         </div>
                         <div class="appointment-telephone-alert" style="background: url('icon-telephone.svg') no-repeat 2rem center #fffabf; background-size: auto 16px;">
-                            If there are any new symptoms, or if the condition gets worse, changes or you have any other concerns, call 111.
+                            If you have any <b>new symptoms</b>, or the <b>condition gets worse</b>, <b>changes</b> or you have any other concerns <b>call 111</b>.
                         </div>
-                        
-                        <h3 class="heading-small">
-                            Self care <i class="fa fa-chevron-down" style="float: right;"></i>
-                        </h3>
-                            
-                                <p >
-                            Unless advised not to, or they have already been given, paracetamol or ibuprofen can be used to relieve a headache. Follow the instructions in the pack. If in doubt ask a pharmacist.
-                        </p>
-                        <p >
-                            Relaxation e.g. gentle exercise, a massage of the shoulders and neck muscles, a warm bath or simply a break from normal daily routine may help
-                        </p>
-                        <p >
-                            Put a warm flannel on the back of the neck.
-                        </p>
-                           
 
+                        <div style="padding: 1rem 1rem 0 1rem;">
+                            <h3 class="heading-small" style="margin: 0;">
+                                Self care <i class="fa fa-chevron-down" style="float: right;"></i>
+                            </h3>
+
+                            <p style="margin: 18px 0;">
+                                Paracetamol or ibuprofen can be used to relieve a headache. But, don't take them if you've been told not to, or you've already taken some. Read the instructions on the packet, or talk to a pharmacist for advice.
+                            </p>
+                            <p style="margin: 18px 0;">
+                                Try gentle exercise, a neck and shoulder massage, a warm bath or a break from your daily routine to help with a headache.
+                            </p>
+                            <p style="margin: 18px 0;">
+                                Place a warm flannel on the back of your neck.
+                            </p>
                         </div>
+
                     </div>
-
                 </div>
+
+            </div>
 
 
 
