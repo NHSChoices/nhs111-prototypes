@@ -2,14 +2,14 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address
 var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, select {
     border: none;margin: 0;padding: 0;
 }
-h1, h2, h3, h4, h5, h6, p, blockquote, pre, small, strike, strong, sub, sup, tt,
+/*h1, h2, h3, h4, h5, h6, p, blockquote, pre, small, strike, strong, sub, sup, tt,
 var, b, u, i, center, input, textarea, table, caption, tbody, tfoot, thead, tr, th, td {
     font-size: inherit;
     font-family: inherit;
     line-height: inherit;
     font-weight: normal;
-}@
-font - face {
+}*/
+@ font - face {
     font - family: GDS - Logo;
     src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica");
 }.validation - summary: after, .validation - summary - errors: after, .grid - wrapper: after, .list - flowing: after, .panel - indent: after, .panel - success: after, .panel - warning: after, .panel - danger: after, .panel - info: after, #main: after, .clearfix: after {
@@ -546,7 +546,7 @@ input: focus, textarea: focus, select: focus {
  
 }.disabled: focus {
     outline: none;
-}.button {
+}/*.button {
     background - color: #00823b;display:inline-block;position:relative;padding:7px 10px 5px;border:none;border-radius:0;-webkit-appearance:none;-webkit-box-shadow:0 2px 0 # 003518; - moz - box - shadow: 0 2 px 0 #003518;box-shadow:0 2px 0 # 003518;
     font - size: 1e m;
     line - height: 1.4;
@@ -590,7 +590,8 @@ media(min - width: 641 px) {.button {
     color: #005ea5;cursor:pointer;display:inline-block;line-height:1.4;margin:0 15px 15px 0;padding:7px 10px 5px;text-decoration:underline;vertical-align:top;-webkit-font-smoothing:antialiased;}@media (max-width: 640px){.button-link{font-size:16px;line-height:1.25;}}.inline-button .button-link{margin-bottom:0;}.button-link:hover{color:# 2e8 aca;
 }.button - link: focus {
    
-}.get - started.button {
+}*/
+ .get - started.button {
     background: #00823b url(../img/icon-pointer.png) 100% 50% no-repeat;background-size:30px 19px;color:# FFF;font - size: 24 px;font - weight: 700;line - height: 0.66667;margin - bottom: 0;padding: 14 px 41 px 10 px 16 px;text - transform: none;
 }@
 media only screen and(-webkit - min - device - pixel - ratio: 2), only screen and(min--moz - device - pixel - ratio: 2), only screen and(-o - min - device - pixel - ratio: 20 / 10), only screen and(min - device - pixel - ratio: 2), only screen and(min - resolution: 2 dppx) {.get - started.button {

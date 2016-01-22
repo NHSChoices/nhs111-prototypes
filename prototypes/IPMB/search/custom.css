@@ -1,0 +1,133 @@
+#disclaimer {
+    margin: 0 auto;
+    position: relative;
+    /* max-width: 1020px; */
+}
+
+#disclaimerContentWrapper {
+    margin: 0 auto;
+    max-width: 1020px;
+}
+
+#disclaimer .header {
+    padding: 10px 0 0 0;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    font-size: 26px;
+    font-weight: bold;
+    /* background: url(../img/bg/disclaimerBG.png) repeat 0 -13px #e4e72e; */
+    background: #e4e72e;
+    color: #325c52;
+}
+
+#disclaimer .contentWrap {
+    margin: 0;
+    padding: 0;
+    background: #e4e72e;
+    clear: both;
+    float: left;
+    width: 100%;
+}
+
+#disclaimer .discHead {
+    letter-spacing: 4px;
+    padding-top: 30px;
+    word-spacing: 10px;
+    font-size: 35px;
+}
+
+#yellowWrapper {
+    width: 100%;
+    background: #e4e72e;
+    float: left;
+}
+
+#disclaimer .subHeader {
+    font-size: 20px;
+    text-align: center;
+    padding: 0;
+    color: #2f5d4f;
+    padding-top: 16px;
+}
+
+#disclaimerHelp {
+    float: left;
+    margin: 3% 0% 1% 15%;
+    padding: 20px;
+}
+
+#disclaimerHelp #left, #disclaimerHelp #right {
+    width: 350px;
+    float: left;
+    background: none;
+}
+
+#disclaimerHelp li {
+    background: url(bullet-arrows.png) no-repeat 0 7px;
+    background-size: 13px;
+    margin-bottom: 15px;
+    padding-left: 16px;
+}
+
+#disclaimerHelp a {
+    color: #2f5d4f;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#disclaimerHelp .helper {
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    color: #46967b;
+    font-style: italic;
+    padding: 10px;
+}
+
+#disclaimerHelp {
+    float: left;
+    margin: 3% 0% 1% 15%;
+    padding: 20px;
+}
+
+#disclaimer #close {
+    margin: 0 0 50px 0;
+}
+
+#disclaimer .center {
+    text-align: center;
+    padding: 0 30px;
+    clear: both;
+}
+
+header .close {
+    padding: 0;
+    right: 50px;
+    top: 43px;
+    position: absolute;
+    cursor: pointer;
+}
+
+#disclaimerHelp span.green {
+    text-decoration: underline;
+}
+
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .2;
+    filter: alpha(opacity=20);
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .5;
+    filter: alpha(opacity=50);
+}

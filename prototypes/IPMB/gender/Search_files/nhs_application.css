@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 @-ms-viewport {
   width: device-width; }
 
@@ -1476,7 +1476,7 @@ body {
       padding: 9px 30px 15px 30px; } }
 
 html, #footer {
-  background-color: #231f20; }
+  /*background-color: #231f20;*/ }
 
 #footer {
   color: #d9dbdd;
