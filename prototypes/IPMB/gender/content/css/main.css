@@ -2,14 +2,14 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address
 var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, select {
     border: none;margin: 0;padding: 0;
 }
-h1, h2, h3, h4, h5, h6, p, blockquote, pre, small, strike, strong, sub, sup, tt,
+/*h1, h2, h3, h4, h5, h6, p, blockquote, pre, small, strike, strong, sub, sup, tt,
 var, b, u, i, center, input, textarea, table, caption, tbody, tfoot, thead, tr, th, td {
     font-size: inherit;
     font-family: inherit;
     line-height: inherit;
     font-weight: normal;
-}@
-font - face {
+}*/
+@ font - face {
     font - family: GDS - Logo;
     src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica");
 }.validation - summary: after, .validation - summary - errors: after, .grid - wrapper: after, .list - flowing: after, .panel - indent: after, .panel - success: after, .panel - warning: after, .panel - danger: after, .panel - info: after, #main: after, .clearfix: after {
