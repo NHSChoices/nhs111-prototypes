@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'nta';
+  src: url(fonts/NeueFrutigerComRegular.woff);
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Frutiger';
+  src: url(fonts/NeueFrutigerComRegular.woff);
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Frutiger';
+  src: url(fonts/NeueFrutigerComBold.woff);
+  font-weight: bold;
+  font-style: normal; }
+
