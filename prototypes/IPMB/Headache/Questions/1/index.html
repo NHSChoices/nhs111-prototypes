@@ -12,6 +12,9 @@
 
 
     <link href="http://nhsalpha.herokuapp.com/public/stylesheets/nhs_application.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="../../../content/questions.css" media="screen" rel="stylesheet" type="text/css" />
+
+
 </head>
 <body>
 
@@ -35,6 +38,51 @@
 
     <main id="content" role="main">
         <h1 class="heading-xlarge">Have you had an injury to your head in the last 7 days?</h1>
+        <div class="notice" role="note" aria-label="Information">
+            <h4 class="bold-small">Why are we asking this?</h4>
+            <p>This question is looking for common symptoms of meningitis and other serious conditions.</p>
+
+        </div>
+
+        <fieldset>
+            <div class="form-item-wrapper">
+                <div class="form-group">
+                    <input type="radio" id="yes" name="question" value="yes">
+                    <label class="form-control-radio" for="yes">
+                        Yes
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-item-wrapper">
+                <div class="form-group">
+                    <input type="radio" id="not-sure" name="question" value="notsure">
+                    <label class="form-control-radio" for="not-sure">
+                        Not sure
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-item-wrapper">
+                <div class="form-group">
+                    <input type="radio" id="no" name="question" value="no">
+                    <label class="form-control-radio" for="no">
+                        No
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-item-wrapper">
+                <div class="form-group">
+                    <div class="nav-buttons"><a href="#" class="button ">&lt; Previous Question</a>
+<a href="2.1.html" class="button ">Next Question &gt;</a></div>
+                   
+
+                </div>
+            </div>
+        </fieldset>
+
+
 
     </main>
     <footer id="footer" role="contentinfo">
