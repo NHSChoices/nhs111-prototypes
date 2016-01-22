@@ -14,6 +14,7 @@
 
 
     <link href="http://nhsalpha.herokuapp.com/public/stylesheets/nhs_application.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="custom.css" media="screen" rel="stylesheet" type="text/css" />
 
     <!-- Javascript -->
 
@@ -27,128 +28,239 @@
     <script src="http://nhsalpha.herokuapp.com/public/javascripts/details.polyfill.js"></script>
     <script src="http://nhsalpha.herokuapp.com/public/javascripts/cards.js"></script>
     <script src="http://nhsalpha.herokuapp.com/public/javascripts/application.js"></script>
+    <script src="jquery.blockUI.js"></script>
 
     <script>
- $(function() {
+        $(function() {
 
-   $(".sticky").stick_in_parent();
+            $(".sticky").stick_in_parent();
 
- });
+        });
     </script>
 
 
 </head>
 
-<body class="">
-    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+<body id="search" class="jsEnabledExpand">
+    <header id="disclaimer" style="z-index:1000">
 
 
-
-    <div id="skiplink-container">
-        <div>
-            <a href="#content" class="skiplink">Skip to main content</a>
+        <div class="header">
+            <img src="close.jpg" class="closeDisclaimer close">
+            <!--<a href="#" title="Close Disclaimer" class="closeDisclaimer accessibility">[ X ]</a>-->
+            <div class="discHead">Do i need to call 999?</div>
         </div>
-    </div>
-
-    <header role="banner" id="global-header">
-        <div class="header-container">
-
-            <a href="/" class="header-logo" title="Go to the NHS.UK homepage">
-                <img src="http://nhsalpha.herokuapp.com/public/images/nhs-rev-logotype.svg" alt="">
-            </a>
+        <div id="yellowWrapper">
+            <div id="disclaimerContentWrapper">
+                <div class="contentWrap">
 
 
+                    <div class="subHeader">Call 999 immediately if you have any of the following</div>
 
-        </div>
+                    <ul id="disclaimerHelp">
+                        <li id="left">
+                            <ul>
+                                <li class="firstChild" id="chestPain">
+                                    <a href="#">Central crushing <span class="green">chest pain</span></a>
+                                    <p class="helper" style="display: none;">
+                                        A feeling of crushing pressure like a heavy weight pushing down on your chest.
+                                    </p>
+                                </li>
+
+                                <li id="stroke">
+                                    <a href="#">You think you are <span class="green">having a stroke</span> </a>
+                                    <p class="helper" style="display: none;">
+                                        Signs of a stroke include being unable to raise both arms and keep them there, difficulty speaking or a lopsided face.
+                                    </p>
+                                </li>
+
+                                <li id="chocking">
+                                    <a href="#">Severe <span class="green">difficulty breathing</span>, choking or turning blue </a>
+                                    <p class="helper" style="display: none;">
+                                        This means you are unable to finish a sentence without stopping several times to take a breath. You may be gasping, wheezing or putting a lot of effort into breathing.
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li id="right">
+                            <ul>
+                                <li id="bleeding">
+                                    <a href="#"><span class="green">Bleeding</span> very heavily </a>
+                                    <p class="helper" style="display: none;">
+                                        This means heavy bleeding that is continuing despite attempts to stop it.
+                                    </p>
+                                </li>
+
+                                <li id="injury">
+                                    <a href="#">A <span class="green">severe injury</span> </a>
+                                    <p class="helper" style="display: none;">
+                                        This includes deep wounds, or injuries caused by falls, assault or road traffic accidents and will require an immediate medical assessment.
+                                    </p>
+                                </li>
+
+                                <li class="lastChild" id="seizure">
+                                    <a href="#">The person you are enquiring about is <span class="green">unconscious </span> having a <span class="green">seizure (fit)</span></a>
+                                    <p class="helper" style="display: none;">
+                                        Unconscious - Not awake and totally unaware of what is going on around you. As if you are asleep, but with no response if someone tries to wake you.<br><br>
+
+                                        Seizure - Uncontrolled electrical activity in the brain, which can lead to loss of consciousness and/or loss of bladder and bowel control. Seizures are often known as fits.
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="center">
+                        <a id="close" class="closeDisclaimer button">None of the above apply</a>
+                    </div>
+                </div>
+            </div> <!-- /disclaimerContentWrapper-->
+        </div> <!-- /yellowWrapper-->
+
+
     </header>
-    <!--end header-->
+<script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
+    <div id="wrapper" style="z-index:100">
 
-
-
-
-
-    <main id="content" role="main">
-        <form action="/Gender/" method="post">
-            <input type="hidden" id="pathwayNo" name="pathwayNo" value="" />
-            <h1 class="heading-xlarge">I need help with</h1>
-            <div class="searchWrap">
-
-                <label for="searchTags">
-                    <input type="text" class="form-control" id="searchTags" autocomplete="off" name="searchTags" placeholder="Search for conditions and symptoms" style="display:inline;" />
-                </label>
-
-                <input type="submit" class="go button" value="GO" id="submitSearch" style="height:100%">
-
-
-
-
-
+        <div id="skiplink-container">
+            <div>
+                <a href="#content" class="skiplink">Skip to main content</a>
             </div>
-            <h2 style="margin-top:30px">Common symptoms</h2>
-            <ul id="commonConditions">
-                <li><a href="#">Abdominal pain</a></li>
-                <li><a href="#">Fever for under 5 year olds</a></li>
-                <li><a href="#">Diarrhoea and vomiting</a></li>
-                <li><a href="#">Colds and flu</a></li>
-                <li><a href="#">Dental – toothache and dental trauma</a></li>
-
-            </ul>
-            <div id="SearchResults">
-
-            </div>
-        </form>
-    </main>
-
-
-
-    <footer id="footer" role="contentinfo">
-
-        <div class="footer-wrapper">
-
-            <div class="text">
-
-                <p>
-                    <small>
-                        &copy; Crown copyright<br>
-                        Content available under <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>, except where otherwise stated.
-                    </small>
-                </p>
-
-            </div>
-
         </div>
 
-    </footer>
+        <header role="banner" id="global-header">
+            <div class="header-container">
+
+                <a href="/" class="header-logo" title="Go to the NHS.UK homepage">
+                    <img src="http://nhsalpha.herokuapp.com/public/images/nhs-rev-logotype.svg" alt="">
+                </a>
 
 
-    <div id="global-app-error" class="app-error hidden"></div>
 
-    <script type="text/javascript">
-    // -- search box autocomplete mock script
-        $(function() {
-            $("#searchTags").autocomplete({
-                source: function(request, response) { response(['Headache', 'Head injury']); },
-                focus: function(event, ui) {
-                    event.preventDefault();
-                    $("#searchTags").val(ui.item.label);
-                    return false;
-                },
-                select: function(event, ui) {
-                    event.preventDefault();
-                    $("#searchTags").val(ui.item.label);
-                    $("#pathwayNo").val(ui.item.value);
-                    $("input.go").removeAttr("disabled");
-                    return false;
-                },
-                open: function(event, ui) {
-                    $('.ui-autocomplete').off('menufocus hover mouseover mouseenter');
-                },
-                appendTo: $('#SearchResults')
-            });
+            </div>
+        </header>
+        <!--end header-->
+
+
+
+
+
+
+        <main id="content" role="main">
+            <form action="/Gender/" method="post">
+                <input type="hidden" id="pathwayNo" name="pathwayNo" value="" />
+                <h1 class="heading-xlarge">I need help with</h1>
+                <div class="searchWrap">
+
+                    <label for="searchTags">
+                        <input type="text" class="form-control" id="searchTags" autocomplete="off" name="searchTags" placeholder="Search for conditions and symptoms" style="display: inline;" />
+                    </label>
+
+                    <input type="submit" class="go button" value="GO" id="submitSearch" style="height: 100%">
+
+
+
+
+
+                </div>
+                <h2 style="margin-top: 30px">Common symptoms</h2>
+                <ul id="commonConditions">
+                    <li><a href="#">Abdominal pain</a></li>
+                    <li><a href="#">Fever for under 5 year olds</a></li>
+                    <li><a href="#">Diarrhoea and vomiting</a></li>
+                    <li><a href="#">Colds and flu</a></li>
+                    <li><a href="#">Dental – toothache and dental trauma</a></li>
+
+                </ul>
+                <div id="SearchResults">
+
+                </div>
+            </form>
+        </main>
+
+
+
+        <footer id="footer" role="contentinfo">
+
+            <div class="footer-wrapper">
+
+                <div class="text">
+
+                    <p>
+                        <small>
+                            &copy; Crown copyright<br>
+                            Content available under <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>, except where otherwise stated.
+                        </small>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </div>
+<div id="global-app-error" class="app-error hidden"></div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(function () {
+            $('#search').addClass('jsEnabledExpand');
+
 
         });
-    </script>
+
+        //on page load show disclaimer and block rest of the page
+        $('.jsEnabledExpand #disclaimer').css({ "display": "block" });
+
+        $('.jsEnabledExpand #disclaimer').slideDown(500);
+
+        $('#search div#wrapper').block({ message: null });
+
+        $('.closeDisclaimer').click(function () {
+            $('.jsEnabledExpand #disclaimer').slideUp(500);
+            $('div#wrapper').unblock();
+        });
+
+
+        //Disclaimer help scripts
+
+        // prevent links from jumping to top of page
+        $('#disclaimerHelp a').click(function (e) {
+            // Cancel the default action
+            e.preventDefault();
+        });
+
+        // hide disclaimer help by default
+        $("#disclaimerHelp .helper").hide();
+    });
+
+    // -- search box autocomplete mock script
+    $(function() {
+        $("#searchTags").autocomplete({
+            source: function(request, response) { response(['Headache', 'Head injury']); },
+            focus: function(event, ui) {
+                event.preventDefault();
+                $("#searchTags").val(ui.item.label);
+                return false;
+            },
+            select: function(event, ui) {
+                event.preventDefault();
+                $("#searchTags").val(ui.item.label);
+                $("#pathwayNo").val(ui.item.value);
+                $("input.go").removeAttr("disabled");
+                return false;
+            },
+            open: function(event, ui) {
+                $('.ui-autocomplete').off('menufocus hover mouseover mouseenter');
+            },
+            appendTo: $('#SearchResults')
+        });
+
+    });
+</script>
 
 </body>
 </html>
