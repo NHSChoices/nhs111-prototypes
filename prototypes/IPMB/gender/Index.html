@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0044)http://nhsalpha.herokuapp.com/examples/blank -->
+<html lang="">
+<script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+  <title>Blank page</title>
+
+  <link href="Search_files/govuk-template.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="Search_files/nhs_fonts.css" media="all" rel="stylesheet" type="text/css">
+  <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" rel="icon" type="image/x-icon">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link href="Search_files/nhs_application.css" media="screen" rel="stylesheet" type="text/css">
+
+  <link href="content/css/main.css" media="all" rel="stylesheet" type="text/css">
+
+  <!--<link rel="shortcut icon" href="~/content/img/favicon.ico" type="image/x-icon">-->
+
+  <link rel="stylesheet" href="content/css/jquery-ui.css">
+  <!-- STYLES -->
+  <link href="content/css/skins/flat/yellow.css" media="all" rel="stylesheet" type="text/css">
+
+  <link href="content/css/custom.css" media="all" rel="stylesheet" type="text/css">
+  <link href="content/styles/vendor/jquery.nouislider.css" media="all" rel="stylesheet" type="text/css">
+  <link href="content/styles/site.css" media="all" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="content/css/responsive.css">
+
+
+  <script src="scripts/vendor/modernizr-custom.js"></script>
+  <script src="scripts/jquery2.1.1.min.js"></script>
+  <script src="scripts/mobileScroller.js"></script>
+
+
+
+  <script src="scripts/jquery2.1.1.min.js"></script>
+  <script src="scripts/jquery1.11.2-ui.min.js"></script>
+  <script src="scripts/jquery.blockUI.js"></script>
+
+
+  <script src="scripts/custom.js"></script>
+
+
+
+  <!-- Javascript -->
+  <!--
+  <script src="./Search_files/jquery-1.11.2.min.js"></script><style type="text/css"></style>
+  <script src="./Search_files/jquery-ui.min.js"></script>
+  <script src="./Search_files/jquery.select-to-autocomplete.js"></script>
+  <script src="./Search_files/jquery.sticky-kit.min.js"></script>
+  <script src="./Search_files/jquery.easing.1.3.js"></script>
+  <script src="./Search_files/jquery.transit.js"></script>
+  <script src="./Search_files/toggle.js"></script>
+  <script src="./Search_files/details.polyfill.js"></script>
+  <script src="./Search_files/cards.js"></script>
+  <script src="./Search_files/application.js"></script>
+
+  <script>
+   $(function() {
+
+     $(".sticky").stick_in_parent();
+
+   });
+  </script>
+      -->
+
+</head>
+
+<body class="js-enabled" id="gender">
+  <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+
+
+  <div id="skiplink-container">
+    <div>
+      <a href="http://nhsalpha.herokuapp.com/examples/blank#content" class="skiplink">Skip to main content</a>
+    </div>
+  </div>
+
+  <header role="banner" id="global-header">
+    <div class="header-container">
+
+      <a href="http://nhsalpha.herokuapp.com/" class="header-logo" title="Go to the NHS.UK homepage">
+        <img src="Search_files/nhs-rev-logotype.svg" alt="">
+      </a>
+
+
+
+    </div>
+  </header>
+  <!--end header-->
+
+
+
+
+  <div class="content-container">
+
+
+    <main id="content" role="main">
+
+    <form action="../Headache/Questions/1/" id="outerContent" method="post">
+      <input id="PathwayNo" name="PathwayNo" type="hidden" value=""/>
+
+      <div id="genderContent">
+        <p class="breadcrumb"></p>
+        <h2>We need a few more details</h2>
+
+        <div id="threeColumnBlock">
+          <div id="columnTwo">
+            <label>
+              <input name="UserInfo.Gender" value="Male" type="radio" id="Male">
+              <img src="content/img/male.png" alt="Male" class="maleIcon">
+            </label>
+
+          </div>
+
+          <div id="columnThree">
+
+
+            <label>
+              <input name="UserInfo.Gender" value="Female" type="radio" id="Female">
+              <img src="content/img/female.png" alt="Female" class="femaleIcon">
+            </label>
+          </div>
+
+
+          <div id="columnOne" class="ageInput">
+            <label>
+              <span id="errmsg"></span>
+              <input type="text" class="largeInputBox" name="UserInfo.Age" id="Age" size=2 maxlength=2 onkeypress=" return numbersonly(this, event); ">
+
+              <span>Type</span><span class="boldText">Your age</span>
+            </label>
+          </div>
+
+        </div>
+        <!--/threeColumnBlock-->
+
+
+        <div id="chooseGender">
+          <span>Choose</span><br>
+          <span class="bold">Your gender</span>
+
+        </div>
+        <input class="button" id="nextScreen" type="submit" name="Slider" value="Next"/>
+      </div> <!--/genderContent-->
+    </form>
+      </main>
+  </div>
+
+
+
+  
+
+  <footer id="footer" role="contentinfo">
+
+    <div class="footer-wrapper">
+
+      <div class="text">
+
+        <p>
+          <small>
+            © Crown copyright<br>
+            Content available under <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>, except where otherwise stated.
+          </small>
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <div id="global-app-error" class="app-error hidden"></div>
+
+
+
+  <script type="text/javascript">
+<!--
+// copyright 1999 Idocs, Inc. http://www.idocs.com
+// Distribute this script freely but keep this notice in place
+function numbersonly(myfield, e, dec)
+{
+var key;
+var keychar;
+
+if (window.event)
+   key = window.event.keyCode;
+else if (e)
+   key = e.which;
+else
+   return true;
+keychar = String.fromCharCode(key);
+
+// control keys
+if ((key==null) || (key==0) || (key==8) ||
+    (key==9) || (key==13) || (key==27) )
+   return true;
+
+// numbers
+else if ((("0123456789").indexOf(keychar) > -1))
+   return true;
+
+// decimal point jump
+else if (dec && (keychar == "."))
+   {
+   myfield.form.elements[dec].focus();
+   return false;
+   }
+else
+   return false;
+}
+
+//-->
+  </script>
+
+
+</body>
+</html>
