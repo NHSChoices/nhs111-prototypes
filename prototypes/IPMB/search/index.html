@@ -69,7 +69,7 @@
 
 
     <main id="content" role="main">
-        <form action="/Question/Gender" method="post">
+        <form action="/Gender/" method="post">
             <input type="hidden" id="pathwayNo" name="pathwayNo" value="" />
             <h1 class="heading-xlarge">I need help with</h1>
             <div class="searchWrap">
@@ -124,6 +124,31 @@
 
     <div id="global-app-error" class="app-error hidden"></div>
 
+    <script type="text/javascript">
+    // -- search box autocomplete mock script
+        $(function() {
+            $("#searchTags").autocomplete({
+                source: function(request, response) { response(['Headache', 'Head injury']); },
+                focus: function(event, ui) {
+                    event.preventDefault();
+                    $("#searchTags").val(ui.item.label);
+                    return false;
+                },
+                select: function(event, ui) {
+                    event.preventDefault();
+                    $("#searchTags").val(ui.item.label);
+                    $("#pathwayNo").val(ui.item.value);
+                    $("input.go").removeAttr("disabled");
+                    return false;
+                },
+                open: function(event, ui) {
+                    $('.ui-autocomplete').off('menufocus hover mouseover mouseenter');
+                },
+                appendTo: $('#SearchResults')
+            });
+
+        });
+    </script>
 
 </body>
 </html>
