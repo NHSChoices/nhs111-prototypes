@@ -47,7 +47,7 @@
             font-weight: normal;
         }
         .item-header h4 {
-            padding: 10px;
+            padding: 15px;
             font-weight: 600 !important;
             background-color: #dbe4f3 !important;
             color: black !important;
@@ -122,7 +122,7 @@
                                     <fieldset>
                                         <!--<legend class="form-label-bold">Your registered doctors practice</legend>-->
                                         <div class="form-group">
-                                            <a href="services.html" class="button button-secondary-cta">Choose a different service</a>
+                                            <a href="services.html" class="button button-secondary-cta" style="height: 4rem; line-height: 4rem; border-width: 3px;">Choose a different service</a>
                                         </div>
                                     </fieldset>
                                 </div>
@@ -158,10 +158,12 @@
 
                                         <div class="inline-form-groups">
                                             <div class="form-group">
-                                                <input type="text" id="first-name" class="form-control form-control-4-chars" placeholder="First name" style="width:215px">
+                                                <label class="first-name" for="dob-day">First name</label>
+                                                <input type="text" id="first-name" class="form-control form-control-4-chars" style="width: 220px">
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" id="last-name" class="form-control form-control-4-chars" placeholder="Last name" style="width:220px">
+                                                <label class="last-name" for="dob-day">Last name</label>
+                                                <input type="text" id="last-name" class="form-control form-control-4-chars" style="width:220px">
                                             </div>
                                         </div>
                                     </fieldset>
@@ -175,13 +177,16 @@
 
                                         <div class="inline-form-groups">
                                             <div class="form-group">
-                                                <input class="form-control form-control-2-chars" id="dob-day" type="number" min="0" max="31" placeholder="01">
+                                                <label class="form-label" for="dob-day">Day</label>
+                                                <input class="form-control form-control-2-chars" id="dob-day" type="number" min="0" max="31">
                                             </div>
                                             <div class="form-group">
-                                                <input class="form-control form-control-2-chars" id="dob-month" type="number" min="0" max="12" placeholder="08">
+                                                <label class="form-label" for="dob-month">Month</label>
+                                                <input class="form-control form-control-2-chars" id="dob-month" type="number" min="0" max="12">
                                             </div>
                                             <div class="form-group">
-                                                <input class="form-control form-control-4-chars" id="dob-year" type="number" min="0" placeholder="2000">
+                                                <label class="form-label" for="dob-year">Year</label>
+                                                <input class="form-control form-control-4-chars" id="dob-year" type="number" min="0">
                                             </div>
                                         </div>
                                     </fieldset>
@@ -196,7 +201,7 @@
                                                 Contact number
                                             </legend>
                                             <div class="inline-form-groups">
-                                                <input type="text" id="contact-label" class="form-control" placeholder="Landline or mobile number">
+                                                <input type="text" id="contact-label" class="form-control">
                                             </div>
                                         </div>
                                     </fieldset>
@@ -212,7 +217,7 @@
 
                                         <div class="inline-form-groups">
                                             <div class="form-group">
-                                                <input type="text" id="postcode-label" class="form-control" style="width: 150px; margin-top: 3px;" placeholder="eg. SE1">
+                                                <input type="text" id="postcode-label" class="form-control" style="width: 150px; margin-top: 3px;">
                                             </div>
                                             <div class="form-group">
                                                 <a href="#" class="button button-secondary-cta" style="height: 4rem; line-height: 4rem; border-width: 3px;">Find my address</a>
@@ -258,8 +263,8 @@
         <div class="footer-container">
             <nav>
                 <ul>
-                    <li><a href="/help/cookies">Cookies</a></li>
-                    <li><a href="/help/clinical-assurance">Clinical assurance</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Clinical assurance</a></li>
                 </ul>
             </nav>
 
