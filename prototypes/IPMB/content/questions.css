@@ -16,7 +16,8 @@
 
         .nav-buttons {
             margin: auto;
-            width: 50%;
+        
+          margin-top: 5%;
         }
 
         .nav-buttons a {
@@ -30,6 +31,7 @@
 
         .form-group {
             margin-bottom: 0;
+
             line-height: 0;
         }
         .notice {
@@ -41,4 +43,16 @@
 
         .notice p {
             font-size: 1.37rem;
+        }
+       
+        .next-button {
+            float: right;
+        }
+
+        .prev-button {
+                font-weight: bold;
+                padding-left: 3rem;
+                background-image: url("../content/icon-button-prev.png");
+                background-repeat: no-repeat;
+                background-position: 5% 55%;
         }
