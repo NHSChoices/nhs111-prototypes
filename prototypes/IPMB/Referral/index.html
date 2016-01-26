@@ -2,7 +2,7 @@
 <html lang="">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <title>Blank page</title>
+    <title>NHS 111 - Speak to a clinician within 2 hours</title>
     <link href="http://nhsalpha.herokuapp.com/public/stylesheets/govuk-template.css?0.12.0" media="screen" rel="stylesheet" type="text/css" />
     <link href="http://nhsalpha.herokuapp.com/public/stylesheets/nhs_fonts.css" media="all" rel="stylesheet" type="text/css" />
     <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" rel="icon" type="image/x-icon">
@@ -39,10 +39,59 @@
         .item-body-content {
             max-width: 960px;
         }
+
+        .item-header-innner h4 {
+                font-size: 24px;
+            margin: 0 0 8px 0;
+        
+          }
+        .form-label {
+            font-weight: 600;
+        }
         p {
             margin: 0;
             font-weight: normal;
         }
+         .item-header {
+             background-color: #dbe4f3;
+             padding: 10px;
+         }
+        
+        
+        .notice {
+            padding: 15px;
+            margin: 10px 0;
+            background-color: transparent;
+            border-left: 5px solid #FFED00;
+        }
+        .notice p {
+             font-size: 1.37rem;
+        }
+
+            .notice h4 {
+                margin: 0;
+            }
+
+        .button-get-started {
+                background-position: 98% 55%;
+        }
+
+        .no-help {
+            padding-top: 50px;
+            margin: auto;
+            text-align: center;
+            width: 50%;
+            font-size: 0.8em;
+        }
+
+        .no-help hr 
+        {
+            padding: 15px;
+        }
+        #content {
+            padding-bottom: 0;
+        }
+
     </style>
 
 
@@ -85,7 +134,7 @@
         <h2 class="heading-large" style="text-align: center; margin: 0;">
             You’ve finished your online assessment.
         </h2>
-        <h2 class="heading-medium" style="text-align: center; margin-top: 0;">
+        <h2 class="heading" style="text-align: center; margin-top: 0;">
             We recommend that you speak to a clinician within 2 hours
         </h2>
 
@@ -99,12 +148,15 @@
                 <div class="item item-cta" id="search">
                     <div class="item-content" style="border: none; cursor: default;">
                         <div class="item-header">
-                            <h4 class="heading-small" style="text-align: center; background-color: #0072C6; color: white; margin: 0;">
-                                Let us contact a healthcare provider near you
-                            </h4>
-                            <p style="text-align: center; background-color: #0072C6; color: white; margin: 0;">
-                                Please enter your details below to find a healthcare provider and they will contact you
-                            </p>
+                            <div class="item-header-innner">
+                                <h4 class="heading" style="text-align: center;">
+                                    Let us contact a healthcare provider near you
+                                </h4>
+                                <p style="text-align: center;">
+                                    Please enter your details below to find a healthcare provider and they will contact you
+                                </p>
+                            </div>
+                        </div>
                         </div>
 
                         <div class="item-body" style="height: auto;" id="search-form">
@@ -117,15 +169,17 @@
                                         <fieldset>
                                             <!--<legend class="form-label-bold">Current location</legend>-->
                                             <div class="form-group">
-                                                <label class="form-label" for="first-label">
-                                                    Find me a service in (postcode)
-                                                </label>
-                                                <!--<p class="form-hint">Enter the details of where you want to find local services. You may not be at home for example and need services close to where you are now.</p>-->
-                                                
-                                                <input type="text" id="first-label" class="form-control">
-                                                <div style="border-left: 3px solid #0072C6; margin: 10px 0; padding-left: 5px;">
-                                                    <h4 class="heading-small" style="color: #0072C6;">Why we need this</h4>
-                                                    <p style="">So we can offer details of healthcare providers available near to where you are right now</p>
+                                                <div class="input-area">
+                                                    <label class="form-label heading-medium" for="first-label">
+                                                        Find me a service in (postcode)
+                                                    </label>
+                                                    <!--<p class="form-hint">Enter the details of where you want to find local services. You may not be at home for example and need services close to where you are now.</p>-->
+
+                                                    <input type="text" id="first-label" class="form-control">
+                                                </div>
+                                                <div class="notice">
+                                                    <h4>Why we need this</h4>
+                                                    <p >So we can offer details of healthcare providers available near to where you are right now</p>
                                                 </div>
                                             </div>
 
@@ -135,17 +189,19 @@
                                         <fieldset>
                                             <!--<legend class="form-label-bold">Your registered doctors practice</legend>-->
                                             <div class="form-group">
-                                                <label class="form-label" for="second-label">
-                                                    Name of your GP practice (optional)
-                                                </label>
-                                                <!--<p class="form-hint">So we can offer healthcare providers which may be available through your own GP practice</p>-->
-                                                <input type="text" id="second-label" class="form-control">
-                                                <div style="border-left: 3px solid #0072C6; margin: 10px 0; padding-left: 5px;">
-                                                    <h4 class="heading-small" style="color: #0072C6;">Why we need this</h4>
-                                                    <p style="font-weight: normal;">So we can offer healthcare providers which may be available through your own GP practice</p>
-                                                </div>
+                                                <div class="input-area">
+                                                    <label class="form-label" for="second-label">
+                                                        Name of your GP practice (optional)
+                                                    </label>
+                                                    <!--<p class="form-hint">So we can offer healthcare providers which may be available through your own GP practice</p>-->
+                                                    <input type="text" id="second-label" class="form-control">
+                                                    </div>
+                                                    <div class="notice">
+                                                        <h4>Why we need this</h4>
+                                                        <p>So we can offer healthcare providers which may be available through your own GP practice</p>
+                                                    </div>
 
-                                            </div>
+                                                </div>
                                         </fieldset>
 
 
@@ -164,16 +220,23 @@
                         </div>
                     </div>
 
-                </div>
-
-
-
-
-
-
-
+              
 
             </div>
+
+
+            <div class="no-help">
+                <p>If you don't want to be put in touch with a clinician</p>
+                <a href="#">Give me information to help with my symptoms</a>
+                <hr/>
+                <a href="#">change my answers</a>
+            </div>
+
+
+
+
+
+   
         </section>
 
         <!--<section>
@@ -182,28 +245,21 @@
     </main>
 
 
-    <footer id="footer" role="contentinfo">
+    <footer id="global-footer" role="contentinfo">
+        <div class="footer-container">
+            <nav>
+                <ul>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Clinical assurance</a></li>
+                </ul>
+            </nav>
 
-        <div class="footer-wrapper">
-
-            <div class="text">
-
-                <p>
-                    <small>
-                        © Crown copyright<br>
-                        Content available under <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>, except where otherwise stated.
-                    </small>
-                </p>
-
-            </div>
-
+            <p>
+                © Crown copyright<br>
+                Content available under <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0.</a>
+            </p>
         </div>
-
     </footer>
-
-
-    <div id="global-app-error" class="app-error hidden"></div>
-
 
 
 
