@@ -4,7 +4,7 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <title>Blank page</title>
     <link href="http://nhsalpha.herokuapp.com/public/stylesheets/govuk-template.css?0.12.0" media="screen" rel="stylesheet" type="text/css" />
-    <link href="http://nhsalpha.herokuapp.com/public/stylesheets/nhs_fonts.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="../content/nhs_fonts.css" media="all" rel="stylesheet" type="text/css" />
     <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" rel="icon" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -46,6 +46,12 @@
             margin: 0;
             font-weight: normal;
         }
+        .item-header h4 {
+            padding: 10px;
+            font-weight: 600 !important;
+            background-color: #dbe4f3 !important;
+            color: black !important;
+        }
     </style>
 
 
@@ -76,7 +82,7 @@
     </header>
 
     <div class="phase-banner">
-        <p>
+        <p style="margin-bottom: 16px;">
             <b>This is a new service.</b> We're still working on it. Send feedback to
             <a href="mailto:alphafeedback@digital.nhs.uk">alphafeedback@digital.nhs.uk</a>
             to help us improve it. The live service is <a href="http://www.nhs.uk">NHS.UK.</a>
@@ -106,7 +112,7 @@
                         <div class="item-body" id="search-form">
 
                             <div class="item-body-content">
-                                <h4 class="heading-small" style="margin: 0;">Hedge End Medical Centre, Southampton (Your GP)</h4>
+                                <h4 class="heading-small" style="margin: 0;">Hedge End Medical Centre, Southampton</h4>
                                 <p>
                                     24-28 Lower Northam Road, Hedge End, Southampton, SO30 4FQ<br />
                                     Open today: 09:00 - 19:30
@@ -152,12 +158,10 @@
 
                                         <div class="inline-form-groups">
                                             <div class="form-group">
-                                                <label class="first-name" for="dob-day">First name</label>
-                                                <input type="text" id="first-name" class="form-control form-control-4-chars">
+                                                <input type="text" id="first-name" class="form-control form-control-4-chars" placeholder="First name" style="width:215px">
                                             </div>
                                             <div class="form-group">
-                                                <label class="last-name" for="dob-day">Last name</label>
-                                                <input type="text" id="last-name" class="form-control form-control-4-chars">
+                                                <input type="text" id="last-name" class="form-control form-control-4-chars" placeholder="Last name" style="width:220px">
                                             </div>
                                         </div>
                                     </fieldset>
@@ -169,33 +173,31 @@
                                             Date of birth
                                         </legend>
 
-                                        <p class="form-hint">For example 31 7 1961</p>
-
                                         <div class="inline-form-groups">
                                             <div class="form-group">
-                                                <label class="form-label" for="dob-day">Day</label>
-                                                <input class="form-control form-control-2-chars" id="dob-day" type="number" min="0" max="31">
+                                                <input class="form-control form-control-2-chars" id="dob-day" type="number" min="0" max="31" placeholder="01">
                                             </div>
                                             <div class="form-group">
-                                                <label class="form-label" for="dob-month">Month</label>
-                                                <input class="form-control form-control-2-chars" id="dob-month" type="number" min="0" max="12">
+                                                <input class="form-control form-control-2-chars" id="dob-month" type="number" min="0" max="12" placeholder="08">
                                             </div>
                                             <div class="form-group">
-                                                <label class="form-label" for="dob-year">Year</label>
-                                                <input class="form-control form-control-4-chars" id="dob-year" type="number" min="0">
+                                                <input class="form-control form-control-4-chars" id="dob-year" type="number" min="0" placeholder="2000">
                                             </div>
                                         </div>
                                     </fieldset>
                                 </div>
 
-                                <div class="form-item-wrapper" style="padding: 0;">
+                                <div class="form-item-wrapper">
                                     <fieldset>
                                         <!--<legend class="form-label-bold">Your registered doctors practice</legend>-->
                                         <div class="form-group">
-                                            <label class="form-label" for="contact-label" style="font-size: 1.25rem; font-weight: bold;">
+                                            <legend class="form-label-bold">
+
                                                 Contact number
-                                            </label>
-                                            <input type="text" id="contact-label" class="form-control">
+                                            </legend>
+                                            <div class="inline-form-groups">
+                                                <input type="text" id="contact-label" class="form-control" placeholder="Landline or mobile number">
+                                            </div>
                                         </div>
                                     </fieldset>
 
@@ -210,10 +212,10 @@
 
                                         <div class="inline-form-groups">
                                             <div class="form-group">
-                                                <input type="text" id="postcode-label" class="form-control">
+                                                <input type="text" id="postcode-label" class="form-control" style="width: 150px; margin-top: 3px;" placeholder="eg. SE1">
                                             </div>
                                             <div class="form-group">
-                                                <a href="#" class="button button-secondary-cta">Find my address</a>
+                                                <a href="#" class="button button-secondary-cta" style="height: 4rem; line-height: 4rem; border-width: 3px;">Find my address</a>
                                             </div>
                                         </div>
                                     </fieldset>
@@ -252,22 +254,20 @@
     </main>
 
 
-    <footer id="footer" role="contentinfo">
+    <footer id="global-footer" role="contentinfo">
+        <div class="footer-container">
+            <nav>
+                <ul>
+                    <li><a href="/help/cookies">Cookies</a></li>
+                    <li><a href="/help/clinical-assurance">Clinical assurance</a></li>
+                </ul>
+            </nav>
 
-        <div class="footer-wrapper">
-
-            <div class="text">
-
-                <p>
-                    <small>
-
-                    </small>
-                </p>
-
-            </div>
-
+            <p>
+                © Crown copyright<br>
+                Content available under <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0.</a>
+            </p>
         </div>
-
     </footer>
 
 
