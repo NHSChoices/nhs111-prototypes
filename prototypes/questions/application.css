@@ -37,6 +37,24 @@
     width: 22px;
     height: 22px;
 }
+.help-text-link {
+    color: #0072C6;
+    font-size: 1.2rem;
+}
+.help-text-link.help-text-link-message {
+    display: none;
+    padding-left: 45px;
+    position: relative;
+    line-height: 1.5rem;
+}
+.help-text-link.help-text-link-message:before {
+    background: url("skin_sprite4.png") no-repeat -71px -99px;
+    content: "\00a0";
+    position: absolute;
+    left: 8px;
+    width: 22px;
+    height: 22px;
+}
 div.panel {
     display: none;
     position: absolute;
