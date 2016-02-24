@@ -1,0 +1,84 @@
+.rationale {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 17px 20px;
+    margin-bottom: 20px;
+}
+.rationale.rationale-message {
+    border-top: 3px solid #0072C6;
+    line-height: 18px;
+    padding-left: 45px;
+    position: relative;
+}
+.rationale.rationale-message:before {
+    background: url("skin_sprite4.png") no-repeat -46px -99px;
+    content: "\00a0";
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    width: 26px;
+    height: 26px;
+}
+.help-text {
+    color: #0072C6;
+    font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+}
+.help-text.help-text-message {
+    padding-left: 45px;
+    position: relative;
+    line-height: 1.5rem;
+}
+.help-text.help-text-message:before {
+    background: url("skin_sprite4.png") no-repeat -71px -99px;
+    content: "\00a0";
+    position: absolute;
+    left: 8px;
+    width: 22px;
+    height: 22px;
+}
+.help-text-link {
+    color: #0072C6;
+    font-size: 1.2rem;
+}
+.help-text-link.help-text-link-message {
+    display: none;
+    padding-left: 45px;
+    position: relative;
+    line-height: 1.5rem;
+}
+.help-text-link.help-text-link-message:before {
+    background: url("skin_sprite4.png") no-repeat -71px -99px;
+    content: "\00a0";
+    position: absolute;
+    left: 8px;
+    width: 22px;
+    height: 22px;
+}
+div.panel {
+    display: none;
+    position: absolute;
+    top: 71px;
+    width: 19%;
+    right: 0%;
+    z-index: 3;
+    margin: 0;
+    overflow: hidden;
+    /*background-color: #0072C6;*/
+    /*border-left: 3px solid #0072C6;*/
+    /*border-radius: 100px;*/
+    padding: 5px;
+}
+.panel div.content {
+    border-left: 3px solid #0072C6;
+    display: none;
+    color: black;
+    padding: 50px;
+    overflow: hidden;
+}
+span.close {
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    cursor: pointer;
+}
