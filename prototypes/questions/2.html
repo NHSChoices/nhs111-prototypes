@@ -1,0 +1,128 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+
+    <!-- css -->
+    <link href="http://nhsalpha.herokuapp.com/public/stylesheets/govuk-template.css?0.12.0" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="../base-assets/css_NhsUK/application.css" media="screen" rel="stylesheet" type="text/css"/>
+    <!-- Javascript -->
+    <script src="../base-assets/scripts/vendor/modernizr-custom.js"></script>
+    <script src="../base-assets/js/vendor/jquery-2.1.3.js"></script>
+    <script src="../base-assets/scripts/jquery.cookie.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            //var $panels = $('.panels > .panel');
+            $('.help-text-link').click(function () {
+                var $this = $(this);
+                var $helpTextLinkMessage = $this.parent().next();
+                if (!$helpTextLinkMessage.is(":visible"))
+                    $helpTextLinkMessage.show();
+                else
+                    $helpTextLinkMessage.hide();
+            });
+           
+        });
+    </script>
+
+</head>
+<body class="">
+<script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+<div id="skiplink-container">
+    <div>
+        <a href="#content" class="skiplink">Skip to main content</a>
+    </div>
+</div>
+<header role="banner" id="global-header">
+    <div class="header-container">
+        <a href="/" class="header-logo" title="Go to the NHS.UK homepage">
+            <img src="../base-assets/images/nhs-rev-logotype.svg" alt="">
+        </a>
+
+    </div>
+</header>
+
+<!--end header-->
+
+<section class="outer-section"></section>
+
+<main id="content" role="main" style="max-width: 60%;">
+
+
+
+    <link href="../base-assets/css_NhsUK/question.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="application.css" media="screen" rel="stylesheet" type="text/css"/>
+
+    <form action="/Question/Navigation" method="post">
+        <input id="Id" name="Id" type="hidden" value="PW755.0"/><input id="JourneyJson" name="JourneyJson" type="hidden" value="{&quot;steps&quot;:[]}"/><input id="PathwayId" name="PathwayId" type="hidden" value="P1184"/><input id="PathwayNo" name="PathwayNo" type="hidden" value="PW755"/><input id="PathwayTitle" name="PathwayTitle" type="hidden" value="Headache"/><input data-val="true" data-val-number="The field Age must be a number." data-val-required="The Age field is required." id="UserInfo_Age" name="UserInfo.Age" type="hidden" value="25"/><input id="UserInfo_Gender" name="UserInfo.Gender" type="hidden" value="Male"/><input id="Title" name="Title" type="hidden" value="Have you had an injury to your head in the last 7 days?"/><input id="SymptomDiscriminator" name="SymptomDiscriminator" type="hidden" value=""/><input id="QuestionNo" name="QuestionNo" type="hidden" value="Tx1506"/><input id="StateJson" name="StateJson" type="hidden" value="{&quot;PATIENT_AGE&quot;:&quot;25&quot;,&quot;PATIENT_GENDER&quot;:&quot;\&quot;M\&quot;&quot;,&quot;PATIENT_PARTY&quot;:&quot;1&quot;}"/><input id="PreviousStateJson" name="PreviousStateJson" type="hidden" value=""/>
+
+        <h2>Are you very ill and experiencing any of these <a id="symptoms" class="glossary-item" href="#">symptoms</a>?</h2>
+        <div class="rationale rationale-message">
+            This question is looking for common <a id="symptoms" class="glossary-item" href="#">symptoms</a> of <a id="meningitis" class="glossary-item" href="#">meningitis</a> and other serious conditions.
+        </div>
+        <ul>
+            <li>
+                <input name="SelectedAnswer" type="radio" id="chin-chest" value="{&quot;title&quot;:&quot;Yes&quot;,&quot;titleWithoutSpaces&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:1}"/>
+                <label for="chin-chest">You can’t move your chin down to your chest <a class="help-text-link" href="#">what does this mean?</a></label>
+                <div class="help-text-link help-text-link-message">This means you can’t bend your head forward and put your chin to your chest because the back of your neck is extremely stiff and painful. This does not mean there is just pain or stiffness when turning your head from side to side.</div>
+            </li>
+            <li>
+                <input name="SelectedAnswer" type="radio" id="bright-light" value="{&quot;title&quot;:&quot;Yes&quot;,&quot;titleWithoutSpaces&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:1}"/>
+                <label for="bright-light">Looking at bright light is painful <a class="help-text-link" href="#">what does this mean?</a></label>
+                <div class="help-text-link help-text-link-message">This means you can’t bear any light at all, including daylight. You will want to be in a darkened room and will not be able to look at the television or a computer screen. This does not mean just having sore eyes.</div>
+            </li>
+            <li>
+                <input name="SelectedAnswer" type="radio" id="Notsure" value="{&quot;title&quot;:&quot;Not sure&quot;,&quot;titleWithoutSpaces&quot;:&quot;Notsure&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:2}"/>
+                <label for="Notsure">I'm not sure</label>
+            </li>
+            <li>
+                <input name="SelectedAnswer" type="radio" id="No" value="{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;order&quot;:3}"/>
+                <label for="No">No</label>
+            </li>
+        </ul>
+        <button id="nextScreen" class="button" type="submit" name="Question" value="Question">Next question</button>
+    </form>
+</main>
+
+<footer id="footer" role="contentinfo">
+    <div class="footer-wrapper">
+        <div class="text">
+            <p>
+                <small>
+                    &copy; Crown copyright<br>
+                    Content available under <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>, except where otherwise stated.
+                </small>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<div id="global-app-error" class="app-error hidden"></div>
+
+<div class="panels">
+    <div class="panel symptoms">
+        <div class="content">
+            <span class="close">X</span>
+            <h4>Symptoms</h4>
+            <p>Sign or feelings that indicate that you have an illness or injury.</p>
+        </div>
+    </div>
+    <div class="panel meningitis">
+        <div class="content">
+            <span class="close">X</span>
+            <h4>Meningitis</h4>
+            <p>A potentially life-threatening inflammation of the protective membranes that cover the brain and spinal cord.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
