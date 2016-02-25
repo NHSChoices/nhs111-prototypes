@@ -27,7 +27,51 @@
                 else
                     $helpTextLinkMessage.hide();
             });
-           
+            var $panels = $('.panels > .panel');
+            $('.glossary-item').click(function () {
+                $panels.filter('.' + this.id).trigger('togglePanel');
+            });
+            $panels
+                .on('togglePanel', function () {
+                    var $this = $(this)
+                      , $activePanels = $panels.filter(':visible').not($this);
+                    if ($activePanels.length) {
+                        $activePanels
+                            .one('panelHidden', function () {
+                                $this.is(':visible')
+                                ? $this.trigger('hidePanel')
+                                : $this.trigger('showPanel');
+                            })
+                            .trigger('hidePanel');
+                    } else {
+                        $this.is(':visible')
+                        ? $this.trigger('hidePanel')
+                        : $this.trigger('showPanel');
+                    }
+                })
+                .on('hidePanel', function () {
+                    var $this = $(this);
+                    $this.find('.content').fadeOut(250, function () {
+                        $this.animate({
+                            'width': 'hide'
+                        }, 500, function () {
+                            $this.trigger('panelHidden');
+                        });
+                    });
+                })
+                .on('showPanel', function () {
+                    var $this = $(this);
+                    $this.animate({
+                        'width': 'show'
+                    }, 500, function () {
+                        $this.find('.content').fadeIn(250, function () {
+                            $this.trigger('panelShown');
+                        });
+                    });
+                });
+            $panels.find('.content .close').on('click', function () {
+                $(this).closest('.panel').trigger('togglePanel');
+            });
         });
     </script>
 
