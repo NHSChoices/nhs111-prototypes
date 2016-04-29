@@ -1,0 +1,63 @@
+﻿
+.self-care-content {
+    padding: 1rem 1rem 0 1rem;
+}
+
+.self-care-content p {
+    margin-bottom: 0;
+}
+
+.self-care-content h2 {
+    margin-top: 2rem;
+}
+
+.self-care-title {
+    font-weight: bold;
+}
+
+.service-booking-message {
+    background-color: #fffabf;
+    padding: 10px 20px;
+    border-left: 4px solid #FFCF47;
+    margin: 2rem 0 4rem 0.8rem;
+    line-height: 3rem;
+}
+
+.service-booking-message.alert {
+     background-color: #F5E5E6;
+     border-left: 4px solid #982426;
+}
+
+.guide-header {
+    margin-left: 0.8rem;
+}
+
+.guide-contents {
+    counter-reset: section;
+    /*font-size: 15px;*/
+}
+
+@media screen and (min-width: 40em) {
+    .guide-contents ol {
+        float: left;
+        width: 50%;
+    }
+}
+.guide-contents ol {
+    margin: 0;
+    padding: 0;
+}
+
+.guide-contents li {
+    position: relative;
+    margin-bottom: 0;
+    padding: 0 24px 4px 22px;
+}
+
+.guide-contents li:before {
+    position: absolute;
+    left: 0;
+    counter-increment: section;
+    content: counter(section) ".";
+    margin-right: 0.5rem;
+}
