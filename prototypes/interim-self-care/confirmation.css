@@ -34,7 +34,7 @@
 }
 
 .guide-contents {
-    counter-reset: section;
+    /*counter-reset: section;*/
     /*font-size: 15px;*/
 }
 
@@ -58,7 +58,7 @@
 .guide-contents li:before {
     position: absolute;
     left: 0;
-    counter-increment: section;
-    content: counter(section) ".";
+    /*counter-increment: section;
+    content: counter(section) ".";*/
     margin-right: 0.5rem;
 }
