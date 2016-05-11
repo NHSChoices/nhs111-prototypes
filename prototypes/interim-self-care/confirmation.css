@@ -15,6 +15,10 @@
 .self-care-title {
     font-weight: bold;
 }
+.service-booking {
+    margin: 2rem 0 4rem 0.8rem;
+    line-height: 3rem;
+}
 
 .service-booking-message {
     background-color: #fffabf;
@@ -27,6 +31,14 @@
 .service-booking-message.alert {
      background-color: #F5E5E6;
      border-left: 4px solid #982426;
+}
+
+.service-booking-message.alert2 {
+     background-color: White;
+     border-left: 4px solid #982426;
+     border-bottom: 1px solid #982426;
+     border-top: 1px solid #982426;
+     border-right: 1px solid #982426;
 }
 
 .guide-header {
@@ -61,4 +73,16 @@
     /*counter-increment: section;
     content: counter(section) ".";*/
     margin-right: 0.5rem;
+}
+
+.section-secondary {
+    background-color: whitesmoke;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.self-care-content p {
+    list-style: disc outside none;
+    display: list-item;
+    margin-left: 2rem;
 }
