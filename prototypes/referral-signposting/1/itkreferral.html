@@ -1,0 +1,789 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0076)http://nhs111-web-beta-integration.azurewebsites.net/Outcome/PersonalDetails -->
+<html lang="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+    Enter Personal Details
+</title>
+
+    <!-- css -->
+    <link href="govuk-template.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="application.css" media="screen" rel="stylesheet" type="text/css">
+
+    <!-- Javascript -->
+    <script src="modernizr-custom.js"></script><style type="text/css"></style>
+    <script src="jquery2.1.1.min.js"></script>
+    <script src="jquery1.11.2-ui.min.js"></script>
+    <script src="jquery.cookie.js"></script>
+    <script>
+        $(function () {
+            var userId = $.cookie("userId");
+            if (!userId) $.cookie("userId", 'b6acdf4c-f6b3-4b18-8b63-50f008cf64ef', { path: '/' });
+        });
+    </script>
+    <link href="personaldetails.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="service.css" media="screen" rel="stylesheet" type="text/css">
+<style type="text/css">
+
+.inline-details {
+    padding: 0.2rem 0 1.5rem 0;
+}    
+
+.personal-details {
+    width: 45%;
+    float: left;
+}
+.service-directions {
+    width: 50%;
+    float: left;
+    border-right: solid rgba(128, 128, 128, 0.5) 1px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+
+ }
+
+.section-item {
+    border-bottom: none;
+    padding-bottom: 10px;
+}
+</style>
+<style type="text/css">
+    .adp, .adp table {
+        font-family: Roboto,Arial,sans-serif;
+        font-weight: 300;
+        color: #2c2c2c;
+    }
+
+        .adp b, .adp-list b {
+            font-weight: 400;
+        }
+
+    .adp-warnbox {
+        margin: 5px 0 3px;
+    }
+
+    .warnbox-content {
+        background: #fff1a8;
+        padding: 5px 6px;
+    }
+
+    .warnbox-c1, .warnbox-c2 {
+        background: #fff1a8;
+        font-size: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
+
+    .warnbox-c1 {
+        margin: 0 2px;
+    }
+
+    .warnbox-c2 {
+        margin: 0 1px;
+    }
+
+    .adp-list {
+        background: #fff;
+        border: 1px solid #cdcdcd;
+        cursor: pointer;
+        padding: 4px;
+        font-family: Roboto,Arial,sans-serif;
+        font-weight: 300;
+        color: #2c2c2c;
+    }
+
+    .adp-fullwidth {
+        width: 100%;
+    }
+
+    .adp-listsel {
+        background: #eee;
+        text-decoration: none;
+    }
+
+    .adp-listheader {
+        padding: 4px;
+    }
+
+    .adp-placemark {
+        background: #eee;
+        border: 1px solid silver;
+        color: #000;
+        cursor: pointer;
+        margin: 10px 0;
+        vertical-align: middle;
+    }
+
+    img.adp-marker {
+        width: 22px;
+        height: 40px;
+    }
+
+    .adp-details, .adp-legal {
+        color: #676767;
+    }
+
+    .adp-summary {
+        padding: 0 3px 3px;
+    }
+
+    .adp-step, .adp-substep {
+        border-top: 1px solid #cdcdcd;
+        margin: 0;
+        padding: .3em 3px;
+        vertical-align: top;
+    }
+
+        .adp-list img, .adp-substep img {
+            width: 15px;
+            height: 15px;
+            position: relative;
+            top: 2px;
+            margin-right: 3px;
+        }
+
+    .adp-distance {
+        white-space: nowrap;
+    }
+
+    .adp-step, .adp-text {
+        width: 100%;
+    }
+
+    .adp-directions {
+        cursor: pointer;
+        border-collapse: collapse;
+    }
+
+    .adp-list .gm-arrow {
+        width: 8px;
+        height: 9px;
+        margin: 5px 0 3px;
+    }
+
+    .adp-agencies {
+        font-size: 80%;
+        margin: 5px 0;
+    }
+
+    .adp-summary-duration {
+        float: right;
+        margin-left: 7px;
+        white-space: nowrap;
+    }
+
+    .adp-substep .gm-line {
+        margin-right: 4px;
+    }
+
+    .adp-substep .adp-stepicon {
+        overflow: hidden;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 16px;
+        height: 16px;
+    }
+
+        .adp-substep .adp-stepicon .adp-maneuver {
+            background-size: 19px 630px;
+            position: absolute;
+            left: 0;
+            width: 16px;
+            height: 16px;
+        }
+
+            .adp-substep .adp-stepicon .adp-maneuver.adp-ferry {
+                background-position: 0 -614px;
+            }
+
+            .adp-substep .adp-stepicon .adp-maneuver.adp-ferry-train {
+                background-position: 0 -566px;
+            }
+
+            .adp-substep .adp-stepicon .adp-maneuver.adp-merge {
+                background-position: 0 -143px;
+            }
+
+            .adp-substep .adp-stepicon .adp-maneuver.adp-straight {
+                background-position: 0 -534px;
+            }
+
+            .adp-substep .adp-stepicon .adp-maneuver.adp-fork-left {
+                background-position: 0 -550px;
+            }
+
+            .adp-substep .adp-stepicon .adp-maneuver.adp-ramp-left {
+                background-position: 0 -598px;
+            }
+
+            .adp-substep .adp-stepicon .adp-maneuver.adp-roundabout-left {
+                background-position: 0 -197px;
+            }
+
+            .adp-substep .adp-stepicon .adp-maneuver.adp-turn-left, .adp-substep .adp-stepicon .adp-maneuver.adp-keep-left {
+                background-position: 0 -413px;
+            }
+
+            .adp-substep .adp-stepicon .adp-maneuver.adp-turn-sharp-left {
+                background-position: 0 0;
+            }
+
+            .adp-substep .adp-stepicon .adp-maneuver.adp-turn-slight-left {
+                background-position: 0 -378px;
+            }
+
+            .adp-substep .adp-stepicon .adp-maneuver.adp-uturn-left {
+                background-position: 0 -305px;
+            }
+
+            .adp-substep .adp-stepicon .adp-maneuver.adp-fork-right {
+                background-position: 0 -499px;
+            }
+
+            .adp-substep .adp-stepicon .adp-maneuver.adp-ramp-right {
+                background-position: 0 -429px;
+            }
+
+            .adp-substep .adp-stepicon .adp-maneuver.adp-roundabout-right {
+                background-position: 0 -232px;
+            }
+
+            .adp-substep .adp-stepicon .adp-maneuver.adp-turn-right, .adp-substep .adp-stepicon .adp-maneuver.adp-keep-right {
+                background-position: 0 -483px;
+            }
+
+            .adp-substep .adp-stepicon .adp-maneuver.adp-turn-sharp-right {
+                background-position: 0 -582px;
+            }
+
+            .adp-substep .adp-stepicon .adp-maneuver.adp-turn-slight-right {
+                background-position: 0 -51px;
+            }
+
+            .adp-substep .adp-stepicon .adp-maneuver.adp-uturn-right {
+                background-position: 0 -35px;
+            }
+
+        .adp-substep .adp-stepicon .adp-maneuver {
+            background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/maneuvers_hdpi.png);
+        }
+</style>
+
+</head>
+<body class="js-enabled">
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <div id="skiplink-container">
+        <div>
+            <a href="http://nhs111-web-beta-integration.azurewebsites.net/Outcome/PersonalDetails#content" class="skiplink">Skip to main content</a>
+        </div>
+    </div>
+    <header role="banner" id="global-header">
+        <div class="header-container">
+            <a href="http://nhs111-web-beta-integration.azurewebsites.net/" class="header-logo" title="Go to the NHS.UK homepage">
+                <img src="nhs-rev-logotype.svg" alt="">
+            </a>
+        </div>
+    </header>
+    
+    <!--end header-->
+
+    <section class="outer-section"></section>
+
+    <main id="content" role="main">
+
+
+        <section style="border-bottom: solid rgba(128, 128, 128, 0.5) 1px; margin-bottom: 10px;">
+            <div class="section-item">
+                <h3 class="section-header">
+                    Directions to MH - In hours - NON Caseload / New Patients (18 yrs + ) - Isle of Wight from SO30 2UN
+                </h3>
+
+                <div class="personal-details-content" style="margin-bottom: 10px;">
+                    <div style="float: left; display: block;" class=" service-address">
+                        CRHT , Sevenacres, St Marys Hospital, Newport, Isle of Wight, PO30 5TG
+                    </div>
+                    <a style="float: left; display: block; margin-left: 20px;" href="#">Choose a different service</a>
+                    </div>
+                </div>
+       
+        </section>
+        <link href="pims.css" media="screen" rel="stylesheet" type="text/css">
+        <div class="service-directions">
+            <img src="directions.png" width="100%;" />
+            <div id="directionspanel" style="direction: ltr;">
+                <div jstcache="0">
+                    <div jstcache="156" class="adp-list">
+                        <table class="adp-fullwidth">
+                            <tbody>
+                                <tr>
+                                    <td class="adp-listheader">Suggested routes:</td>
+                                </tr>
+                                <tr jstcache="146" jsinstance="0">
+                                    <td data-route-index="0" jstcache="147" jsaction="directionsRouteList.selectRoute" class="adp-listsel" jsan="7.adp-listsel,0.data-route-index,22.jsaction">
+                                        <span class="adp-listinfo"><b jstcache="148">M27 and A335 </b><span jstcache="149">8.4 mi</span><span jstcache="150">. </span><span jstcache="151">About <span jstcache="82">19 mins</span></span><span jstcache="152" style="display: none"></span></span>
+                                    </td>
+                                </tr>
+                                <tr jstcache="146" jsinstance="1">
+                                    <td data-route-index="1" jstcache="147" jsaction="directionsRouteList.selectRoute" jsan="0.data-route-index,22.jsaction">
+                                        <span class="adp-listinfo"><b jstcache="148">W End Rd </b><span jstcache="149">5.7 mi</span><span jstcache="150">. </span><span jstcache="151">About <span jstcache="82">20 mins</span></span><span jstcache="152" style="display: none"></span></span>
+                                    </td>
+                                </tr>
+                                <tr jstcache="146" jsinstance="*2">
+                                    <td data-route-index="2" jstcache="147" jsaction="directionsRouteList.selectRoute" jsan="0.data-route-index,22.jsaction">
+                                        <span class="adp-listinfo"><b jstcache="148">A335 </b><span jstcache="149">6.6 mi</span><span jstcache="150">. </span><span jstcache="151">About <span jstcache="82">22 mins</span></span><span jstcache="152" style="display: none"></span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div jstcache="0">
+                    <div jstcache="157" class="adp">
+                        <div jstcache="51" class="adp-warnbox" style="display: none">
+                            <div class="warnbox-c2"></div>
+                            <div class="warnbox-c1"></div>
+                            <div jstcache="52" class="warnbox-content" jsan="7.warnbox-content"></div>
+                            <div class="warnbox-c1"></div>
+                            <div class="warnbox-c2"></div>
+                        </div>
+                        <div data-leg-index="0" jsaction="directionsPanel.selectLeg">
+                            <table class="adp-placemark">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img jstcache="53" src="https://mts.googleapis.com/maps/vt/icon/name=icons/spotlight/spotlight-waypoint-a.png&amp;text=A&amp;psize=16&amp;font=fonts/Roboto-Regular.ttf&amp;color=ff333333&amp;ax=44&amp;ay=48&amp;scale=2" class="adp-marker">
+                                        </td>
+                                        <td jstcache="54" class="adp-text" jsan="7.adp-text">Hedge End, Southampton, Hampshire SO30 2UN, UK</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div jstcache="55" jsinstance="*0">
+                            <div class="adp-summary">
+                                <span jstcache="56">8.4 mi</span><span jstcache="57">. </span><span jstcache="58">About <span jstcache="82">19 mins</span></span> <span jstcache="59" style="display: none"></span>
+                            </div>
+                            <div>
+                                <table class="adp-directions">
+                                    <tbody>
+                                        <tr data-leg-index="0" data-step-index="0" jstcache="60" jsaction="directionsPanel.selectLegAndStep" jsinstance="0">
+                                            <td class="adp-substep">
+                                                <div jstcache="61" class="adp-stepicon" style="display: none">
+                                                    <div jstcache="62" class="adp-maneuver" jsan="7.adp-maneuver"></div>
+                                                </div>
+                                            </td>
+                                            <td jstcache="63" class="adp-substep" jsan="7.adp-substep">1.</td>
+                                            <td jstcache="64" class="adp-substep">
+                                                Head <b>north-east</b> towards <b>Tollbar Way</b>/<b>B3342</b>
+                                                <div style="font-size: 0.9em">Restricted-usage road</div>
+                                            </td>
+                                            <td class="adp-substep">
+                                                <div jstcache="65" class="adp-distance" jsan="7.adp-distance">279 ft</div>
+                                            </td>
+                                        </tr>
+                                        <tr data-leg-index="0" data-step-index="1" jstcache="60" jsaction="directionsPanel.selectLegAndStep" jsinstance="1">
+                                            <td class="adp-substep">
+                                                <div jstcache="61" class="adp-stepicon">
+                                                    <div jstcache="62" class="adp-turn-right adp-maneuver" jsan="7.adp-turn-right,7.adp-maneuver"></div>
+                                                </div>
+                                            </td>
+                                            <td jstcache="63" class="adp-substep" jsan="7.adp-substep">2.</td>
+                                            <td jstcache="64" class="adp-substep">
+                                                Turn <b>right</b> onto <b>Tollbar Way</b>/<b>B3342</b>
+                                                <div style="font-size: 0.9em">Go through 1 roundabout</div>
+                                            </td>
+                                            <td class="adp-substep">
+                                                <div jstcache="65" class="adp-distance" jsan="7.adp-distance">0.6 mi</div>
+                                            </td>
+                                        </tr>
+                                        <tr data-leg-index="0" data-step-index="2" jstcache="60" jsaction="directionsPanel.selectLegAndStep" jsinstance="2">
+                                            <td class="adp-substep">
+                                                <div jstcache="61" class="adp-stepicon">
+                                                    <div jstcache="62" class="adp-roundabout-left adp-maneuver" jsan="7.adp-roundabout-left,7.adp-maneuver"></div>
+                                                </div>
+                                            </td>
+                                            <td jstcache="63" class="adp-substep" jsan="7.adp-substep">3.</td>
+                                            <td jstcache="64" class="adp-substep">
+                                                At the roundabout, take the <b>2nd</b> exit and stay on <b>Tollbar Way</b>/<b>B3342</b>
+                                                <div style="font-size: 0.9em">Go through 1 roundabout</div>
+                                            </td>
+                                            <td class="adp-substep">
+                                                <div jstcache="65" class="adp-distance" jsan="7.adp-distance">0.3 mi</div>
+                                            </td>
+                                        </tr>
+                                        <tr data-leg-index="0" data-step-index="3" jstcache="60" jsaction="directionsPanel.selectLegAndStep" jsinstance="3">
+                                            <td class="adp-substep">
+                                                <div jstcache="61" class="adp-stepicon">
+                                                    <div jstcache="62" class="adp-roundabout-left adp-maneuver" jsan="7.adp-roundabout-left,7.adp-maneuver"></div>
+                                                </div>
+                                            </td>
+                                            <td jstcache="63" class="adp-substep" jsan="7.adp-substep">4.</td>
+                                            <td jstcache="64" class="adp-substep">At the roundabout, take the <b>2nd</b> exit and stay on <b>Tollbar Way</b>/<b>B3342</b></td>
+                                            <td class="adp-substep">
+                                                <div jstcache="65" class="adp-distance" jsan="7.adp-distance">0.1 mi</div>
+                                            </td>
+                                        </tr>
+                                        <tr data-leg-index="0" data-step-index="4" jstcache="60" jsaction="directionsPanel.selectLegAndStep" jsinstance="4">
+                                            <td class="adp-substep">
+                                                <div jstcache="61" class="adp-stepicon">
+                                                    <div jstcache="62" class="adp-roundabout-left adp-maneuver" jsan="7.adp-roundabout-left,7.adp-maneuver"></div>
+                                                </div>
+                                            </td>
+                                            <td jstcache="63" class="adp-substep" jsan="7.adp-substep">5.</td>
+                                            <td jstcache="64" class="adp-substep">At the roundabout, take the <b>3rd</b> exit onto <b>Charles Watts Way</b>/<b>A334</b></td>
+                                            <td class="adp-substep">
+                                                <div jstcache="65" class="adp-distance" jsan="7.adp-distance">0.4 mi</div>
+                                            </td>
+                                        </tr>
+                                        <tr data-leg-index="0" data-step-index="5" jstcache="60" jsaction="directionsPanel.selectLegAndStep" jsinstance="5">
+                                            <td class="adp-substep">
+                                                <div jstcache="61" class="adp-stepicon">
+                                                    <div jstcache="62" class="adp-roundabout-left adp-maneuver" jsan="7.adp-roundabout-left,7.adp-maneuver"></div>
+                                                </div>
+                                            </td>
+                                            <td jstcache="63" class="adp-substep" jsan="7.adp-substep">6.</td>
+                                            <td jstcache="64" class="adp-substep">At the roundabout, take the <b>4th</b> exit onto the <b>M27</b> slip road to <b>Southampton West &amp; Docks</b>/<b>Eastleigh</b>/<b>Winchester</b></td>
+                                            <td class="adp-substep">
+                                                <div jstcache="65" class="adp-distance" jsan="7.adp-distance">0.5 mi</div>
+                                            </td>
+                                        </tr>
+                                        <tr data-leg-index="0" data-step-index="6" jstcache="60" jsaction="directionsPanel.selectLegAndStep" jsinstance="6">
+                                            <td class="adp-substep">
+                                                <div jstcache="61" class="adp-stepicon">
+                                                    <div jstcache="62" class="adp-merge adp-maneuver" jsan="7.adp-merge,7.adp-maneuver"></div>
+                                                </div>
+                                            </td>
+                                            <td jstcache="63" class="adp-substep" jsan="7.adp-substep">7.</td>
+                                            <td jstcache="64" class="adp-substep">Merge onto <b>M27</b></td>
+                                            <td class="adp-substep">
+                                                <div jstcache="65" class="adp-distance" jsan="7.adp-distance">3.1 mi</div>
+                                            </td>
+                                        </tr>
+                                        <tr data-leg-index="0" data-step-index="7" jstcache="60" jsaction="directionsPanel.selectLegAndStep" jsinstance="7">
+                                            <td class="adp-substep">
+                                                <div jstcache="61" class="adp-stepicon">
+                                                    <div jstcache="62" class="adp-ramp-left adp-maneuver" jsan="7.adp-ramp-left,7.adp-maneuver"></div>
+                                                </div>
+                                            </td>
+                                            <td jstcache="63" class="adp-substep" jsan="7.adp-substep">8.</td>
+                                            <td jstcache="64" class="adp-substep">At junction <b>5</b>, take the <b>A335</b> exit to <b>Southampton Airport</b>/<b>Eastleigh</b></td>
+                                            <td class="adp-substep">
+                                                <div jstcache="65" class="adp-distance" jsan="7.adp-distance">0.2 mi</div>
+                                            </td>
+                                        </tr>
+                                        <tr data-leg-index="0" data-step-index="8" jstcache="60" jsaction="directionsPanel.selectLegAndStep" jsinstance="8">
+                                            <td class="adp-substep">
+                                                <div jstcache="61" class="adp-stepicon">
+                                                    <div jstcache="62" class="adp-roundabout-left adp-maneuver" jsan="7.adp-roundabout-left,7.adp-maneuver"></div>
+                                                </div>
+                                            </td>
+                                            <td jstcache="63" class="adp-substep" jsan="7.adp-substep">9.</td>
+                                            <td jstcache="64" class="adp-substep">At the roundabout, take the <b>1st</b> exit onto <b>Stoneham Way</b>/<b>A335</b></td>
+                                            <td class="adp-substep">
+                                                <div jstcache="65" class="adp-distance" jsan="7.adp-distance">0.7 mi</div>
+                                            </td>
+                                        </tr>
+                                        <tr data-leg-index="0" data-step-index="9" jstcache="60" jsaction="directionsPanel.selectLegAndStep" jsinstance="9">
+                                            <td class="adp-substep">
+                                                <div jstcache="61" class="adp-stepicon">
+                                                    <div jstcache="62" class="adp-turn-left adp-maneuver" jsan="7.adp-turn-left,7.adp-maneuver"></div>
+                                                </div>
+                                            </td>
+                                            <td jstcache="63" class="adp-substep" jsan="7.adp-substep">10.</td>
+                                            <td jstcache="64" class="adp-substep">
+                                                Turn <b>left</b> onto <b>Thomas Lewis Way</b>/<b>A335</b>
+                                                <div style="font-size: 0.9em">Continue to follow A335</div>
+                                            </td>
+                                            <td class="adp-substep">
+                                                <div jstcache="65" class="adp-distance" jsan="7.adp-distance">2.2 mi</div>
+                                            </td>
+                                        </tr>
+                                        <tr data-leg-index="0" data-step-index="10" jstcache="60" jsaction="directionsPanel.selectLegAndStep" jsinstance="10">
+                                            <td class="adp-substep">
+                                                <div jstcache="61" class="adp-stepicon">
+                                                    <div jstcache="62" class="adp-turn-left adp-maneuver" jsan="7.adp-turn-left,7.adp-maneuver"></div>
+                                                </div>
+                                            </td>
+                                            <td jstcache="63" class="adp-substep" jsan="7.adp-substep">11.</td>
+                                            <td jstcache="64" class="adp-substep">Turn <b>left</b> onto <b>Lyon St</b></td>
+                                            <td class="adp-substep">
+                                                <div jstcache="65" class="adp-distance" jsan="7.adp-distance">0.2 mi</div>
+                                            </td>
+                                        </tr>
+                                        <tr data-leg-index="0" data-step-index="11" jstcache="60" jsaction="directionsPanel.selectLegAndStep" jsinstance="*11">
+                                            <td class="adp-substep">
+                                                <div jstcache="61" class="adp-stepicon">
+                                                    <div jstcache="62" class="adp-turn-right adp-maneuver" jsan="7.adp-turn-right,7.adp-maneuver"></div>
+                                                </div>
+                                            </td>
+                                            <td jstcache="63" class="adp-substep" jsan="7.adp-substep">12.</td>
+                                            <td jstcache="64" class="adp-substep">
+                                                Turn <b>right</b> onto <b>Raven Rd</b>
+                                                <div style="font-size: 0.9em">Destination will be on the right</div>
+                                            </td>
+                                            <td class="adp-substep">
+                                                <div jstcache="65" class="adp-distance" jsan="7.adp-distance">358 ft</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div data-leg-index="1" jstcache="66" jsaction="directionsPanel.selectLeg">
+                                <table class="adp-placemark">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <img jstcache="67" src="https://mts.googleapis.com/maps/vt/icon/name=icons/spotlight/spotlight-waypoint-b.png&amp;text=B&amp;psize=16&amp;font=fonts/Roboto-Regular.ttf&amp;color=ff333333&amp;ax=44&amp;ay=48&amp;scale=2" class="adp-marker">
+                                            </td>
+                                            <td jstcache="68" class="adp-text" jsan="7.adp-text">Southampton, Southampton SO14 0YG, UK</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div jstcache="69" class="adp-legal" jsan="7.adp-legal">Map data ©2016 Google</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="personal-details">
+
+
+            <form action="http://nhs111-web-beta-integration.azurewebsites.net/Outcome/Confirmation" method="post">
+                <input id="Id" name="Id" type="hidden" value="Dx11">
+                <section>
+                    <div class="section-item last">
+                        <h3 style="font-size: 1.5em; padding-top: 0;" class="section-header">
+                            Let them know I'm on my way
+                        </h3>
+                        <div class="personal-details-content">
+                            <label>
+                                Full name
+                            </label>
+                            <div class="inline-details">
+                                <input class="form-control form-control-4-chars" id="UserInfo_FirstName" name="UserInfo.FirstName" placeholder="First name" type="text" value="">
+                                <input class="form-control form-control-4-chars" id="UserInfo_LastName" name="UserInfo.LastName" placeholder="Last name" type="text" value="">
+                            </div>
+                            <label>
+                                Date of birth
+                            </label>
+                            <label class="form-hint">
+                                For example 18 4 1973
+                            </label>
+                            <div class="inline-details">
+                                <input class="form-control form-control-2-chars" data-val="true" data-val-number="The field Day must be a number." id="UserInfo_Day" name="UserInfo.Day" placeholder="DD" type="text" value="">
+                                <input class="form-control form-control-2-chars" data-val="true" data-val-number="The field Month must be a number." id="UserInfo_Month" name="UserInfo.Month" placeholder="MM" type="text" value="">
+                                <input class="form-control form-control-4-chars" data-val="true" data-val-number="The field Year must be a number." id="UserInfo_Year" name="UserInfo.Year" placeholder="YYYY" type="text" value="">
+                            </div>
+                            <label>
+                                Contact number
+                            </label>
+                            <div class="inline-details">
+                                <input class="form-control" id="UserInfo_TelephoneNumber" name="UserInfo.TelephoneNumber" placeholder="Landline or mobile number" type="text" value="">
+                            </div>
+                            <script src="./EnterPersonalDetails_files/spin.min.js"></script>
+                            <link rel="stylesheet" href="./EnterPersonalDetails_files/jquery-ui.css">
+                            <div id="loadingPostcode" style="display: none;">
+                                <div id="loadingcontent">
+                                    <p id="loadingspinner">
+                                        Searching for addresses matching <span id="postcodeSpan"></span>...
+                                    </p>
+                                </div>
+                            </div>
+                            <label>
+                                Postcode of home address
+                            </label>
+                            <div class="inline-details">
+                                <input class="form-control form-control-8-chars" id="AddressSearchViewModel_PostCode" name="AddressSearchViewModel.PostCode" placeholder="eg. SE1" type="text" value="">
+                                <input  type="button" class="button find-address" id="findMyAddress" value="Find my address">
+                                <a style="clear: both; display: block;" class=" button button-next button-link" href="http://nhs111-web-beta-integration.azurewebsites.net/Outcome/PersonalDetails#">I don't know my postcode</a>
+                            </div>
+                            <div id="AddressList" style="display: none;">
+                                <label>Pick an address</label>
+                                <label class="select-label">
+                                    <select class="select-address" id="AddressSelect"></select>
+                                </label>
+                            </div>
+
+                            <!--Spinner script-->
+                            <script type="text/javascript">
+                                $(function () {
+                                    $("#AddressList").hide();
+                                    $("#AddressDetails").hide();
+                                    var addresses = [];
+                                    $("#findMyAddress").click(function () {
+                                        $("#loadingPostcode").fadeIn();
+                                        var opts = {
+                                            lines: 12, // The number of lines to draw
+                                            length: 7, // The length of each line
+                                            width: 4, // The line thickness
+                                            radius: 10, // The radius of the inner circle
+                                            color: '#000', // #rgb or #rrggbb
+                                            speed: 1, // Rounds per second
+                                            trail: 60, // Afterglow percentage
+                                            shadow: false, // Whether to render a shadow
+                                            hwaccel: false // Whether to use hardware acceleration
+                                        };
+                                        var postcode = $("#PostCode").val();
+                                        //$("#postcodeSpan").text(postcode.toUpperCase());
+                                        var target = document.getElementById('loadingPostcode');
+                                        var spinner = new Spinner(opts).spin(target);
+                                        $.ajax({
+                                            contentType: "application/json; charset=utf-8",
+                                            dataType: "json",
+                                            type: "GET",
+                                            url: "https://locationservicesstaging.azure-api.net/location/postcode/" + postcode,
+                                            headers: {
+                                                "Ocp-Apim-Subscription-Key": "1ea992718a84486689023b191e7f862e"
+                                            },
+                                            success: function (response) {
+                                                addresses = response;
+                                                var select = $("#AddressSelect");
+                                                select.empty();
+                                                select.append($("<option />").val(0).text("Please choose..."));
+                                                $.each(response, function () {
+                                                    var text = this.AddressLines[0];
+                                                    if (this.BuildingName != "")
+                                                        text = this.AddressLines[1];
+                                                    select.append($("<option />").val(this.UPRN).text(text));
+                                                });
+                                                select.change(function () {
+                                                    var selectedAddress = $("#AddressSelect option:selected").attr("value");
+                                                    if (selectedAddress == "0")
+                                                        return;
+                                                    var result = $.grep(addresses, function (e) { return e.UPRN == selectedAddress; });
+                                                    if (result.length < 1) {
+                                                        console.error("Address selected with id " + selectedAddress + " which isn't in list of addresses.");
+                                                        return;
+                                                    }
+                                                    $("#HomeAddress_HouseNumber").val(result[0].HouseNumber);
+                                                    $("#HomeAddress_AddressLine1").val(result[0].StreetDescription);
+                                                    $("#HomeAddress_AddressLine2").val(result[0].TownName);
+                                                    $("#HomeAddress_City").val(result[0].PostTown);
+                                                    $("#HomeAddress_County").val(result[0].AdministrativeArea);
+                                                    $("#HomeAddress_PostCode").val(result[0].Postcode);
+                                                    $("#AddressDetails").show();
+                                                });
+                                                $("#AddressList").show();
+                                                spinner.stop();
+                                                $("#loadingPostcode").fadeOut();
+                                            },
+                                            timeout: 3000,
+                                            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                                                console.error("Status: " + textStatus);
+                                                alert("Error: " + errorThrown);
+                                                $("#AddressList").hide();
+                                                $("#AddressDetails").hide();
+                                            }
+                                        });
+                                    });
+                                });
+                            </script>
+                            <div class="inline-details">
+                                <input type="submit" class="button button-submit-details" value="Submit my details">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </form>
+        </div>
+
+    </main>
+    <section class="feedback-section">
+    
+
+<div class="feedback-wrapper">
+    <div class="feedback-container feedback-container--open">
+        <div class="feedback-banner">
+            <a href="http://nhs111-web-beta-integration.azurewebsites.net/Outcome/PersonalDetails#FeedbackForm" class="feedback-dismiss"></a>
+            <form id="FeedbackForm" action="http://nhs111-web-beta-integration.azurewebsites.net/Feedback/SubmitFeedback">
+                <div id="FeedbackDetails">
+                    <h3 class="feedback-message feedback-title">
+                        Help us improve 111 online
+                    </h3>
+                    <p class="feedback-message">
+                        If you’d like to give your views on helping us improve 111 online, please use the form below.
+                    </p>
+                    <div class="feedback-form">
+                        <textarea value="" class="feedback-input" cols="20" id="Text" maxlength="8000" name="Text" placeholder="Feedback" rows="2"></textarea>
+                        <a class="feedback-btn feedback-submit" id="btnFeedback" onclick="SubmitFeedback(this);">Submit</a>
+                    </div>
+                </div>
+                <input id="UserId" name="UserId" type="hidden" value="d5342e80-6355-4e44-b3e3-8290f2b6578f">
+                <input id="PageId" name="PageId" type="hidden" value="Dx11">
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+
+    $('.feedback-dismiss').click(function () {
+        $('.feedback-wrapper').slideToggle();
+    });
+
+    $('.feedback-input').focus(function () {
+        $(this).animate({
+            //width: "70%",
+            //height: "70%"
+        });
+    });
+
+    $(document).ready(function () {
+        var $userId = $("#FeedbackForm #UserId");
+        $userId.val($.cookie("userId"));
+    });
+
+    $("#Text").keypress(function (event) {
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        var RETURNKEY = 13;
+        if (keycode === RETURNKEY) {
+            $("#btnFeedback").click();
+            return false;
+        }
+    });
+
+    function SubmitFeedback(btnClicked) {
+        if ($("#Text").val() !== "") {
+            var $form = $(btnClicked).parents("form");
+            $form[0][0].value = $('<div/>').text($form[0][0].value).html();
+            var detailsDiv = $("#FeedbackDetails");
+            $(detailsDiv).slideToggle(600);
+            $.ajax({
+                type: "POST",
+                url: $form.attr("action"),
+                data: $form.serialize(),
+                error: function (xhr, status, error) {
+                    alert(error);
+                    $(detailsDiv).slideToggle(600);
+                    //do something about the error
+                },
+                success: function (response) {
+                    $(detailsDiv).html('<p>' + response.Message + '</p>');
+                    $(detailsDiv).slideToggle(600);
+                }
+            });
+            return false;
+        }
+    }
+</script>
+
+</section>
+    <footer id="footer" role="contentinfo">
+        <div class="footer-wrapper">
+            <div class="text">
+                <p>
+                    <small>
+                        © Crown copyright<br>
+                        Content available under <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>, except where otherwise stated.
+                    </small>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="global-app-error" class="app-error hidden"></div>
+
+
+</body></html>
