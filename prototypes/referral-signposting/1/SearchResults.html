@@ -113,8 +113,8 @@
 
 
 <link href="disposition.css" media="screen" rel="stylesheet" type="text/css">
-
-<h2 style="margin-bottom: 20px;">Nearest A&E departments to SO19 7AX</h2>
+        <form action="itkreferral.html" method="GET">
+            <h2 style="margin-bottom: 20px;">Nearest A&E departments to SO19 7AX</h2>
         <div class="service-results">
             <section>
                 <div class="section-item">
@@ -122,9 +122,10 @@
                         Recommended service
                     </h3>
                     <div class="service-list-content">
-                        <div class="service-name"><img src="icons/fac-map-A.png" /> MH - In hours - NON Caseload / New Patients (18 yrs + ) - Isle of Wight</div>
+                        <div class="service-name"><img src="icons/fac-map-A.png"/> MH - In hours - NON Caseload / New Patients (18 yrs + ) - Isle of Wight
+                        </div>
                         <div class="service-address">
-                            CRHT<br />Sevenacres<br />St Marys Hospital<br />Newport, Isle of Wight<br />PO30 5TG
+                            CRHT<br/>Sevenacres<br/>St Marys Hospital<br/>Newport, Isle of Wight<br/>PO30 5TG
                         </div>
                         <input data-val="true" data-val-number="The field IdField must be a number." data-val-required="The IdField field is required." id="IdField" name="IdField" type="hidden" value="1396255437">
 
@@ -142,9 +143,10 @@
                         Other services near you
                     </h3>
                     <div class="service-list-content">
-                        <div class="service-name"><img src="icons/fac-map-B.png" />MH - Community Child and Adolescent MH Service up to 18 yrs- Isle of Wight</div>
+                        <div class="service-name"><img src="icons/fac-map-B.png"/>MH - Community Child and Adolescent MH Service up to 18 yrs- Isle of Wight
+                        </div>
                         <div class="service-address">
-                            7 Pyle Street<br />Newport<br />Isle of Wight<br />PO30 1JW
+                            7 Pyle Street<br/>Newport<br/>Isle of Wight<br/>PO30 1JW
                         </div>
                         <input data-val="true" data-val-number="The field IdField must be a number." data-val-required="The IdField field is required." id="IdField" name="IdField" type="hidden" value="1399886899">
 
@@ -154,11 +156,12 @@
 
                     </div>
                     <div class="service-list-content">
-                        <div class="service-name"><img src="icons/fac-map-C.png" />Hampshire GP - Hedge End Medical Centre, Southampton (WH CCG) (Home GP)</div>
-                        <div class="service-address">
-                            24-28 Lower Northam Road<br/> Hedge End<br />Southampton<br />SO30 4FQ
+                        <div class="service-name"><img src="icons/fac-map-C.png"/>Hampshire GP - Hedge End Medical Centre, Southampton (WH CCG) (Home GP)
                         </div>
-         
+                        <div class="service-address">
+                            24-28 Lower Northam Road<br/> Hedge End<br/>Southampton<br/>SO30 4FQ
+                        </div>
+
                         <div class="service-actions">
                             <button class="button" name="PersonalDetails" value="">Get directions</button>
                             <button class="button expectme" name="PersonalDetails" value="">Let them know to expect me</button>
@@ -166,21 +169,23 @@
 
                     </div>
                     <div class="service-list-content">
-                        <div class="service-name"><img src="icons/fac-map-D.png" />Hampshire GP - St Lukes Surgery, Hedge End, Southampton (WH CCG)</div>
+                        <div class="service-name"><img src="icons/fac-map-D.png"/>Hampshire GP - St Lukes Surgery, Hedge End, Southampton (WH CCG)
+                        </div>
                         <div class="service-address">
                             St. Lukes Close<br/>Hedge End<br/>Southampton<br/>SO30 2US
                         </div>
-   
-                     
+
+
                         <div class="service-actions">
                             <button class="button" name="PersonalDetails" value="">Get directions</button>
                         </div>
 
                     </div>
                     <div class="service-list-content">
-                        <div class="service-name"><img src="icons/fac-map-E.png" />GP Choice - Hants - Stokewood Surgery, Eastleigh (WH)</div>
+                        <div class="service-name"><img src="icons/fac-map-E.png"/>GP Choice - Hants - Stokewood Surgery, Eastleigh (WH)
+                        </div>
                         <div class="service-address">
-                            Fair Oak Road<br />Fair Oak<br />Eastleigh<br />SO50 8AU
+                            Fair Oak Road<br/>Fair Oak<br/>Eastleigh<br/>SO50 8AU
                         </div>
                         <div class="service-actions">
                             <button class="button" name="PersonalDetails" value="">Get directions</button>
@@ -192,52 +197,52 @@
                 </div>
             </section>
         </div>
+            </form>
 
-        <div class="service-map">
-            <img src="map.png"/>
-        </div>
-        <script>
-    $(function () {
-        $("#FindGP").click(function () {
-            $("#FindGP").val("");
-            $("#SurgeryViewModel_SelectedSurgery").val("");
-        }
-        );
-        $("#FindGP").autocomplete({
-            source: function (request, response) {
-                $.ajax({
-                    url: '/Outcome/SearchSurgery',
-                    type: "post",
-                    data: { input: $("#FindGP").val() },
-                    success: function (data) {
-                        response(data);
-                    },
-                    error: function (textStatus, errorThrown) {
-                        return null;
+            <div class="service-map">
+                <img src="map.png" />
+            </div>
+            <script>
+                $(function () {
+                    $("#FindGP").click(function () {
+                        $("#FindGP").val("");
+                        $("#SurgeryViewModel_SelectedSurgery").val("");
                     }
+                    );
+                    $("#FindGP").autocomplete({
+                        source: function (request, response) {
+                            $.ajax({
+                                url: '/Outcome/SearchSurgery',
+                                type: "post",
+                                data: { input: $("#FindGP").val() },
+                                success: function (data) {
+                                    response(data);
+                                },
+                                error: function (textStatus, errorThrown) {
+                                    return null;
+                                }
+                            });
+                        },
+                        focus: function (event, ui) {
+                            $("#FindGP").val(ui.item.Name);
+                            return false;
+                        },
+                        select: function (event, ui) {
+                            $("#FindGP").val(ui.item.Name);
+                            $("#SurgeryViewModel_SelectedSurgery").val(ui.item.SurgeryId);
+                            return false;
+                        }
+                    })
+                        .autocomplete("instance")._renderItem = function (ul, item) {
+                            return $("<li>")
+                                .append("<a>" + item.Name + "</a>")
+                                .appendTo(ul);
+                        };
+
                 });
-            },
-            focus: function (event, ui) {
-                $("#FindGP").val(ui.item.Name);
-                return false;
-            },
-            select: function (event, ui) {
-                $("#FindGP").val(ui.item.Name);
-                $("#SurgeryViewModel_SelectedSurgery").val(ui.item.SurgeryId);
-                return false;
-            }
-        })
-            .autocomplete("instance")._renderItem = function (ul, item) {
-                return $("<li>")
-                    .append("<a>" + item.Name + "</a>")
-                    .appendTo(ul);
-            };
 
-    });
-
-</script>
-
-    </main>
+            </script>
+</main>
     <section class="feedback-section">
     
 
