@@ -1,0 +1,1242 @@
+/* active top navigation for PIMS */
+.main-nav li#find-services-topnav {background:#fff;}
+.main-nav li#find-services-topnav a {color:#00649b;}
+.main-nav li#find-services-topnav:hover div, .main-nav li#find-services-topnav:active div {left:-53px;}
+/* width overides which were incorrectly calculated */
+.pims .five {padding:1em 0 0 0; width:95.3em;}
+/*.fs.pims.profile .five.col.border .pad .two-sm {width:35.6em;}*/
+.pims .five .three-sm {width:55.7em;}
+.pims .five .tertiary-content {width:100%;}
+.pims .five .four-sm {width:75em;}
+.pims .tabs-nav {margin-right:1em; width:94.5em;}
+/* profile info - address, website */
+.pims .col.five.profile-info {padding:0; width:95.5em;}
+.pims .profile-info .summary {display:inline; float:left;}
+.pims .profile-info .site {display:inline; float:right; margin-right:1em; text-align:right;}
+.pims .profile-info .site a {color:#900;}
+.pims .profile-info .panel-profile-summary {background:#fff; clear:none; display:inline; float:left; margin:0 1em 1em 48px; padding:0; width:50.8em;}
+.pims .profile-info .panel-profile-site {background:#fff; clear:none; display:inline; float:left; margin:0; padding:0; width:37.7em;}
+.pims .profile-info .panel-profile-site .panel-content p {text-align:right;}
+.pims .profile-info .pad {padding:0;}
+/* content styling */
+.pims .breadcrumbs {margin-bottom:1em; margin-top:-1em;}
+.pims .breadcrumbs ul li a {color:#900;}
+.pims .panel .panel-content ul li, .pims .panel .panel-content ol li {list-style-position:outside; margin-left:2em;}
+.pims .five .three-sm h2 {margin-bottom:.5em;}
+.pims .three-sm .breadcrumbs li a,  .pims .five-sm .breadcrumbs li a{display:block; line-height:1.2em;}
+/* panels */
+.pims .three-sm .panel, .pims .four-sm .panel {background:none; padding:0;}
+.pims .three-sm .panel .pad, .pims .two-sm .panel .pad, .pims .four-sm .panel .pad {padding:0;}
+.pims .three-sm .panel.box .pad {padding:1em;}
+.pims .three-sm .panel.panel-bg {background:#f2f2f0;}
+.pims .three-sm .panel.panel-bg .pad {padding:1em;}
+.pims .three-sm .panel.name-serviceteamsummary, .pims .three-sm .panel.name-thingsshouldknowmodule {border:1px solid #b2b2b2; clear:none; float:left; padding:1em; width:25.1em;}
+.pims .three-sm .panel.name-thingsshouldknowmodule {margin-right:1em;}
+.pims .three-sm .cqc-panel {background:#f2f2f0; padding:1em 1em 0.1em 1em;margin-bottom: 1em;}
+/* telephone cost message */
+.profile-info .tel-no {display:block; font-size:1.6em;}
+.profile-info .tel-cost {color:#0064b7; display:block; font-style:italic; margin:5px 0;}
+.contact-details .tel-cost {color:#0064b7;}
+/* panels content styling */
+.pims .panel-content ul, .pims .panel-content ol {margin-bottom:1em;}
+.pims .panel-content ol li {line-height:1.4em; margin-bottom:.3em;}
+.pims .panel-content ul.no-bullets {list-style:none;}
+.pims .panel-content ul.no-bullets li {margin-bottom:1em;}
+/* overview - text and image */
+.pims .panel .profile-pic {background:#f2f2f0; float:right; margin:0 1em 1em 1em; padding:.5em;}
+.pims .panel .profile-pic img {border:1px solid #616161;}
+/* acute trust */
+.pims .acute-trust-info h1 {padding:.65em 0 .2em 60px;}
+.pims .acute-trust-info .summary {margin-left:60px;}
+.pims .three-sm .panel.contact-details .col {width:25.7em;}
+.pims .three-sm .panel.contact-details .col ul {list-style:none; list-style-position:outside; margin-top:2.6em;}
+.pims .three-sm .panel.contact-details .col ul li {margin-bottom:1em;}
+.pims .three-sm .panel.contact-details .col ul li span {font-weight:bold;}
+/* acute trust and hospital contact */
+.pims .box-list.additional-contacts {background:#f2f2f0; padding:1em;}
+.pims .box-list.additional-contacts .panel {background:#fff; border:0; min-height:11.5em; height:auto !important; height:10em; width:26.3em;}
+.pims .box-list.additional-contacts .panel dl span {padding-left:1em;}
+.pims .box-list.additional-contacts .panel dt.hidden {clear:none;}
+/* acute trust contact - pals */
+.pims .two-sm .pals-info .box {background:#fff; border:0;}
+.pims .two-sm .pals-info .box dl span {padding-left:1em;}
+.pims .two-sm .pals {margin:0; padding-bottom:1em;}
+.pims .two-sm .pals dt, .pims .panel .pals dd {clear:none; display:inline; float:left;}
+.pims .two-sm .pals dt {clear:left; font-weight:normal;}
+.pims .two-sm .pals dd {margin:0; min-width:50%;}
+/* hospital */
+.pims .hospital-info .summary {margin-left:60px;}
+.fs h1.aande, .fs h1.walkincentre, .fs h1.minorinjuriesunit, .fs h1.dentist, .fs h1.optician, .fs h1.pharmacy, .fs h1.pct, .fs h1.mental-health-trust, .fs h1.acute-trust, .fs h1.independent-sector, .fs h1.care-trust, .fs h1.ambulance-trust, .fs h1.national-service, .fs h1.care-provider, .fs h1.care-organisation, .fs h1.ccg, .fs h1.lat {padding:.65em 0 .5em 46px; background-color:#fff; background-position:0 .6em; background-repeat:no-repeat;}
+.fs h1.aande, .fs h1.walkincentre, .fs h1.minorinjuriesunit {background-image: url(/img/find-services/hub/hub-icon-urgent-care.gif)}
+.fs h1.dentist {background-image: url(/img/find-services/hub/hub-icon-dentist.gif)}
+.fs h1.optician {background-image: url(/img/find-services/hub/hub-icon-optician.gif)}
+.fs h1.pharmacy {background-image: url(/img/find-services/hub/hub-icon-pharmacy.gif)}
+.fs h1.pct {background-image: url(/img/find-services/hub/hub-icon-pct-new.gif)}
+.fs h1.hospital {padding:.65em 0 .2em 46px; background-image: url(/img/find-services/hub/hub-icon-hospital.gif)}
+.fs h1.clinic {padding:.65em 0 .2em 46px; background-image: url(/img/find-services/hub/hub-icon-clinic.gif);}
+.fs h1.mental-health-trust {background:url(/img/find-services/hub/hub-icon-mental-health-trust.gif) left no-repeat;}
+.fs h1.acute-trust {background:url(/img/find-services/hub/hub-icon-acute-trust.gif) left no-repeat;}
+.fs h1.independent-sector {background:url(/img/find-services/hub/hub-icon-independent-sector.gif) left no-repeat;}
+.fs h1.care-trust {background:url(/img/find-services/hub/hub-icon-hct.gif) left no-repeat;}
+.fs h1.ambulance-trust {background:url(/img/find-services/hub/hub-icon-ambulance-trust.gif) left no-repeat;}
+.fs h1.national-service {background:url(/img/find-services/hub/hub-icon-nhsdirect.jpg) no-repeat 0 0.8em;}
+.fs h1.care-provider {background-image: url(/img/find-services/hub/hub-icon-care-provider.gif)}
+.fs h1.care-organisation {background:url(/img/find-services/hub/hub-icon-social-care-independent-provider.gif) left no-repeat;}
+.fs h1.ccg {background-image:url(/img/find-services/hub/hub-icon-ccg.gif);}
+.fs h1.lat {background-image:url(/img/find-services/hub/hub-icon-at.gif);}
+.fs h1.nhs-trust {background:url(/img/find-services/hub/hub-icon-nhs-trust.gif) left no-repeat;}
+/* list of addresses in boxes */
+.pims .box-list {margin-bottom:1em;}
+.pims .box-list .panel, .fs.pims .three-sm .teaser.patient-info, .fs.pims .three-sm .teaser.other-branches, .fs.pims .three-sm .teaser.staff-info {clear:none; float:left; margin-right:1em; width:27.1em;}
+.pims .box-list.hospital-list .panel {min-height:18em; height:auto !important; height:18em;}
+.pims .box-list.hospital-list .panel.module {width:100%; min-height:1%;}
+.pims .box-list.clinic-list .panel {min-height:18em; height:auto !important; height:18em;}
+.pims .box-list.clinic-list .panel.module {width:100%; min-height:1%;}
+.pims .box-list .panel.last {margin-right:0;}
+.pims .box-list .panel dt, .pims .box-list .panel dd {clear:none; display:inline; float:left;}
+.pims .box-list .panel dt {clear:left; font-weight:normal; padding-bottom:.3em;}
+.pims .box-list .panel dd {margin:0; min-width:50%; word-wrap:break-word;}
+.pims .box-list .panel dd.address {width:99%;}
+/* search widget */
+.pims .compare-hospitals .crnr, .pims .compare-hospitals .find-hospital .icn, .pims .compare-hospitals .find-hospital .cartoon {display:none;}
+.pims .compare-hospitals .message {margin-bottom:1em;}
+.pims .compare-hospitals .message img {float:right; margin-left:1em;}
+.pims .compare-hospitals .message h3 {color:#585858; font-size:1.3em; margin:0;}
+.pims .compare-hospitals .hub-search-box {margin:0; padding:0; width:auto;}
+.pims .compare-hospitals .hub-search-box .hub-search {background:none; float:none; height:auto; padding:0;}
+.pims .compare-hospitals #divColWidgets .hub-search input, .pims .compare-hospitals #divColWidgets #widgetCompare-box input {margin-top:.4em; width:19em;}
+.pims .compare-hospitals #divColWidgets .hub-search label, .pims .compare-hospitals #divColWidgets #widgetCompare-box label {font-size:1.3em; font-weight:normal; width:20em;}
+.pims .compare-hospitals .hub-search-box #widgetCompare-box {position:relative;}
+.pims .compare-hospitals .hub-search-box #widgetCompare-box label {display:block;}
+.pims .compare-hospitals .hub-search-box .hub-submit {background:none; float:none; height:auto; margin-left:1px; margin-top:.5em; padding:0; width:auto;}
+.pims .compare-hospitals .hub-search-box .hub-submit .submit-container {background:none; height:auto; padding:0; width:auto;}
+.pims .compare-hospitals .predictive {border:0; width:28em; z-index:1;}
+.pims .compare-hospitals .predictive .pad {height:17em; min-height:17em; padding:1em;}
+.pims .compare-hospitals .predictive ul {margin-top:0;}
+.pims .compare-hospitals .predictive a {color:#585858;}
+.pims .compare-hospitals .predictive a#a-to-z {font-weight:normal;}
+/* departments and services */
+.pims .departments-services {background:#f2f2f0; margin-bottom:1em; padding:.5em 1em 2em .5em;}
+.pims .departments-services table {border:1px solid #f2f2f0; border-collapse:collapse; width:97%;}
+.pims .departments-services table caption {padding-left:3.2em; padding-bottom:1em;}
+.pims .departments-services table caption, .pims .departments-services table th {font-size:1.5em; font-weight:bold; text-align:left;}
+.pims .departments-services table tr.newletter td {border-top:15px solid #f2f2f0;}
+.pims .departments-services table td, .pims .departments-services table th {border:5px solid #f2f2f0; padding:.5em 1em; vertical-align:top;}
+.pims .departments-services table th {padding:.5em .8em;}
+.pims .departments-services table td {background:#fff; width:46%;}
+.pims .departments-services table td.empty {background:#f2f2f0; border:0; padding:0; width:2%;}
+.pims .departments-services table th {border:0; padding-bottom:0;}
+.pims .departments-services table tr.newletter th {padding:.8em .5em 0 0; text-align:right;}
+.pims .departments-services table tr.firstnewletter td {border-top:10px solid #f2f2f0;}
+.pims .departments-services table tr.firstnewletter th {padding-top:.5em;}
+.pims .departments-services table a {color:#900;}
+.pims .panel .departments-services table tr td ul {list-style:none; list-style-position:outside; margin:0;}
+.pims .panel .departments-services table td ul li {margin-left:0;}
+.pims .acute-departments-services table caption {padding:.5em 0 .5em 1.8em;}
+.pims .acute-departments-services table td {border:0; font-size:1.1em; padding:0;}
+.pims .acute-departments-services table td a {font-size:1em;}
+.pims .acute-departments-services table td .panel {border:0; margin:0;}
+.pims .acute-departments-services table td .panel table {border:0; width:100%;}
+.pims .acute-departments-services table td .panel table td {border:5px solid #f2f2f0; padding:.5em 1em; vertical-align:top;}
+.pims .acute-departments-services table tr.firstnewletter th {padding-top:.7em; text-align:center; padding-right:0;}
+.pims .acute-departments-services table tr.firstnewletter td {border-top:5px solid #f2f2f0;}
+.pims .acute-departments-services table td .panel table td ul {list-style:none; list-style-position:outside; margin:0;}
+.pims .acute-departments-services table td .panel table td ul li {font-size:1em;}
+.pims .acute-departments-services table th.depts {width:23%;}
+/* hospital department */
+.pims .panel-treatments-offered .module .module {padding:0;}
+/* useful links */
+.pims .module .useful-links .pad {padding:0;}
+.pims .module .useful-links h3 {color:#900; font-size:1.5em; font-weight:bold; margin:0 0 .5em 0;}
+.pims .module .useful-links ul {margin-bottom:1em; padding-bottom:0;}
+.pims .module .useful-links ul li {margin-left:1.3em;}
+/* hospital overview */
+.pims .hospital-overview .panel .panel-content {min-height:15em; height:auto !important; height:15em;}
+/* hospital overview comments */
+.pims .comment-holder .your-comments {padding:1em 0.5em 0 0.5em; border:3px solid #d8d8d8; margin:0 0 2em 0; position:relative; background-color:#fff;}
+.pims .comment-holder h3 {margin: 0.2em 0 .6em 0;}
+.pims .comment-holder .bg-image {background:transparent url(/img/homepage/homepage.gif) no-repeat scroll -272px 0; display:block; height:194px; position:absolute; right:35px; top:-9px; width:63px;}
+.pims .comment-holder .box {background-color:#f7f7f7;}
+.pims .comment-holder .your-comments .crnr {background-image:url(/img/homepage/comment-crnrs.gif); width:7px; height:7px;}
+.pims .comment-holder .your-comments .tl {top:-3px; left:-3px;}
+.pims .comment-holder .your-comments .tr {background-position:-7px 0; top:-3px; right:-3px;}
+.pims .comment-holder .your-comments .bl {width:59px; height:20px; background-position: 0 -7px; bottom:-16px; left:-3px;}
+.pims .comment-holder .your-comments .br {background-position:-52px 0; bottom:-3px; right:-3px;}
+.pims .comment-holder .your-comments p.comment-details a {background:transparent; color:#006699;}
+.pims .comment-holder .comment-container {width: 33em; position: relative; left:0; top:0; font-size:1em; min-height:11em;}
+.pims .comment-holder .comment-container .comments {overflow:hidden; width: 28em; min-height:10em; margin :0 2.5em; position: absolute; top: 3px;}
+.pims .comment-holder .comment-container .comments ul {width: 9999px; list-style-image:none; list-style-position:outside; list-style-type:none; margin:0; padding:0; position: absolute; top: 0;}
+.pims .comment-holder .comment-container ul li {display:block; float:left; height: 9em; width: 31.6em; font-size:1.0em;}
+.pims .comment-holder .comment-container .arrow {display: block; height: 4em; padding-top:2.7em; width: 1.6em; position: absolute; top:0; cursor: pointer;}
+.pims .comment-holder .comment-container .forward {right: 0; padding-left: 0.4em;}
+.pims .comment-holder .comment-container .back {left:0; padding-right:0.4em;}
+.pims .comment-holder .comment-container .forward:hover, .pims .comment-holder .comment-container .back:hover {background-color:#fff;}
+.pims .comment-holder .comment-container p.quote, .pims .comment-holder .comment-container p.comment-details {font-size:1.2em; width:20em;}
+.pims .comment-holder .comment-container p.comment-details a {color:#900;}
+/* last updated */
+.pims .last-updated {clear:left; margin-top:3em;}
+/* hospital facilities */
+.pims .internal-nav li {border-right:1px solid #585858; display:inline; font-size:1.4em; padding:0 .5em;}
+.pims .internal-nav li.first {border:0; font-weight:bold; padding:0;}
+.pims .internal-nav li.last {border:0;}
+.pims .internal-nav li a {color:#900;}
+.pims .five .five-sm {width:93.3em;}
+.pims .five .five-sm .panel, .pims .five .five-sm .panel .pad {background:none; padding:0;}
+.pims .five .five-sm .panel .two-sm .panel {background:#f2f2f0;}
+.pims .five .five-sm .panel .two-sm .panel .pad {padding:1em;}
+.pims .facility {border-bottom:1px dotted #ccc; margin:0 0 1em 0; padding-bottom:1em; width:93.3em;}
+.pims .facility h3 {color:#585858;}
+.pims .facility .two-sm .panel {margin-top:2.5em;}
+.pims .facility .facility-list {margin-bottom:1em;}
+.pims .panel-content .facility .facility-list li {background-position:0 0; background-repeat:no-repeat; background-color:transparent; display:inline; float:left; margin-left:1em; padding:0 0 .5em 20px; width:27%;}
+.pims .panel-content .facility .facility-list li span {font-size:.9em; color:#585858; display:block;}
+.pims .facility .facility-list li.yes {background-image:url(/img/pims/icon-yes.gif);}
+.pims .facility .facility-list li.no {background-image:url(/img/pims/icon-no.gif);}
+.pims .facility .facility-list li.not-answered {background-image:url(/img/pims/icon-unknown.gif);}
+.pims .facility .averages {background:none; margin-bottom:1em; padding:0;}
+.pims .facility .averages p {background:#fff; border:0; margin-bottom:1em; padding:1em;}
+/* hospital patient feedback */
+.pims .feedback .patient-comment .two-sm {width:35.4em;}
+.pims .feedback .paging p {float:left;}
+.pims .feedback .paging p.back-comments {clear:left; padding-bottom:1em;}
+.pims .feedback ul.pagination li {margin:0;}
+/* dropdown list */
+.pims .feedback .comment-sort {float:left; position:relative; margin:1em 0; width:100%; z-index:2}
+.pims .feedback .comment-sort .list-dropdown-enabled {width:60%;}
+.pims .feedback .comment-sort p, .pims .feedback .comment-sort ul {float:left;}
+.pims .feedback .comment-sort p {margin:.5em 1.5em 0 0;}
+.pims .feedback .comment-sort p.services-list {margin:.5em 1.45em 0 3em;}
+.pims .feedback .list-dropdown {position:relative;}
+.pims .feedback .list-dropdown .bold {float:left; font-weight:bold; width:auto;}
+.pims .feedback .list-dropdown .top-option {display:inline; float:left; width:auto;}
+.pims .feedback .list-dropdown-enabled .list-dropdown .top-option {background:#f2f2f2; border:1px solid #ccc; color:#900; display:block; float:none; font-weight:bold; width:auto;}
+.pims .feedback .list-dropdown-enabled .list-dropdown .top-option span.list-dropdown-icon {float:left; padding:.3em .5em; width:10px;}
+.pims .feedback .list-dropdown .top-option span.current-sort {color:#900; margin-right:.8em;}
+.pims .feedback .list-dropdown .top-option span.current-sort span {float:left; padding:.4em .9em .5em .6em;}
+.pims .feedback .list-dropdown-enabled .list-dropdown .top-option span.current-sort {margin-right:0;}
+.pims .feedback .list-dropdown-enabled .list-dropdown .top-option span.current-sort span {border-right:1px solid #ccc; width:9.9em;}
+.pims .feedback .list-dropdown .top-option .crnr {display:none;}
+.pims .feedback .list-dropdown-enabled .list-dropdown .top-option .crnr {background-image:url(/img/grey-corners-bordered-trans.gif); display:block; float:none; padding:0; width:10px;}
+.pims .feedback .list-dropdown-enabled .list-dropdown .top-option.expanded .crnr {background-image:url(/img/grey-corners-bordered-dropdown-trans.gif);}
+.pims .feedback .list-dropdown-enabled .list-dropdown .top-option .tl {left:0; top:0;}
+.pims .feedback .list-dropdown-enabled .list-dropdown .top-option .tr {right:0; top:0;}
+.pims .feedback .list-dropdown-enabled .list-dropdown .top-option .bl {bottom:0; left:0;}
+.pims .feedback .list-dropdown-enabled .list-dropdown .top-option .br {bottom:0; right:0;}
+.pims .feedback .list-dropdown ul {list-style:none; list-style-position:outside; padding:0;}
+.pims .feedback .list-dropdown li {display:inline; float:left; margin-right:.8em; width:auto;}
+.pims .feedback .list-dropdown-enabled li.single-option {margin-top:.5em;}
+.pims .feedback .list-dropdown .list-dropdown-results {margin-left:0; margin-right:1em; width:12.4em;}
+.pims .feedback .list-dropdown-enabled .list-dropdown-results {padding-top:.5em; width:26%;}
+.pims .feedback .list-dropdown-enabled .list-dropdown li li {border-bottom:1px dotted #e3e3e3; display:block; float:none; padding:.3em .8em; width:auto;}
+.pims .feedback .list-dropdown li a {color:#900; text-decoration:underline;}
+.pims .feedback .list-dropdown li a:hover {text-decoration:none;}
+.pims .feedback .list-dropdown-enabled .list-dropdown li a {background:transparent; color:#585858; text-decoration:none;}
+.pims .feedback .list-dropdown-enabled .list-dropdown li a:hover {text-decoration:underline;}
+.pims .feedback .list-dropdown .list-dropdown-first {margin-left:.5em; margin-right:0; width:32em;}
+.pims .feedback .list-dropdown-enabled .list-dropdown .list-dropdown-first {border-top:0; display:block; float:left; padding:0; position:relative; width:auto;}
+.pims .feedback .list-dropdown-enabled .list-dropdown .list-dropdown-icon {background:url(/img/scorecards/arrow-grey-down.gif) 50% 50% no-repeat; cursor:pointer; display:block; float:right; height:20px; width:19px;}
+.pims .feedback .list-dropdown .list-dropdown-main {width:100%;}
+.pims .feedback .list-dropdown-enabled .list-dropdown .list-dropdown-main {border-top:0; display:none; position:absolute; z-index:101;}
+.pims .feedback .list-dropdown-enabled .list-dropdown .list-dropdown-main ul {background:#fff; border:1px solid #cdcdcd; border-top:0; float:none;}
+.pims .feedback .list-dropdown .list-dropdown-main ul {margin-bottom:0;}
+.pims .feedback .list-dropdown .list-dropdown-main li {margin-left:0;}
+.pims .feedback .list-dropdown-enabled .list-dropdown .list-dropdown-main li {display:block; margin-right:0;}
+.pims .feedback .list-dropdown-enabled .dropdown-services {width:22.4em;}
+.pims .feedback .list-dropdown-enabled .dropdown-services .list-dropdown-first {width:18.4em;}
+.pims .feedback .list-dropdown-enabled .dropdown-services .top-option span.current-sort span {width:14.7em;}
+
+/* feedback */
+.pims .three-sm .feedback h2 {background:none; color:#585858; font-size:1.8em; height:auto; margin:0; padding:0; min-height:1em;}
+.pims .three-sm .feedback .find-out {padding:0 0 1em 0;}
+.pims .three-sm .feedback .no-comments {clear:left; padding-top:1em;}
+.pims .feedback .comment-container {clear:both;}
+.pims .feedback ul.rc-header-links {list-style:none; list-style-position:outside; margin-top:1.5em;}
+.pims .feedback ul.rc-header-links li {float:left; margin-left:0; margin-right:1.5em;}
+.pims .feedback ul.rc-header-links li.rss a {background:url(/img/rss_feed.gif) left no-repeat; padding-left:20px;}
+.pims .feedback .user-comment {border:1px solid #ccc; margin-bottom:1em;}
+.pims .feedback .user-comment h3 {color:#585858; font-size:1.4em; font-weight:bold;}
+.pims .feedback .user-comment .pad-rl {padding:0 1em;}
+.pims .feedback .user-comment .three {border-top:1px dotted #ccc; padding-top:1em; width:55.6em;}
+.pims .feedback .user-comment .one h3 {font-size:1.3em; font-weight:bold; padding-left:.8em;}
+.pims .feedback .user-comment .one h4 {background:url(/img/randc/rc-yes-rec.gif) no-repeat left center; font-weight:normal; height:2.3em; padding: 0 0 0 2.6em;}
+.pims .feedback .user-comment .one .recno h4 {background:url(/img/randc/rc-not-rec.gif) no-repeat left center;}
+.pims .feedback .user-comment .one .overall-rating {padding:0 1em 1em 1em;}
+.pims .feedback .user-comment .one .overall-rating h4 {background:none; clear:left; height:auto; margin:.5em 0; padding:0;}
+.pims .feedback .user-comment .one .overall-rating img {float:left; margin-right:1em;}
+.pims .feedback .user-comment .one .overall-rating p {float:left;}
+.pims .feedback .user-comment .two {width:35.3em;}
+.pims .feedback .user-comment .two h5 {font-size:1.3em; margin-bottom:0;}
+.pims .feedback .user-comment .two .comment-date {margin:1em 0;}
+.pims .feedback .user-comment .comment-report a {color:#900;}
+.pims .feedback .user-comment .org-reply {background-color:#f7f7f7; border-top:1px solid #ccc; clear:both; margin-top:1em; padding:1em;}
+.pims .feedback .add-your-views {background-color:#f7f7f7; border-bottom:1px dotted #ccc; margin-bottom:1em; padding:1em;}
+.pims .feedback .user-comment h4 {font-size:1.3em; margin-top:.5em;}
+.pims .feedback .user-comment h4 span {color:#585858; font-weight:normal; font-size:1em;}
+.pims .feedback .user-comment h5 {font-size:1.3em; margin-bottom:0.1em;}
+.pims .feedback .user-comment .overall-rating {padding:0 1em 1em 1em;}
+.pims .feedback .user-comment .overall-rating h4 {font-weight:normal; margin-bottom:0; margin-top:1em;}
+.pims .feedback .user-comment .overall-rating p {float:left;}
+.pims .feedback .user-comment .chevron-red a {color:#900;}
+.pims .five .two-sm .patient-ratings {background:none; margin-bottom:0; padding:0;}
+.pims .five .two-sm .patient-rating .avg-patient-wrap {margin-top:1em;}
+.pims .feedback .comment-details .tags-list {list-style:none; margin-bottom:2em;}
+.pims .feedback .comment-details .tags-list li {color:#900; float:left; margin:0 .5em 0 0;}
+.pims .five .two-sm .module .tag-category {background:#fff; margin-bottom:.5em; padding:.5em 1em .3em 1em;}
+.pims .five .two-sm .module .tag-category h3 {color:#585858; font-size:1.3em; margin-bottom:.3em;}
+.pims .five .two-sm .module .tag-category ul {list-style:none; margin-bottom:.5em;}
+.pims .five .two-sm .module .tag-category ul li {color:#900; float:left; margin:0 .5em 0 0;}
+.pims .five .two-sm .module .tag-category .show-more {text-align:right;}
+.pims .five .two-sm .module .tag-category .show-more a {background:url(/img/chevron-glossary.gif) left no-repeat; color:#585858; padding-left:10px;}
+/* no ratings/comments */
+.pims .feedback .rc-mesg {font-size:1.4em; padding:.7em 0;}
+.pims .feedback .rc-none {background:url(/img/randc/icon-comments-small.gif) 1.5em 1.5em no-repeat; padding:1.5em 1.5em 1.5em 8.5em;}
+.pims .feedback .rc-none .rc-first {color:#900; font-size:1.4em;}
+.pims .feedback .rc-none .submit {margin:1em 0 0 14em;}
+.pims .feedback .user-comment .one .no-opinion h3 {padding:0;}
+.pims .feedback .user-comment .one .no-opinion h4 {background:none; padding:0; color:#900; font-weight:bold}
+/* overall rating */
+.pims .five .two-sm .overall-patient-rating .no-of-users {float:left; font-size:1.6em; font-weight:bold; margin-right:1em;}
+.pims .five .two-sm .overall-patient-rating .filter-value {background:#ccc; float:left; padding:.3em;}
+.pims .five .two-sm .overall-patient-rating .five {width:auto;}
+.pims .five .two-sm .overall-patient-rating .filter-value .percentage-wrap {background:#fff; display:block; float:left; height:1em; padding:.2em; width:11.5em;}
+.pims .five .two-sm .overall-patient-rating .filter-value .percentage-bar {background:url(/img/randc/bg-bar-graph.gif) top left repeat-x; display:block; height:1em;}
+.pims .five .two-sm .overall-patient-rating .five .percentage-bar {width:5%;}
+.pims .five .two-sm .overall-patient-rating .ten .percentage-bar {width:10%;}
+.pims .five .two-sm .overall-patient-rating .fifteen .percentage-bar {width:15%;}
+.pims .five .two-sm .overall-patient-rating .twenty .percentage-bar {width:20%;}
+.pims .five .two-sm .overall-patient-rating .twentyfive .percentage-bar {width:25%;}
+.pims .five .two-sm .overall-patient-rating .thirty .percentage-bar {width:30%;}
+.pims .five .two-sm .overall-patient-rating .thirtyfive .percentage-bar {width:35%;}
+.pims .five .two-sm .overall-patient-rating .forty .percentage-bar {width:40%;}
+.pims .five .two-sm .overall-patient-rating .fortyfive .percentage-bar {width:45%;}
+.pims .five .two-sm .overall-patient-rating .fifty .percentage-bar {width:50%;}
+.pims .five .two-sm .overall-patient-rating .fiftyfive .percentage-bar {width:55%;}
+.pims .five .two-sm .overall-patient-rating .sixty .percentage-bar {width:60%;}
+.pims .five .two-sm .overall-patient-rating .sixtyfive .percentage-bar {width:65%;}
+.pims .five .two-sm .overall-patient-rating .seventy .percentage-bar {width:70%;}
+.pims .five .two-sm .overall-patient-rating .seventyfive .percentage-bar {width:75%;}
+.pims .five .two-sm .overall-patient-rating .eighty .percentage-bar {width:80%;}
+.pims .five .two-sm .overall-patient-rating .eightyfive .percentage-bar {width:85%;}
+.pims .five .two-sm .overall-patient-rating .ninety .percentage-bar {width:90%;}
+.pims .five .two-sm .overall-patient-rating .ninetyfive .percentage-bar {width:95%;}
+.pims .five .two-sm .overall-patient-rating .hundred .percentage-bar {width:100%;}
+.pims .five .two-sm .overall-patient-rating .filter-value .percentage-value {display:block; float:left; font-size:1.1em; font-weight:bold; margin-left:.5em; width:2.5em;}
+.pims .five .two-sm .overall-patient-rating .would-recommend {clear:left;}
+/* average patient rating */
+.pims .five .two-sm .patient-rating .avg-patient-rating {background:#fff; margin-bottom:.5em; padding:.5em 1em;}
+.pims .five .two-sm .patient-rating .avg-patient-rating h3 {color:#585858; font-size:1.3em; font-weight:bold; margin-bottom:1em;}
+.pims .five .two-sm .patient-rating .avg-patient-rating img {float:left; margin-right:1em;}
+.pims .five .two-sm .patient-rating .avg-patient-rating .avg-title {float:left; padding-bottom:0;}
+.pims .five .two-sm .patient-rating .avg-patient-rating .number-of-ratings {float:right; padding-bottom:0; padding-left:1em;}
+.pims .five .two-sm .your-views {background:#f2f2f2 url(/img/randc/icon-add-your-views-2col.gif) 10px 10px no-repeat; padding-left:60px;}
+.pims .five .two-sm .your-views h2 {padding-bottom:0;}
+.pims .five .two-sm .your-views p {padding:0 0 1em 0;}
+.pims .five .two-sm .your-views .submit {margin:0;}
+.pims .five .two-sm .your-views .our-rules {float:left; margin-left:2em;}
+/* add your comments */
+.pims .three-sm .add-views {margin-bottom:1em; margin-top:2em;}
+.pims .three-sm .add-views .border {border-color:#dadada;}
+.pims .three-sm .add-views .bdr-bot {border-bottom:1px dotted #ccc;}
+.pims .three-sm .add-views a {color:#900;}
+.pims .three-sm .add-views legend {padding-bottom:.8em;}
+.pims .three-sm .add-views legend label {font-size:1em;}
+.pims .three-sm .add-views .add-your-view {padding:1em;}
+.pims .three-sm .add-views .add-your-view label {font-weight:bold;}
+.pims .three-sm .add-your-view-hdr {border-bottom:1px dotted #ccc; padding:1em;}
+.pims .three-sm .add-your-view-hdr p {clear:both;}
+.pims .three-sm .add-your-view-hdr p.email-message {font-style:italic;}
+.pims .three-sm .add-your-view-hdr .intro-panel {clear:both; padding-top:.5em;}
+.pims .three-sm .add-your-view-hdr fieldset .log-out {margin-left:1em; font-size:.8em; font-weight:normal;}
+.pims .three-sm .add-your-view-hdr input {background-color:#fff; border:1px solid #dadada; float:left; margin-bottom:.5em; margin-right:.5em; padding:.3em; width:25em;}
+.pims .three-sm .add-your-view-hdr .display-name {margin-top:1em;}
+.pims .three-sm .add-your-view-hdr .display-name label {display:block; font-size:1.2em; font-weight:bold; margin-bottom:.5em;}
+.pims .three-sm .add-your-view-hdr .display-name input {background-color:#fff; border:1px solid #dadada; font-size:1.2em; margin-bottom:.5em; padding:.3em; width:23em;}
+.pims .three-sm .add-your-view-hdr .display-name .annon-checkbox {clear:left; display:block;}
+.pims .three-sm .add-your-view-hdr .display-name .annon-checkbox input {border:none; float:left; margin-right:.5em; margin-top:.1em; width:auto;}
+.pims .three-sm .add-your-view-hdr .display-name .annon-checkbox label {font-weight:normal; margin:.3em 0;}
+.pims .three-sm .add-views .overall-rating select {margin:0;}
+.pims .three-sm .add-views .overall-rating fieldset {margin-top:1.5em;}
+.pims .three-sm .add-views .overall-rating fieldset legend {margin-bottom:1em; padding:0;}
+.pims .three-sm .add-views .overall-rating fieldset label {display:block; font-weight:normal; margin-bottom:.8em;}
+.pims .three-sm .add-views .overall-rating .yes-rec {background:url(/img/find-services/profiles/tick.gif) right no-repeat; display:block; width:26em;}
+.pims .three-sm .add-views .overall-rating .not-rec {background:url(/img/find-services/profiles/cross.gif) right no-repeat; display:block; width:26em;}
+.pims .rc-comments .rc-comments-container p.not-rec {background:url(/img/find-services/profiles/cross.gif) no-repeat;}
+.pims .rc-comments .rc-comments-container p.yes-rec {background:url(/img/find-services/listings/tick-list.gif) no-repeat;}
+.pims .three-sm .add-views .overall-rating input {float:left; margin-right:.5em;}
+.pims .three-sm .add-views .about-org {padding-bottom:0;}
+.pims .three-sm .add-views .about-org p.question {margin-top:1em;}
+.pims .three-sm .add-views .optional-comment {padding-top:0;}
+.pims .three-sm .add-views .optional-comment .user-message {margin:1em 0;}
+.pims .three-sm .add-views .optional-comment .add-a-comment {background:none; margin-top:1em; padding:0;}
+.pims .three-sm .add-views .optional-comment .add-comment-textbox {margin:3em 0 1em 0;}
+.pims .three-sm .add-views .optional-comment .add-comment-textbox p {margin:0; padding:0;}
+.pims .three-sm .add-views .optional-comment .add-comment-textbox p.error {clear:both;}
+.pims .three-sm .add-views .optional-comment .add-comment-textbox textarea {background-color:#fff; border:1px solid #dadada; font-size:1.2em; height:15em; margin-bottom:.5em; margin-top:.5em; padding:.3em; width:43.9em;}
+.pims .three-sm .add-views .optional-comment .add-comment-textbox {margin-bottom:1em;}
+.pims .three-sm .add-views .optional-comment .add-comment-textbox span span {font-size:1.2em;}
+.pims .three-sm .add-views .optional-comment .last-visited {clear:both; font-weight:bold; margin-top:1em;}
+.pims .three-sm .add-views .optional-comment .comment-title {background-color:#fff; border:1px solid #dadada; font-size:1em; padding:.3em; width:43.9em;}
+.pims .three-sm .add-views .optional-comment .title-comment {margin-top:3em;}
+.pims .three-sm .add-views .optional-comment .title-comment p {margin-bottom:0;}
+.pims .three-sm .add-views .optional-comment .title-comment label {display:block; margin-bottom:.5em;}
+.pims .three-sm .add-views .optional-comment .title-comment span span {font-size:1.2em;}
+.pims .three-sm .add-views .add-view-disclaimer h3, .pims .three-sm .add-views .add-view-disclaimer a {color:#585858;}
+.pims .two-sm .feedback-moderation {margin-top:3.5em;}
+.pims .two-sm .feedback-moderation .link-list li {background:none; padding:0;}
+.pims .three-sm .message-feedback .chevron-red a {background:transparent url(/img/chevron-red.gif) 0 4px no-repeat; color:#900; display:block; padding-left:10px; text-decoration:none;}
+.pims .three-sm .message-feedback .chevron-red a:hover {text-decoration:underline;}
+.pims .three-sm .comments-footer h3 {color:#585858; font-size:1.2em;}
+.pims .three-sm .comments-footer .submit {margin-top:1em;}
+/* hospital comments on overview page */
+.pims .rc-comments {background-color:#f2f2f0; display:block; position:relative;}
+.pims .rc-comments h4 {color:#900; font-size:1.3em; margin-bottom:.5em;}
+.pims .rc-comments .overall-ratings {margin-bottom:.5em; min-height:3em;}
+.pims .rc-comments .no-of-users {font-weight:bold; margin-bottom:0; padding-bottom:0;}
+.pims .rc-comments .rc-comments-container {background-color:#fff; clear:both; padding:0 1em 1em 1em;}
+.pims .rc-comments .rc-nocomments-container {background-color:#fff; clear:both; padding:1em; text-align:center;}
+.pims .rc-comments .rc-nocomments-container p {font-size:1.3em;}
+.pims .rc-comments .rc-nocomments-container p.leavereviewlink a.review-link {padding:.3em 1em; display:inline-block; text-decoration:none; font-weight:bold; font-size:1.4em; color:#000; background:url(/img/find-services/leave-review-bg.gif) repeat-x 0 0; border-radius:5px;}
+.pims .rc-comments .rc-nocomments-container p.leavereviewlink a.review-link:hover, .pims .rc-comments .rc-nocomments-container p.leavereviewlink a.review-link:focus, .pims .rc-comments .rc-nocomments-container p.leavereviewlink a.review-link:active {background-position:0 -70px;}
+.pims .rc-comments .rc-nocomments-container p.leavereviewlink {display:inline-block; padding-top:.5em;  padding-bottom:.5em;}
+.pims .rc-comments .rc-comments-container .user-recommendation {padding:1em 0;}
+.pims .rc-comments .rc-comments-container .user-recommendation h4 {padding-left:0; margin-bottom:0;}
+.pims .rc-comments .rc-comments-container .user-recommendation h4 a {color:#585858; text-decoration:none;}
+.pims .rc-comments .rc-comments-container .user-recommendation h4 a:hover {text-decoration:underline;}
+.pims .rc-comments .rc-comments-container .user-recommendation h4.no-icon {background:none; padding:0;}
+.pims .rc-comments .rc-comments-container .user-recommendation h4.tick-icon {background:url(/img/ratings/tick-icon-small.png) no-repeat; background-position: 0 6px; padding:2em 0 0 0;}
+.pims .rc-comments .rc-comments-container .user-recommendation h4.cross-icon {background:url(/img/ratings/cross-icon-small.png) no-repeat; background-position: 0 6px; padding:2em 0 0 0;}
+.pims .rc-comments .rc-comments-container .user-recommendation h4.question-icon {background:url(/img/ratings/question-icon-small.png) no-repeat; background-position: 0 6px; padding:2em 0 0 0;}
+.pims .rc-comments .rc-comments-container .user-recommendation h4.one-star-icon {background:url(/img/ratings/one-stars-small.png) no-repeat; background-position: 0 6px; padding:2em 0 0 0;}
+.pims .rc-comments .rc-comments-container .user-recommendation h4.two-star-icon {background:url(/img/ratings/two-stars-small.png) no-repeat; background-position: 0 6px; padding:2em 0 0 0;}
+.pims .rc-comments .rc-comments-container .user-recommendation h4.three-star-icon {background:url(/img/ratings/three-stars-small.png) no-repeat; background-position: 0 6px; padding:2em 0 0 0;}
+.pims .rc-comments .rc-comments-container .user-recommendation h4.four-star-icon {background:url(/img/ratings/four-stars-small.png) no-repeat; background-position: 0 6px; padding:2em 0 0 0;}
+.pims .rc-comments .rc-comments-container .user-recommendation h4.five-star-icon {background:url(/img/ratings/five-stars-small.png) no-repeat; background-position: 0 6px; padding:2em 0 0 0;}
+.pims .rc-comments .rc-comments-container .user-recommendation p {padding-bottom:0; padding-left:25px;}
+.pims .rc-comments .rc-comments-container .user-recommendation .reviewtext {padding-bottom:0; padding-left:0px; font-size:1.3em;}
+.pims .rc-comments .rc-comments-container .user-recommendation .rating-details {font-size:1.2em; padding-left:0; margin-top:0.3em;}
+.pims .rc-comments .rc-comments-container .tick-icon {background:url(/img/find-services/listings/tick-list.gif) 1em 1.2em no-repeat;}
+.pims .rc-comments .rc-comments-container .not-rec {background:url(/img/find-services/profiles/cross.gif) 1em 1.2em no-repeat;}
+.pims .rc-comments .rc-comments-container .rc-comments-links {border-top:1px solid #bfbfbf; margin-top:1em; padding-top:1em;}
+.pims .rc-comments .rc-comments-container .rc-comments-links p.left-link {float:left; font-weight:bold;}
+.pims .rc-comments .rc-comments-container .rc-comments-links p.right-link {float:right; font-weight:bold;}
+/* trust patient feedback */
+.pims .trusts .patient-comment .org-reply {background:#f7f7f7; border:0; clear:left;}
+.pims .trusts .patient-comment .trust-comment {margin-bottom:1em;}
+.pims .trusts .patient-comment .trust-comment .tags-list {list-style:none; margin-bottom:2em;}
+.pims .trusts .patient-comment .trust-comment .tags-list li {color:#900; float:left; margin:0 .5em 0 0;}
+.pims .trusts .patient-comment .trust-comment .tags-list li a {color:#900;}
+.pims .trusts .patient-comment .two-sm {position:relative;}
+.pims .trusts .patient-comment .patient-opinion {position:absolute; bottom:1em; left:-18.3em;}
+/* hospital departments subpage, hospital treatment subpage */
+.pims .panel .key-fact {background:#fff; margin-bottom:1em; padding:1em 1em 0 1em;}
+.pims .three-sm .panel .key-fact {margin-bottom:0; margin-top:1em; padding:0;}
+.pims .service-locations .panel.last {margin-bottom:0;}
+.pims .panel .panel-content .treatment-header {color:#585858; font-size:1.8em;}
+.pims .panel .service-feedback {padding:1em 1em 0 1em;}
+.pims .panel .service-feedback ul {margin:0;}
+.pims .panel .service-feedback ul li {margin:0 0 1em 0;}
+.pims .three-sm .service-feedback {margin:1em 0; padding:0;}
+/* hospital department staff */
+.pims .team {border-bottom:1px dotted #ccc; margin-top:2em; padding-bottom:1em;}
+.pims .team dl {background:#f2f2f0; padding:1em 1em .5em 1em;}
+.pims .team dl dt, .pims .team dl dd {background:#fff; display:block; float:none; padding:.5em 1em 0 1em;}
+.pims .team dl dd {margin-bottom:.5em; padding:0 1em .5em 1em;}
+.pims .team h3 {margin-bottom:0;}
+.pims .team h3 span {color:#585858; font-size:.85em; padding-left:1em;}
+.pims .team .three-sm .profile-info {margin-right:1em;}
+.pims .team .no-member-info {width:75.1em;}
+.pims .team .no-member-info .profile-info {width:55.6em;}
+.pims .team .three-sm .profile-pic {display:inline-block; float:right;}
+.pims .team .three-sm .no-summary .profile-pic {float:none;}
+.pims .team .one, .pims .team .three-sm {margin-top:1em;}
+.pims .team .team-email {padding-bottom:0; padding-top:.5em;}
+/* hospital contact details, map and directions */
+.pims .three-sm .panel.contact-details {border:0;}
+.pims .three-sm .panel.contact-details .pad {padding:0;}
+.pims .three-sm .panel.contact-details .contact-header, .pims .three-sm .panel.contact-details .get-directions {border:1px solid #b4b4b4; margin-bottom:1em; padding:.9em .9em .3em .9em;}
+.pims .three-sm .panel.contact-details .get-directions {margin-top:1em; padding-bottom:1.8em;}
+.pims .three-sm .panel.contact-details .get-directions .travel-modes {margin-bottom:1.8em;}
+.pims .three-sm .panel.contact-details .get-directions .travel-modes li {float:left; list-style:none; margin:0 1px 0 0;}
+.pims .three-sm .panel.contact-details .get-directions .travel-modes li a {background-image:url(/img/pims/sprite-travel-modes.gif); background-repeat:no-repeat; display:block; height:29px; outline:0; text-indent:-9999px; width:50px;}
+.pims .three-sm .panel.contact-details .get-directions li.mode-car a {background-position:left top;}
+.pims .three-sm .panel.contact-details .get-directions li.mode-transit a {background-position:-50px top;}
+.pims .three-sm .panel.contact-details .get-directions li.mode-walking a {background-position:-100px top;}
+.pims .three-sm .panel.contact-details .get-directions li.mode-bicycling a {background-position:-150px top;}
+.pims .three-sm .panel.contact-details .get-directions li.mode-car a:hover, .pims .three-sm .panel.contact-details .get-directions li.mode-car a:active, .pims .three-sm .panel.contact-details .get-directions li.mode-car a:focus {background-position:left -29px;}
+.pims .three-sm .panel.contact-details .get-directions li.mode-transit a:hover, .pims .three-sm .panel.contact-details .get-directions li.mode-transit a:active, .pims .three-sm .panel.contact-details .get-directions li.mode-transit a:focus {background-position:-50px -29px;}
+.pims .three-sm .panel.contact-details .get-directions li.mode-walking a:hover, .pims .three-sm .panel.contact-details .get-directions li.mode-walking a:active, .pims .three-sm .panel.contact-details .get-directions li.mode-walking a:focus {background-position:-100px -29px;}
+.pims .three-sm .panel.contact-details .get-directions li.mode-bicycling a:hover, .pims .three-sm .panel.contact-details .get-directions li.mode-bicycling a:active, .pims .three-sm .panel.contact-details .get-directions li.mode-bicycling a:focus {background-position:-150px -29px;}
+.pims .three-sm .panel.contact-details .get-directions li.mode-car.active a {background-position:left -58px;}
+.pims .three-sm .panel.contact-details .get-directions li.mode-transit.active a {background-position:-50px -58px;}
+.pims .three-sm .panel.contact-details .get-directions li.mode-walking.active a {background-position:-100px -58px;}
+.pims .three-sm .panel.contact-details .get-directions li.mode-bicycling.active a {background-position:-150px -58px;}
+.pims .three-sm .panel.contact-details .get-directions li.print-directions {float:right;}
+.pims .three-sm .panel.contact-details .get-directions li.print-directions a {background:url(/img/social-sharing/print.jpg) right no-repeat; color:#585858; height:auto; margin-right:1em; padding-right:25px; text-decoration:none; text-indent:0; width:auto;}
+.pims .three-sm .panel.contact-details .get-directions li.print-directions a:hover, .pims .three-sm .panel.contact-details .get-directions li.print-directions a:active, .pims .three-sm .panel.contact-details .get-directions li.print-directions a:focus {text-decoration:underline;}
+.pims .three-sm .panel.contact-details .get-directions .startlocation {border:1px solid #b4b4b4; float:left; padding:.2em; width:21em;}
+.pims .three-sm .panel.contact-details .get-directions .submit {margin:.1em 0 0 1em;}
+.pims .three-sm .panel.contact-details .get-directions .submit input:hover, .pims .three-sm .panel.contact-details .get-directions .submit input:active, .pims .three-sm .panel.contact-details .get-directions .submit input:focus {text-decoration:underline}
+.pims .three-sm .panel.contact-details .get-directions h4 {color:#900; font-size:1.4em; margin:1em 0;}
+.pims .three-sm .panel.contact-details .get-directions .note {background:#fffdb8 url(/img/pims/map-info.gif) 8px no-repeat; border:1px solid #ffc600; margin-bottom:1em; padding:.5em .5em 0 45px;}
+.pims .three-sm .panel.contact-details .get-directions .no-results {margin-top:1em;}
+.pims .three-sm .panel.contact-details .get-directions .no-results p {font-weight:bold; padding:.5em 0 .8em 0;}
+.pims .three-sm .panel.contact-details .get-directions #directionspanel {font-size:1.2em;}
+.adp-substep div img, .adp-list img, .adp-substep img {display:inline !important;}
+.adp-listheader {padding:0 4px 4px 0;}
+.adp-list li {font-size:1em; margin-left:0 !important;}
+.adp-list li img:first-child {display:none !important;}
+.pac-container .pac-item {font-size:1.2em;}
+.adp-substep div, .adp-agencies {font-size:100% !important;}
+.adp-substep div span a, .adp-agencies a {font-size:100%;}
+#adp-placemark img, .adp-placemark img {display:none}
+#adp-placemark, .adp-placemark {padding:10px 10px 10px 37px; width:100%;}
+#adp-placemark {background:#eee url(/img/pims/map-a.png) 10px no-repeat;}
+.adp-placemark {background:#eee url(/img/pims/map-b.png) 10px no-repeat;}
+.pims .three-sm .get-directions .warnbox-content {background:#fffdb8; border:1px solid #ffc600; padding:6px 10px;}
+.pims .three-sm .get-directions .warnbox-c1, .pims .three-sm .get-directions .warnbox-c2 {background:none;}
+.pims .print-error {margin-top:-1.7em; text-align:right;}
+
+.pims .three-sm .panel.contact-details .one-sm {width:17.3em;}
+.pims .three-sm .panel.contact-details .one-sm p {margin-bottom:1em;}
+.pims .three-sm .panel.contact-details .one-sm p a {word-wrap:break-word;}
+.pims .three-sm .panel.contact-details .two-sm {width:35.2em;}
+.pims .three-sm .panel.contact-details .two-sm .map {font-size:1em; height:31.2em; position:relative; width:35.2em;}
+.pims .three-sm .panel.contact-details .editmap .map {width:52.7em;}
+.pims .three-sm .panel.contact-details .resetpin p {clear:both}
+
+.pims .three-sm .panel-bg {background:#f2f2f0;}
+.pims .three-sm .panel-bg .one-sm {margin-right:1em; width:15.5em;}
+.pims .three-sm .panel-bg .two-sm {width:35.4em;}
+.pims .three-sm .panel-other-services ul {list-style:none; list-style-position:outside; margin:0;}
+.pims .three-sm .panel-other-services ul li {clear:left; padding-bottom:1em;}
+.pims .three-sm .panel-other-services ul dt {clear:none; display:inline; float:left; width:2em;}
+.pims .three-sm .panel-other-services ul dd {margin:0;}
+.pims .three-sm .panel .pals-info h3 {margin-bottom:0;}
+.pims .three-sm .panel .pals-info .box {border:0; float:left; padding:0; width:19em;}
+.pims .three-sm .panel .pals-info .box dl span {padding-left:1em;}
+.pims .three-sm .panel .pals-info .pals-text {float:right; width:34.7em;}
+.pims .three-sm .panel .pals {margin:0; padding-bottom:.6em;}
+.pims .three-sm .panel .pals dt, .pims .panel .pals dd {clear:none; display:inline; float:left;}
+.pims .three-sm .panel .pals dt {clear:left; font-weight:normal;}
+.pims .three-sm .panel .pals dd {margin:0; min-width:50%; padding-right:0;}
+.pims .three-sm .panel.other-trust {margin-left:1em;}
+.pims .three-sm .panel.other-trust dt {clear:none; display:inline; float:left; font-weight:normal;}
+.pims .three-sm .panel.other-trust dl span {padding-left:1em;}
+.pims .three-sm .panel.other-trust dl dd {margin:0;}
+.pims .two-sm .panel .plan-route legend {font-weight:normal; color:#585858;}
+.pims .two-sm .panel .plan-route p {padding-bottom:1em;}
+.pims .two-sm .panel fieldset.plan-route { margin-bottom:1em;}
+.pims .two-sm .panel .section-indicators-display .panel {padding:0;}
+/* quality account data panel */
+.pims .panel .quality-account .quality-account-download {background:url(/img/pims/icon-file-download.gif) 0 3px no-repeat; min-height:35px; height:auto !important; height:35px; padding-left:45px;}
+.pims .panel .quality-account .quality-account-download a {font-weight:bold;}
+.pims .panel .quality-account .quality-account-download span {display:block; font-size:.9em; line-height:1.2em;}
+.pims .panel .quality-account .smaller {clear:left; font-size:1.1em;}
+/* share feedback panel */
+.pims .panel .share-feedback a {font-weight:bold;}
+/* simple scorecard panel */
+.pims .panel .simple-scorecard .service-feedback ul {list-style:none; list-style-position:outside;}
+.pims .panel .simple-scorecard .service-feedback .one-sm p img {margin-top:-.4em;}
+.pims .panel .simple-scorecard .service-feedback .one-sm ul {padding-top:.2em;}
+.pims .panel .simple-scorecard .service-feedback .one-sm ul li {margin:0;}
+.pims .panel .simple-scorecard .service-feedback .one-sm ul li.key-facts-number {font-size:2.4em; font-weight:bold;} 
+.pims .panel .treatment-scorecard .one-sm {display:block; float:none; width:auto;}
+.pims .panel .treatment-scorecard .one-sm h4 {padding:0;}
+.pims .panel .treatment-scorecard .one-sm ul {list-style-position:inside; list-style-type:disc;}
+.pims .panel .treatment-scorecard .one-sm ul li {margin:0 0 0 1.2em;}
+/* maternity */
+.pims .maternity ul.tick-list li, .pims .maternity ul.maternity-units li {list-style-position:outside; list-style-type:none;}
+.pims .maternity ul.tick-list li.negative {background-image:none;}
+.pims .maternity .panel .statistics {margin-bottom:1em;}
+.pims .maternity ul.maternity-units {margin:0 0 1em 0;}
+.pims .maternity ul.link-list li {margin-left:0; position:relative;}
+.pims .maternity ul.link-list a {background-color:transparent; background-position:right center; background-repeat:no-repeat; color:#900; cursor:pointer; left:0; position:absolute; text-indent:93%; width:100%;}
+.pims .maternity ul.link-list a.show {background-image:url(/img/personalisation/footer-plus.gif);}
+.pims .maternity ul.link-list a.hide {background-image:url(/img/personalisation/footer-minus.gif);}
+.pims .maternity .info-panel {background:#f2f2f2 url(/img/find-services/info.gif) no-repeat 1em 1em; color:#069; font-weight:bold; margin:0 0 1em 0; min-height:36px; padding:1em 1em .5em 54px;}
+.pims .maternity .unit-info {border-bottom:1px dotted #585858; margin:0 0 1em 0;}
+.pims .maternity .unit-info h2 {color:#585858; font-size:1.8em;}
+.pims .maternity .unit-info ul.tick-list {background:#f2f2f2;}
+.pims .maternity .unit-info ul.tick-list li {background-color:#fff; background-image:url(/img/find-services/tick.gif); background-position:10px center; line-height:21px; margin:0 0 .5em 0; padding:0 0 0 36px;}
+.pims .maternity .unit-info ul.tick-list li.negative {background-image:url(/img/find-services/cross.gif);}
+.pims .maternity .unit-info ul.link-list li a {text-indent:89%;}
+.pims .maternity .unit-info .info-panel p {background:#fff; padding:.5em;}
+.pims .three-sm .maternity .unit-info ul.link-list li a {text-indent:93%;}
+.pims .maternity .unit-info .divide-10 a {color:#585858;}
+.pims .maternity .unit-info .divide-10 ul {list-style-position:outside; margin-left:1em;}
+/* compare link */
+.pims .compare-link {margin-bottom:.5em; margin-left:1em;}
+.pims .compare-link a {color:#900;}
+/* manage aliases */
+.pims #aliasbox h1 {color:#585858; padding:0 0 .2em 0;}
+.pims #aliasbox a {color:#003b6d; font-weight:bold; margin-bottom:1em;}
+.pims .manage-aliases {margin-right:1em;}
+.pims .manage-aliases p {margin-bottom:1em;}
+.pims .manage-aliases .panel {background:none; padding:0;}
+.pims .manage-aliases .aliases {background:#f2f2f0; padding:1.5em;}
+.pims .manage-aliases legend {font-size:1.4em;}
+.pims .manage-aliases legend span {color:#585858; display:block; white-space:normal; width:24.7em;}
+.pims .manage-aliases .panel .row {margin-bottom:.5em; padding:.5em 0;}
+.pims .manage-aliases .panel .row input {padding:.2em; width:28.1em;}
+.pims .manage-aliases .panel .submit {float:right; margin-top:2em;}
+/* alert messages eg upgrade browser, turn on javascript */
+.pims .pims-alert {background:#fffe9a url(/img/pims/icon-alert.gif) 9px 6px no-repeat; margin:0 1em 1em 0; padding:0 1em 1em 1em;}
+.pims .pims-alert .pims-alert-title {font-size:1.8em; padding:.2em 0 0 30px;}
+.pims .pims-alert ul {list-style-position:outside;}
+.pims .pims-alert ul li {display:inline; margin-right:2em;}
+/* find a PIMS user */
+.pims .find-pims-user {margin-right:1em;}
+.pims .find-pims-user h1 {color:#585858; padding:0 0 .2em 0;}
+.pims .find-pims-user .border {min-height:30em; height:auto !important; height:30em;}
+.pims .find-pims-user .col {padding:2em;}
+.pims .find-pims-user .search-term {border:1px solid #b2b2b2; margin-bottom:1em; padding:.1em; width:24em;}
+.pims .find-pims-user ul.search-organisation {list-style:none; list-style-position:outside; margin-left:3em;}
+.pims .find-pims-user ul.search-organisation li {margin-bottom:.5em;}
+.pims .find-pims-user ul.search-organisation li a {color:#900;}
+.pims .find-pims-user .search-results {clear:left; margin:0 2em;}
+.pims .find-pims-user .search-results h2 {border-bottom:1px solid #585858; margin-bottom:.7em; padding-bottom:.8em;}
+/* search results */
+.pims .search-results ul {list-style:none; list-style-position:outside;}
+.pims .search-results ul a {color:#900;}
+.pims .search-results strong {font-size:1.2em;}
+.pims .search-results li.search-item {margin-bottom:2em;}
+.pims .search-results li.name-email {clear:left;}
+.pims .search-results ul ul ul {float:left;}
+.pims .search-results ul ul li.organisations span {float:left; margin-right:.5em;}
+.pims .search-results ul ul li.organisations li {display:inline; float:left; margin-right:.5em;}
+/* is this a new hospital */
+.pims .is-this-new {margin-right:1em;}
+.pims .is-this-new h1 {color:#585858; padding:0 0 .2em 0;}
+.pims .is-this-new .header-txt {font-size:1.4em;}
+.pims .is-this-new .box {padding:2em;}
+.pims .is-this-new .later {float:left; font-weight:bold; margin-right:1em;}
+.pims .is-this-new .submits {padding:.5em 0 2em 0;}
+.pims .is-this-new .submit {margin:0 1em 0 0;}
+/* videos */
+.pims .video-panel .crnr {background-image:url(/img/media-panel-crnr.gif);}
+.pims .video-panel .tl {left:0; top:0;}
+.pims .video-panel .tr {right:0; top:0;}
+.pims .video-panel .bl {bottom:0; left:0;}
+.pims .video-panel .br {bottom:0; right:0;}
+.pims .panel .video-panel .pad {padding:1em;}
+.pims .video-container .crnr {background-image:url(/img/media-inner-panel-crnr.gif); height:5px; width:5px;}
+/* access denied */
+.pims.profile .col.access-denied {margin-top:1em; padding:0;}
+.pims.profile .col.access-denied p {padding:1em;}
+/* Generic 'last-verified' class */
+.fs.pims p.last-verified {font-size:1.1em; width:100%; clear:both;}
+/* patient acceptance */
+.pims.profile .patient-acceptance ul {padding:0.3em 0 0 0.3em; margin:0;}
+.pims.profile .patient-acceptance ul li {background:url(/img/pims/icons-yes-no.gif) left center no-repeat transparent; list-style-type:none; margin:0; padding:0 0 .7em 30px;}
+.pims.profile .patient-acceptance ul li span {font-weight:normal; font-size:.9em; color:#585858; display:block;}
+.pims.profile .patient-acceptance ul li.yes {background-position:0 1px;}
+.pims.profile .patient-acceptance ul li.no {background-position:0 -39px;}
+.pims.profile .patient-acceptance ul li.not-answered {background-position:0 -79px;}
+.pims.profile .panel .panel-content .patient-acceptance p.last-verified {text-align:right;}
+/*Child orgs */
+.fs.pims .three-sm .child-org-item {margin-bottom:1em;}
+.fs.pims .three-sm .child-org-item .child-org-name {font-size:1.6em; font-weight:bold;}
+/* View accounts */
+.fs.pims .view-accounts h1, .fs.pims .view-accounts .acc-results-item h3, .fs.pims .view-accounts .acc-results-item a {color:#585858;}
+.fs.pims .view-accounts h2 {margin-bottom:1em;}
+.fs.pims .view-accounts .filter-view {background:#eaeaea; margin-bottom:2em;}
+.fs.pims .view-accounts .filter-view .filter {display:block; float:left; width:47%;}
+.fs.pims .view-accounts .filter-view .filter select {width:90%; margin-top:.2em;}
+.fs.pims .view-accounts .acc-results-item {margin-top:-.1em; padding-left:3em;}
+.fs.pims .view-accounts .acc-results-item.item-parent-org {border-top:1px solid #eaeaea; border-bottom:1px solid #eaeaea;}
+.fs.pims .view-accounts .acc-results-item dl {float:left; width:100%;}
+.fs.pims .view-accounts .acc-results-item dl dt, .fs.pims .view-accounts .acc-results-item dl dd {display:inline; float:left; margin:0 0 .7em 0;}
+.fs.pims .view-accounts .acc-results-item dl dt {width:10em;}
+.fs.pims .view-accounts .acc-results-item dl dd {width:19.5em;}
+.fs.pims .view-accounts .filter-view label {cursor:text;}
+.fs.pims .view-accounts .filter-view a.helpLink {font-size:inherit; background:url(/img/pims/icons-yes-no.gif) no-repeat 66px -79px transparent; padding-right:1.7em;}
+/* Opening times */
+.fs.pims .pims-opening-times {padding:0; border:0; margin-bottom:1em;}
+.fs.pims .pims-opening-times h3 {color:#585858;}
+.fs.pims .pims-opening-times table {font-size:1.2em; width:65%; float:left;}
+.fs.pims .pims-opening-times table th, .fs.pims .pims-opening-times table td {padding:.3em 0;}
+.fs.pims .pims-opening-times table th, .fs.pims .pims-opening-times table td.closed {font-weight:bold; text-align:left;}
+.fs.pims .pims-opening-times h4 {clear:both; padding:2em 0 0 0}
+.fs.pims .pims-opening-times p.add-info {padding-top:.7em;}
+.fs.pims .pims-opening-times p.last-verified {padding-top:1em;}
+.fs.pims .pims-opening-times h3.pims-PH-opening-times{padding-top:1.5em}
+/*manage comment administrators*/
+table.manage-comment-admins {border:1px solid #f2f2f0; border-collapse:collapse; width:97%; margin-bottom:2em;}
+table.manage-comment-admins th {font-size:1.3em; font-weight:bold; text-align:left; padding:.5em 0.9em;}
+table.manage-comment-admins td {font-size:1.2em}
+table.manage-comment-admins a {font-size:1em}
+table.manage-comment-admins td {border-top:1px solid #f2f2f0; padding:.5em 1em; vertical-align:top;}
+.manage-admin-login label {display:block; font-size:1.3em; font-weight:normal; width:20em; font-weight:bold;}
+.manage-admin-login input {margin-top:.4em; width:19em; padding:.2em; margin-bottom:.4em;}
+.manage-admin-login .submit {width:6em; float:none; display:block; margin-top:.3em;}
+.manage-admin-login .submit input {width:5em; margin:0; margin:-1px 1px 1px -1px; padding:0 1.6em 0.2em 0.5em;}
+/* PCT child org services */
+.fs.pims .acute-depts-servs h3, .fs.pims .acute-depts-servs h3 a {color:#585858;}
+.fs.pims .acute-depts-servs .panel-content {border-bottom:.1em solid #dadada; padding:1em 0 1.5em 0;}
+.fs.pims .page-links {padding-bottom:2em;}
+.fs.pims .page-links p {font-weight:bold; float:left; padding:0 .3em 0 0; font-size:1.3em;}
+.fs.pims .page-links ul li {list-style:none; display:inline; border-right:1px solid #585858; font-size:1.3em; padding:0 .5em;}
+.fs.pims .page-links ul li.last {border:0;}
+.fs.pims .page-links ul li a {color:#990000;}
+/* PCT service heading module */
+.fs.pims .three-sm .managed-by {margin-top:-1em;}
+/* PCT services */
+.fs.pims .three-sm h2 {color:#585858; font-size:1.7em; background:transparent;}
+.fs.pims .three-sm .box-list dl.contact-details dt {float:left;}
+.fs.pims .three-sm .review-msg {padding-bottom:2em; border-bottom:1px solid #bbb;}
+.fs.pims .three-sm .review-msg h2 {font-size:2.4em;}
+.fs.pims .three-sm .review-msg h2, .fs.pims .three-sm .review-msg h3 {color:#585858;}
+/* Service locations */
+.fs.pims .two-sm .panel .serv-locations ul {background:#fff; padding:1em;}
+.fs.pims .two-sm .panel .serv-locations ul li {list-style-type:none; margin:0 0 .8em 0;}
+.fs.pims .two-sm .panel .serv-locations ul li a {color:#585858;}
+.fs.pims .two-sm .panel .serv-locations ul li a:hover, .fs.pims .two-sm .panel .serv-locations li a:focus {text-decoration:none;}
+/* ChildOrg facilities tab */
+.fs.pims .tertiary-content .panel {background:#fff; padding:0; margin:0;}
+.fs.pims .tertiary-content .panel.panel-profile-site {width:55.7em;}
+.fs.pims .tertiary-content .panel .panel-content .pad {padding:0;}
+.fs.pims .tertiary-content .facility {border-bottom:1px dotted #ccc; width:100%;}
+.fs.pims .tertiary-content .facility .two-sm .panel {background:#f2f2f2;}
+.fs.pims .tertiary-content .facility .two-sm .panel .pad {padding:1em 1em 0 1em;}
+.fs.pims .tertiary-content .category-tags {background:#f2f2f2; padding:1em;}
+.fs.pims .tertiary-content .category-tags h3 {margin:.3em 0 1em 0;}
+.fs.pims .tertiary-content .category-tags .tag-category {background:#fff; padding:.5em 1em;}
+.fs.pims .tertiary-content .category-tags .tag-category ul {list-style:none; margin-bottom:.5em;}
+.fs.pims .tertiary-content .category-tags .tag-category ul li {color:#900; float:left; margin:0 .5em 0 0;}
+/* ChildOrg staff tab */
+.fs.pims .team-intro {padding:0 0 2em 0;}
+
+/* Leave review */
+.fs.pims .leave-review {float:right; width:auto; margin-top:2em; padding:1em; border:1px solid #fc3; border-radius:5px; text-align:center; position:relative;}
+.fs.pims .leave-review p.leavereviewlink a.review-link, .fs.pims .comments p.leavereviewlink a.review-link {padding:.3em 1em; display:inline-block; text-decoration:none; font-weight:bold; font-size:1.4em; color:#000; background:url(/img/find-services/leave-review-bg.gif) repeat-x 0 0; border-radius:5px;}
+.fs.pims .leave-review p.leavereviewlink a.review-link:hover, .fs.pims .leave-review p.leavereviewlink a.review-link:focus, .fs.pims .leave-review p.leavereviewlink a.review-link:active, .fs.pims .comments p.leavereviewlink a.review-link:hover, .fs.pims .comments p.leavereviewlink a.review-link:focus, .fs.pims .comments p.leavereviewlink a.review-link:active {background-position:0 -70px;}
+.fs.pims .leave-review p {padding:1em 0 0 0; clear:both;}
+.fs.pims .leave-review p.starrating, .fs.pims .leave-review p.leavereviewlink {display:inline-block; padding-top:0;}
+.fs.pims .leave-review p img {position:relative; top:.8em;}
+
+.fs.pims .profile-info .panel-profile-site {background:#fff; clear:none; display:inline; float:right; margin:0; padding:0; width:auto;}
+.fs.pims .profile-info .panel-profile-site .panel-content p {text-align:center;}
+.fs.pims .profile-info .panel-profile-summary {background:#fff; clear:none; display:inline; float:left; margin:0 1em 1em 0; padding:0; width:60em;}
+.fs.pims .profile-info .panel-profile-summary p {margin-left:3.8em; clear:both;}
+.fs.pims .profile-info .panel-profile-summary h1.hospital {padding:.65em 0 .2em 46px; float:left; display:inline; background-image: url(/img/find-services/hub/hub-icon-hospital.gif);}
+
+/* comment admin */
+.pims .comment-admin {margin-top:-1em; position:relative;}
+.pims .three-sm .comment-admin h2 {font-size:2em;}
+
+/* R17 Media */
+.fs.pims .three-sm .media-prev {background:#585858; width:100%; float:left; padding-bottom:1em; margin-top:1em;}
+.fs.pims .three-sm .media-prev .pad {padding:1em;}
+.fs.pims .three-sm .media-prev .main-content {width:34.6em; float:left;}
+.fs.pims .three-sm .media-prev .side-content {width:17.6em; float:right; clear:right;}
+.fs.pims .three-sm .media-prev .pims-alert {margin:0;}
+.fs.pims .three-sm .media-prev .pims-alert p {padding:.5em 0 0 2em;}
+.fs.pims .three-sm .media-prev .pad p, .fs .three-sm .media-prev .pad a {color:#fff;}
+.fs.pims .three-sm .media-prev .media-item {width:34.6em; height:21.5em; background:#3a3a3a;}
+.fs.pims .three-sm .media-prev .media-title {font-size:1.2em; color:#fff; margin-bottom:.2em;}
+.fs.pims .three-sm .media-prev .credits {font-weight:bold; padding-bottom:0;}
+.fs.pims .three-sm .media-prev .showhide-trig {float:left; clear:left; margin:.5em 0 0 .7em; padding-bottom:0;}
+.fs.pims .three-sm .media-prev .showhide-trig a {background:url(/img/pims/icons.gif) 1px -71px no-repeat transparent; padding-left:1.3em; color:#fff;}
+.fs.pims .three-sm .media-prev .showhide-trig a.active {background-position:0 -84px;}
+.fs.pims .three-sm .showhide-wrap.transcript {float:left; width:100%;}
+.fs.pims .three-sm .showhide-wrap.transcript .showhide-content {padding:1em 1em .5em 1em; margin-top:-.1em; border-top:0;}
+.fs.pims .three-sm .showhide-wrap.transcript .showhide-content h3 {color:#585858;}
+
+/* eps panel */
+.pims .two-sm .panel-eps .pad {background:url(/img/eps-nhs-logo.gif) top left no-repeat; padding-top:95px;}
+.pims .two-sm .panel-eps .pad li {margin-bottom:1em;}
+
+/* service team summary panel */
+.pims .three-sm .panel.name-serviceteamsummary .pad .profile-pic {float:left; margin:0 0 1em 0;} 
+.pims .three-sm .panel.name-serviceteamsummary .pad p {clear:left;}
+
+/* Manage Organisation Type Module */
+.manage-org-type span, .manage-org-type-fldst label {font-weight:bold;}
+.panel-content fieldset #HospitalTypeSelectBox {margin-bottom:1em;}
+
+/*----- GP profiles Nov 2011 -----*/
+.fs.pims .btt-link {text-align:right; clear:both;}
+.fs.pims .btt-link a {color:#585858;}
+.box-msg {padding:1em; border:1px solid; margin-bottom:1em;}
+.box-msg p {padding:0;}
+.box-msg.info {background:#dfeff7; border-color:#6cb4fa;}
+.box-msg.alert {background:#fff5d8; border-color:#f3c279;}
+.box-msg.success {background:#ccecd9; border-color:#51a179;}
+/* File upload */
+.fs.pims ul.assoc-docs {padding:0; margin:0;}
+.fs.pims ul.assoc-docs li {list-style-type:none; padding:0; list-style-position:outside; margin:0;}
+.fs.pims ul.assoc-docs li a {color:#990000;}
+/* PPDES multiple file upload */
+.fs.pims .file-item .panel {margin-bottom:0;}
+.fs.pims .file-item .panel p {padding-bottom:0;}
+/* Performance metrics */
+.fs.pims .metrics-wrap {background:#f2f2f2; padding:.5em .5em 0 .5em; width:54.7em; float:left; margin:1em 0;}
+.fs.pims .metrics-wrap .metric-item {background:#fff; padding:1em; width:51.7em; float:left; margin:.5em;}
+.fs.pims .metrics-wrap .metric-item .metric-title, .metrics-wrap .metric-item .metric-desc {padding-left:7.8em;}
+.fs.pims .metrics-wrap .metric-item .metric-desc {display:block;}
+.fs.pims .metrics-wrap .metric-item .metric-title {font-weight:bold;}
+.fs.pims .metrics-wrap .metric-item .metric-data {font-size:2.7em; float:left; margin-top:-.3em;}
+.fs.pims .metrics-wrap .metric-item .read-more {text-align:right;}
+.fs.pims .metrics-wrap .metric-item .read-more a {color:#990000;}
+/* News teaser */
+.fs.pims .news-teaser {background:#f2f2f2;}
+.fs.pims .news-teaser .panel {padding:0;}
+.fs.pims .news-teaser p {float:left; padding:0 1em 0 0;}
+.fs.pims .news-teaser p a {color:#990000;}
+.fs.pims .news-teaser ul {margin:0;}
+.fs.pims .news-teaser ul li {list-style-type:none; display:inline; margin:0 1.5em 0 0;}
+/* Staff profiles */
+.fs.pims .three-sm .panel.staff-details {background:#f2f2f0; float:left; width:55.7em; border:0; padding:0;}
+.fs.pims .three-sm .panel.staff-details .pad {padding:1em;}
+.fs.pims .three-sm .panel.staff-details.gp-staff .staff-title p {margin-bottom:0; padding-bottom:0;}
+.fs.pims .three-sm .panel.staff-details .staff-title p span {font-style:italic;}
+.fs.pims .three-sm .panel.staff-details .staff-info {float:left; border-top:1px solid #ccc; width:53.7em;}
+.fs.pims .three-sm .panel.staff-details .staff-info .profile-pic {margin:0 0 1em 1em; padding:3px; border:1px solid #ccc;}
+.fs.pims .three-sm .panel.staff-details .staff-info ul li {list-style-type:none; margin-left:0;}
+.fs.pims .three-sm .panel.staff-details h5 {font-size:1.2em; padding-bottom:.2em;}
+.fs.pims .three-sm .panel.staff-details .additional-info {float:left; background:#fff; padding:1em; width:51.7em; margin:1em 0 0 0;}
+.fs.pims .three-sm .panel.staff-details .additional-info acronym {cursor:help; border-bottom:1px dotted #585858;}
+.fs.pims .three-sm .panel.staff-details .additional-info .info-item {float:left; width:33%;}
+.fs.pims .three-sm .panel.staff-details .additional-info .info-item p {padding:0;}
+.fs.pims .three-sm .panel.staff-details .additional-info p.explanation {margin:1em 0 0 0; padding:0; float:left; clear:left;}
+/* Tabbed opening times */
+.fs.pims .pims-opening-times.tabbed-content-wrap .tab-content {width:55.4em;}
+.fs.pims .pims-opening-times.tabbed-content-wrap .tab-content.js, .fs.pims .pims-opening-times.tabbed-content-wrap .additional-info.js {border:1px solid #b4b4b4;}
+.fs.pims .pims-opening-times.tabbed-content-wrap .tab-content.js {float:left; border-bottom:0; margin:-1px 0 0 0;}
+.fs.pims .pims-opening-times.tabbed-content-wrap .tab-content.out-of-hours {padding:1em; width:53.4em;}
+.fs.pims .pims-opening-times.tabbed-content-wrap .last-verified {display:block; margin-bottom:1em;}
+.fs.pims .pims-opening-times.tabbed-content-wrap .last-verified.js {padding:1em; width:53.4em; float:left; margin-bottom:0; border:1px solid #b4b4b4; border-top:0;}
+.fs.pims .pims-opening-times.tabbed-content-wrap .last-verified.js p {padding-bottom:0; font-size:1.1em;}
+.fs.pims .pims-opening-times.tabbed-content-wrap .additional-info {float:left; border-top:0; background:#fff; width:53.4em;}
+.fs.pims .pims-opening-times.tabbed-content-wrap .additional-info.js {padding:1em; margin:-1px 0 0 0;}
+.fs.pims .pims-opening-times.tabbed-content-wrap .additional-info h4 {padding-top:0;}
+.fs.pims .pims-opening-times.tabbed-content-wrap .additional-info .add-info {padding-top:0;}
+.fs.pims .pims-opening-times.tabbed-content-wrap ul.tabs {padding-left:1px;}
+.fs.pims .pims-opening-times.tabbed-content-wrap ul.tabs li {padding:5px 10px; font-weight:bold; color:#585858; background:url(/img/modules/sprite-module.gif) 0 -1028px repeat-x transparent; display:inline; list-style-type:none; margin-left:-1px; bottom:0; border:1px solid #B4B4B4;}
+.fs.pims .pims-opening-times.tabbed-content-wrap ul.tabs li.active {border-bottom:none; padding-bottom:6px; background:#fff;}
+.fs.pims .pims-opening-times.tabbed-content-wrap ul.tabs li .crnr {width:6px; height:6px; background:url(/img/find-services/nav-crnrs-bg.gif) no-repeat 0 -20px transparent;}
+.fs.pims .pims-opening-times.tabbed-content-wrap ul.tabs li .crnr.tab-tl {background-position:0 -20px; float:left; top:-1px; left:-1px;}
+.fs.pims .pims-opening-times.tabbed-content-wrap ul.tabs li .crnr.tab-tr {background-position:0 -43px; float:right; top:-1px; right:-1px;}
+.fs.pims .pims-opening-times.tabbed-content-wrap ul.tabs li a {padding:0; color:#585858;}
+.fs.pims .pims-opening-times.tabbed-content-wrap table {width:100%; border-collapse:collapse;}
+.fs.pims .pims-opening-times.tabbed-content-wrap table tr {background:#fff;}
+.fs.pims .pims-opening-times.tabbed-content-wrap table tr.even {background:#f5f5f5;}
+.fs.pims .pims-opening-times.tabbed-content-wrap table tr td, .fs.pims .pims-opening-times.tabbed-content-wrap table tr th {padding:.5em 1em;}
+.fs.pims .pims-opening-times.tabbed-content-wrap table tr th {width:8em; padding-right:0;}
+.fs.pims .pims-opening-times.tabbed-content-wrap table tr td {width:6em; display:inline-block;}
+/* Generic article items (News, Patient info etc) */
+.fs.pims .three-sm .panel.article-item {border-bottom:1px solid #ccc; padding:1em 0;}
+.fs.pims .three-sm .panel.article-item .profile-pic, .pims .three-sm .dementia-compact .intro img, .pims .three-sm .voluntary-indicators .intro img {float:right; margin:0 0 1em 1em; border:1px solid #ddd; padding:.3em;}
+/* Contact tab panels */
+.fs.pims .three-sm .panel.catchment-area, .fs.pims .three-sm .panel.other-branches {background:#f2f2f0; padding:1em; float:left; border:1px solid #f2f2f0;}
+.fs.pims .three-sm .panel.other-branches {width:53.5em; margin:0;}
+.fs.pims .three-sm .panel.other-branches h3 {margin:0;}
+.fs.pims .three-sm .panel.other-branches .clear .col {width:32%;}
+/* Overview teasers */
+.fs.pims .three-sm .module-col {width:27.3em;}
+.fs.pims .three-sm .serv-staff-providers, .fs.pims .three-sm .module-col .teaser {width:100%;}
+.fs.pims .three-sm .module-col .teaser {margin:0;}
+.fs.pims .three-sm .teaser .panel-content .teaser-inner-panel {padding:1em 1em 1.4em 1em; background:#f2f2f0;}
+.fs.pims .three-sm .teaser .panel-content .teaser-inner-panel img {float:left; margin-right:1em;}
+.fs.pims .three-sm .teaser .panel-content .teaser-inner-panel p {padding-top:.3em;}
+.fs.pims .three-sm .teaser.staff-info .additional-info {background:#f2f2f0; padding:1em;}
+.fs.pims .three-sm ul.staff-list li {list-style-type:none; margin:0 0 .5em 0;}
+.fs.pims .three-sm ul.staff-list li a {color:#990000;}
+.fs.pims .three-sm .teaser.staff-info ul.staff-list li {margin:0;}
+.fs.pims .three-sm .teaser.patient-info {width:auto;}
+.fs.pims .three-sm .teaser.patient-info .fda-panel {background:#f2f2f0; padding:1em; float:left; width:auto;}
+.fs.pims .three-sm .teaser.patient-info .fda-panel p img {float:left; margin-right:1em;}
+.fs.pims .three-sm .news-panel {padding-bottom:0;}
+.fs.pims .three-sm .news-panel .article-item {background:#f2f2f0; padding:1em; border-bottom:0;}
+.fs.pims .three-sm .news-panel .article-item h4 {font-size:1.4em; color:#585858; padding-bottom:.5em;}
+.fs.pims .three-sm .news-panel .article-item h5 {font-size:1.2em; margin:0 0 .2em 0;}
+.fs.pims .three-sm .news-panel .article-item .btt-link, .fs.pims .three-sm .news-panel .article-item .last-updated {padding-top:1em;}
+.fs.pims .three-sm .news-panel .article-item .last-updated {margin:0; float:left; width:60%; clear:right;}
+.fs.pims .three-sm .news-panel .article-item .btt-link {width:25%; float:right; clear:right;}
+/* Online facilities */
+.fs.profile .online-facilities .module {margin-bottom:0;}
+.fs.profile .online-facilities ul {list-style:none; margin-top:1em;}
+.fs.profile .online-facilities ul li {clear:left; margin-bottom:.7em; margin-left:0;}
+.fs.profile .online-facilities ul li img {display:inline; float:left; margin-right:.5em; margin-top:-1px;}
+.fs.profile .online-facilities p {clear:left;}
+.fs.profile .online-facilities .submit {margin:1.5em 0;}
+.fs.profile .online-facilities .datasource {margin-top:1em; padding-bottom:0;}
+.fs.profile .tertiary-content .online-facilities .panel {background:#fff;}
+.fs.profile .tertiary-content .online-facilities .box {padding:0;}
+/* Patient acceptance */
+.fs.pims .two-sm .gp-patient-acceptance {padding:0 0 0 49px; background:no-repeat scroll 0 0 transparent;}
+.fs.pims .two-sm .gp-patient-acceptance.accept-yes {background-image:url(/img/randc/acceptyes.gif);}
+.fs.pims .two-sm .gp-patient-acceptance.accept-no {background-image:url(/img/randc/acceptno.gif);}
+.fs.pims .two-sm .gp-patient-acceptance h3 {font-size:1.2em; color:#585858; padding:0; margin:0;}
+.fs.pims .two-sm .gp-patient-acceptance ul {padding:.5em 0;}
+.fs.pims .two-sm .gp-patient-acceptance ul li {background:0; padding:0; margin:0 0 .5em 0; list-style-type:none;}
+/* EPS teaser */
+.fs.pims .two-sm .eps-teaser h3 {margin-top:.8em;}
+.fs.pims .two-sm .eps-teaser ul {padding-left:2em;}
+.fs.pims .two-sm .eps-teaser ul li {list-style-position:outside; margin:0 0 1em 0;}
+/* Service details - other locations */
+.fs.pims .three-sm .serv-other-locations {margin-bottom:1em; padding:1em; background:#f2f2f0;}
+.fs.pims .three-sm .serv-other-locations table {border-collapse:collapse; font-size:1.2em;}
+.fs.pims .three-sm .serv-other-locations table th {text-align:left; font-size:1.2em; color:#990000;}
+.fs.pims .three-sm .serv-other-locations table td {padding:1em 1em 1em 0; width:50%; vertical-align:top;}
+.fs.pims .three-sm .serv-other-locations table td p {font-size:inherit;}
+/* Service details - staff providing service */
+.fs.pims .three-sm .serv-staff-providers {padding:1em;}
+/* Service details - Referral req'd */
+.fs.pims .two-sm .serv-referral-reqd {padding-bottom:0; margin-bottom:0;}
+.fs.pims .two-sm .serv-referral-reqd p {padding-left:4em; margin-top:-1em;}
+.fs.pims .two-sm .serv-referral-reqd .icn {background:url(/img/carers/icns.gif) 6px -150px #fff no-repeat; padding:0 .3em; top:-10px; left:-10px; float:left; position:relative;}
+/* Pims Leave review form */
+.pims .five-sm .lr-pad {float:left; background:#f2f2f2; padding:1em; margin:1em 0 0 0;}
+.pims .five-sm .lr-pad legend {font-size:1.5em; color:#990000; font-weight:bold;}
+.pims .five-sm .lr-pad legend.icon {background:url(/img/find-services/lr-form-icon.gif) no-repeat; padding:0 0 .5em 2em;}
+.pims .five-sm .lr-pad legend.icon.number-two {background-position: 0 -38px;}
+.pims .five-sm .lr-pad legend.icon.number-three {background-position: 0 -76px;}
+.pims .five-sm .lr-pad legend.icon.number-four {background-position: 0 -116px;}
+.pims .five-sm .lr-pad legend.icon.number-five {background-position: 0 -154px;}
+.pims .five-sm .lr-pad legend span {color:#585858; font-weight:normal;}
+.pims .five-sm .lr-pad-info {float:left; width:85.3em; background:#fff; padding:2em 3em; margin:.5em 0 0 0;}
+.pims .five-sm .lr-pad fieldset.recommend .lr-pad-info .row {float:left;}
+.pims .five-sm .lr-pad fieldset.recommend .lr-pad-info .row p {color:#585858; font-weight:normal; padding-bottom:.5em;}
+.pims .five-sm .lr-pad fieldset.facts .lr-pad-info .row1 {float:left; padding-right:6em;}
+.pims .five-sm .lr-pad fieldset.facts .lr-pad-info .row1 legend {padding-bottom:.5em;}
+.pims .five-sm .lr-pad fieldset.facts .lr-pad-info .row1 select {display:block; margin-right:1em; margin-top:.5em;}
+.pims .five-sm .lr-pad fieldset.facts .lr-pad-info .row1 label {color:#585858; font-weight:bold; display:block;} 
+.pims .five-sm .lr-pad fieldset.facts .lr-pad-info .row1 p {color:#585858; font-weight:bold; padding-bottom:.5em;} 
+.pims .five-sm .lr-pad fieldset.submit-review .lr-pad-info .panel .row1 {float:left; padding-right:6em; padding-top:1em;}
+.pims .five-sm .lr-pad fieldset.submit-review .lr-pad-info .panel .row1 label, .pims .five-sm .lr-pad fieldset.submit-review .lr-pad-info .panel .row2 label {color:#585858; font-weight:bold; display:block; width:auto;}
+.pims .five-sm .lr-pad fieldset.submit-review .lr-pad-info .panel .row1 input, .pims .five-sm .lr-pad fieldset.submit-review .lr-pad-info .panel .row2 input {padding:.3em; width:20em; border:1px solid #ccc;}
+.pims .five-sm .lr-pad fieldset.submit-review .lr-pad-info .panel .row2 {float:left; clear:both; padding-top:1em; padding-right:6em;}
+.pims .five-sm .lr-pad fieldset.submit-review .lr-pad-info .panel .row2 span.lrcheckbox input {width:auto; font-size:1.2em; border:none; border:none; padding:0; margin:0; display:inline;}
+.pims .five-sm .lr-pad fieldset.submit-review .lr-pad-info .panel .row2 label.lrcheckbox-label {font-weight:normal; display:inline; padding-left:5em;}
+.pims .five-sm .lr-pad fieldset.submit-review .lr-pad-info .panel p {float:left; clear:both; padding-top:2em; color:#585858; width:auto;}
+.pims .five-sm .lr-pad fieldset.submit-review .lr-pad-info .panel p a {color:#585858;}
+.pims .five-sm .lr-pad fieldset.submit-review .lr-pad-info .panel p a:hover, .pims .five-sm .lr-pad fieldset.submit-review .lr-pad-info .panel p a:focus, .pims .five-sm .lr-pad fieldset.submit-review .lr-pad-info .panel p a:active {text-decoration:none;}
+.pims .five-sm .lr-pad fieldset.submit-review .lr-pad-info .submit-btn {float:left; margin-left:1em; margin-top:2em; display:inline;}
+.pims .five-sm .lr-pad fieldset.submit-review .lr-pad-info .submit-btn input{ background:url(/img/find-services/leave-review-bg.gif) repeat-x 0 0; padding:5px 15px; font-size:1.4em; color:#000; border:none; font-weight:bold; border-radius: 5px;}
+.pims .five-sm .lr-pad fieldset.submit-review .lr-pad-info .submit-btn input:hover {background-position:0 -70px; cursor:pointer;}
+.pims .five-sm .lr-pad fieldset.submit-review .lr-pad-info .panel{float:left; clear:both; width:100%;} 
+.pims .five-sm .lr-pad fieldset.review .lr-pad-info input, .pims .five-sm .lr-pad fieldset.review .lr-pad-info textarea {float:left; display:block; padding:.3em; width:41.4em; margin:.5em 0; border:1px solid #ccc;}
+.pims .five-sm .lr-pad fieldset.review .lr-pad-info label {color:#585858; font-weight:bold; float:left;}
+.pims .five-sm .lr-pad fieldset.review .lr-pad-info .row {width:50.6em; padding-bottom:.5em; float:left;}
+.pims .five-sm .lr-pad fieldset.review .lr-pad-info textarea {height:15em; font-size:1.2em;}  
+.pims .five-sm .lr-pad fieldset.review .lr-pad-info .row span {font-size:1.2em; float:right;}
+.pims .five-sm .lr-pad fieldset.review .lr-pad-info .row label span.error {float:none; border:1px solid #ff3300; color:#990000; padding:.5em .5em .3em 2.3em; background:#ffe9e9 url(/img/find-services/lf-error-icon.gif) 6px 6px no-repeat; margin-bottom:.5em; margin-top:.5em; font-weight:normal; display:block; font-size:1.1em;} 
+.pims .five-sm .lr-pad fieldset.ratings .lr-pad-info .row {border-bottom:1px dotted #ccc; width:52.5em; padding-bottom:2em; margin-bottom:2em;}
+.pims .five-sm .lr-pad fieldset.ratings .lr-pad-info .row label {color:#585858; font-weight:bold; display:block;}
+.pims .five-sm .lr-pad fieldset.ratings .lr-pad-info .row span {color:#585858; font-weight:normal; display:block; padding-bottom:.5em; font-size:1.2em;}
+.pims .five-sm .lr-pad fieldset .lr-pad-info .row span.error {border:1px solid #ff3300; color:#990000; padding:.6em .5em .5em 2.3em; background:#ffe9e9 url(/img/find-services/lf-error-icon.gif) 6px 6px no-repeat; margin-bottom:.5em; display:block; font-weight:normal; font-size:1.2em; display:block;}
+.pims .five-sm .lr-pad fieldset .lr-pad-info .row1 label span.error {border:1px solid #ff3300; color:#990000; padding:.5em .5em .3em 2.3em; background:#ffe9e9 url(/img/find-services/lf-error-icon.gif) 6px 6px no-repeat; margin-bottom:.5em; margin-top:.5em; display:block; font-weight:normal; font-size:1.1em; display:block;}
+.pims .five-sm .lr-pad fieldset .lr-pad-info .panel .row1 label span.error, .pims .five-sm .lr-pad fieldset .lr-pad-info .panel .row2 label span.error {border:1px solid #ff3300; color:#990000; padding:.5em .5em .3em 2.3em; background:#ffe9e9 url(/img/find-services/lf-error-icon.gif) 6px 6px no-repeat; margin-bottom:.5em; margin-top:.5em; font-weight:normal; display:block; font-size:1.1em;}
+.pims .five-sm .lr-pad fieldset .lr-pad-info .panel .row2 label span.error {margin-bottom:.5em;}
+.pims .five-sm .top-validation {border:1px solid #ff3300; color:#990000; padding:.6em .5em .5em 1em; background:#ffe9e9; margin-bottom:.5em; display:block; font-weight:normal; font-size:1.2em; display:block;}
+.pims .five-sm .top-validation p {font-size:1.5em; padding-bottom:0;}
+.pims .five-sm .top-validation ul li {list-style-type:none; list-style-position:outside;}
+.pims .five-sm .top-validation ul li label {font-size:.9em;}
+
+/* Star rating */
+.pims fieldset.ratings .UserRating, .pims fieldset.recommend .UserRating {padding-bottom:2.5em;}
+.pims fieldset.recommend .UserRating {padding-top:.5em;}
+.pims fieldset.ratings .user-rating, .pims fieldset.recommend .user-rating {margin-left:.5em;}
+.pims fieldset.ratings .user-rating h4, .pims fieldset.recommend .user-rating h4 {font-size:1.1em !important; margin-bottom:.3em;}
+.pims fieldset.ratings .user-rating #UserRating, .pims fieldset.recommend .user-rating #UserRating {float:left;}
+.pims fieldset.ratings .user-rating label, .pims fieldset.recommend .user-rating label {display:block; float:left; font-size:1.1em; margin:.2em 0 0 1em;}
+.pims fieldset.ratings .lr-pad-info .row .UserRating span.caption, .pims fieldset.recommend .lr-pad-info .row .UserRating span.caption {color:#000; display:block; float:left; font-size:1.2em; font-weight:bold; margin:.3em 0 0 1em;}
+.pims fieldset.ratings .user-rating .the-rating label, .pims fieldset.recommend .user-rating .the-rating label {margin-left:0;}
+.pims fieldset.ratings .ui-stars-star, .pims fieldset.ratings .ui-stars-cancel, .pims fieldset.recommend .ui-stars-star, .pims fieldset.recommend .ui-stars-cancel {cursor: pointer; display: block; float:left; overflow:hidden; text-indent: -999em;}
+.pims fieldset.ratings .ui-stars-star a, .pims fieldset.ratings .ui-stars-cancel a, .pims fieldset.recommend .ui-stars-star a, .pims fieldset.recommend .ui-stars-cancel a {background: url(/img/rating-stars.gif) top left no-repeat; display: block; height:26px; width:19px;}
+.pims fieldset.ratings .ui-stars-star a, .pims fieldset.recommend .ui-stars-star a {background-position:0 0;}
+.pims fieldset.ratings .ui-stars-star-on a, .pims fieldset.recommend .ui-stars-star-on a {background-position:0 -36px;}
+.pims fieldset.ratings .ui-stars-star-hover a, .pims fieldset.recommend .ui-stars-star-hover a {background-position:0 -36px;}
+.pims fieldset.ratings .ui-stars-cancel-hover a, .pims fieldset.recommend .ui-stars-cancel-hover a {background-position: 0 0;}
+.pims fieldset.ratings .ui-stars-star-disabled, .pims fieldset.ratings .ui-stars-star-disabled a, .pims fieldset.ratings .ui-stars-cancel-disabled a, .pims fieldset.recommend .ui-stars-star-disabled, .pims fieldset.recommend .ui-stars-star-disabled a, .pims fieldset.recommend .ui-stars-cancel-disabled a {cursor: default !important;}
+
+/* Ratings */
+.pims .five-sm .reviews-ratings h2 {color:#990000; float:left;}
+.pims .five-sm .reviews-ratings .rr-heading {width:93.3em;}
+.pims .five-sm .reviews-ratings .rr-heading h2 a {background:url(/img/ratings/info-icon-sprite.png) no-repeat 0 4px; height:21px; width:17px; text-indent:-9999px; display:inline-block;}
+.pims .five-sm .reviews-ratings .rr-heading h2 a:hover, .pims .five-sm .reviews-ratings .rr-heading h2 a:focus, .pims .five-sm .reviews-ratings .rr-heading h2 a:active {background-position:0px -26px;}
+.pims .five-sm .reviews-ratings .rr-heading .den-adm-link {float:right; padding-top:.5em;}
+.pims .five-sm .reviews-ratings .rr-overview-rating {float:left; width:93.3em; padding:1em 0 1em 0;}
+.pims .five-sm .reviews-ratings .rr-overview-rating p {float:left; padding:2em 0 0 2em; font-size:1.2em;}
+.pims .five-sm .reviews-ratings .rr-overview-rating .starrating {border:2px solid #fc3; border-radius:5px; padding:1.5em .5em .5em 1.5em; text-align:center; width:auto; float:left;}
+.pims .five-sm .reviews-ratings .rr-overview-rating .starrating p {display:inline; float:left; font-size:2.4em; font-weight:bold; padding:.1em 0 0 0;}
+.pims .five-sm .reviews-ratings .rr-overview-rating .starrating img {display:inline-block;}
+.pims .five-sm .reviews-ratings .ratingsrow {float:left; margin:2em 0;}
+.pims .five-sm .reviews-ratings .ratingsrow .ratingspanel {float:left; width:16.55em; text-align:center; padding:1em;}
+.pims .five-sm .reviews-ratings .ratingsrow .ratingspanel .ratings-overview {margin:0 auto;}
+.pims .five-sm .reviews-ratings .ratingsrow .ratingspanel  p.questiontitle {padding-top:.5em; padding-bottom:0.5em; border-top:1px dotted #ccc; border-bottom:0;}
+.pims .five-sm .reviews-ratings .ratingsrow .ratingspanel  p {font-weight:normal; border-bottom:1px dotted #ccc;}
+.pims .five-sm .reviews-ratings .ratingsrow .ratingspanel  img {padding-bottom:.5em;}
+.pims .five-sm .reviews-ratings .filters {float:left; width:93.3em; margin-bottom:1em;}
+.pims .five-sm .reviews-ratings .filters h2 {float:left;}
+.pims .five-sm .reviews-ratings .filters p {float:left;padding:.4em 0 0 1em; padding-bottom:0; display:inline;}
+.pims .five-sm .reviews-ratings .filters .paging {float:right;}
+.pims .five-sm .reviews-ratings .filters .paging ul.pagination {float:right; padding:.4em 0 0 0; margin:0;}
+.pims .five-sm .reviews-ratings .filters .paging ul.pagination li {list-style:none; list-style-position:outside; padding:0; margin:0;}
+.pims .five-sm .reviews-ratings .filters .paging ul.pagination li.currentpage  {padding:0 1em;}
+.pims .five-sm .reviews-ratings .paging ul.pagination {float:right; padding:.4em 0 0 0; margin:0;}
+.pims .five-sm .reviews-ratings .paging ul.pagination li {list-style:none; list-style-position:outside; padding:0; margin:0;}
+.pims .five-sm .reviews-ratings .paging ul.pagination li.currentpage  {padding:0 1em;}
+.pims .five-sm .reviews-ratings .filters fieldset {background:#f2f2f2; padding:1em; width:91.3em; float:left; text-align:right;}
+.pims .five-sm .reviews-ratings .filters fieldset .filter-department, .pims .five-sm .reviews-ratings .filters fieldset .order, .pims .five-sm .reviews-ratings .filters fieldset #subject-results-container  {display:inline; margin:0 2em 1em 0; padding-top:.2em;}
+.pims .five-sm .reviews-ratings .filters fieldset #subject-results-container {margin-right:0; padding-top:0;}
+.pims .five-sm .reviews-ratings .filters fieldset #subject-results-container input {border:1px solid #ccc; font-size:1.2em; width:12em; padding:.2em .3em .1em .3em; color:#000;}
+.pims .five-sm .reviews-ratings .filters fieldset input.filter-btn{background:url(/img/find-services/leave-review-bg.gif) repeat-x 0 0; padding:2px 10px; font-size:1.4em; color:#000; border:none; font-weight:bold; border-radius: 3px; margin-left:1em;}
+.pims .five-sm .reviews-ratings .filters fieldset input.filter-btn:hover, .pims .five-sm .reviews-ratings .filters fieldset input.filter-btn:focus {background-position:0 -70px; cursor:pointer;}
+.pims .five-sm .reviews-ratings .filters fieldset #subject-results-container .predictive {background:#fff; border:1px solid #b5b5b6; margin-top:.1em; position:absolute; right:111px; width:15em; z-index:1000;}
+.pims .five-sm .reviews-ratings .filters fieldset #subject-results-container .predictive.webkit {background:red;}
+.pims .five-sm .reviews-ratings .filters fieldset #subject-results-container .predictive .pad {border:none;}
+.pims .five-sm .reviews-ratings .filters fieldset #subject-results-container .predictive .pad, .pims .five-sm .reviews-ratings .filters fieldset #subject-results-container .predictive .pad ul {height:auto; min-height:0;}
+.pims .five-sm .reviews-ratings .filters fieldset #subject-results-container .predictive .pad ul {margin-bottom:.5em; margin-top:0;}
+.pims .five-sm .reviews-ratings .filters fieldset #subject-results-container .predictive .pad ul li {list-style-position:outside; list-style-type:none; text-align:left;}
+.pims .five-sm .reviews-ratings .filters fieldset #subject-results-container .predictive .pad ul li a {border-bottom:1px dotted #ccc; display:block; padding:.5em 0 .5em .7em; text-decoration:none;}
+.pims .five-sm .reviews-ratings .filters fieldset #subject-results-container .predictive .pad ul li a:hover, .pims .five-sm .reviews-ratings .filters fieldset #subject-results-container .predictive .pad ul li a:focus, .pims .five-sm .reviews-ratings .filters fieldset #subject-results-container .predictive .pad ul li a:active, .pims .five-sm .reviews-ratings .filters fieldset #subject-results-container .predictive .pad ul li.ac_over a {background:#e7e7e7; cursor:pointer; tex-decoration:underline;}
+.pims .five-sm .reviews-ratings .comments {float:left; width:93.3em;}
+.pims .five-sm .reviews-ratings .comments .panel {float:left; border:1px solid #ccc; margin:1em 0;}
+.pims .five-sm .reviews-ratings .comments .panel .paneltop {float:left; padding:1em 1em 0 1em; border-bottom:1px solid #ccc; width:98%;}
+.pims .five-sm .reviews-ratings .comments .panel .paneltop h3 {float:left; font-size:1.3em; display:inline-block; color:#000; background:url(/img/ratings/comment-indicators.gif) no-repeat;}
+.pims .five-sm .reviews-ratings .comments .panel .paneltop h3.tick-icon {background-position:0 0; padding:.7em 0 .5em 3em;}
+.pims .five-sm .reviews-ratings .comments .panel .paneltop h3.question-icon {background-position:0 -61px; padding:.7em 0 .5em 3em;}
+.pims .five-sm .reviews-ratings .comments .panel .paneltop h3.cross-icon {background-position:0 -123px; padding:.7em 0 .5em 3em;}
+.pims .five-sm .reviews-ratings .comments .panel .paneltop h3.no-icon {background:none; padding:.7em 0 .5em 0;}
+.pims .five-sm .reviews-ratings .comments .panel .paneltop h3.one-star-icon {background:url(/img/find-services/one-star.gif) no-repeat; background-position: 0 6px; padding:.7em 0 .8em 9em;}
+.pims .five-sm .reviews-ratings .comments .panel .paneltop h3.two-star-icon {background:url(/img/find-services/two-star.gif) no-repeat; background-position: 0 6px; padding:.7em 0 .8em 9em;}
+.pims .five-sm .reviews-ratings .comments .panel .paneltop h3.three-star-icon {background:url(/img/find-services/three-star.gif) no-repeat; background-position: 0 6px; padding:.7em 0 .8em 9em;}
+.pims .five-sm .reviews-ratings .comments .panel .paneltop h3.four-star-icon {background:url(/img/find-services/four-star.gif) no-repeat; background-position: 0 6px; padding:.7em 0 .8em 9em;}
+.pims .five-sm .reviews-ratings .comments .panel .paneltop h3.five-star-icon {background:url(/img/find-services/five-star.gif) no-repeat; background-position: 0 6px; padding:.7em 0 .8em 9em;}
+.pims .five-sm .reviews-ratings .comments .panel .paneltop h3 span {font-weight:normal;}
+.pims .five-sm .reviews-ratings .comments .panel .paneltop p {display:inline; font-size:1.3em; float:left; padding-top:8px;}
+.pims .five-sm .reviews-ratings .comments .panel .panelmiddle {float:left; border-bottom:1px solid #ccc; width:100%;}
+.pims .five-sm .reviews-ratings .comments .panel .panelmiddle .content {float:left; width:46em; padding:2em 1em 2em 5em;}
+.pims .five-sm .reviews-ratings .comments .panel .panelmiddle .content .sub-content {padding-bottom:2em;}
+.pims .five-sm .reviews-ratings .comments .panel .panelmiddle .content .sub-content p {padding:0;}
+.pims .five-sm .reviews-ratings .comments .panel .panelmiddle .commentsupplier {float:right; margin:2em; width:13em; border:1px solid #cbcbcb; background:#fff;}
+.pims .five-sm .reviews-ratings .comments .panel .panelmiddle .commentsupplier p{border-bottom:1px dotted #cbcbcb; padding:.5em; color:#a7a7a7; font-size:1.1em;}
+.pims .five-sm .reviews-ratings .comments .panel .panelmiddle .commentsupplier img{margin: 0 auto;}
+.pims .five-sm .reviews-ratings .comments .panel .panelmiddle .response-wrapper {background:#f2f2f2; float:left; width:100%;}
+.pims .five-sm .reviews-ratings .comments .panel .panelmiddle .commentsupplier p.noLogo {text-align:center;}
+.pims .five-sm .reviews-ratings .comments .panel .panelmiddle .response-wrapper .response { width: 42em;}
+.pims .five-sm .reviews-ratings .comments .panel .panelmiddle .response, .pims .five-sm .reviews-ratings .comments .panel .panelmiddle .noresponse {float:left; background:#f2f2f2; padding:2em 1em 2em 9em; width:83.3em;}
+.pims .five-sm .reviews-ratings .comments .panel .panelmiddle .response p, .pims .five-sm .reviews-ratings .comments .panel .panelmiddle .noresponse p {width:35em; padding-top:.5em;}
+.pims .five-sm .reviews-ratings .comments .panel .panelmiddle .noresponse {background:#ffc; padding:1em 1em 1em 9em;}
+.pims .five-sm .reviews-ratings .comments .panel .panelmiddle .noresponse p {color:#333; font-weight:bold;}
+.pims .five-sm .reviews-ratings .comments .panel .panelmiddle h4 {color:#990000; font-weight:bold; font-size:1.4em; padding-bottom:1em;}
+.pims .five-sm .reviews-ratings .comments .panel .panelmiddle a {color:#585858;}
+.pims .five-sm .reviews-ratings .comments .panel .panelbottom {float:left; padding:1em; width:98%;}
+.pims .five-sm .reviews-ratings .comments .panel .panelbottom p.review-link {background:url(/img/find-services/star.gif) no-repeat 0 0; padding:0 0 0 1.5em; float:left;}
+.pims .five-sm .reviews-ratings .comments .panel .panelbottom p.review-link a {color:#990000; text-decoration:underline;}
+.pims .five-sm .reviews-ratings .comments .panel .panelbottom p.review-link a:hover, .pims .five-sm .reviews-ratings .comments .panel .panelbottom p.review-link a:focus {text-decoration:none;}
+.pims .five-sm .breadcrumbs {width:55.7em;}
+.pims .five-sm .leave-review {margin-top:-2em;}
+.pims .five-sm .trust-heading {float:left; clear:left; width:55.7em;}
+.pims .five-sm .reviews-ratings .com-adm-link p {float:right;}
+
+/* Thank you screen Promos */
+.pims .five-sm .review-msg h2 {color:#900; margin-bottom:1em;}
+.pims .five-sm .review-msg h3 {color:#585858;}
+.pims .five-sm .review-msg p.info {background:url(/img/pims/blue-info-icon.png) no-repeat; padding:0 0 1em 4em;}
+.pims .five-sm .review-msg img {float:right; margin-left:7em; border:1px solid #ccc;}
+.pims .five-sm .feedback-promo {float:left; width:62em; border-top:1px solid #ccc; padding-top:3em; margin-top:2em;}
+.pims .five-sm .feedback-promo .promo-panel {padding-bottom:2em;}
+.pims .five-sm .feedback-promo .promo-panel h2 {font-size:1.5em; font-weight:bold; color:#666;}
+.pims .five-sm .feedback-promo .promo-panel .text .image {float:left; margin-right:2em; margin-bottom:1em;}
+.pims .five-sm .feedback-promo .promo-panel .text {float:left;}
+.pims .five-sm .feedback-promo .promo-panel .text p {color:#585858; line-height:1.4em; padding-bottom:1em;}
+.pims .five-sm .feedback-promo .promo-panel .text p.link {padding-bottom:0;}
+.pims .five-sm .feedback-promo .promo-panel .text p.link a {color:#900; font-weight:bold; text-decoration:underline;}
+.pims .five-sm .feedback-promo .promo-panel .text p.link a:hover, .pims .five-sm .feedback-promo .promo-panel .text p.link a:focus, .pims .five-sm .feedback-promo .promo-panel .text p.link a:active {text-decoration:none;}
+
+/* Ratings lightbox page*/
+.pims .wrapper .ratings-information h2 {color:#900; font-size:1.6em; padding-bottom:.5em;}
+.pims .wrapper .ratings-information .panelbottom {padding-right:1em;}
+.pims .wrapper .ratings-information .panelbottom h3 {color:#585858; font-size:1.4em; font-weight:bold; margin-bottom:0;}
+.pims .wrapper .ratings-information .panelbottom  p {padding-bottom:1em;}
+
+/* Ratings more info lightbox */
+.lb-overlay {border:5px solid #900;}
+.lb-overlay h2 {padding:0; margin:0; background:#eee; border-bottom:1px solid #ccc; padding:.5em 1em; color:#900; font-size:1.6em;}
+.lb-overlay .panelbottom {padding:.5em 1.5em 1.5em 1.5em; background:#fff;}
+.lb-overlay .panelbottom h3 {color:#585858; padding-top:1em; font-size:1.4em; font-weight:bold;}
+.ui-dialog .ui-dialog-titlebar {display:block;}
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {z-index:1; background: url("/img/ratings/lightbox-close.gif") no-repeat scroll right 0.1em transparent; color: #585858; float: right; font-size: 1.2em; padding-right: 1.3em; position: relative; right: 20px; text-decoration: none; top: 30px; font-weight:bold;}
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close:focus {color:#900;}
+.ui-widget-overlay {background: none repeat scroll 0 0 #000000; left: 0; position: absolute; top: 0;}
+.ui-dialog.ui-widget-content {padding-top:10%;}
+
+/* No comments */
+.pims .five-sm .reviews-ratings .comments .nocomments {margin:1em; width:53.7em;}
+.pims .five-sm .reviews-ratings .comments .nocomments h3 {color:#585858;}
+.pims .five-sm .reviews-ratings .comments .nocomments .leavereviewlink {margin-top:1em;}
+
+/* share this page */
+/* non-javascript */
+.pims .share {color:#000; margin:0; padding:0; position:relative; width:12.5em; float:right;}
+.pims .share p {float:left;}
+.pims .share .share-text {background:transparent; color:#000; text-decoration:none;}
+.pims .share ul {float:left; list-style:none;}
+.pims .share ul li {display:inline; float:left; margin-left:.5em;}
+.pims .share ul li a {background:url(/img/guides/sprite-share.gif) -1px -1px no-repeat; display:block; height:16px; text-indent:-9999px; width:16px;}
+.pims .share ul li.twitter a {background-position:-1px -37px;}
+.pims .share ul li.facebook a {background-position:-1px -73px;}
+.pims .share ul li.msn a {background-position:-1px -109px;}
+/* with javascript */
+.pims .share-js {float:right;}
+.pims .share-js p {color:#000; font-size:1.1em; padding:0; border:1px solid #ccc; float:right;}
+.pims .share-js span {float:left;}
+.pims .share-js .number {background:#0064b7 url(/img/ratings/sprite-share.gif) right -206px no-repeat; color:#fff; padding:1px 8px 1px 7px; }
+.pims .share-js .share-link {background:#fff url(/img/ratings/sprite-share.gif) 3px -142px no-repeat; cursor:pointer; float:left; padding:1px 10px 1px 19px; text-decoration:none;}
+.pims .share-js .share-link span {background:transparent; color:#000;}
+.pims .share-js .share-link:hover, .pims .share-js .share-link:active, .pims .share-js .share-link:focus {background-color:#f2f2f2; background-position:3px -177px;}
+.pims .share-js .share-hover {background-color:#81c0f4; background-position:3px -177px;}
+.pims .share-js .share-list {background:url(/img/ratings/sprite-share.gif) 109px -265px no-repeat; clear:left; padding-top:10px; position:absolute; right:0; top:22px; z-index:100;}
+.pims .share-js .share-list-items {background:#e7e7e7; float:none; padding:10px; width:136px;}
+.pims .share-js .share-list-items p {background:transparent; border-bottom:1px solid #ccc; border-top:none; border-left:none; border-right:none; color:#000; float:none; font-size:1.3em; font-weight:bold; margin-bottom:.5em; padding-bottom:.5em;}
+.pims .share-js .share-list-items p a {background:#fff url(/img/ratings/sprite-share.gif) 5px -232px no-repeat; display:block; float:right; height:8px; padding:5px; text-indent:-9999px; width:7px;}
+.pims .share-js .share-list ul li {display:block; float:none; margin:0; padding-top:.5em;}
+.pims .share-js .share-list ul li a {background-color:transparent; background-position:top left; color:#000; height:auto; padding:2px 0 2px 25px; text-decoration:none; text-indent:0; width:auto;}
+.pims .share-js .share-list ul li.twitter a {background-position:0 -36px;}
+.pims .share-js .share-list ul li.facebook a {background-position:0 -72px;}
+.pims .share-js .share-list ul li.msn a {background-position:0 -108px;}
+.pims .share-js .share-list ul li a:hover, .pims .share-js .share-list ul li a:focus {text-decoration:underline;}
+
+/*----- Social Care / Care Provider profiles -----*/
+.pims .two-sm .panel h3 acronym {border:0;}
+/* Dementia Care Compact / Voluntary indicators */
+.pims .three-sm .dementia-compact .intro, .pims .three-sm .voluntary-indicators .intro {float:left; padding-bottom:1em; width:100%;}
+.pims .three-sm .dementia-compact .panel, .pims .three-sm .voluntary-indicators .panel {background:#f2f2f0; padding:1em;}
+.pims .three-sm .dementia-compact .panel h4, .pims .three-sm .panel .cp-text-intro {font-weight:bold;}
+.pims .three-sm .dementia-compact .panel h4 {font-size:1.4em; line-height:1.3em; padding-bottom:.5em;}
+/* CQC summary */
+.pims .two-sm .panel .panel-inner.cqc, .pims .three-sm .panel .panel-inner.cqc {background-color:#fff; background-position:10px 10px; background-repeat:no-repeat; min-height:4.6em; padding:1em 1em 1em 8em; margin-bottom:1em;}
+.pims .two-sm .panel .panel-inner.cqc.cqc-no-data, .pims .three-sm .panel .panel-inner.cqc.cqc-no-data {background-image:url(/img/scorecards/na.gif);}
+.pims .two-sm .panel .panel-inner.cqc.cqc-pass, .pims .three-sm .panel .panel-inner.cqc.cqc-pass {background-image:url(/img/indicators/icon-tick.png);}
+.pims .two-sm .panel .panel-inner.cqc.cqc-partial, .pims .two-sm .panel .panel-inner.cqc.cqc-fail, .pims .three-sm .panel .panel-inner.cqc.cqc-partial, .pims .three-sm .panel .panel-inner.cqc.cqc-fail {background-image:url(/img/indicators/icon-exclamation.png);}
+.pims .two-sm .panel .panel-inner.cqc, .pims .three-sm .panel .panel-inner.cqc p {font-weight:bold;}
+.pims .two-sm .panel .panel-inner.cqc acronym, .pims .three-sm .panel .panel-inner.cqc acronym {cursor:help;}
+/* Cost of Care */
+.pims .two-sm .cost-of-care span.cost, .pims .two-sm .overall-capacity span.capacity {font-size:1.2em; font-weight:bold;}
+.pims .two-sm .cost-of-care span.cost {display:block; padding-top:.4em;}
+/* Image gallery */
+.pims .three-sm .img-gallery .row {float:left; margin-bottom:1em; width:100%;}
+.pims .three-sm .img-gallery .item, .pims .three-sm .img-gallery .item .panel, .pims .three-sm .img-gallery .item .panel-content {height:175px;}
+.pims .three-sm .img-gallery .item, .pims .three-sm .img-gallery .item .panel .panel-content .pad {width:175px;}
+.pims .three-sm .img-gallery .item {background:#f2f2f2; display:inline-block; float:left; list-style-type:none; margin:0 1em 0 0;}
+.pims .three-sm .img-gallery .item.last {margin-right:0;}
+.pims .three-sm .img-gallery .item .panel {margin-bottom:0;}
+.pims .three-sm .img-gallery .item .panel .panel-content {display:table;}
+.pims .three-sm .img-gallery .item .panel .panel-content .pad {display:table-cell; vertical-align:middle;}
+.pims .three-sm .img-gallery .item .panel .panel-content .pad img {margin:0 auto;}
+/* Charter marks / Accreditation */
+.pims .three-sm .accreditation .item {border-bottom:1px solid #ccc; float:left; padding:1em 0; width:100%;}
+.pims .three-sm .accreditation .item img {float:right; margin:0 0 1em 1em;}
+.pims .three-sm .accreditation .item  .cp-response {background:#f2f2f0; clear:both; float:left; margin:1em 0; padding:1em; width:53.7em;}
+.pims .two-sm .charter-marks .panel {background:#fff; padding:0;}
+.pims .two-sm .charter-marks .item {border:1px solid #ccc; margin-bottom:1em; padding:1em;}
+.pims .two-sm .charter-marks .panel .cp-response {border-top:1px solid #ccc; margin-top:2em; padding-top:1em;}
+.pims .two-sm .charter-marks .single {margin-bottom: 10px; border-bottom: 1px solid #ccc;}
+/* Indicators */
+.pims .panel .service-feedback .one-sm {background:#fff; border-right:2px solid #f2f2f0; margin:0 -2px 0 0; padding:1em;}
+.pims .panel .service-feedback .one-sm.last {border-left:2px solid #f2f2f0;}
+.pims .panel .service-feedback .indicator-value, .pims .panel .service-feedback .indicator-text {display:block; overflow:hidden;}
+.pims .panel .service-feedback .indicator-value {float:left; font-size:2.2em; line-height:1em; margin-right:.3em;}
+.pims .panel .service-feedback .one-sm h4, .pims .panel .service-feedback .one-sm img {padding:0;}
+.pims .panel .simple-scorecard .service-feedback {padding:0;}
+.pims .panel .simple-scorecard .service-feedback .one-sm.last {width:14.1em;}
+.pims .panel .simple-scorecard .service-feedback .one-sm p, .pims .panel .simple-scorecard .service-feedback .indicator-text {display:block; overflow:hidden;}
+.pims .panel .simple-scorecard .service-feedback .one-sm p {float:none; padding:0; width:auto;}
+.pims .panel .simple-scorecard .service-feedback .one-sm img {display:inline; float:left; margin-right:1em;}
+.pims .panel .simple-scorecard .service-feedback .one-sm img.fcstar {display:block; float:none; padding-bottom:.5em;}
+.pims.fs.profile .voluntary-indicators .panel .service-feedback {margin:0;}
+.pims.fs.profile .voluntary-indicators .panel .service-feedback .one-sm {width:42%;}
+.pims.fs.profile .voluntary-indicators .panel .service-feedback .one-sm .indicator-value {font-weight:bold;}
+.pims.fs.profile .voluntary-indicators .panel .cp-response {padding-top:1em;}
+
+/* facilities scorecard for child gp */
+.pims .tertiary-content .child-org {margin-bottom:1em;}
+.pims .tertiary-content .child-org .panel {background:#f2f2f0; padding:1em;}
+/* Third party text */
+.pims .thirdpartytext {float:right; padding-top:2em;}
+
+/* Friends & Family indicators */
+.panel .qos-feedback table {border-collapse:collapse; font-size:1.2em;}
+.panel .qos-feedback table th, .panel .qos-feedback table td {background:#fff; border:5px solid #f2f2f0; text-align:left; width:1%;}
+.panel .qos-feedback table th {padding:10px 15px;}
+.panel .qos-feedback table td {padding:5px;}
+.panel .qos-feedback table th.ward-name {font-weight:normal;}
+.panel .qos-feedback table th#fft-ward-name, .panel .qos-feedback table th#fft-score, .panel .qos-feedback table th#fft-other-services {border-bottom:10px solid #f2f2f0; border-left:1px solid #f2f2f0; border-right:1px solid #f2f2f0;}
+.panel .qos-feedback table td.score {font-size:2.2em; text-align:center;}
+
+/* Friends & Family lightbox graph */
+.lb-graph .inner {background:#fff; padding:1em; }
+.lb-graph .inner .pad {background:#f2f2f0; padding:.5em}
+.lb-graph table {background:#f2f2f0; border-collapse:collapse; font-family:arial,helvetica,sans-serif; font-weight:bold; width:100%;}
+.lb-graph caption {display:none}
+.lb-graph th {color:#900000; font-size:1.3em; text-align:left;}
+.lb-graph td {color:#900000; font-size:1.3em; padding:0; width:28%;}
+.lb-graph td.bar-value {background:#fff; padding:.6em; width:63%;}
+.lb-graph td.value {background:#fff; font-weight:normal; padding-left:1em; width:10%;}
+.lb-graph td.bar-value div {background:#f2f2f0; height:40px; width:400px;}
+.lb-graph .lb-overlay {border:2px solid #900;}
+.lb-graph .lb-overlay h3 {background:#eee; border-bottom:1px solid #ccc; color:#900; font-size: 1.3em; margin:0; padding:1em;}
+.lb-graph .lb-overlay .panelbottom {background:#fff; padding:.5em 1.5em 1.5em 1.5em;}
+.lb-graph .lb-overlay .panelbottom h3 {color:#585858; padding-top:1em;}
+.lb-graph .ui-dialog-titlebar .ui-dialog-titlebar-close {background:url(/img/pims/lightbox-close.gif) right .2em no-repeat; color:#585858; float:right; font-size:1.2em; font-weight:bold; padding-right:1.3em; position:relative; right:20px; text-decoration:none; top:30px; z-index:1;}
+.lb-graph .ui-dialog-titlebar .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close:active, .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close:focus {color:#900;}
+.lb-graph.ui-widget-content {padding-top:10%;}
+.lb-graph .ui-dialog-titlebar {display:block;}
+.wrapper.lb-graph {width:72em;}
+
+/* Friends & Family Maternity Module */
+.pims .panel .panel-content .fft-maternity-holder {clear: both; margin-top:2em}
+.pims .panel .panel-content .fft-maternity-intro {float: left;width: 30em; padding-bottom:3em}
+.pims .panel .panel-content .fft-maternity-intro h3 {color:#585858}
+.pims .panel .panel-content .fft-maternity-holder h4 {clear:both; margin-bottom:2em !important; font-size:1.3em}
+.pims .panel .panel-content .fft-maternity-questions-holder {float:left; margin-bottom:4em; width:26em; margin-right:2em}
+.pims .panel .panel-content .fft-maternity-questions-holder.last {margin-right:0}
+.pims .panel .panel-content .fft-maternity-questions-holder p.fft-maternity-question{height:5em}
+.pims .panel .panel-content .fft-maternity-questions span {display:block; font-size:.9em; padding-top:1em}
+.pims .panel .panel-content .fft-maternity-holder .fft-maternity-score {margin-top:1em}
+.pims .panel .panel-content .fft-maternity-holder .fft-maternity-score p {font-size:4.2em; display:inline}
+.pims .panel .panel-content .fft-maternity-holder .fft-maternity-score span {float: right; font-size:1.2em; padding-top:2.5em}
+.pims .panel .panel-content .fft-maternity-key {border:1px solid #b4b4b4;padding: 1em;width: 21em; float:right}
+.pims .panel .panel-content .fft-maternity-key p {margin:0;padding: 0; margin-bottom:.5em}
+.pims .panel .panel-content .fft-maternity-key ul{list-style-type:none; margin:0; padding:0;}
+.pims .panel .panel-content .fft-maternity-key ul li{list-style-type:none; margin-left:0; background:url(/img/pims/fft-graph-key.png) no-repeat;padding-left: 20px; margin-bottom:.3em}
+.pims .panel .panel-content .fft-maternity-key ul li.fft-likely {background-position:0 -63px}
+.pims .panel .panel-content .fft-maternity-key ul li.fft-neither {background-position:0 -127px}
+.pims .panel .panel-content .fft-maternity-key ul li.fft-unlikely {background-position:0 -191px}
+.pims .panel .panel-content .fft-maternity-key ul li.fft-extremely-unlikely {background-position:0 -255px}
+.pims .panel .panel-content .fft-maternity-key ul li.fft-dont-know{background-position:0 -319px}
+.pims .panel .panel-content .fft-maternity-key ul li span{}
+.pims .panel .panel-content .fft-maternity-graph-holder {margin-top:1em;}
+.pims .panel .panel-content .fft-maternity-graph-holder .fft-maternity-score p {font-size:3em;display: inline; color:#585858}
+.pims .panel .panel-content .fft-maternity-graph-holder .fft-maternity-score span{font-size:1.1em; float:right; line-height:3em}
+.pims .panel .panel-content .fft-maternity-graph-holder table {width:100%; font-weight:bold;}
+.pims .panel .panel-content .fft-maternity-graph-holder table th {text-align: left;vertical-align:top;}
+.pims .panel .panel-content .fft-maternity-graph-holder table td {color:#585858; padding:0; font-size:1.3em }
+.pims .panel .panel-content .fft-maternity-graph-holder table td.bar-value{background:#fff; width:90%; }
+.pims .panel .panel-content .fft-maternity-graph-holder table td.value{width:10%; font-weight:normal; padding-left:1em; background:#fff }
+.pims .panel .panel-content .fft-maternity-graph-holder table td.bar-value div{height:20px;background: #f2f2f2; margin-bottom:.5em}
+.pims .panel .panel-content .fft-maternity-no-graph {background: #f2f2f2; padding:7em 5em; text-align:center;margin-left:.5em; margin-top:1.5em}
+/* have your say */
+.pims .have-your-say {border: 1px solid #B4B4B4; margin-bottom: 1em; padding: 0.9em 0.9em 0.3em;}
+/* nurse staffing levels */
+.staffing-indicators {background-color: #F2F2F0; margin-bottom: 2em; margin-top: 1em; padding: 1em 0.8em 0.4em 1em;}
+table.ward-nurse-staffing-levels th, table.ward-nurse-staffing-levels td {background-color: #FFF; border-bottom: 6px solid #F2F2F0; border-right: 2px solid #F2F2F0; color: #585858; font-size: 1.2em; padding: 15px 5px 10px 5px; width: 20%;}
+table.ward-nurse-staffing-levels td {vertical-align: top;}
+table.ward-nurse-staffing-levels th.specific-ward-name {font-weight: normal;}
+table.ward-nurse-staffing-levels td img {display: block; margin-left: auto; margin-right: auto;}
+table.ward-nurse-staffing-levels td p {font-size: 1em; text-align: center;}
+table.ward-nurse-staffing-levels td p.data-not-available {font-size: 2em;}
+table.ward-nurse-staffing-levels td p.indicator-value {font-size: 2em;}
+table.ward-nurse-staffing-levels span.label {display:none;}
+/*Clincal data*/
+.pims .panel-content .clinical-date-list-container {background: #fff; padding: 1em;}
+.pims .panel-content .clinical-date-list-container ul {list-style-type: none}
+.pims .panel-content .clinical-date-list-container ul li {margin-left:0; margin-bottom:.5em}
+/*Care providers indicators*/
+.pims .three-sm .pad .panel-nonedit.module { margin: 0 0 1em 0;background: #f2f2f0; padding:1em}
+.pims .three-sm .pad .panel-nonedit.module .service-feedback .one-sm { border-right: none; width:23.3em}
+/* acessibility fixes */
+.pims-opening-times .hidden {visibility:hidden;}
