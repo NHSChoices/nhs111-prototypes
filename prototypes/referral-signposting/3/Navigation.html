@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0085)http://nhs111-web-beta-integration.azurewebsites.net/Question/Navigation#FeedbackForm -->
+<html lang="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+
+</title>
+
+    <!-- css -->
+    <link href="govuk-template.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="application.css" media="screen" rel="stylesheet" type="text/css">
+
+    <!-- Javascript -->
+    <script src="modernizr-custom.js"></script><style type="text/css"></style>
+    <script src="jquery2.1.1.min.js"></script>
+    <script src="jquery1.11.2-ui.min.js"></script>
+    <script src="jquery.cookie.js"></script>
+    <script>
+        $(function () {
+            var userId = $.cookie("userId");
+            if (!userId) $.cookie("userId", '21438948-f6e6-4b96-8d17-0953bffbbe82', { path: '/' });
+        });
+    </script>
+    <style>
+   
+    </style>
+</head>
+<body class="js-enabled">
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <div id="skiplink-container">
+        <div>
+            <a href="http://nhs111-web-beta-integration.azurewebsites.net/Question/Navigation#content" class="skiplink">Skip to main content</a>
+        </div>
+    </div>
+    <header role="banner" id="global-header">
+        <div class="header-container">
+            <a href="http://nhs111-web-beta-integration.azurewebsites.net/" class="header-logo" title="Go to the NHS.UK homepage">
+                <img src="nhs-rev-logotype.svg" alt="">
+            </a>
+        </div>
+    </header>
+    
+    <!--end header-->
+
+    <section class="outer-section">
+    <div class="sub-header">
+        <div>
+            <div class="plus">+</div>
+            
+            <h2 style="font-size: 1.6em;">
+                Your answers suggest you should go to an Accident and Emergency department within 1 hour
+            </h2>
+        </div>
+    </div>
+</section>
+
+    <main id="content" role="main">
+        
+
+
+
+
+
+<link href="disposition.css" media="screen" rel="stylesheet" type="text/css">
+
+<h2>Find a suitable A&E department</h2>
+<!--<p>Tell us where you are and we can find your nearest A&E department</p>-->
+        <div style="float: left;">
+            <form action="Searchresults.html" method="get">
+                <input id="Id" name="Id" type="hidden" value="Dx13"><input id="JourneyJson" name="JourneyJson" type="hidden" value="{&quot;steps&quot;:[{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;titleWithoutSpaces&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;Head injury|Worsening, head injury&quot;,&quot;excludeKeywords&quot;:&quot;Headache|Medication, pain and/or fever|Worsening&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Have you had an injury to your head in the last 7 days?&quot;,&quot;questionNo&quot;:&quot;Tx1506&quot;,&quot;questionId&quot;:&quot;PW755.0&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Did your injury cause a head wound?&quot;,&quot;questionNo&quot;:&quot;Tx1488&quot;,&quot;questionId&quot;:&quot;PW755.300&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you become breathless or more breathless than usual since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx100077&quot;,&quot;questionId&quot;:&quot;PW684.0&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Did you have a fit around the time of, or since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx1486&quot;,&quot;questionId&quot;:&quot;PW684.100&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:5},&quot;questionTitle&quot;:&quot;Have you had any of these problems since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx3816&quot;,&quot;questionId&quot;:&quot;PW684.400&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:5},&quot;questionTitle&quot;:&quot;Have you had any of these symptoms since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx3815&quot;,&quot;questionId&quot;:&quot;PW684.300&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;Have you developed any of these since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx220282&quot;,&quot;questionId&quot;:&quot;PW684.600&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you had non-stop neck pain since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx220278&quot;,&quot;questionId&quot;:&quot;PW684.500&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Are you much more difficult to rouse than usual?&quot;,&quot;questionNo&quot;:&quot;Tx1538&quot;,&quot;questionId&quot;:&quot;PW684.800&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you noticed any new problems with your vision?&quot;,&quot;questionNo&quot;:&quot;Tx220291&quot;,&quot;questionId&quot;:&quot;PW684.900&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;Do any of these apply since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx220281&quot;,&quot;questionId&quot;:&quot;PW684.1000&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;Was your injury caused by any of the following?&quot;,&quot;questionNo&quot;:&quot;Tx220279&quot;,&quot;questionId&quot;:&quot;PW684.1200&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Did you fall onto your head from a height of 1 metre or more?&quot;,&quot;questionNo&quot;:&quot;Tx220280&quot;,&quot;questionId&quot;:&quot;PW684.1100&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Do you have any bruising around an uninjured eye or ear?&quot;,&quot;questionNo&quot;:&quot;Tx221249&quot;,&quot;questionId&quot;:&quot;PW684.1400&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;titleWithoutSpaces&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Are you able to get up off the floor?&quot;,&quot;questionNo&quot;:&quot;Tx222608&quot;,&quot;questionId&quot;:&quot;PW684.2500&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:5},&quot;questionTitle&quot;:&quot;Have you been assaulted?&quot;,&quot;questionNo&quot;:&quot;Tx47002&quot;,&quot;questionId&quot;:&quot;PW684.2900&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;Do any of these apply to you?&quot;,&quot;questionNo&quot;:&quot;Tx220289&quot;,&quot;questionId&quot;:&quot;PW684.3900&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Were you affected by drugs or alcohol around the time or since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx220293&quot;,&quot;questionId&quot;:&quot;PW684.4500&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you ever had surgery to your brain?&quot;,&quot;questionNo&quot;:&quot;Tx220294&quot;,&quot;questionId&quot;:&quot;PW684.4600&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you vomited since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx221228&quot;,&quot;questionId&quot;:&quot;PW684.5600&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;titleWithoutSpaces&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Have you had a headache since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx222589&quot;,&quot;questionId&quot;:&quot;PW684.5800&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;Do any of the following apply?&quot;,&quot;questionNo&quot;:&quot;Tx221227&quot;,&quot;questionId&quot;:&quot;PW684.6000&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;Do any of the following apply since the injury?&quot;,&quot;questionNo&quot;:&quot;Tx3413&quot;,&quot;questionId&quot;:&quot;PW684.5700&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Do you have a problem opening your mouth properly?&quot;,&quot;questionNo&quot;:&quot;Tx220340&quot;,&quot;questionId&quot;:&quot;PW684.6100&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you got pain or swelling that is getting worse?&quot;,&quot;questionNo&quot;:&quot;Tx3420&quot;,&quot;questionId&quot;:&quot;PW684.6200&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;Do either of the following apply to you?&quot;,&quot;questionNo&quot;:&quot;Tx1241&quot;,&quot;questionId&quot;:&quot;PW684.6800&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Was the blow to your head enough to knock you to the ground?&quot;,&quot;questionNo&quot;:&quot;Tx221239&quot;,&quot;questionId&quot;:&quot;PW684.6700&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;titleWithoutSpaces&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Have you taken any painkillers?&quot;,&quot;questionNo&quot;:&quot;Tx220374&quot;,&quot;questionId&quot;:&quot;PW684.7200&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have the painkillers helped the pain?&quot;,&quot;questionNo&quot;:&quot;Tx220375&quot;,&quot;questionId&quot;:&quot;PW684.7400&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;One hour ago or more&quot;,&quot;titleWithoutSpaces&quot;:&quot;Onehouragoormore&quot;,&quot;symptomDiscriminator&quot;:&quot;4003&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;When were the painkillers taken?&quot;,&quot;questionNo&quot;:&quot;Tx220376&quot;,&quot;questionId&quot;:&quot;PW684.7900&quot;,&quot;jtbs&quot;:false}]}"><input id="PathwayId" name="PathwayId" type="hidden" value="PW755MaleAdult"><input id="PathwayNo" name="PathwayNo" type="hidden" value="PW756,PW752,PW754,PW753,PW754,PW755"><input id="SymptomGroup" name="SymptomGroup" type="hidden" value=""><input data-val="true" data-val-number="The field Age must be a number." data-val-required="The Age field is required." id="UserInfo_Age" name="UserInfo.Age" type="hidden" value="22"><input id="UserInfo_Gender" name="UserInfo.Gender" type="hidden" value="Male"><input id="SymptomDiscriminator" name="SymptomDiscriminator" type="hidden" value="4003"><input id="Title" name="Title" type="hidden" value="Speak to a Primary Care Service within 6 hours"><input data-val="true" data-val-required="The UserId field is required." id="UserId" name="UserId" type="hidden" value="4c185283-f6ad-4bef-83a9-c664d52f6d71"><input id="CollectedKeywords_Keywords_0_" name="CollectedKeywords.Keywords[0]" type="hidden" value="Headache"><input id="CollectedKeywords_Keywords_1_" name="CollectedKeywords.Keywords[1]" type="hidden" value="Medication, pain and/or fever"><input id="CollectedKeywords_Keywords_2_" name="CollectedKeywords.Keywords[2]" type="hidden" value="Head injury"><input id="CollectedKeywords_Keywords_3_" name="CollectedKeywords.Keywords[3]" type="hidden" value="Worsening, head injury"><input id="CollectedKeywords_ExcludeKeywords_0_" name="CollectedKeywords.ExcludeKeywords[0]" type="hidden" value="After a fit/seizure"><input id="CollectedKeywords_ExcludeKeywords_1_" name="CollectedKeywords.ExcludeKeywords[1]" type="hidden" value="Headache"><input id="CollectedKeywords_ExcludeKeywords_2_" name="CollectedKeywords.ExcludeKeywords[2]" type="hidden" value="Medication, pain and/or fever"><input id="CollectedKeywords_ExcludeKeywords_3_" name="CollectedKeywords.ExcludeKeywords[3]" type="hidden" value="Worsening"> <label>
+                    Postcode
+                    <input id="UserInfo_CurrentAddress_PostCode" name="UserInfo.CurrentAddress.PostCode" type="text" value="">
+                </label>
+
+                <input class="button button-next" type="submit" name="DosResults" value="Find A&E departments">
+            </form>
+        </div>
+    <aside style=" width: 40%;">
+        <h3>Why are we asking you this?</h3>
+        <p>So that we can find details of an A&amp;E department near you that can treat your symptoms.</p>
+        
+    </aside>
+        <script>
+    $(function () {
+        $("#FindGP").click(function () {
+            $("#FindGP").val("");
+            $("#SurgeryViewModel_SelectedSurgery").val("");
+        }
+        );
+        $("#FindGP").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: '/Outcome/SearchSurgery',
+                    type: "post",
+                    data: { input: $("#FindGP").val() },
+                    success: function (data) {
+                        response(data);
+                    },
+                    error: function (textStatus, errorThrown) {
+                        return null;
+                    }
+                });
+            },
+            focus: function (event, ui) {
+                $("#FindGP").val(ui.item.Name);
+                return false;
+            },
+            select: function (event, ui) {
+                $("#FindGP").val(ui.item.Name);
+                $("#SurgeryViewModel_SelectedSurgery").val(ui.item.SurgeryId);
+                return false;
+            }
+        })
+            .autocomplete("instance")._renderItem = function (ul, item) {
+                return $("<li>")
+                    .append("<a>" + item.Name + "</a>")
+                    .appendTo(ul);
+            };
+
+    });
+
+</script>
+
+
+    </main>
+    <div>
+        <p style ="text-align: center; font-size: 125%;">
+            <a href="#">Click here for some advice to follow in the meantime</a>
+        </p>
+        <p style="text-align: left; margin-left:10%">
+            <a href="#">< Change your answers</a>
+        </p>
+    </div>
+
+<section class="feedback-section">
+    
+
+<div class="feedback-wrapper" style="display: none;">
+    <div class="feedback-container feedback-container--open">
+        <div class="feedback-banner">
+            <a href="http://nhs111-web-beta-integration.azurewebsites.net/Question/Navigation#FeedbackForm" class="feedback-dismiss"></a>
+            <form id="FeedbackForm" action="http://nhs111-web-beta-integration.azurewebsites.net/Feedback/SubmitFeedback">
+                <div id="FeedbackDetails">
+                    <h3 class="feedback-message feedback-title">
+                        Help us improve 111 online
+                    </h3>
+                    <p class="feedback-message">
+                        If you’d like to give your views on helping us improve 111 online, please use the form below.
+                    </p>
+                    <div class="feedback-form">
+                        <textarea value="" class="feedback-input" cols="20" id="Text" maxlength="8000" name="Text" placeholder="Feedback" rows="2"></textarea>
+                        <a class="feedback-btn feedback-submit" id="btnFeedback" onclick="SubmitFeedback(this);">Submit</a>
+                    </div>
+                </div>
+                <input id="UserId" name="UserId" type="hidden" value="34e6b361-ccd0-46ae-8c3d-51026a16814e">
+                <input id="PageId" name="PageId" type="hidden" value="Dx13">
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+
+    $('.feedback-dismiss').click(function () {
+        $('.feedback-wrapper').slideToggle();
+    });
+
+    $('.feedback-input').focus(function () {
+        $(this).animate({
+            //width: "70%",
+            //height: "70%"
+        });
+    });
+
+    $(document).ready(function () {
+        var $userId = $("#FeedbackForm #UserId");
+        $userId.val($.cookie("userId"));
+    });
+
+    $("#Text").keypress(function (event) {
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        var RETURNKEY = 13;
+        if (keycode === RETURNKEY) {
+            $("#btnFeedback").click();
+            return false;
+        }
+    });
+
+    function SubmitFeedback(btnClicked) {
+        if ($("#Text").val() !== "") {
+            var $form = $(btnClicked).parents("form");
+            $form[0][0].value = $('<div/>').text($form[0][0].value).html();
+            var detailsDiv = $("#FeedbackDetails");
+            $(detailsDiv).slideToggle(600);
+            $.ajax({
+                type: "POST",
+                url: $form.attr("action"),
+                data: $form.serialize(),
+                error: function (xhr, status, error) {
+                    alert(error);
+                    $(detailsDiv).slideToggle(600);
+                    //do something about the error
+                },
+                success: function (response) {
+                    $(detailsDiv).html('<p>' + response.Message + '</p>');
+                    $(detailsDiv).slideToggle(600);
+                }
+            });
+            return false;
+        }
+    }
+</script>
+
+</section>
+    <footer id="footer" role="contentinfo">
+        <div class="footer-wrapper">
+            <div class="text">
+                <p>
+                    <small>
+                        © Crown copyright<br>
+                        Content available under <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>, except where otherwise stated.
+                    </small>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="global-app-error" class="app-error hidden"></div>
+
+
+<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span></body></html>
