@@ -139,8 +139,8 @@ $("#age").keypress(function (e) {
 $(".age-content").addClass("hide-age");
 
 $("img.maleImage").click(function () {
-    $("img.femaleImage").attr("src", "/content/img/female.png");
-    $(this).attr("src", "/content/img/male_sel.png");
+    $("img.femaleImage").attr("src", "../content/img/female.png");
+    $(this).attr("src", "../content/img/male_sel.png");
     $("#Male").prop("checked", true);
     $("#Female").prop("checked", false);
     

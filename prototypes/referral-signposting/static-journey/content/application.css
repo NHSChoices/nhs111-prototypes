@@ -358,7 +358,10 @@ table th.numeric {
   -webkit-appearance: none;
   /* to be fixed */
   text-decoration: none !important; }
-  .button:link, .button:hover, .button:focus, .button:visited {
+    .button:visited {
+         color: #fff;
+    }
+.button:hover, .button:focus{
     color: #fff;
     background-color: #006647; }
   @media (min-width: 641px) {
@@ -382,20 +385,23 @@ table th.numeric {
 .button-get-started {
   font-weight: bold;
   padding-right: 3rem;
-  background-image: url("../images/icons/icon-button-next.svg");
+  background-image: url("../content/images/icons/icon-button-next.svg");
   background-repeat: no-repeat;
   background-position: 95% 55%; }
 
 .button-next {
   font-weight: normal;
   padding-right: 5rem;
-  background-image: url("../images/icons/icon-button-next.svg");
+  background-image: url("../content/images/icons/icon-button-next.svg");
   background-repeat: no-repeat;
   background-position: 70% 60%; }
+a.button-next
+{    background-position: 95% 61%;
 
+}
 .button-cancel {
   padding-right: 3rem;
-  background-image: url("/public/images/icon-button-cancel.svg");
+  background-image: url("../content/public/images/icon-button-cancel.svg");
   background-repeat: no-repeat;
   background-position: 92% 50%;
   background-color: #9B004F;
@@ -1892,9 +1898,14 @@ label, .form-label, .form-label-bold {
     width: 100%;
     overflow: hidden;
 }
+a.previous-question {
+    background-image: url("../content/images/icons/icon-button-prev.svg");
+    background-repeat: no-repeat;
+    background-position: left 12px top 16px;
+}
 
 button[type=submit].previous-question, input[type=submit].previous-question {
-    background-image: url("../images/icons/icon-button-prev.svg");
+    background-image: url("../content/images/icons/icon-button-prev.svg");
     background-repeat: no-repeat;
     background-position: left 12px top 16px;
     padding: 0 18px 10px 35px;
