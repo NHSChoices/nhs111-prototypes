@@ -172,7 +172,8 @@
                     success: function(data) {
                         response(JSON.parse(data).slice(0, 7));
                     },
-                    error: function(textStatus, errorThrown) {
+                    error: function (textStatus, errorThrown) {
+                        $("input.go").removeAttr("disabled");
                         return null;
                     }
                 });
