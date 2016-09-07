@@ -2196,3 +2196,11 @@ button[disabled=disabled] {
 }
 
 
+#previousScreen:visited  {
+    color: #fff !important;
+}
+
+#previousScreena:visited, #previousScreen.link:visited {
+    color: #fff !important;
+}
+
