@@ -152,8 +152,8 @@ $("img.maleImage").click(function () {
 });
 
 $("img.femaleImage").click(function () {
-    $("img.maleImage").attr("src", "/content/img/male.png");
-    $(this).attr("src", "/content/img/female_sel.png");
+    $("img.maleImage").attr("src", "../content/img/male.png");
+    $(this).attr("src", "../content/img/female_sel.png");
     $("#Female").prop("checked", true);
     $("#Male").prop("checked", false);
     
