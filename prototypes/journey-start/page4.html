@@ -86,23 +86,23 @@
                 Your details 
             </h2>
 
-            <p>Please enter your postcode, age and sex (or the age and sex of the person you are enquiring about).</p>
+            <p>Please enter your sex, age and postcode (or the sex and age of the person you're enquiring about).</p>
             <div id="answers">
-                <div class="age">
-                    <h2 class="heading-small">Postcode</h2>
-                    <input class="form-control input-age" style="width: 100px;" data-val="true" data-val-number="The field Age must be a number." data-val-required="The Age field is required." id="UserInfo_Age"  name="UserInfo.Age" onkeypress="return numbersonly(this, event);" size="2" type="text" value="">
-                </div>
+                <p class="answer">
+                    <label for="Vomitingonly"><input name="SelectedAnswer" type="radio" id="Vomitingonly" /><span class="answer-text">Male</span></label>
+                </p>
+                <p class="answer">
+                    <label for="Diarrhoeaonly"><input name="SelectedAnswer" type="radio" id="Diarrhoeaonly" /><span class="answer-text">Female</span></label>
+                </p>
                 <div class="age">
                     <h2 class="heading-small">Age</h2>
                     <input class="form-control input-age" style="width: 50px;" data-val="true" data-val-number="The field Age must be a number." data-val-required="The Age field is required." id="UserInfo_Age" maxlength="2" name="UserInfo.Age" onkeypress="return numbersonly(this, event);" size="2" type="text" value="">
                 </div>
+                <div class="age">
+                    <h2 class="heading-small">Postcode</h2>
+                    <input class="form-control input-age" style="width: 100px;" data-val="true" data-val-number="The field Age must be a number." data-val-required="The Age field is required." id="UserInfo_Age" name="UserInfo.Age" onkeypress="return numbersonly(this, event);" size="2" type="text" value="">
+                </div>
                 <p></p>
-                <p class="answer">
-                    <label for="Vomitingonly"><input name="SelectedAnswer" type="radio" id="Vomitingonly"/><span class="answer-text">Male</span></label>
-                </p>
-                <p class="answer">
-                    <label for="Diarrhoeaonly"><input name="SelectedAnswer" type="radio" id="Diarrhoeaonly"/><span class="answer-text">Female</span></label>
-                </p>
             </div>
             <button class="button button-next" id="nextScreen" type="submit" name="Question" value="Question">Next</button>
         </form>
