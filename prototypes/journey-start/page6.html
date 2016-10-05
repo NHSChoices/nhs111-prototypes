@@ -45,7 +45,12 @@
             'virtualPageTitle': 'As well as the abdominal pain, do you have any of the following?'
         }];
     </script>
-
+    <style type="text/css">
+.module-zero .list-conditions li a {
+                color: #0077CC;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body class="">
 
@@ -85,7 +90,7 @@
 
         <form action="page3.html" method="get" class="module-zero" id="form">
             <h2 class="question-header">
-                Which of these best describes what you want to find out about?
+                What do you want to find out about?
             </h2>
 
             <ul class="list-conditions" id="disclaimerHelp" style="list-style-image: none">
@@ -162,6 +167,12 @@
             var $helpTextLinkMessage = $this.parent().next('.help-text-link-message');
             $helpTextLinkMessage.slideToggle("fast");
         });
+
+        $('.helper a').click(function (e) {
+            // Cancel the default action
+            window.location = "triage.html";
+        });
+
     });
 
 
