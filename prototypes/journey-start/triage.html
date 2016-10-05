@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html>
 <html lang="">
 <head>
@@ -81,36 +81,27 @@
 
 
 
-        <form action="page2.html" method="get" id="form">
-
-            <h2 class="question-header">Welcome to 111 Online.</h2>
-            <p>This service can assess your symptoms and connect you with an NHS health service that meets your needs.</p>
-
-            <p>We can also give you information to help you treat yourself.</p>
-
-            <h3 style="font-size: 18px; margin-top: 20px;">Tell us what you want to do.</h3>
-
+        <form action="index.html" method="get">
+            <h2 class="question-header">How bad is your pain?</h2>
             <div id="answers">
                 <p class="answer">
-                    <label for="a"><input name="SelectedAnswer" type="radio" id="a"/><span class="answer-text">Describe my symptoms and be directed to a health service (including a callback from a clinician)</span></label>
-                </p>
-                <p class="answer">
-                    <label for="b"><input name="SelectedAnswer" type="radio" id="b" value="search"/><span class="answer-text">Search for a health service myself</span></label>
-                </p>
-                <p class="answer">
-                    <label for="c"><input name="SelectedAnswer" type="radio" id="c" /><span class="answer-text">Get out-of-hours help when services are closed</span></label>
+                    <label for="Sobadthatit&#39;simpossibletodoanything"><input name="SelectedAnswer" type="radio" id="Sobadthatit&#39;simpossibletodoanything" /><span class="answer-text">So bad that it&#39;s impossible to do anything</span></label>
 
+                    <a class="help-text-link" href="javascript:void(0);">What does this mean?</a>
                 </p>
+                <div class="help-text-link-message">This means the pain is so bad that you can't walk about normally.<br />You may be lying down, unable to move or writhing in agony.<br />You may be crying out because of the pain.</div>
                 <p class="answer">
-                    <label for="d"><input name="SelectedAnswer" type="radio" id="d" /><span class="answer-text">Get an emergency prescription</span></label>
+                    <label for="Badenoughtointerferewithnormalactivity"><input name="SelectedAnswer" type="radio" id="Badenoughtointerferewithnormalactivity" /><span class="answer-text">Bad enough to interfere with normal activity</span></label>
 
+                    <a class="help-text-link" href="javascript:void(0);">What does this mean?</a>
                 </p>
+                <div class="help-text-link-message">This means the pain is not stopping you from walking  about or doing things, but it feels uncomfortable.</div>
                 <p class="answer">
-                    <label for="e"><input name="SelectedAnswer" type="radio" id="e" /><span class="answer-text">Get help with a dental problem</span></label>
+                    <label for="Noneoftheabove"><input name="SelectedAnswer" type="radio" id="Noneoftheabove" /><span class="answer-text">None of the above</span></label>
 
                 </p>
             </div>
-            <button class="button button-next" id="nextScreen" type="submit" name="Question" value="Question">Start now</button>
+            <button class="button button-next" id="nextScreen" type="submit" name="Question" value="Question">Next</button>
         </form>
         <script type="text/javascript">
 
@@ -130,14 +121,6 @@
 
             var $helpTextLinkMessage = $this.parent().next('.help-text-link-message');
             $helpTextLinkMessage.slideToggle("fast");
-        });
-
-        $("#form").submit(function (event) {
-            var selected = $('input[name=SelectedAnswer]:checked', '#form').val();
-            if (selected == "search") {
-                window.location = "http://www.nhs.uk/service-search";
-                event.preventDefault();
-            }
         });
     });
 

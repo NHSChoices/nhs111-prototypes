@@ -10,6 +10,7 @@
     <!-- css -->
     <link href="http://nhsalpha.herokuapp.com/public/stylesheets/govuk-template.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
     <link href="Content/css_NhsUK/application.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="Content/css_NhsUK/search.css" media="screen" rel="stylesheet" type="text/css" />
 
     <!-- Javascript -->
     <script src="scripts/vendor/modernizr-custom.js"></script>
@@ -22,6 +23,7 @@
     <script src="Scripts/jquery1.11.2-ui.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
     <script src="scripts/jquery.cookie.js"></script>
+    <script src="scripts/disclaimer.js"></script>
 
     <script>
         $(document).ready(function () {
@@ -81,26 +83,64 @@
 
 
 
-        <form action="index.html" method="get">
-            <h2 class="question-header">How bad is your pain?</h2>
-            <div id="answers">
-                <p class="answer">
-                    <label for="Sobadthatit&#39;simpossibletodoanything"><input name="SelectedAnswer" type="radio" id="Sobadthatit&#39;simpossibletodoanything" /><span class="answer-text">So bad that it&#39;s impossible to do anything</span></label>
+        <form action="page3.html" method="get" class="module-zero" id="form">
+            <h2 class="question-header">
+                Which of these best describes what you want to find out about?
+            </h2>
 
-                    <a class="help-text-link" href="javascript:void(0);">What does this mean?</a>
-                </p>
-                <div class="help-text-link-message">This means the pain is so bad that you can't walk about normally.<br />You may be lying down, unable to move or writhing in agony.<br />You may be crying out because of the pain.</div>
-                <p class="answer">
-                    <label for="Badenoughtointerferewithnormalactivity"><input name="SelectedAnswer" type="radio" id="Badenoughtointerferewithnormalactivity" /><span class="answer-text">Bad enough to interfere with normal activity</span></label>
+            <ul class="list-conditions" id="disclaimerHelp" style="list-style-image: none">
 
-                    <a class="help-text-link" href="javascript:void(0);">What does this mean?</a>
-                </p>
-                <div class="help-text-link-message">This means the pain is not stopping you from walking  about or doing things, but it feels uncomfortable.</div>
-                <p class="answer">
-                    <label for="Noneoftheabove"><input name="SelectedAnswer" type="radio" id="Noneoftheabove" /><span class="answer-text">None of the above</span></label>
-
-                </p>
-            </div>
+                <li class="firstChild"><a href="#"><span class="green">Allergies</span></a></li>
+                <li><a href="#"><span class="green">Bleeding</span></a></li>
+                <li><a href="#"><span class="green">Children</span></a></li>
+                <li><a href="#"><span class="green">Dental</span></a></li>
+                <li><a href="#"><span class="green">Ear, nose and throat</span></a></li>
+                <li><a href="#"><span class="green">Head and neck</span></a></li>
+                <li class="injury" id="injury">
+                    <a href="#"><span class="green">Injuries</span></a>
+                    <p class="helper" style="display: block;">
+                        <a href="triage.html">Back injury</a><br/>
+                        <a href="triage.html">Bites and stings</a><br/>
+                        <a href="triage.html">Burns, scalds and electric shock</a><br/>
+                        <a href="triage.html">Chest injury</a><br/>
+                        <a href="triage.html">Facial injury</a><br/>
+                        <a href="triage.html">Foreign body</a><br/>
+                        <a href="triage.html">Head injury</a><br/>
+                        <a href="triage.html">Leg pain</a><br/>
+                        <a href="triage.html">Limb injury</a><br/>
+                        <a href="triage.html">Nosebleed</a><br/>
+                        <a href="triage.html">Rectal bleeding</a><br/>
+                        <a href="triage.html">Swallowed or inhaled object</a><br/>
+                        <a href="triage.html">Wounds</a><br/>
+                    </p>
+                </li>
+                <li><a href="#"><span class="green">Mental health</span></a></li>
+                <li class="seizure" id="seizure">
+                    <a href="#"><span class="green">Pains</span></a>
+                    <p class="helper" style="display: block;">
+                        <a href="triage.html">Abdominal pain</a><br />
+                        <a href="triage.html">Back injury</a><br />
+                        <a href="triage.html">Bites and stings</a><br />
+                        <a href="triage.html">Breathing problems</a><br />
+                        <a href="triage.html">Chest and back pain</a><br />
+                        <a href="triage.html">Chest injury</a><br />
+                        <a href="triage.html">Dental problems</a><br />
+                        <a href="triage.html">Earache</a><br />
+                        <a href="triage.html">Headache</a><br />
+                        <a href="triage.html">Joint pain and swelling</a><br />
+                        <a href="triage.html">Leg pain</a><br />
+                        <a href="triage.html">Mouth problems</a><br />
+                        <a href="triage.html">Neck pains</a><br />
+                        <a href="triage.html">Urinary problems</a><br />
+</p>
+                </li>
+                <li><a href="#"><span class="green">Pregnancy</span></a></li>
+                <li><a href="#"><span class="green">Sexual health</span></a></li>
+                <li><a href="#"><span class="green">Skin problems</span></a></li>
+                <li><a href="#"><span class="green">General health</span></a></li>
+                <li><a href="#"><span class="green">Seasonal health advice</span></a></li>
+            </ul>
+ 
             <button class="button button-next" id="nextScreen" type="submit" name="Question" value="Question">Next</button>
         </form>
         <script type="text/javascript">
@@ -177,6 +217,15 @@
     $(document).ready(function () {
         var $userId = $("#FeedbackForm #UserId");
         $userId.val($.cookie("userId"));
+
+        $("#form").submit(function (event) {
+            var selected = $('input[name=SelectedAnswer]:checked', '#form').val();
+            if (selected == "yes") {
+                window.location = "999.html";
+                event.preventDefault();
+            }
+        });
+
     });
 
     $("#Text").keypress(function (event) {
