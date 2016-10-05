@@ -61,7 +61,7 @@ $(document).ready(function() {
 
     });
 
-    $("#injury").click(function() {
+    $("#injury").click(function () {
 
         $("#injury .helper").toggleClass("active");
         $("#injury .helper").slideToggle('500');
