@@ -1,0 +1,256 @@
+﻿
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>NHS 111 Digital</title>
+
+    <!-- css -->
+    <link href="http://nhsalpha.herokuapp.com/public/stylesheets/govuk-template.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
+    <link href="Content/css_NhsUK/application.css" media="all" rel="stylesheet" type="text/css" />
+
+    <!-- Javascript -->
+    <script src="scripts/vendor/modernizr-custom.js"></script>
+    <!--[if lt IE 9]>
+     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <![endif]-->
+
+    <script src="scripts/jquery2.1.1.min.js"></script>
+
+    <script src="Scripts/jquery1.11.2-ui.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/jquery.cookie.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var $sessionId = $("#SessionId");
+            if ($sessionId) $sessionId.val($.cookie("userId"));
+        });
+
+        $(function () {
+            var userId = $.cookie("userId");
+            if (!userId) $.cookie("userId", '0586bbef-b026-40e3-98f6-31d56474461e', { path: '/' });
+        });
+    </script>
+
+    <!--<script src="~/scripts/jquery2.1.1.min.js"></script> included on layout page -->
+    <script src="scripts/jquery1.11.2-ui.min.js"></script>
+    <script src="scripts/jquery.blockUI.js"></script>
+    <script src="scripts/custom.js"></script>
+
+</head>
+<body class="">
+
+
+
+
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe src='//www.googletagmanager.com/ns.html?id=1234-No-Its-Not'
+                height='0' width='0' style='display:none;visibility:hidden'></iframe>
+    </noscript>
+    <script>
+            (function(w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', '1234-No-Its-Not');</script>
+    <!-- End Google Tag Manager -->
+
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <div id="skiplink-container">
+        <div>
+            <a href="#content" class="skiplink">Skip to main content</a>
+        </div>
+    </div>
+    <header role="banner" id="global-header">
+        <div class="header-container">
+            <a href="index.html" class="header-logo" title="Go to the NHS.UK homepage">
+                <img src="content/images/nhs-rev-logotype.jpg" alt="" />
+
+            </a>
+            <div class="header-title">
+                111 Online <strong class="phase-tag beta"></strong>
+            </div>
+        </div>
+    </header>
+
+    <!--end header-->
+
+
+    <section class="outer-section">
+        <link href="Content/css_NhsUK/emergency.css" media="screen" rel="stylesheet" type="text/css" />
+
+        <div class="emergency">
+            <div class="emergency-img-container">
+                <div class="emergency-img">
+                    <img src="content/img/call_999.png" alt="Call 999" class="emergency-image" />
+                </div>
+                <div class="emergency-text">
+
+                    <div class="sub-header">
+                        <div>
+                            <h2>Call 999</h2>
+                        </div>
+                        <div>
+                            <h3 style="margin-bottom: 25px; font-size: 1.0em;">Your answers suggest you should dial 999 now for an ambulance</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="emergency-hr" />
+    </section>
+
+    <main id="content" role="main">
+
+
+
+
+
+        <div id="wrapper">
+            <div>
+
+            </div> <!--/ContentWrapper-->
+            <form action="/Question/Navigation" method="post">
+                <input data-val="true" data-val-required="The SessionId field is required." id="SessionId" name="SessionId" type="hidden" value="d4da1f4c-d5d5-4e19-906f-9110dcd3b004" />
+                <input id="Id" name="Id" type="hidden" value="Dx012" />
+                <input id="JourneyJson" name="JourneyJson" type="hidden" value="{&quot;steps&quot;:[{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;titleWithoutSpaces&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;Head injury|Worsening, head injury&quot;,&quot;excludeKeywords&quot;:&quot;Headache|Medication, pain and/or fever|Worsening&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Have you had an injury to your head in the last 7 days?&quot;,&quot;questionNo&quot;:&quot;TX1506&quot;,&quot;questionId&quot;:&quot;PW755.0&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;titleWithoutSpaces&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;Wound, head or neck&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Did your injury cause a head wound?&quot;,&quot;questionNo&quot;:&quot;TX1488&quot;,&quot;questionId&quot;:&quot;PW755.300&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you become breathless or more breathless than usual since the injury?&quot;,&quot;questionNo&quot;:&quot;TX100077&quot;,&quot;questionId&quot;:&quot;PW692.0&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;titleWithoutSpaces&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;Fit or seizure&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Did you have a fit around the time of, or since the injury?&quot;,&quot;questionNo&quot;:&quot;TX1486&quot;,&quot;questionId&quot;:&quot;PW692.700&quot;,&quot;jtbs&quot;:false},{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;titleWithoutSpaces&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;4004&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Have you got anything stuck deep inside the wound or got anything sticking out of it?&quot;,&quot;questionNo&quot;:&quot;TX1102&quot;,&quot;questionId&quot;:&quot;PW692.200&quot;,&quot;jtbs&quot;:false}]}" />
+                <input id="PathwayId" name="PathwayId" type="hidden" value="PW755MaleAdult" />
+                <input id="PathwayNo" name="PathwayNo" type="hidden" value="PW755" />
+                <input id="PathwayTitle" name="PathwayTitle" type="hidden" value="Headache" />
+                <input id="SymptomGroup" name="SymptomGroup" type="hidden" value="1111" />
+                <input data-val="true" data-val-number="The field Age must be a number." data-val-required="The Age field is required." id="UserInfo_Age" name="UserInfo.Age" type="hidden" value="20" />
+                <input id="UserInfo_Gender" name="UserInfo.Gender" type="hidden" value="Male" />
+                <input id="SymptomDiscriminatorCode" name="SymptomDiscriminatorCode" type="hidden" value="4004" />
+                <input id="Title" name="Title" type="hidden" value="Emergency Ambulance Response (Green 2)" />
+                <input id="UserInfo_CurrentAddress_PostCode" name="UserInfo.CurrentAddress.PostCode" type="hidden" value="" />
+                <input id="StateJson" name="StateJson" type="hidden" value="{&quot;PATIENT_AGEGROUP&quot;:&quot;Adult&quot;,&quot;PATIENT_PARTY&quot;:&quot;1&quot;,&quot;PATIENT_GENDER&quot;:&quot;\&quot;M\&quot;&quot;,&quot;PATIENT_AGE&quot;:&quot;20&quot;}" />
+                <input id="PreviousStateJson" name="PreviousStateJson" type="hidden" value="{&quot;PATIENT_AGEGROUP&quot;:&quot;Adult&quot;,&quot;PATIENT_PARTY&quot;:&quot;1&quot;,&quot;PATIENT_GENDER&quot;:&quot;\&quot;M\&quot;&quot;,&quot;PATIENT_AGE&quot;:&quot;20&quot;}" />
+                <input id="TimeFrameText" name="TimeFrameText" type="hidden" value="" />
+                <input id="SymptomDiscriminator_ReasoningText" name="SymptomDiscriminator.ReasoningText" type="hidden" value="" />
+                <input id="OutcomeGroup_Text" name="OutcomeGroup.Text" type="hidden" value="dial 999 now for an ambulance" />
+                <input id="SurgeryViewModel_SelectedSurgery" name="SurgeryViewModel.SelectedSurgery" type="hidden" value="" />
+
+                <input id="CollectedKeywords_Keywords_0__Value" name="CollectedKeywords.Keywords[0].Value" type="hidden" value="Headache" /><input data-val="true" data-val-required="The IsFromAnswer field is required." id="CollectedKeywords_Keywords_0__IsFromAnswer" name="CollectedKeywords.Keywords[0].IsFromAnswer" type="hidden" value="False" /><input id="CollectedKeywords_Keywords_1__Value" name="CollectedKeywords.Keywords[1].Value" type="hidden" value="Medication, pain and/or fever" /><input data-val="true" data-val-required="The IsFromAnswer field is required." id="CollectedKeywords_Keywords_1__IsFromAnswer" name="CollectedKeywords.Keywords[1].IsFromAnswer" type="hidden" value="False" /><input id="CollectedKeywords_Keywords_2__Value" name="CollectedKeywords.Keywords[2].Value" type="hidden" value="Head injury" /><input data-val="true" data-val-required="The IsFromAnswer field is required." id="CollectedKeywords_Keywords_2__IsFromAnswer" name="CollectedKeywords.Keywords[2].IsFromAnswer" type="hidden" value="True" /><input id="CollectedKeywords_Keywords_3__Value" name="CollectedKeywords.Keywords[3].Value" type="hidden" value="Worsening, head injury" /><input data-val="true" data-val-required="The IsFromAnswer field is required." id="CollectedKeywords_Keywords_3__IsFromAnswer" name="CollectedKeywords.Keywords[3].IsFromAnswer" type="hidden" value="True" /><input id="CollectedKeywords_Keywords_4__Value" name="CollectedKeywords.Keywords[4].Value" type="hidden" value="Wound, head or neck" /><input data-val="true" data-val-required="The IsFromAnswer field is required." id="CollectedKeywords_Keywords_4__IsFromAnswer" name="CollectedKeywords.Keywords[4].IsFromAnswer" type="hidden" value="True" /><input id="CollectedKeywords_Keywords_5__Value" name="CollectedKeywords.Keywords[5].Value" type="hidden" value="Fit or seizure" /><input data-val="true" data-val-required="The IsFromAnswer field is required." id="CollectedKeywords_Keywords_5__IsFromAnswer" name="CollectedKeywords.Keywords[5].IsFromAnswer" type="hidden" value="True" />
+                <input id="CollectedKeywords_ExcludeKeywords_0__Value" name="CollectedKeywords.ExcludeKeywords[0].Value" type="hidden" value="After a fit/seizure" /><input data-val="true" data-val-required="The IsFromAnswer field is required." id="CollectedKeywords_ExcludeKeywords_0__IsFromAnswer" name="CollectedKeywords.ExcludeKeywords[0].IsFromAnswer" type="hidden" value="False" /><input id="CollectedKeywords_ExcludeKeywords_1__Value" name="CollectedKeywords.ExcludeKeywords[1].Value" type="hidden" value="Headache" /><input data-val="true" data-val-required="The IsFromAnswer field is required." id="CollectedKeywords_ExcludeKeywords_1__IsFromAnswer" name="CollectedKeywords.ExcludeKeywords[1].IsFromAnswer" type="hidden" value="True" /><input id="CollectedKeywords_ExcludeKeywords_2__Value" name="CollectedKeywords.ExcludeKeywords[2].Value" type="hidden" value="Medication, pain and/or fever" /><input data-val="true" data-val-required="The IsFromAnswer field is required." id="CollectedKeywords_ExcludeKeywords_2__IsFromAnswer" name="CollectedKeywords.ExcludeKeywords[2].IsFromAnswer" type="hidden" value="True" /><input id="CollectedKeywords_ExcludeKeywords_3__Value" name="CollectedKeywords.ExcludeKeywords[3].Value" type="hidden" value="Worsening" /><input data-val="true" data-val-required="The IsFromAnswer field is required." id="CollectedKeywords_ExcludeKeywords_3__IsFromAnswer" name="CollectedKeywords.ExcludeKeywords[3].IsFromAnswer" type="hidden" value="True" />
+
+
+
+            </form>
+        </div> <!-- /site -->
+    </main>
+    <section class="feedback-section">
+
+        <!--[if lte IE 8]>
+            <style>
+                .feedback-container {
+                    color: black;
+                }
+
+            </style>
+        <![endif]-->
+
+        <div class="feedback-wrapper">
+            <div class="feedback-container feedback-container--open">
+                <div class="feedback-banner">
+                    <a href="#FeedbackForm" class="feedback-dismiss"></a>
+                    <form id="FeedbackForm" action="/Feedback/SubmitFeedback">
+                        <div id="FeedbackDetails">
+                            <h3 class="feedback-message feedback-title">
+                                Help us improve 111 online
+                            </h3>
+                            <p class="feedback-message">
+                                If you’d like to give your views on helping us improve 111 online, please use the form below.
+                            </p>
+                            <div class="feedback-form">
+                                <textarea Value="" class="feedback-input" cols="20" id="Text" maxlength="8000" name="Text" placeholder="Feedback" rows="2"></textarea>
+                                <a class="feedback-btn feedback-submit" id="btnFeedback" onclick="SubmitFeedback(this);">Submit</a>
+                            </div>
+                        </div>
+                        <input id="UserId" name="UserId" type="hidden" value="" />
+                        <input id="PageId" name="PageId" type="hidden" value="Dx012" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+
+    $('.feedback-dismiss').click(function () {
+        $('.feedback-wrapper').slideToggle();
+    });
+
+    $('.feedback-input').focus(function () {
+        $(this).animate({
+            //width: "70%",
+            //height: "70%"
+        });
+    });
+
+    $(document).ready(function () {
+        var $userId = $("#FeedbackForm #UserId");
+        $userId.val($.cookie("userId"));
+    });
+
+    $("#Text").keypress(function (event) {
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        var RETURNKEY = 13;
+        if (keycode === RETURNKEY) {
+            $("#btnFeedback").click();
+            return false;
+        }
+    });
+
+    function SubmitFeedback(btnClicked) {
+        if ($("#Text").val() !== "") {
+            var $form = $(btnClicked).parents("form");
+            $form[0][0].value = $('<div/>').text($form[0][0].value).html();
+            var detailsDiv = $("#FeedbackDetails");
+            $(detailsDiv).slideToggle(600);
+            $.ajax({
+                type: "POST",
+                url: $form.attr("action"),
+                data: $form.serialize(),
+                error: function (xhr, status, error) {
+                    alert(error);
+                    $(detailsDiv).slideToggle(600);
+                    //do something about the error
+                },
+                success: function (response) {
+                    $(detailsDiv).html('<p>' + response.Message + '</p>');
+                    $(detailsDiv).slideToggle(600);
+                }
+            });
+            return false;
+        }
+    }
+        </script>
+
+    </section>
+    <footer id="footer" role="contentinfo">
+        <div class="footer-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="/Help/Cookies" target="_blank">Cookies</a></li>
+                    <li><a href="/Help/Privacy" target="_blank">Privacy statement</a></li>
+                </ul>
+            </nav>
+            <div class="text">
+                <p>
+                    <small>
+                        &copy; Crown copyright<br>
+                        Content available under <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>, except where otherwise stated.
+                    </small>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="global-app-error" class="app-error hidden"></div>
+</body>
+</html>
