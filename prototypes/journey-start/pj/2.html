@@ -1,0 +1,328 @@
+﻿
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+
+    <!-- css -->
+    <link href="http://nhsalpha.herokuapp.com/public/stylesheets/govuk-template.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
+    <link href="Content/css_NhsUK/application.css" media="all" rel="stylesheet" type="text/css" />
+
+    <!-- Javascript -->
+    <script src="scripts/vendor/modernizr-custom.js"></script>
+    <!--[if lt IE 9]>
+     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <![endif]-->
+
+    <script src="scripts/jquery2.1.1.min.js"></script>
+
+    <script src="Scripts/jquery1.11.2-ui.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/jquery.cookie.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var $sessionId = $("#SessionId");
+            if ($sessionId) $sessionId.val($.cookie("userId"));
+        });
+
+        $(function () {
+            var userId = $.cookie("userId");
+            if (!userId) $.cookie("userId", 'ca189c56-5468-4f08-9d47-953f95c5a0c6', { path: '/' });
+        });
+    </script>
+
+    <script>
+        var pageId = 'PW519.0';
+        dataLayer = [
+        {
+            'virtualPageUrl': document.location.pathname + '/' + pageId,
+            'virtualPageTitle': 'As well as the abdominal pain, do you have any of the following?'
+        }];
+    </script>
+
+</head>
+<body class="">
+
+
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <div id="skiplink-container">
+        <div>
+            <a href="#content" class="skiplink">Skip to main content</a>
+        </div>
+    </div>
+    <header role="banner" id="global-header">
+        <div class="header-container">
+            <a href="index.html" class="header-logo" title="Go to the NHS.UK homepage">
+                <img src="content/images/nhs-rev-logotype.jpg" alt="" />
+
+            </a>
+            <div class="header-title">
+                111 Online <strong class="phase-tag beta"></strong>
+            </div>
+        </div>
+    </header>
+
+    <!--end header-->
+
+<style>
+    .homepage-top-inner {
+    position: relative;
+    overflow: hidden;
+    /*max-width: 1020px;*/
+    margin: 0 auto;
+    text-align: left;
+}
+
+    .inner-block.floated-children {
+    margin: 0 15px;
+}
+
+    .welcome-text {
+    width: 75%;
+}
+
+    /*.floated-inner-block {
+    margin: 0 15px;
+}*/
+
+    .content-links {
+    position: absolute;
+    top: 0;
+    left: 75%;
+    width: 25%;
+}
+
+    .content-links-inner {
+    background: #dff0d8;
+        color: #3c763d;
+    padding: 15px 20px 5px;
+    margin-top: 30px;
+    min-height: 20em;
+}
+
+    .content-links-inner h2 {
+    margin: 5px 0 0;
+    font-size: 14px;
+    line-height: 1.42857;
+}
+
+    .content-links-inner ul {
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+    .content-links-inner li {
+    font-size: 16px;
+    line-height: 1.25;
+    list-style: none;
+    margin: 5px 0;
+        color: #3c763d;
+}
+
+    .content-links-inner a {
+    
+        color: #3c763d;
+}
+    .container {
+        margin-top: 20px;
+    }
+    .column-left{ float: left; width: 33%; }
+.column-right{ float: right; width: 33%; }
+.column-center{ display: inline-block; width: 33%; }
+</style>
+
+
+<section class="outer-section"></section>
+
+    <main id="content" role="main">
+
+
+        <link href="content/css_NhsUk/question.css?3.0.0.0" media="screen" rel="stylesheet" type="text/css" />
+        <header class="homepage-top" style="background-color: #d9edf7; padding: 20px;">
+            <div class="homepage-top-inner">
+
+                <div class="welcome-block">
+                    <div class="inner-block floated-children">
+                        <div class="welcome-text">
+                            <div class="floated-inner-block">
+                                <h1>Find the symptom giving you most concern</h1>
+                                <p>We'll then ask you some questions to check how severe your symptoms are.</p>
+                                <p>It may feel like we’re asking a lot of questions, but we need to rule out some serious conditions first. It's important we check everything thoroughly.</p>
+                                <p>The assessment may take up to 10 minutes.</p>
+                                <form id="header-search" class="site-search" action="/search" method="get" role="search">
+                                    <div class="header-search-content">
+                                        <div>
+                                            <label for="searchTags">
+                                                <input type="text" style="width: 80%" class="input-symptoms ui-autocomplete-input" id="searchTags" autocomplete="off" name="searchTags" placeholder="Search for conditions and symptoms">
+                                            </label>
+
+                                            <input type="submit" class="button button-get-started go" value="Go" id="submitSearch" disabled="disabled">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="content-links">
+                            <div class="floated-inner-block content-links-inner">
+                                <h2>Common symptoms</h2>
+                                <ul>
+                                    <li><a href="#">Headache</a></li>
+                                    <li><a href="#">Chest and back pain</a></li>
+                                    <li><a href="#">Cold or flu</a></li>
+                                    <li><a href="#">Rash or skin problem</a></li>
+                                    <li><a href="#">Mental health problem</a></li>
+                                    <li><a href="#">Diarrhoea and vomiting</a></li>
+                                    <li><a href="#">Sexual concerns</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container" >
+            <div class="column-center">
+                <ul>
+                    <li><a href="#">Allergies</a></li>
+                    <li><a href="#">Bleeding</a></li>
+                    <li><a href="#">Children</a></li>
+                    <li><a href="#">Dental</a></li>
+                    <li><a href="#">Seasonal health advice</a></li>
+                    <li><a href="#">Diarrhoea and vomiting</a></li>
+                    <li><a href="#">Sexual concerns</a></li>
+                </ul>
+            </div>
+            <div class="column-left">
+                <ul>
+                    <li><a href="#">Ear, nose and throat</a></li>
+                    <li><a href="#">Head and neck</a></li>
+                    <li><a href="#">Injuries</a></li>
+                    <li><a href="#">Mental health</a></li>
+                </ul>
+            </div>
+            <div class="column-right">
+                <ul>
+                    <li><a href="#">Pains</a></li>
+                    <li><a href="#">Pregnancy</a></li>
+                    <li><a href="#">Sexual health</a></li>
+                    <li><a href="#">Skin problems</a></li>
+                    <li><a href="#">General health</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+    <section class="feedback-section">
+
+        <!--[if lte IE 8]>
+            <style>
+                .feedback-container {
+                    color: black;
+                }
+
+            </style>
+        <![endif]-->
+
+        <div class="feedback-wrapper">
+            <div class="feedback-container feedback-container--open">
+                <div class="feedback-banner">
+                    <a href="#FeedbackForm" class="feedback-dismiss"></a>
+                    <form id="FeedbackForm" action="/Feedback/SubmitFeedback">
+                        <div id="FeedbackDetails">
+                            <h3 class="feedback-message feedback-title">
+                                Help us improve 111 online
+                            </h3>
+                            <p class="feedback-message">
+                                If you'd like to give your views on helping us improve 111 online, please use the form below.
+                            </p>
+                            <div class="feedback-form">
+                                <textarea Value="" class="feedback-input" cols="20" id="Text" maxlength="8000" name="Text" placeholder="Feedback" rows="2"></textarea>
+                                <a class="feedback-btn feedback-submit" id="btnFeedback" onclick="SubmitFeedback(this);">Submit</a>
+                            </div>
+                        </div>
+                        <input id="UserId" name="UserId" type="hidden" value="" />
+                        <input id="PageId" name="PageId" type="hidden" value="/JustToBeSafe/JustToBeSafeFirstPW519MaleAdult" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+
+            $('.feedback-dismiss').click(function () {
+                $('.feedback-wrapper').slideToggle();
+            });
+
+            $('.feedback-input').focus(function () {
+                $(this).animate({
+                    //width: "70%",
+                    //height: "70%"
+                });
+            });
+
+            $(document).ready(function () {
+                var $userId = $("#FeedbackForm #UserId");
+                $userId.val($.cookie("userId"));
+            });
+
+            $("#Text").keypress(function (event) {
+                var keycode = (event.keyCode ? event.keyCode : event.which);
+                var RETURNKEY = 13;
+                if (keycode === RETURNKEY) {
+                    $("#btnFeedback").click();
+                    return false;
+                }
+            });
+
+            function SubmitFeedback(btnClicked) {
+                if ($("#Text").val() !== "") {
+                    var $form = $(btnClicked).parents("form");
+                    $form[0][0].value = $('<div/>').text($form[0][0].value).html();
+                    var detailsDiv = $("#FeedbackDetails");
+                    $(detailsDiv).slideToggle(600);
+                    $.ajax({
+                        type: "POST",
+                        url: $form.attr("action"),
+                        data: $form.serialize(),
+                        error: function (xhr, status, error) {
+                            alert(error);
+                            $(detailsDiv).slideToggle(600);
+                            //do something about the error
+                        },
+                        success: function (response) {
+                            $(detailsDiv).html('<p>' + response.Message + '</p>');
+                            $(detailsDiv).slideToggle(600);
+                        }
+                    });
+                    return false;
+                }
+            }
+        </script>
+
+    </section>
+    <footer id="footer" role="contentinfo">
+        <div class="footer-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="/Help/Cookies" target="_blank">Cookies</a></li>
+                    <li><a href="/Help/Privacy" target="_blank">Privacy statement</a></li>
+                </ul>
+            </nav>
+            <div class="text">
+                <p>
+                    <small>
+                        &copy; Crown copyright<br>
+                        Content available under <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>, except where otherwise stated.
+                    </small>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="global-app-error" class="app-error hidden"></div>
+</body>
+</html>
