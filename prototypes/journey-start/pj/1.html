@@ -1,0 +1,279 @@
+﻿
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+
+    <!-- css -->
+    <link href="http://nhsalpha.herokuapp.com/public/stylesheets/govuk-template.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
+    <link href="Content/css_NhsUK/application.css" media="all" rel="stylesheet" type="text/css" />
+
+    <!-- Javascript -->
+    <script src="scripts/vendor/modernizr-custom.js"></script>
+    <!--[if lt IE 9]>
+     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <![endif]-->
+
+    <script src="scripts/jquery2.1.1.min.js"></script>
+
+    <script src="Scripts/jquery1.11.2-ui.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/jquery.cookie.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var $sessionId = $("#SessionId");
+            if ($sessionId) $sessionId.val($.cookie("userId"));
+        });
+
+        $(function () {
+            var userId = $.cookie("userId");
+            if (!userId) $.cookie("userId", 'ca189c56-5468-4f08-9d47-953f95c5a0c6', { path: '/' });
+        });
+    </script>
+
+    <script>
+        var pageId = 'PW519.0';
+        dataLayer = [
+        {
+            'virtualPageUrl': document.location.pathname + '/' + pageId,
+            'virtualPageTitle': 'As well as the abdominal pain, do you have any of the following?'
+        }];
+    </script>
+
+</head>
+<body class="">
+
+
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <div id="skiplink-container">
+        <div>
+            <a href="#content" class="skiplink">Skip to main content</a>
+        </div>
+    </div>
+    <header role="banner" id="global-header">
+        <div class="header-container">
+            <a href="index.html" class="header-logo" title="Go to the NHS.UK homepage">
+                <img src="content/images/nhs-rev-logotype.jpg" alt="" />
+
+            </a>
+            <div class="header-title">
+                111 Online <strong class="phase-tag beta"></strong>
+            </div>
+        </div>
+    </header>
+
+    <!--end header-->
+
+
+    <section class="outer-section"></section>
+
+    <main id="content" role="main">
+
+
+        <link href="content/css_NhsUk/question.css?3.0.0.0" media="screen" rel="stylesheet" type="text/css" />
+
+
+        <div style="background-color: #f2dede; color: #a94442; padding: 20px;">
+            <h2 class="question-header" style="margin: 0;">
+                Before we start, we need to be sure you don't have a serious condition that requires an ambulance.
+            </h2>
+
+            <p>Do you, or the person you're enquiring about, have <strong>any</strong> of these?</p>
+            <ul class="list-conditions" id="disclaimerHelp" style="margin-bottom: 0;">
+
+                <li class="firstChild" id="chestPain">
+                    <a href="#">central crushing <span class="green">chest pain</span></a>
+                    <p class="helper" style="display: block;">
+                        A feeling of crushing pressure like a heavy weight pushing down on your chest.
+                    </p>
+                </li>
+
+                <li id="stroke">
+                    <a href="#">you think you're <span class="green">having a stroke</span> </a>
+                    <p class="helper" style="display: none;">
+                        Signs of a stroke include being unable to raise both arms and keep them there, difficulty speaking or a lopsided face.
+                    </p>
+                </li>
+
+                <li id="chocking">
+                    <a href="#">severe <span class="green">difficulty breathing</span>, choking or turning blue </a>
+                    <p class="helper" style="display: none;">
+                        This means you are unable to finish a sentence without stopping several times to take a breath. You may be gasping, wheezing or putting a lot of effort into breathing.
+                    </p>
+                </li>
+
+                <li id="bleeding">
+                    <a href="#"><span class="green">bleeding</span> very heavily </a>
+                    <p class="helper" style="display: none;">
+                        This means heavy bleeding that is continuing despite attempts to stop it.
+                    </p>
+                </li>
+
+                <li id="injury">
+                    <a href="#">a <span class="green">severe injury</span> </a>
+                    <p class="helper" style="display: none;">
+                        This includes deep wounds, or injuries caused by falls, assault or road traffic accidents and will require an immediate medical assessment.
+                    </p>
+                </li>
+
+                <li class="lastChild" id="seizure">
+                    <a href="#">The person you're enquiring about is <span class="green">unconscious</span> or having a <span class="green">seizure (fit)</span></a>
+                    <p class="helper" style="display: none;">
+                        Unconscious - Not awake and totally unaware of what is going on around you. As if you are asleep, but with no response if someone tries to wake you.<br><br>
+
+                        Seizure - Uncontrolled electrical activity in the brain, which can lead to loss of consciousness and/or loss of bladder and bowel control. Seizures are often known as fits.
+                    </p>
+                </li>
+                <button class="button" style="background-color: #a94442; color: #f2dede" id="nextScreen" type="submit" name="Question" value="Question">Call 999</button>
+            </ul>
+        </div>
+
+        <div style="background-color: #dff0d8; color: #3c763d; padding: 20px; margin-top: 20px;">
+            <h2 class="question-header" style="margin: 0;">
+                None of the above?
+            </h2>
+
+            <p>We need to know which symptom is giving the most concern.</p>
+            <p>Let us know your age and sex (or the age and sex of the person you're enquiring about) and we will give you a list of symptoms to get started</p>
+            <form action="2.html" method="get">
+                <h3>Gender</h3>
+                <div id="answers">
+                    <p class="answer">
+                        <label for="Vomitingonly"><input name="SelectedAnswer" type="radio" id="Vomitingonly" /><span class="answer-text">Male</span></label>
+                    </p>
+                    <p class="answer">
+                        <label for="Diarrhoeaonly"><input name="SelectedAnswer" type="radio" id="Diarrhoeaonly" /><span class="answer-text">Female</span></label>
+                    </p>
+                </div>
+                <h3>Age</h3>
+                <div id="answers">
+                    <p class="answer">
+                        <label for="Vomitingonly"><input name="SelectedAnswer" type="radio" id="Vomitingonly" /><span class="answer-text">Infant (&lt;1)</span></label>
+                    </p>
+                    <p class="answer">
+                        <label for="Diarrhoeaonly"><input name="SelectedAnswer" type="radio" id="Diarrhoeaonly" /><span class="answer-text">Toddlar (1-4)</span></label>
+                    </p>
+                    <p class="answer">
+                        <label for="Vomitingonly"><input name="SelectedAnswer" type="radio" id="Vomitingonly" /><span class="answer-text">Child (5-15)</span></label>
+                    </p>
+                    <p class="answer">
+                        <label for="Vomitingonly"><input name="SelectedAnswer" type="radio" id="Vomitingonly" /><span class="answer-text">Adult (16+)</span></label>
+                    </p>
+                </div>
+                <button class="button button-next" id="nextScreen" type="submit" name="Question" value="Question">Next</button>
+            </form>
+        </div>
+    </main>
+    <section class="feedback-section">
+
+        <!--[if lte IE 8]>
+            <style>
+                .feedback-container {
+                    color: black;
+                }
+
+            </style>
+        <![endif]-->
+
+        <div class="feedback-wrapper">
+            <div class="feedback-container feedback-container--open">
+                <div class="feedback-banner">
+                    <a href="#FeedbackForm" class="feedback-dismiss"></a>
+                    <form id="FeedbackForm" action="/Feedback/SubmitFeedback">
+                        <div id="FeedbackDetails">
+                            <h3 class="feedback-message feedback-title">
+                                Help us improve 111 online
+                            </h3>
+                            <p class="feedback-message">
+                                If you'd like to give your views on helping us improve 111 online, please use the form below.
+                            </p>
+                            <div class="feedback-form">
+                                <textarea Value="" class="feedback-input" cols="20" id="Text" maxlength="8000" name="Text" placeholder="Feedback" rows="2"></textarea>
+                                <a class="feedback-btn feedback-submit" id="btnFeedback" onclick="SubmitFeedback(this);">Submit</a>
+                            </div>
+                        </div>
+                        <input id="UserId" name="UserId" type="hidden" value="" />
+                        <input id="PageId" name="PageId" type="hidden" value="/JustToBeSafe/JustToBeSafeFirstPW519MaleAdult" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+
+            $('.feedback-dismiss').click(function () {
+                $('.feedback-wrapper').slideToggle();
+            });
+
+            $('.feedback-input').focus(function () {
+                $(this).animate({
+                    //width: "70%",
+                    //height: "70%"
+                });
+            });
+
+            $(document).ready(function () {
+                var $userId = $("#FeedbackForm #UserId");
+                $userId.val($.cookie("userId"));
+            });
+
+            $("#Text").keypress(function (event) {
+                var keycode = (event.keyCode ? event.keyCode : event.which);
+                var RETURNKEY = 13;
+                if (keycode === RETURNKEY) {
+                    $("#btnFeedback").click();
+                    return false;
+                }
+            });
+
+            function SubmitFeedback(btnClicked) {
+                if ($("#Text").val() !== "") {
+                    var $form = $(btnClicked).parents("form");
+                    $form[0][0].value = $('<div/>').text($form[0][0].value).html();
+                    var detailsDiv = $("#FeedbackDetails");
+                    $(detailsDiv).slideToggle(600);
+                    $.ajax({
+                        type: "POST",
+                        url: $form.attr("action"),
+                        data: $form.serialize(),
+                        error: function (xhr, status, error) {
+                            alert(error);
+                            $(detailsDiv).slideToggle(600);
+                            //do something about the error
+                        },
+                        success: function (response) {
+                            $(detailsDiv).html('<p>' + response.Message + '</p>');
+                            $(detailsDiv).slideToggle(600);
+                        }
+                    });
+                    return false;
+                }
+            }
+        </script>
+
+    </section>
+    <footer id="footer" role="contentinfo">
+        <div class="footer-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="/Help/Cookies" target="_blank">Cookies</a></li>
+                    <li><a href="/Help/Privacy" target="_blank">Privacy statement</a></li>
+                </ul>
+            </nav>
+            <div class="text">
+                <p>
+                    <small>
+                        &copy; Crown copyright<br>
+                        Content available under <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>, except where otherwise stated.
+                    </small>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="global-app-error" class="app-error hidden"></div>
+</body>
+</html>
