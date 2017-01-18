@@ -121,7 +121,7 @@
                     type: "GET",
                     success: function (data, textStatus, jqXHR) {
                         data = $.parseJSON(data);
-                        if (data.length > 0) {
+                        if (data.length > 0 && data.length < ALL_PATHWAYS) {
                             $.each(data, function (i, item) {
                                 $SymptomsResultsContainer.append('<div><a href="#">' + item.group + "</a></div>");
                             });
