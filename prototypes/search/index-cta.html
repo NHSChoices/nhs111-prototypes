@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html lang="" class="">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NHS 111 Digital</title>
+    <!-- css -->
+    <link href="./index_files/govuk-template.css" media="all" rel="stylesheet" type="text/css">
+    <link href="./index_files/application.css" media="all" rel="stylesheet" type="text/css">
+    <!-- Javascript -->
+    <script src="./index_files/modernizr-custom.js.download"></script>
+    <!--[if lt IE 9]>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <![endif]-->
+    <script src="./index_files/jquery2.1.1.min.js.download"></script>
+    <script src="./index_files/jquery1.11.2-ui.min.js.download"></script>
+    <script src="./index_files/bootstrap.min.js.download"></script>
+    <script src="./index_files/jquery.cookie.js.download"></script>
+    <script src="./index_files/jquery.validate.min.js.download"></script>
+    <script src="./index_files/jquery.validate.unobtrusive.min.js.download"></script>
+    <script src="./index_files/jquery.ns-autogrow.min.js.download"></script>
+
+    <!--<script src="~/scripts/jquery2.1.1.min.js"></script> included on layout page -->
+    <script src="./index_files/jquery1.11.2-ui.min.js(1).download"></script>
+    <script src="./index_files/jquery.blockUI.js.download"></script>
+    <script src="./index_files/disclaimer.js.download"></script>
+</head>
+<body class="js-enabled">
+    <header role="banner" id="global-header">
+        <div class="header-container">
+            <a href="http://nhs111-web-beta-integration.azurewebsites.net/" class="header-logo" title="Go to the NHS 111 homepage">
+                <img src="./index_files/nhs-rev-logotype.jpg" alt="">
+            </a>
+            <div class="header-title">
+                111 <strong class="phase-tag beta"></strong>
+            </div>
+        </div>
+    </header>
+
+    <section class="outer-section"></section>
+    <main id="content" role="main">
+
+        <link href="./index_files/search.css" media="screen" rel="stylesheet" type="text/css">
+
+        <div id="search">
+
+            <div id="wrapper">
+                <div class="content-container">
+                    <div class="search">
+                        <div class="symptoms-find-header">
+                            <h2>Search for your symptom</h2>
+                        </div>
+                        <div class="symptoms-find-container">
+                            <div class="symptoms-search">
+                                <label for="searchTags">
+                                    <input type="text" class="input-symptoms ui-autocomplete-input" id="searchTags" autocomplete="off" name="searchTags">
+                                </label>
+
+                                <input type="submit" class="button button-get-started go" value="Go" id="submitSearch">
+                            </div>
+                        </div>
+                    </div>
+                    <!--content end-->
+                    <div class="search-results">
+                        <div class="symptoms-results-header">
+                            <h3>Search results for '<span id="search-term"></span>'</h3>
+                        </div>
+                        <div class="symptoms-no-results-header">
+                            <h3>No results found for '<span id="search-term-no"></span>'</h3>
+                        </div>
+                        <div class="symptoms-results-container" id="symptoms-results-container">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--wrapper ends-->
+
+            <script>
+
+            </script>
+        </div>
+    </main>
+    <section class="feedback-section">
+        <div class="feedback-wrapper">
+            <div class="feedback-container feedback-container--open">
+                <div class="feedback-banner">
+                    <a href="#FeedbackForm" class="feedback-dismiss"></a>
+                    <!--<form id="FeedbackForm" action="" novalidate="novalidate">-->
+                    <div id="FeedbackDetails">
+
+                        <p class="feedback-message">
+                            Tell us if this page isn't clear
+                        </p>
+                        <div class="feedback-form">
+                            <textarea value="" class="feedback-input" cols="20" id="Text" maxlength="8000" name="Text" placeholder="Feedback" rows="2" style="height: 48px;"></textarea>
+                            <a class="feedback-btn feedback-submit button-next" id="btnFeedback" onclick="SubmitFeedback(this);">Send feedback</a>
+                        </div>
+                    </div>
+                    <input id="UserId" name="UserId" type="hidden" value="">
+                    <input id="PageId" name="PageId" type="hidden" value="/Question/Search">
+                    <!--</form>-->
+                </div>
+            </div>
+        </div>
+        <script>
+
+
+
+            $('#submitSearch').click(function () {
+                var ALL_PATHWAYS = 172;
+                var $SymptomsResultsContainer = $("#symptoms-results-container");
+                var $SearchTags = $("#searchTags");
+
+                $("#search-term").text($SearchTags.val());
+                $("#search-term-no").text($SearchTags.val());
+                $SymptomsResultsContainer.empty()
+                $.ajax({
+                    url: 'http://nhs111-business-api-integration.azurewebsites.net/pathway_suggest/' + $SearchTags.val() + '/true/Male/41',
+                    type: "GET",
+                    success: function (data, textStatus, jqXHR) {
+                        data = $.parseJSON(data);
+                        if (data.length > 0) {
+                            $.each(data, function (i, item) {
+                                $SymptomsResultsContainer.append('<div><a href="#">' + item.group + "</a></div>");
+                            });
+                            $(".symptoms-no-results-header").hide();
+                            $(".symptoms-results-header").show();
+                        }
+                        else {
+                            $(".symptoms-results-header").hide();
+                            $(".symptoms-no-results-header").show();
+                        }
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        $(".symptoms-results-header").hide();
+                        $(".symptoms-no-results-header").show();
+                    }
+                });
+            });
+
+            $('.feedback-input').focus(function () {
+                $(this).animate({
+                    //width: "70%",
+                    //height: "70%"
+                });
+            });
+
+            $(document).ready(function () {
+                var $userId = $("#FeedbackForm #UserId");
+                $userId.val($.cookie("userId"));
+                $('.feedback-input').autogrow({ vertical: true, horizontal: false });
+
+            });
+
+
+            function SubmitFeedback(btnClicked) {
+                if ($("#Text").val() !== "") {
+                    var $form = $(btnClicked).parents("form");
+                    $form[0][0].value = $('<div/>').text($form[0][0].value).html();
+                    var detailsDiv = $("#FeedbackDetails");
+                    $(detailsDiv).slideToggle(600);
+                    $.ajax({
+                        type: "POST",
+                        url: $form.attr("action"),
+                        data: $form.serialize(),
+                        error: function (xhr, status, error) {
+                            alert(error);
+                            $(detailsDiv).slideToggle(600);
+                            //do something about the error
+                        },
+                        success: function (response) {
+                            $(detailsDiv).html('<p>' + response.Message + '</p>');
+                            $(detailsDiv).slideToggle(600);
+                        }
+                    });
+                    return false;
+                }
+            }
+
+
+        </script>
+    </section>
+    <footer id="footer" role="contentinfo">
+        <div class="footer-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="#" target="_blank">Terms and conditions</a></li>
+                    <li><a href="#" target="_blank">Privacy statement</a></li>
+                    <li><a href="#" target="_blank">Cookies</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <div id="global-app-error" class="app-error hidden"></div>
+</body>
+</html>

@@ -45,6 +45,21 @@ a.linkButton {
     .symptoms-find-header h2 {
         margin: 30px 0;
     }
+    .symptoms-results-header {
+        display: none;
+    }
+    .symptoms-no-results-header {
+        display: none;
+    }
+    .symptoms-results-header h3 {
+        font-size: 1.2em;
+    }
+    .symptoms-no-results-header h3 {
+        font-size: 1.2em;
+    }
+    .symptoms-results-container div {
+        margin: 5px 0;
+    }
 
 .common-symptoms {
     background-color: #e4f1f9;
