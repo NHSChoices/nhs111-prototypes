@@ -58,7 +58,13 @@ a.linkButton {
         font-size: 1.2em;
     }
     .symptoms-results-container div {
-        margin: 5px 0;
+        margin: 5px 0 25px 0;
+    }
+	.symptoms-results-container div a {
+        font-size: 1.8rem;
+    }
+	.symptoms-results-container div p {
+        font-size: 1.6rem;
     }
 
 .common-symptoms {
