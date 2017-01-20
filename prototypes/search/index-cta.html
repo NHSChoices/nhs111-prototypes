@@ -117,13 +117,12 @@
                 $("#search-term-no").text($SearchTags.val());
                 $SymptomsResultsContainer.empty()
                 $.ajax({
-                    url: 'http://nhs111-business-api-integration.azurewebsites.net/pathway_suggest/' + $SearchTags.val() + '/true/Male/41',
+                    url: 'http://nhs111-business-api-integration.azurewebsites.net/pathwaysearch/' + $SearchTags.val(),
                     type: "GET",
                     success: function (data, textStatus, jqXHR) {
-                        data = $.parseJSON(data);
                         if (data.length > 0 && data.length < ALL_PATHWAYS) {
                             $.each(data, function (i, item) {
-                                $SymptomsResultsContainer.append('<div><a href="#">' + item.group + "</a></div>");
+                                $SymptomsResultsContainer.append('<div><a href="#">' + item.Title + "</a><p>" + item.Description + "</p></div>");
                             });
                             $(".symptoms-no-results-header").hide();
                             $(".symptoms-results-header").show();
