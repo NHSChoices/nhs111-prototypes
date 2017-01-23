@@ -1,256 +1,238 @@
-﻿<!DOCTYPE html>
-<html lang="" class="">
+﻿
+<!DOCTYPE html>
+<html lang="">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>NHS 111 Digital</title>
+
     <!-- css -->
-    <link href="./index_files/govuk-template.css" media="all" rel="stylesheet" type="text/css">
-    <link href="./index_files/application.css" media="all" rel="stylesheet" type="text/css">
+    <link href="./index_files/govuk-template.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
+    <link href="./index_files/application.css" media="all" rel="stylesheet" type="text/css" />
+
     <!-- Javascript -->
     <script src="./index_files/modernizr-custom.js"></script>
     <!--[if lt IE 9]>
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <![endif]-->
+
     <script src="./index_files/jquery2.1.1.min.js"></script>
+
     <script src="./index_files/jquery1.11.2-ui.min.js"></script>
     <script src="./index_files/bootstrap.min.js"></script>
     <script src="./index_files/jquery.cookie.js"></script>
-    <script src="./index_files/jquery.validate.min.js"></script>
-    <script src="./index_files/jquery.validate.unobtrusive.min.js"></script>
-    <script src="./index_files/jquery.ns-autogrow.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/mvc/5.1/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ns-autogrow/1.1.6/jquery.ns-autogrow.min.js"></script>
 
-    <!--<script src="~/scripts/jquery2.1.1.min.js"></script> included on layout page -->
-    <script src="./index_files/jquery1.11.2-ui.min.js(1)"></script>
-    <script src="./index_files/jquery.blockUI.js"></script>
-    <script src="./index_files/custom.js"></script>
-    <script src="./index_files/disclaimer.js"></script>
+
 </head>
-<body class="js-enabled">
-<header role="banner" id="global-header">
-    <div class="header-container">
-        <a href="http://nhs111-web-beta-integration.azurewebsites.net/" class="header-logo" title="Go to the NHS 111 homepage">
-            <img src="./index_files/nhs-rev-logotype.jpg" alt="">
-        </a>
-        <div class="header-title">
-            111 <strong class="phase-tag beta"></strong>
+<body class="">
+
+
+
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <div id="skiplink-container">
+        <div>
+            <a href="#content" class="skiplink">Skip to main content</a>
         </div>
     </div>
-</header>
+    <header role="banner" id="global-header">
+        <div class="header-container">
+            <a href="/" class="header-logo" title="Go to the NHS 111 homepage">
+                <img src="./index_files/nhs-rev-logotype.jpg" alt="" />
 
-<section class="outer-section"></section>
+            </a>
+            <div class="header-title">
+                111 <strong class="phase-tag beta"></strong>
+            </div>
+        </div>
+    </header>
+
+    <!--end header-->
+
+
+    <section class="outer-section"></section>
+
     <main id="content" role="main">
 
-        <link href="./index_files/search.css" media="screen" rel="stylesheet" type="text/css">
 
-        <div id="search">
 
-            <div id="wrapper">
-                <div class="content-container">
-                    <div>
-                        <form action="" method="post" novalidate="novalidate">
-                            <div class="symptoms-find-header">
-                                <h2>What's your worst symptom?</h2>
-                            </div>
-                            <div class="symptoms-find-container">
-                                <div class="symptoms-search">
-                                    <label for="searchTags" class="symptoms-label">
-                                        <input type="text" class="input-symptoms ui-autocomplete-input" id="searchTags" autocomplete="off" name="searchTags">
-                                    </label>
-                                </div>
-                            </div>
 
-                        </form>
-                    </div>
+        <link href="./index_files/gender.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="./index_files/question.css?3.0.0.0" media="screen" rel="stylesheet" type="text/css" />
 
-                    <div class="search-panel">
+        <form action="search.html" id="outerContent" method="get">
 
-                        <div class="no-results">
-                            <h3 class="red">No topics found</h3>
-                        </div>
+            <h2 class="heading-small">Sex</h2>
+            <div id="answers">
+                <label for="Male" class="answer answer-label">
+                    <span class="answer-radio">
+                        <input id="Male" name="Gender" type="radio" value="Male" />
+                    </span>
+                    <span class="answer-text">Male</span>
+                </label>
+                <label for="Female" class="answer answer-label">
+                    <span class="answer-radio">
+                        <input id="Female" name="Gender" type="radio" value="Female" />
+                    </span>
+                    <span class="answer-text">Female</span>
+                </label>
+            </div>
 
-                        <div class="common">
-                            <h3>Popular topics</h3>
-                            <ul>
-                                <li><input type="submit" class="popularTopic linkButton" value="Abdominal pain" id="PW519"></li>
-                                <li><input type="submit" class="popularTopic linkButton" value="Cold or flu symptoms" id="PW1042"></li>
-                                <li><input type="submit" class="popularTopic linkButton" value="Diarrhoea and vomiting" id="PW1555"></li>
-                                <li><input type="submit" class="popularTopic linkButton" value="Headache" id="PW755"></li>
-                                <li><input type="submit" class="popularTopic linkButton" value="Mental health problems" id="PW1751,PW1751,PW1751,PW1751"></li>
-                                <li><input type="submit" class="popularTopic linkButton" value="Rash or skin problems" id="PW1771"></li>
-                                <li><input type="submit" class="popularTopic linkButton" value="Sexual concerns" id="PW1685"></li>
-                            </ul>
-
-                        </div>
-
-                        <div class="search-results">
-                            <h3></h3>
-
-                            <ul>
-                            </ul>
-                        </div>
-
-                    </div>
+            <div class="age-content">
+                <h2 class="heading-small">Age in years</h2>
+                <div>
+                    <span class="field-validation-valid" data-valmsg-for="Age" data-valmsg-replace="false">Sorry, this service is not available for children under 5 years of age, for medical advice please call 111.</span>
                 </div>
-                <!--content end-->
+                <div class="age">
+                    <span id="errmsg"></span>
+                    <input class="form-control input-age" data-val="true" data-val-age="Age restriction violated" data-val-age-prefixelement="Age" data-val-number="The field Age must be a number." data-val-required="&#39;Age&#39; must not be empty." id="Age" maxlength="3" name="Age" size="3" type="number" value="" />
+                </div>
             </div>
 
-        </div>
-        <!--wrapper ends-->
 
+
+            <script type="text/javascript">
+
+    // copyright 1999 Idocs, Inc. http://www.idocs.com
+    // Distribute this script freely but keep this notice in place
+    function numbersonly(myfield, e, dec) {
+        var key;
+        var keychar;
+
+        if (window.event)
+            key = window.event.keyCode;
+        else if (e)
+            key = e.which;
+        else
+            return true;
+        keychar = String.fromCharCode(key);
+
+        // control keys
+        if ((key == null) || (key == 0) || (key == 8) ||
+        (key == 9) || (key == 13) || (key == 27))
+            return true;
+// numbers
+        else if ((("0123456789").indexOf(keychar) > -1))
+            return true;
+// decimal point jump
+        else if (dec && (keychar == ".")) {
+            myfield.form.elements[dec].focus();
+            return false;
+        } else
+            return false;
+    }
+
+            </script>
+
+            <div class="worsening-advice-icon">
+                <p>If you're worried that a child or adult has been deliberately harmed, call 111 to talk to someone.</p>
+            </div>
+            <hr />
+            <input class="button button-next" id="submitGender" type="submit" name="Slider" value="Next" />
+        </form>
     </main>
-<section class="feedback-section">
-    <div class="feedback-wrapper">
-        <div class="feedback-container feedback-container--open">
-            <div class="feedback-banner">
-                <a href="#FeedbackForm" class="feedback-dismiss"></a>
-                <form id="FeedbackForm" action="" novalidate="novalidate">
-                    <div id="FeedbackDetails">
+    <section class="feedback-section">
 
-                        <p class="feedback-message">
-                            Tell us if this page isn't clear
-                        </p>
-                        <div class="feedback-form">
-                            <textarea value="" class="feedback-input" cols="20" id="Text" maxlength="8000" name="Text" placeholder="Feedback" rows="2" style="height: 48px;"></textarea>
-                            <a class="feedback-btn feedback-submit button-next" id="btnFeedback" onclick="SubmitFeedback(this);">Send feedback</a>
+        <!--[if lte IE 8]>
+            <style>
+                .feedback-container {
+                    color: black;
+                }
+
+            </style>
+        <![endif]-->
+
+        <div class="feedback-wrapper">
+            <div class="feedback-container feedback-container--open">
+                <div class="feedback-banner">
+                    <a href="#FeedbackForm" class="feedback-dismiss"></a>
+                    <form id="FeedbackForm" action="/Feedback/SubmitFeedback">
+                        <div id="FeedbackDetails">
+
+                            <p class="feedback-message">
+                                Tell us if this page isn't clear
+                            </p>
+                            <div class="feedback-form">
+                                <textarea Value="" class="feedback-input" cols="20" id="Text" maxlength="8000" name="Text" placeholder="Feedback" rows="2"></textarea>
+                                <a class="feedback-btn feedback-submit button-next" id="btnFeedback" onclick="SubmitFeedback(this);">Send feedback</a>
+                            </div>
                         </div>
-                    </div>
-                    <input id="UserId" name="UserId" type="hidden" value="">
-                    <input id="PageId" name="PageId" type="hidden" value="/Question/Search">
-                </form>
+                        <input id="UserId" name="UserId" type="hidden" value="" />
+                        <input id="PageId" name="PageId" type="hidden" value="/Question/InitialQuestion" />
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-    <script>
+        <script>
 
-        $('.feedback-dismiss').click(function() {
-            $('.feedback-wrapper').slideToggle();
+    $('.feedback-dismiss').click(function () {
+        $('.feedback-wrapper').slideToggle();
+    });
+
+    $('.feedback-input').focus(function () {
+        $(this).animate({
+            //width: "70%",
+            //height: "70%"
         });
+    });
 
-        $('.feedback-input').focus(function() {
-            $(this).animate({
-                //width: "70%",
-                //height: "70%"
-                
-            });
-        });
-        var searchIcon = $("<div class='searching-icon'>&nbsp;&nbsp;<img src='index_files/animatedCircle.gif' /><br />Searching...</div>");
+    $(document).ready(function () {
+        var $userId = $("#FeedbackForm #UserId");
+        $userId.val($.cookie("userId"));
+        $('.feedback-input').autogrow({ vertical: true, horizontal: false });
 
-        function performSearch() {
-            var ALL_PATHWAYS = 172;
+    });
+
+
+    function SubmitFeedback(btnClicked) {
+        if ($("#Text").val() !== "") {
+            var $form = $(btnClicked).parents("form");
+            $form[0][0].value = $('<div/>').text($form[0][0].value).html();
+            var detailsDiv = $("#FeedbackDetails");
+            $(detailsDiv).slideToggle(600);
             $.ajax({
-                url: 'http://nhs111-business-api-integration.azurewebsites.net/pathway_suggest/' + $("#searchTags").val() + '/true/Male/41',
-                type: "GET",
-                dataType: "json",
-                data: { input: $("#searchTags").val(), gender: 'Male', age: 35 },
-                success: function (data) {
-                    if (data.length > 0 && data.length != ALL_PATHWAYS) {
-                        $(".search-results ul").empty();
-                        $(".search-results h3").text(data.length + " topics found matching '" + $("#searchTags").val() + "'");
-                        for (var i = 0; i < data.length; i++) {
-                            var topic = data[i];
-                            var li = $("<li><input type='submit' class='linkButton' value='" + topic.group + "' id='PW1042'><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></li>");
-                            $(".search-results ul").append(li);
-                            $(".search-results").show();
-                        }
-                    } else {
-                        showNothingFound();
-                    }
+                type: "POST",
+                url: $form.attr("action"),
+                data: $form.serialize(),
+                error: function (xhr, status, error) {
+                    alert(error);
+                    $(detailsDiv).slideToggle(600);
+                    //do something about the error
                 },
-                error: function (textStatus, errorThrown) {
-                    return null;
+                success: function (response) {
+                    $(detailsDiv).html('<p>' + response.Message + '</p>');
+                    $(detailsDiv).slideToggle(600);
                 }
             });
-        };
-
-        function showNothingFound() {
-            searchIcon.remove();
-            $(".search-results").hide();
-            $('.common').show();
-            $(".no-results").show();
-            $(".no-results h3").text("No topics found matching '" + $("#searchTags").val() + "'");
-
+            return false;
         }
-
-        function startSearching() {
-            $(".no-results").hide();
-            $(".search-results").hide();
-            $('.common').hide();
-            if (!$(".searching-icon").length) {
-                $('.search-panel').append(searchIcon);
-            }
-            window.setTimeout(function () {
-                if ($('#searchTags').val().length > 0) {
-                    searchIcon.remove();
-                    performSearch();
-                }}, 1000);
-
-        }
-
-        function showPopularTopics() {
-            searchIcon.remove();
-            $('.common').show();
-            $(".search-results").hide();
-            $(".no-results").hide();
-        }
-
-        $(document).ready(function () {
-            showPopularTopics();
-            var $userId = $("#FeedbackForm #UserId");
-            $userId.val($.cookie("userId"));
-            $('.feedback-input').autogrow({ vertical: true, horizontal: false });
-            $("#searchTags").focus();
-            $('#searchTags').on('input', function () {
-                if ($('#searchTags').val().length > 0) {
-                        startSearching();
-                } else {
-                    showPopularTopics();
-                }
-
-            });
-
-        });
+    }
 
 
-        function SubmitFeedback(btnClicked) {
-            if ($("#Text").val() !== "") {
-                var $form = $(btnClicked).parents("form");
-                $form[0][0].value = $('<div/>').text($form[0][0].value).html();
-                var detailsDiv = $("#FeedbackDetails");
-                $(detailsDiv).slideToggle(600);
-                $.ajax({
-                    type: "POST",
-                    url: $form.attr("action"),
-                    data: $form.serialize(),
-                    error: function(xhr, status, error) {
-                        alert(error);
-                        $(detailsDiv).slideToggle(600);
-                        //do something about the error
-                    },
-                    success: function(response) {
-                        $(detailsDiv).html('<p>' + response.Message + '</p>');
-                        $(detailsDiv).slideToggle(600);
-                    }
-                });
-                return false;
-            }
-        }
+        </script>
 
+    </section>
+    <footer id="footer" role="contentinfo">
+        <div class="footer-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="/Help/Terms" target="_blank">Terms and conditions</a></li>
+                    <li><a href="/Help/Privacy" target="_blank">Privacy statement</a></li>
+                    <li><a href="/Help/Cookies" target="_blank">Cookies</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
 
-    </script>
-</section>
-<footer id="footer" role="contentinfo">
-    <div class="footer-wrapper">
-        <nav>
-            <ul>
-                <li><a href="#" target="_blank">Terms and conditions</a></li>
-                <li><a href="#" target="_blank">Privacy statement</a></li>
-                <li><a href="#" target="_blank">Cookies</a></li>
-            </ul>
-        </nav>
-    </div>
-</footer>
-<div id="global-app-error" class="app-error hidden"></div>
+    <div id="global-app-error" class="app-error hidden"></div>
 </body>
-
 </html>
+
