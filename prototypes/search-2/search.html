@@ -169,8 +169,12 @@
                         for (var i = 0; i < data.length; i++) {
                             var topic = data[i];
                             var desc = topic.Description;
-							desc = desc.replace(/\\n\\n/g, ". ")
-							desc = desc.replace(" . ", ". ")
+							if(desc !=null)
+							{
+								desc = desc.replace(/\\n\\n/g, ". ")
+								desc = desc.replace(" . ", ". ")
+							}
+							else desc = "";
                             var li = $("<li><input type='submit' class='linkButton' value='" + topic.Title + "' id='" + topic.PathwayNumber + "'><p>" + desc + "</p></li>");
                             $(".search-results ul").append(li);
                         }
