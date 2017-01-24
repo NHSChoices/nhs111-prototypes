@@ -1,0 +1,238 @@
+﻿
+<!DOCTYPE html>
+<html lang="">
+<head>
+
+
+
+
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>NHS 111 Digital</title>
+
+    <!-- css -->
+    <link href="./index_files/govuk-template.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
+    <link href="./index_files/application.css" media="all" rel="stylesheet" type="text/css" />
+
+    <!-- Javascript -->
+    <script src="./index_files/modernizr-custom.js"></script>
+    <!--[if lt IE 9]>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <![endif]-->
+
+    <script src="./index_files/jquery2.1.1.min.js"></script>
+
+    <script src="./index_files/jquery1.11.2-ui.min.js"></script>
+    <script src="./index_files/bootstrap.min.js"></script>
+    <script src="./index_files/jquery.cookie.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/mvc/5.1/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ns-autogrow/1.1.6/jquery.ns-autogrow.min.js"></script>
+
+
+</head>
+<body class="">
+
+
+
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <div id="skiplink-container">
+        <div>
+            <a href="#content" class="skiplink">Skip to main content</a>
+        </div>
+    </div>
+    <header role="banner" id="global-header">
+        <div class="header-container">
+            <a href="/" class="header-logo" title="Go to the NHS 111 homepage">
+                <img src="./index_files/nhs-rev-logotype.jpg" alt="" />
+
+            </a>
+            <div class="header-title">
+                111 <strong class="phase-tag beta"></strong>
+            </div>
+        </div>
+    </header>
+
+    <!--end header-->
+
+
+    <section class="outer-section"></section>
+
+    <main id="content" role="main">
+
+
+
+
+        <link href="./index_files/gender.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="./index_files/question.css?3.0.0.0" media="screen" rel="stylesheet" type="text/css" />
+
+        <form action="../index-cta.html" id="outerContent" method="get">
+
+            <h2 class="heading-small">Sex</h2>
+            <div id="answers">
+                <label for="Male" class="answer answer-label">
+                    <span class="answer-radio">
+                        <input id="Male" name="Gender" type="radio" value="Male" />
+                    </span>
+                    <span class="answer-text">Male</span>
+                </label>
+                <label for="Female" class="answer answer-label">
+                    <span class="answer-radio">
+                        <input id="Female" name="Gender" type="radio" value="Female" />
+                    </span>
+                    <span class="answer-text">Female</span>
+                </label>
+            </div>
+
+            <div class="age-content">
+                <h2 class="heading-small">Age in years</h2>
+                <div>
+                    <span class="field-validation-valid" data-valmsg-for="Age" data-valmsg-replace="false">Sorry, this service is not available for children under 5 years of age, for medical advice please call 111.</span>
+                </div>
+                <div class="age">
+                    <span id="errmsg"></span>
+                    <input class="form-control input-age" data-val="true" data-val-age="Age restriction violated" data-val-age-prefixelement="Age" data-val-number="The field Age must be a number." data-val-required="&#39;Age&#39; must not be empty." id="Age" maxlength="3" name="Age" size="3" type="number" value="" />
+                </div>
+            </div>
+
+
+
+            <script type="text/javascript">
+
+    // copyright 1999 Idocs, Inc. http://www.idocs.com
+    // Distribute this script freely but keep this notice in place
+    function numbersonly(myfield, e, dec) {
+        var key;
+        var keychar;
+
+        if (window.event)
+            key = window.event.keyCode;
+        else if (e)
+            key = e.which;
+        else
+            return true;
+        keychar = String.fromCharCode(key);
+
+        // control keys
+        if ((key == null) || (key == 0) || (key == 8) ||
+        (key == 9) || (key == 13) || (key == 27))
+            return true;
+// numbers
+        else if ((("0123456789").indexOf(keychar) > -1))
+            return true;
+// decimal point jump
+        else if (dec && (keychar == ".")) {
+            myfield.form.elements[dec].focus();
+            return false;
+        } else
+            return false;
+    }
+
+            </script>
+
+            <div class="worsening-advice-icon">
+                <p>If you're worried that a child or adult has been deliberately harmed, call 111 to talk to someone.</p>
+            </div>
+            <hr />
+            <input class="button button-next" id="submitGender" type="submit" name="Slider" value="Next" />
+        </form>
+    </main>
+    <section class="feedback-section">
+
+        <!--[if lte IE 8]>
+            <style>
+                .feedback-container {
+                    color: black;
+                }
+
+            </style>
+        <![endif]-->
+
+        <div class="feedback-wrapper">
+            <div class="feedback-container feedback-container--open">
+                <div class="feedback-banner">
+                    <a href="#FeedbackForm" class="feedback-dismiss"></a>
+                    <form id="FeedbackForm" action="/Feedback/SubmitFeedback">
+                        <div id="FeedbackDetails">
+
+                            <p class="feedback-message">
+                                Tell us if this page isn't clear
+                            </p>
+                            <div class="feedback-form">
+                                <textarea Value="" class="feedback-input" cols="20" id="Text" maxlength="8000" name="Text" placeholder="Feedback" rows="2"></textarea>
+                                <a class="feedback-btn feedback-submit button-next" id="btnFeedback" onclick="SubmitFeedback(this);">Send feedback</a>
+                            </div>
+                        </div>
+                        <input id="UserId" name="UserId" type="hidden" value="" />
+                        <input id="PageId" name="PageId" type="hidden" value="/Question/InitialQuestion" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+
+    $('.feedback-dismiss').click(function () {
+        $('.feedback-wrapper').slideToggle();
+    });
+
+    $('.feedback-input').focus(function () {
+        $(this).animate({
+            //width: "70%",
+            //height: "70%"
+        });
+    });
+
+    $(document).ready(function () {
+        var $userId = $("#FeedbackForm #UserId");
+        $userId.val($.cookie("userId"));
+        $('.feedback-input').autogrow({ vertical: true, horizontal: false });
+
+    });
+
+
+    function SubmitFeedback(btnClicked) {
+        if ($("#Text").val() !== "") {
+            var $form = $(btnClicked).parents("form");
+            $form[0][0].value = $('<div/>').text($form[0][0].value).html();
+            var detailsDiv = $("#FeedbackDetails");
+            $(detailsDiv).slideToggle(600);
+            $.ajax({
+                type: "POST",
+                url: $form.attr("action"),
+                data: $form.serialize(),
+                error: function (xhr, status, error) {
+                    alert(error);
+                    $(detailsDiv).slideToggle(600);
+                    //do something about the error
+                },
+                success: function (response) {
+                    $(detailsDiv).html('<p>' + response.Message + '</p>');
+                    $(detailsDiv).slideToggle(600);
+                }
+            });
+            return false;
+        }
+    }
+
+
+        </script>
+
+    </section>
+    <footer id="footer" role="contentinfo">
+        <div class="footer-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="/Help/Terms" target="_blank">Terms and conditions</a></li>
+                    <li><a href="/Help/Privacy" target="_blank">Privacy statement</a></li>
+                    <li><a href="/Help/Cookies" target="_blank">Cookies</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <div id="global-app-error" class="app-error hidden"></div>
+</body>
+</html>
+

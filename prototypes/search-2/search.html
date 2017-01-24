@@ -168,7 +168,8 @@
                         $(".search-results h3").text(data.length + " topics found matching '" + $("#searchTags").val() + "'");
                         for (var i = 0; i < data.length; i++) {
                             var topic = data[i];
-                            var desc = topic.Description.replace("\\n\\n", ". ");
+                            var desc = topic.Description;
+							desc = desc.replace("\\n\\n", "<br>")
                             var li = $("<li><input type='submit' class='linkButton' value='" + topic.Title + "' id='" + topic.PathwayNumber + "'><p>" + desc + "</p></li>");
                             $(".search-results ul").append(li);
                         }
