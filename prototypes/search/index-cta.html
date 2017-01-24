@@ -147,7 +147,10 @@
                     success: function (data, textStatus, jqXHR) {
                         if (data.length > 0 && data.length < ALL_PATHWAYS) {
                             $.each(data, function (i, item) {
-                                $SymptomsResultsContainer.append('<div><a href="#">' + item.Title + "</a><p>" + item.Description + "</p></div>");
+							   var desc = item.Description;
+								desc = desc.replace(/\\n\\n/g, ". ")
+								desc = desc.replace(" . ", ". ")
+                                $SymptomsResultsContainer.append('<div><a href="#">' + item.Title + "</a><p>" + desc + "</p></div>");
                             });
                             $(".symptoms-no-results-header").hide();
                             $(".symptoms-results-header").show();
