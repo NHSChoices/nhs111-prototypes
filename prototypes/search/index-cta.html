@@ -105,19 +105,44 @@
             </div>
         </div>
         <script>
-
-
-
+		 function getUrlVars() {
+						var vars = [], hash;
+						var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+						for (var i = 0; i < hashes.length; i++) {
+							hash = hashes[i].split('=');
+							vars.push(hash[0]);
+							vars[hash[0]] = hash[1];
+						}
+						return vars;
+					}
+			var vars = getUrlVars();
+			var gender = vars["Gender"];
+			var age = vars["Age"];
+  function normaliseAgeGroup(age) {
+				//0-1, 1-5, 5-16, 16
+				if (age >= 0 && age < 1)
+					return "Infant";
+				if (age >= 1 && age < 5)
+					return "Toddler";
+				if (age >= 5 && age < 16)
+					return "Child";
+				if (age >= 16)
+					return "Adult";
+			};
             $('#submitSearch').click(function () {
                 var ALL_PATHWAYS = 172;
                 var $SymptomsResultsContainer = $("#symptoms-results-container");
                 var $SearchTags = $("#searchTags");
 
+				
+			
+
+				
                 $("#search-term").text($SearchTags.val());
                 $("#search-term-no").text($SearchTags.val());
                 $SymptomsResultsContainer.empty()
                 $.ajax({
-                    url: 'http://nhs111-business-api-integration.azurewebsites.net/pathwaysearch/' + $SearchTags.val(),
+                    url: 'http://nhs111-business-api-integration.azurewebsites.net/pathwaysearch/' + gender + '/' + age + '/' + $("#searchTags").val(),
                     type: "GET",
                     success: function (data, textStatus, jqXHR) {
                         if (data.length > 0 && data.length < ALL_PATHWAYS) {
@@ -139,6 +164,11 @@
                 });
             });
 
+			
+			
+			
+			 
+
             $('.feedback-input').focus(function () {
                 $(this).animate({
                     //width: "70%",
@@ -150,6 +180,7 @@
                 var $userId = $("#FeedbackForm #UserId");
                 $userId.val($.cookie("userId"));
                 $('.feedback-input').autogrow({ vertical: true, horizontal: false });
+				age = normaliseAgeGroup(age);
 
             });
 
