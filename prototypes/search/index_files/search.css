@@ -416,3 +416,10 @@ a.category {
 span.underline {
     text-decoration: underline;
 }
+em.highlight-term {
+    color: red;
+    font-weight: bold;
+}
+em.score {
+    font-weight: bold;
+}
