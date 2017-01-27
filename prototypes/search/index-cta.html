@@ -150,7 +150,16 @@
 							   var desc = item.Description;
 								desc = desc.replace(/\\n\\n/g, ". ")
 								desc = desc.replace(" . ", ". ")
-								$SymptomsResultsContainer.append('<div><a href="#">' + item.Title + "</a><p>" + desc + "</p><p><em class='score'>" + item.Score + "</em></p></div>");
+								var title = item.Title[0];
+								var otherDescriptions = ""
+								var visible = "";
+                                if (item.Title.length > 1)
+								{
+                                    for (j = 1; j < item.Title.length; j++)
+								        otherDescriptions += item.Title[j] + "; ";
+								    visible = "show";
+								}
+								$SymptomsResultsContainer.append('<div><a href="#' + item.PathwayNo + '">' + title + "</a><p class='also-descriptions " + visible + "'>Also used for : " + otherDescriptions + "</p><p>" + desc + "</p><p><em class='score'>" + item.Score + "</em></p></div>");
                             });
                             $(".symptoms-no-results-header").hide();
                             $(".symptoms-results-header").show();
