@@ -142,7 +142,7 @@
                 $("#search-term-no").text($SearchTags.val());
                 $SymptomsResultsContainer.empty()
                 $.ajax({
-                    url: 'http://localhost:9001/pathwaysearch/' + gender + '/' + age + '/' + $("#searchTags").val() + '?highlight=true&score=true',
+                    url: 'http://nhs111-business-api-integration.azurewebsites.net/pathwaysearch/' + gender + '/' + age + '/' + $("#searchTags").val() + '?highlight=true&score=true',
                     type: "GET",
                     success: function (data, textStatus, jqXHR) {
                         if (data.length > 0 && data.length < ALL_PATHWAYS) {
