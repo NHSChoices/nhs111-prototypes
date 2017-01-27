@@ -423,3 +423,13 @@ em.highlight-term {
 em.score {
     font-weight: bold;
 }
+.also-descriptions{
+    display: none;
+    font-style: italic;
+    font-weight: bold;
+    color: #0072C6;
+    font-size: 1.2rem !important;
+}
+.also-descriptions.show{
+    display: block;
+}
