@@ -1,0 +1,252 @@
+﻿
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+
+    <!-- css -->
+    <link href="http://nhsalpha.herokuapp.com/public/stylesheets/govuk-template.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
+    <link href="Content/css_NhsUK/application.css" media="all" rel="stylesheet" type="text/css" />
+
+    <!-- Javascript -->
+    <script src="scripts/vendor/modernizr-custom.js"></script>
+    <!--[if lt IE 9]>
+     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <![endif]-->
+
+    <script src="scripts/jquery2.1.1.min.js"></script>
+
+    <script src="Scripts/jquery1.11.2-ui.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/jquery.cookie.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var $sessionId = $("#SessionId");
+            if ($sessionId) $sessionId.val($.cookie("userId"));
+        });
+
+        $(function () {
+            var userId = $.cookie("userId");
+            if (!userId) $.cookie("userId", 'ca189c56-5468-4f08-9d47-953f95c5a0c6', { path: '/' });
+        });
+    </script>
+
+    <script>
+        var pageId = 'PW519.0';
+        dataLayer = [
+        {
+            'virtualPageUrl': document.location.pathname + '/' + pageId,
+            'virtualPageTitle': 'As well as the abdominal pain, do you have any of the following?'
+        }];
+    </script>
+
+</head>
+<body class="">
+
+
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <div id="skiplink-container">
+        <div>
+            <a href="#content" class="skiplink">Skip to main content</a>
+        </div>
+    </div>
+    <header role="banner" id="global-header">
+        <div class="header-container">
+            <a href="index.html" class="header-logo" title="Go to the NHS.UK homepage">
+                <img src="content/images/nhs-rev-logotype.jpg" alt="" />
+
+            </a>
+            <div class="header-title">
+                111 Online <strong class="phase-tag beta"></strong>
+            </div>
+        </div>
+    </header>
+
+    <!--end header-->
+
+
+    <section class="outer-section"></section>
+
+    <main id="content" role="main">
+
+
+        <link href="content/css_NhsUk/question.css?3.0.0.0" media="screen" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+        <form>
+            <h2 class="question-header">Do you feel so ill that you can’t think of anything else?</h2>
+            <p style="padding-bottom:20px">For example, you feel worse than you’ve ever felt in your life and you have a feeling that something is very wrong.</p>
+            <div id="answers">
+                <p class="answer">
+                    <label for="Yes"><input name="SelectedAnswer" type="radio" value="triage2.html" id="Yes" /><span class="answer-text">Yes</span></label>
+                </p>
+
+                <p class="answer">
+                    <label for="NotSure"><input name="SelectedAnswer" type="radio" value="end.html" id="NotSure" /><span class="answer-text">Not sure</span></label>
+                </p>
+
+                <p class="answer">
+                    <label for="No"><input name="SelectedAnswer" type="radio" value="end.html" id="No" /><span class="answer-text">No</span></label>
+                </p>
+            </div>
+            <button class="button previous-question" id="previousScreen" type="submit" name="PreviousQuestion" onclick="history.back(1);">Previous</button>
+            <button class="button button-next" id="nextScreen" type="button" name="Question" value="Question">Next</button>
+        </form>
+        <script type="text/javascript">
+
+
+            $(document).ready(function () {
+                function getUrlVars() {
+                    var vars = [], hash;
+                    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+                    for (var i = 0; i < hashes.length; i++) {
+                        hash = hashes[i].split('=');
+                        vars.push(hash[0]);
+                        vars[hash[0]] = hash[1];
+                    }
+                    return vars;
+                }
+
+                $('#nextScreen[type=button]').click(function () {
+                    var answer = $("input[name='SelectedAnswer']:checked");
+                    if (answer.length > 0) {
+                        var value = answer[0].value;
+                        var domain = getUrlVars()["domain"];
+                        if (value === "end.html") {
+                            window.location.href = "http://" + domain + "/question/direct/PW1555MaleAdult/25/Diarrhoea and Vomiting/?answers=3,2,2";
+                        } else {
+                            window.location.href = value + "?domain=" + domain;
+                        }
+                    }
+                });
+
+                //enable disable submit button
+                $("#nextScreen[type=button]").attr('disabled', 'disabled');
+
+                $("form input[type=radio]").change(function () {
+                    $("button[type=button]").removeAttr('disabled');
+                });
+
+                $('.help-text-link').click(function () {
+                    var $this = $(this);
+                    //$this.preventDefault();
+
+                    var $helpTextLinkMessage = $this.parent().next('.help-text-link-message');
+                    $helpTextLinkMessage.slideToggle("fast");
+                });
+            });
+
+
+        </script>
+    </main>
+    <section class="feedback-section">
+
+        <!--[if lte IE 8]>
+            <style>
+                .feedback-container {
+                    color: black;
+                }
+
+            </style>
+        <![endif]-->
+
+        <div class="feedback-wrapper">
+            <div class="feedback-container feedback-container--open">
+                <div class="feedback-banner">
+                    <a href="#FeedbackForm" class="feedback-dismiss"></a>
+                    <form id="FeedbackForm" action="/Feedback/SubmitFeedback" novalidate="novalidate">
+                        <div id="FeedbackDetails">
+
+                            <p class="feedback-message">
+                                Tell us if this page isn't clear
+                            </p>
+                            <div class="feedback-form">
+                                <textarea value="" class="feedback-input" cols="20" id="Text" maxlength="8000" name="Text" placeholder="Feedback" rows="2" style="height: 48px;"></textarea>
+                                <a class="feedback-btn feedback-submit button-next" id="btnFeedback" onclick="SubmitFeedback(this);">Send feedback</a>
+                            </div>
+                        </div>
+                        <input id="UserId" name="UserId" type="hidden" value="">
+                        <input id="PageId" name="PageId" type="hidden" value="/Question/NavigationPW556FemaleAdult">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+
+            $('.feedback-dismiss').click(function () {
+                $('.feedback-wrapper').slideToggle();
+            });
+
+            $('.feedback-input').focus(function () {
+                $(this).animate({
+                    //width: "70%",
+                    //height: "70%"
+                });
+            });
+
+            $(document).ready(function () {
+                var $userId = $("#FeedbackForm #UserId");
+                $userId.val($.cookie("userId"));
+                $('.feedback-input').autogrow({ vertical: true, horizontal: false });
+
+            });
+
+
+            function SubmitFeedback(btnClicked) {
+                if ($("#Text").val() !== "") {
+                    var $form = $(btnClicked).parents("form");
+                    $form[0][0].value = $('<div/>').text($form[0][0].value).html();
+                    var detailsDiv = $("#FeedbackDetails");
+                    $(detailsDiv).slideToggle(600);
+                    $.ajax({
+                        type: "POST",
+                        url: $form.attr("action"),
+                        data: $form.serialize(),
+                        error: function (xhr, status, error) {
+                            alert(error);
+                            $(detailsDiv).slideToggle(600);
+                            //do something about the error
+                        },
+                        success: function (response) {
+                            $(detailsDiv).html('<p>' + response.Message + '</p>');
+                            $(detailsDiv).slideToggle(600);
+                        }
+                    });
+                    return false;
+                }
+            }
+
+
+        </script>
+
+    </section>
+    <footer id="footer" role="contentinfo">
+        <div class="footer-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="/Help/Cookies" target="_blank">Cookies</a></li>
+                    <li><a href="/Help/Privacy" target="_blank">Privacy statement</a></li>
+                </ul>
+            </nav>
+            <div class="text">
+                <p>
+                    <small>
+                        &copy; Crown copyright<br>
+                        Content available under <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>, except where otherwise stated.
+                    </small>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="global-app-error" class="app-error hidden"></div>
+</body>
+</html>
