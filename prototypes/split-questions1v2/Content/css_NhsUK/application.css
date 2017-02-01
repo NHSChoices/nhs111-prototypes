@@ -380,7 +380,7 @@ table th.numeric {
 .button-get-started {
   font-weight: normal;
   padding-right: 3rem;
-  background-image: url("/content/images/icons/icon-button-next.svg");
+  background-image: url("../images/icons/icon-button-next.svg");
   background-repeat: no-repeat;
   background-position: right 10px top 60%;
 }
@@ -388,13 +388,13 @@ table th.numeric {
 .button-next {
   font-weight: normal;
   padding-right: 5rem;
-  background-image: url("/content/images/icons/icon-button-next.svg");
+  background-image: url("../images/icons/icon-button-next.svg");
   background-repeat: no-repeat;
   background-position: 70% 60%; }
 
 .button-cancel {
   padding-right: 3rem;
-  background-image: url("/public/images/icon-button-cancel.svg");
+  background-image: url("../../images/icon-button-cancel.svg");
   background-repeat: no-repeat;
   background-position: 92% 50%;
   background-color: #9B004F;
@@ -1884,7 +1884,7 @@ label, .form-label, .form-label-bold {
 }
 
 button[type=submit].previous-question, input[type=submit].previous-question {
-    background-image: url("/content/images/icons/icon-button-prev.svg");
+    background-image: url("../images/icons/icon-button-prev.svg");
     background-repeat: no-repeat;
     background-position: left 12px top 16px;
     padding: 0 18px 10px 35px;
@@ -2065,7 +2065,7 @@ button[disabled=disabled] {
 }
 .feedback-dismiss {
     color: #ffffff;
-    background-image: url("/content/img/icon-button-cancel.svg");
+    background-image: url("../../content/img/icon-button-cancel.svg");
     background-repeat: no-repeat;
     width: 20px;
     height: 20px;
@@ -2186,7 +2186,7 @@ button[disabled=disabled] {
     height: 90px;
     display:block;
     float:left;
-    background: #FFFFFF url("/Content/_assets/img/exclamation_blue.png") 15px 15px/70px 70px no-repeat;
+    background: #FFFFFF url("../../Content/_assets/img/exclamation_blue.png") 15px 15px/70px 70px no-repeat;
 }
 
 .steps {
@@ -2419,7 +2419,7 @@ button[disabled=disabled] {
     color: #79AFDD;
     cursor: pointer;
     float: right;
-    background-image: url(/content/images/icons/icon-link-back.png);
+    background-image: url(../images/icons/icon-link-back.png);
     background-repeat: no-repeat;
     background-position: 0 50%;
     padding-left: 20px;
@@ -2431,7 +2431,7 @@ button[disabled=disabled] {
     line-height: inherit;
     height: inherit;
     padding-left: 20px !important;
-    background-image: url("/content/images/icons/icon-link-back.png");
+    background-image: url("../images/icons/icon-link-back.png");
     background-position: 0;
 
 }
