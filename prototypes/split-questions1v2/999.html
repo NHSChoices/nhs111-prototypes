@@ -1,0 +1,231 @@
+﻿
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+
+    <!-- css -->
+    <link href="http://nhsalpha.herokuapp.com/public/stylesheets/govuk-template.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
+    <link href="Content/css_NhsUK/application.css" media="all" rel="stylesheet" type="text/css" />
+
+    <!-- Javascript -->
+    <script src="scripts/vendor/modernizr-custom.js"></script>
+    <!--[if lt IE 9]>
+     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <![endif]-->
+
+    <script src="scripts/jquery2.1.1.min.js"></script>
+
+    <script src="Scripts/jquery1.11.2-ui.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/jquery.cookie.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var $sessionId = $("#SessionId");
+            if ($sessionId) $sessionId.val($.cookie("userId"));
+        });
+
+        $(function () {
+            var userId = $.cookie("userId");
+            if (!userId) $.cookie("userId", 'ca189c56-5468-4f08-9d47-953f95c5a0c6', { path: '/' });
+        });
+    </script>
+
+    <script>
+        var pageId = 'PW519.0';
+        dataLayer = [
+        {
+            'virtualPageUrl': document.location.pathname + '/' + pageId,
+            'virtualPageTitle': 'As well as the abdominal pain, do you have any of the following?'
+        }];
+    </script>
+
+</head>
+<body class="">
+
+
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <div id="skiplink-container">
+        <div>
+            <a href="#content" class="skiplink">Skip to main content</a>
+        </div>
+    </div>
+    <header role="banner" id="global-header">
+        <div class="header-container">
+            <a href="index.html" class="header-logo" title="Go to the NHS.UK homepage">
+                <img src="content/images/nhs-rev-logotype.jpg" alt="" />
+
+            </a>
+            <div class="header-title">
+                111 Online <strong class="phase-tag beta"></strong>
+            </div>
+        </div>
+    </header>
+
+    <!--end header-->
+
+
+    <section class="outer-section"></section>
+
+    <main id="content" role="main">
+        <section>
+            <div class="outcome-header">
+                <h2 class="heading-large">Your answers suggest you should dial 999 now for an ambulance</h2>
+            </div>
+        </section>
+
+
+        <div id="wrapper">
+            <div>
+
+            </div> <!--/ContentWrapper-->
+            <form action="/Question/Navigation" method="post" novalidate="novalidate">
+                <input id="SessionId" name="SessionId" type="hidden" value="423e019f-4f7f-4335-a55e-a243287b563f">
+                <input id="JourneyId" name="JourneyId" type="hidden" value="9b34455f-a2fb-482d-8409-81067220e2fe">
+                <input id="Id" name="Id" type="hidden" value="Dx011">
+                <input id="JourneyJson" name="JourneyJson" type="hidden" value="{&quot;steps&quot;:[{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;reportText&quot;:&quot;There was no rapid swelling of the lips, face, throat or tongue.&quot;,&quot;dispoDisplayText&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you got rapid swelling of your lips, face, tongue, mouth or throat?&quot;,&quot;questionNo&quot;:&quot;TX1728&quot;,&quot;questionId&quot;:&quot;PW556.6800&quot;,&quot;jtbs&quot;:false,&quot;state&quot;:&quot;{\&quot;PATIENT_AGE\&quot;:\&quot;33\&quot;,\&quot;PATIENT_GENDER\&quot;:\&quot;\\\&quot;F\\\&quot;\&quot;,\&quot;PATIENT_PARTY\&quot;:\&quot;1\&quot;,\&quot;PATIENT_AGEGROUP\&quot;:\&quot;Adult\&quot;}&quot;},{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;titleWithoutSpaces&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;|Medication, pain and/or fever&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;reportText&quot;:&quot;There was chest or upper back pain at the time of the assessment.&quot;,&quot;dispoDisplayText&quot;:&quot;Chest/upper back pain now&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Do you have any pain in your chest or upper back right now?&quot;,&quot;questionNo&quot;:&quot;TX1286&quot;,&quot;questionId&quot;:&quot;PW556.100&quot;,&quot;jtbs&quot;:false,&quot;state&quot;:&quot;{\&quot;PATIENT_AGE\&quot;:\&quot;33\&quot;,\&quot;PATIENT_GENDER\&quot;:\&quot;\\\&quot;F\\\&quot;\&quot;,\&quot;PATIENT_PARTY\&quot;:\&quot;1\&quot;,\&quot;PATIENT_AGEGROUP\&quot;:\&quot;Adult\&quot;}&quot;},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;|Medication, pain and/or fever&quot;,&quot;excludeKeywords&quot;:&quot;|&quot;,&quot;reportText&quot;:&quot;The individual had not experienced a previous heart attack.&quot;,&quot;dispoDisplayText&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Have you ever had a heart attack?&quot;,&quot;questionNo&quot;:&quot;TX221225&quot;,&quot;questionId&quot;:&quot;PA21.100&quot;,&quot;jtbs&quot;:false,&quot;state&quot;:&quot;{\&quot;PATIENT_AGE\&quot;:\&quot;33\&quot;,\&quot;PATIENT_GENDER\&quot;:\&quot;\\\&quot;F\\\&quot;\&quot;,\&quot;PATIENT_PARTY\&quot;:\&quot;1\&quot;,\&quot;PATIENT_AGEGROUP\&quot;:\&quot;Adult\&quot;,\&quot;ChestPainNow\&quot;:\&quot;\\\&quot;present\\\&quot;\&quot;}&quot;},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;|&quot;,&quot;excludeKeywords&quot;:&quot;|&quot;,&quot;reportText&quot;:&quot;There had been no previous diagnosis of aortic aneurysm or Marfan's syndrome.&quot;,&quot;dispoDisplayText&quot;:&quot;&quot;,&quot;order&quot;:4},&quot;questionTitle&quot;:&quot;Has your doctor diagnosed you with either of the following?&quot;,&quot;questionNo&quot;:&quot;TX220257&quot;,&quot;questionId&quot;:&quot;PA21.1700&quot;,&quot;jtbs&quot;:false,&quot;state&quot;:&quot;{\&quot;PATIENT_AGE\&quot;:\&quot;33\&quot;,\&quot;PATIENT_GENDER\&quot;:\&quot;\\\&quot;F\\\&quot;\&quot;,\&quot;PATIENT_PARTY\&quot;:\&quot;1\&quot;,\&quot;PATIENT_AGEGROUP\&quot;:\&quot;Adult\&quot;,\&quot;ChestPainNow\&quot;:\&quot;\\\&quot;present\\\&quot;\&quot;,\&quot;PainUnder12hrs\&quot;:\&quot;\\\&quot;present\\\&quot;\&quot;}&quot;},{&quot;answer&quot;:{&quot;title&quot;:&quot;Cool or cold or clammy (damp and sweaty)&quot;,&quot;titleWithoutSpaces&quot;:&quot;Coolorcoldorclammy(dampandsweaty)&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;This means the skin on the torso (trunk, or middle part of your body) feels cool, cold or clammy when touched.\\nClammy means damp or sweaty.\\nYou may say you feel like a wet fish or are in a cold sweat.&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;reportText&quot;:&quot;The skin on the torso felt cool or cold or clammy.&quot;,&quot;dispoDisplayText&quot;:&quot;Cool, cold or clammy&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;How does the skin on your chest, back or tummy (abdomen) feel?&quot;,&quot;questionNo&quot;:&quot;TX223142&quot;,&quot;questionId&quot;:&quot;PA21.21100&quot;,&quot;jtbs&quot;:false,&quot;state&quot;:&quot;{\&quot;PATIENT_AGE\&quot;:\&quot;33\&quot;,\&quot;PATIENT_GENDER\&quot;:\&quot;\\\&quot;F\\\&quot;\&quot;,\&quot;PATIENT_PARTY\&quot;:\&quot;1\&quot;,\&quot;PATIENT_AGEGROUP\&quot;:\&quot;Adult\&quot;,\&quot;ChestPainNow\&quot;:\&quot;\\\&quot;present\\\&quot;\&quot;,\&quot;PainUnder12hrs\&quot;:\&quot;\\\&quot;present\\\&quot;\&quot;}&quot;},{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;titleWithoutSpaces&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;You will look very unwell and pale. Your skin may look blue or grey. On dark skin check the palms of your hands.&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;reportText&quot;:&quot;The individual was pale, blue or grey in colour.&quot;,&quot;dispoDisplayText&quot;:&quot;Appears shocked&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Do you look extremely pale?&quot;,&quot;questionNo&quot;:&quot;TX46039&quot;,&quot;questionId&quot;:&quot;PA21.2300&quot;,&quot;jtbs&quot;:false,&quot;state&quot;:&quot;{\&quot;PATIENT_AGE\&quot;:\&quot;33\&quot;,\&quot;PATIENT_GENDER\&quot;:\&quot;\\\&quot;F\\\&quot;\&quot;,\&quot;PATIENT_PARTY\&quot;:\&quot;1\&quot;,\&quot;PATIENT_AGEGROUP\&quot;:\&quot;Adult\&quot;,\&quot;ChestPainNow\&quot;:\&quot;\\\&quot;present\\\&quot;\&quot;,\&quot;PainUnder12hrs\&quot;:\&quot;\\\&quot;present\\\&quot;\&quot;}&quot;},{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;titleWithoutSpaces&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;This only means pain that comes on out of the blue and isn't related to you moving or doing activities.\\nThis is an agonising pain. \\nThis only means a ripping or tearing pain.\\nIt doesn't mean a stinging, crushing, stabbing or aching type of pain.&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;reportText&quot;:&quot;The individual had experienced a sudden onset of ripping or tearing pain.&quot;,&quot;dispoDisplayText&quot;:&quot;Ripping/tearing pain, sudden onset&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Have you got a ripping or tearing pain that started suddenly?&quot;,&quot;questionNo&quot;:&quot;TX220037&quot;,&quot;questionId&quot;:&quot;PA21.2500&quot;,&quot;jtbs&quot;:false,&quot;state&quot;:&quot;{\&quot;PATIENT_AGE\&quot;:\&quot;33\&quot;,\&quot;PATIENT_GENDER\&quot;:\&quot;\\\&quot;F\\\&quot;\&quot;,\&quot;PATIENT_PARTY\&quot;:\&quot;1\&quot;,\&quot;PATIENT_AGEGROUP\&quot;:\&quot;Adult\&quot;,\&quot;ChestPainNow\&quot;:\&quot;\\\&quot;present\\\&quot;\&quot;,\&quot;PainUnder12hrs\&quot;:\&quot;\\\&quot;present\\\&quot;\&quot;}&quot;}]}">
+                <input id="PathwayId" name="PathwayId" type="hidden" value="PW556FemaleAdult">
+                <input id="JourneyId" name="JourneyId" type="hidden" value="9b34455f-a2fb-482d-8409-81067220e2fe">
+                <input id="PathwayNo" name="PathwayNo" type="hidden" value="PW556">
+                <input id="PathwayTitle" name="PathwayTitle" type="hidden" value="Chest pain">
+                <input id="SymptomGroup" name="SymptomGroup" type="hidden" value="1039">
+                <input data-val="true" data-val-age="Age restriction violated" data-val-age-prefixelement="Age" data-val-number="The field Age must be a number." data-val-required="'Age' must not be empty." id="UserInfo_Demography_Age" name="UserInfo.Demography.Age" type="hidden" value="33">
+                <input id="UserInfo_Demography_Gender" name="UserInfo.Demography.Gender" type="hidden" value="Female">
+                <input id="SymptomDiscriminatorCode" name="SymptomDiscriminatorCode" type="hidden" value="4016">
+                <input id="Title" name="Title" type="hidden" value="Emergency Ambulance Response (Red 2)">
+                <input data-val="true" data-val-allowedpostcode="Sorry, this service is not currently available in your area.  Please call NHS 111 for advice now." data-val-allowedpostcode-prefixelement="Postcode" data-val-validpostcode="Please enter a valid UK postcode" data-val-validpostcode-prefixelement="Postcode" id="UserInfo_CurrentAddress_Postcode" name="UserInfo.CurrentAddress.Postcode" type="hidden" value="">
+                <input id="StateJson" name="StateJson" type="hidden" value="{&quot;PATIENT_AGE&quot;:&quot;33&quot;,&quot;PATIENT_GENDER&quot;:&quot;\&quot;F\&quot;&quot;,&quot;PATIENT_PARTY&quot;:&quot;1&quot;,&quot;PATIENT_AGEGROUP&quot;:&quot;Adult&quot;,&quot;ChestPainNow&quot;:&quot;\&quot;present\&quot;&quot;,&quot;PainUnder12hrs&quot;:&quot;\&quot;present\&quot;&quot;}">
+                <input id="TimeFrameText" name="TimeFrameText" type="hidden" value="">
+                <input id="SymptomDiscriminator_ReasoningText" name="SymptomDiscriminator.ReasoningText" type="hidden" value="">
+                <input id="OutcomeGroup_Text" name="OutcomeGroup.Text" type="hidden" value="dial 999 now for an ambulance">
+                <input data-val="true" data-val-number="The field TimeFrameMinutes must be a number." id="TimeFrameMinutes" name="TimeFrameMinutes" type="hidden" value="0">
+                <input data-val="true" data-val-date="The field DispositionTime must be a date." id="DispositionTime" name="DispositionTime" type="hidden" value="1/20/2017 2:50:33 PM">
+                <input id="SurveyLink_PathwayNo" name="SurveyLink.PathwayNo" type="hidden" value="PW556">
+                <input id="SurveyLink_EndPathwayNo" name="SurveyLink.EndPathwayNo" type="hidden" value="PA21">
+                <input id="SurveyLink_EndPathwayTitle" name="SurveyLink.EndPathwayTitle" type="hidden" value="Chest and Upper Back Pain">
+                <input id="SurveyLink_PathwayTitle" name="SurveyLink.PathwayTitle" type="hidden" value="Chest pain">
+                <input id="SurveyLink_DispositionCode" name="SurveyLink.DispositionCode" type="hidden" value="Dx011">
+                <input id="SurveyLink_JourneyId" name="SurveyLink.JourneyId" type="hidden" value="9b34455f-a2fb-482d-8409-81067220e2fe">
+                <input data-val="true" data-val-date="The field DispositionDateTime must be a date." id="SurveyLink_DispositionDateTime" name="SurveyLink.DispositionDateTime" type="hidden" value="1/20/2017 2:50:33 PM">
+                <input id="SurgeryViewModel_SelectedSurgery" name="SurgeryViewModel.SelectedSurgery" type="hidden" value="">
+
+                <input id="CollectedKeywords_Keywords_0__Value" name="CollectedKeywords.Keywords[0].Value" type="hidden" value="Breathlessness"><input id="CollectedKeywords_Keywords_0__IsFromAnswer" name="CollectedKeywords.Keywords[0].IsFromAnswer" type="hidden" value="False"><input id="CollectedKeywords_Keywords_1__Value" name="CollectedKeywords.Keywords[1].Value" type="hidden" value="Medication, pain and/or fever"><input id="CollectedKeywords_Keywords_1__IsFromAnswer" name="CollectedKeywords.Keywords[1].IsFromAnswer" type="hidden" value="True">
+
+
+
+
+                <div class="changeAnswers row">
+                    <a href="#" class="button-link-prev button-link" type="submit" name="PreviousQuestion" value="Change my previous answer" onclick="history.back(1);">Change my previous answer</a>
+                </div>
+            </form>
+        </div> <!-- /site -->
+    </main>
+
+    <section class="feedback-section">
+
+        <!--[if lte IE 8]>
+            <style>
+                .feedback-container {
+                    color: black;
+                }
+
+            </style>
+        <![endif]-->
+
+        <div class="feedback-wrapper">
+            <div class="feedback-container feedback-container--open">
+                <div class="feedback-banner">
+                    <a href="#FeedbackForm" class="feedback-dismiss"></a>
+                    <form id="FeedbackForm" action="/Feedback/SubmitFeedback" novalidate="novalidate">
+                        <div id="FeedbackDetails">
+
+                            <p class="feedback-message">
+                                Tell us if this page isn't clear
+                            </p>
+                            <div class="feedback-form">
+                                <textarea value="" class="feedback-input" cols="20" id="Text" maxlength="8000" name="Text" placeholder="Feedback" rows="2" style="height: 48px;"></textarea>
+                                <a class="feedback-btn feedback-submit button-next" id="btnFeedback" onclick="SubmitFeedback(this);">Send feedback</a>
+                            </div>
+                        </div>
+                        <input id="UserId" name="UserId" type="hidden" value="">
+                        <input id="PageId" name="PageId" type="hidden" value="/Question/NavigationPW556FemaleAdult">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+
+            $('.feedback-dismiss').click(function () {
+                $('.feedback-wrapper').slideToggle();
+            });
+
+            $('.feedback-input').focus(function () {
+                $(this).animate({
+                    //width: "70%",
+                    //height: "70%"
+                });
+            });
+
+            $(document).ready(function () {
+                var $userId = $("#FeedbackForm #UserId");
+                $userId.val($.cookie("userId"));
+                $('.feedback-input').autogrow({ vertical: true, horizontal: false });
+
+            });
+
+
+            function SubmitFeedback(btnClicked) {
+                if ($("#Text").val() !== "") {
+                    var $form = $(btnClicked).parents("form");
+                    $form[0][0].value = $('<div/>').text($form[0][0].value).html();
+                    var detailsDiv = $("#FeedbackDetails");
+                    $(detailsDiv).slideToggle(600);
+                    $.ajax({
+                        type: "POST",
+                        url: $form.attr("action"),
+                        data: $form.serialize(),
+                        error: function (xhr, status, error) {
+                            alert(error);
+                            $(detailsDiv).slideToggle(600);
+                            //do something about the error
+                        },
+                        success: function (response) {
+                            $(detailsDiv).html('<p>' + response.Message + '</p>');
+                            $(detailsDiv).slideToggle(600);
+                        }
+                    });
+                    return false;
+                }
+            }
+
+
+        </script>
+
+    </section>
+
+<footer id="footer" role="contentinfo">
+        <div class="footer-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="/Help/Cookies" target="_blank">Cookies</a></li>
+                    <li><a href="/Help/Privacy" target="_blank">Privacy statement</a></li>
+                </ul>
+            </nav>
+            <div class="text">
+                <p>
+                    <small>
+                        &copy; Crown copyright<br>
+                        Content available under <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>, except where otherwise stated.
+                    </small>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="global-app-error" class="app-error hidden"></div>
+</body>
+</html>
