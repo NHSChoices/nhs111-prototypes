@@ -105,25 +105,61 @@
             </div>
         </div>
         <script>
-
-
-
+		 function getUrlVars() {
+						var vars = [], hash;
+						var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+						for (var i = 0; i < hashes.length; i++) {
+							hash = hashes[i].split('=');
+							vars.push(hash[0]);
+							vars[hash[0]] = hash[1];
+						}
+						return vars;
+					}
+			var vars = getUrlVars();
+			var gender = vars["Gender"];
+			var age = vars["Age"];
+  function normaliseAgeGroup(age) {
+				//0-1, 1-5, 5-16, 16
+				if (age >= 0 && age < 1)
+					return "Infant";
+				if (age >= 1 && age < 5)
+					return "Toddler";
+				if (age >= 5 && age < 16)
+					return "Child";
+				if (age >= 16)
+					return "Adult";
+			};
             $('#submitSearch').click(function () {
                 var ALL_PATHWAYS = 172;
                 var $SymptomsResultsContainer = $("#symptoms-results-container");
                 var $SearchTags = $("#searchTags");
 
+				
+			
+
+				
                 $("#search-term").text($SearchTags.val());
                 $("#search-term-no").text($SearchTags.val());
                 $SymptomsResultsContainer.empty()
                 $.ajax({
-                    url: 'http://nhs111-business-api-integration.azurewebsites.net/pathway_suggest/' + $SearchTags.val() + '/true/Male/41',
+                    url: 'http://nhs111-business-api-integration.azurewebsites.net/pathwaysearch/' + gender + '/' + age + '/' + $("#searchTags").val() + '?highlight=true&score=true',
                     type: "GET",
                     success: function (data, textStatus, jqXHR) {
-                        data = $.parseJSON(data);
                         if (data.length > 0 && data.length < ALL_PATHWAYS) {
                             $.each(data, function (i, item) {
-                                $SymptomsResultsContainer.append('<div><a href="#">' + item.group + "</a></div>");
+							   var desc = item.Description;
+								desc = desc.replace(/\\n\\n/g, ". ")
+								desc = desc.replace(" . ", ". ")
+								var title = item.Title[0];
+								var otherDescriptions = ""
+								var visible = "";
+                                if (item.Title.length > 1)
+								{
+                                    for (j = 1; j < item.Title.length; j++)
+								        otherDescriptions += item.Title[j] + "; ";
+								    visible = "show";
+								}
+								$SymptomsResultsContainer.append('<div><a href="#' + item.PathwayNo + '">' + title + "</a><p class='also-descriptions " + visible + "'>Also used for : " + otherDescriptions + "</p><p>" + desc + "</p><p><em class='score'>" + item.Score + "</em></p></div>");
                             });
                             $(".symptoms-no-results-header").hide();
                             $(".symptoms-results-header").show();
@@ -140,6 +176,11 @@
                 });
             });
 
+			
+			
+			
+			 
+
             $('.feedback-input').focus(function () {
                 $(this).animate({
                     //width: "70%",
@@ -151,6 +192,7 @@
                 var $userId = $("#FeedbackForm #UserId");
                 $userId.val($.cookie("userId"));
                 $('.feedback-input').autogrow({ vertical: true, horizontal: false });
+				age = normaliseAgeGroup(age);
 
             });
 

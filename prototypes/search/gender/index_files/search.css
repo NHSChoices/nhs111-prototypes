@@ -32,7 +32,6 @@ a.linkButton {
      margin-left: 0.5rem;
 }
 .symptoms-find-container {
-    float: left; 
     display: inline-block; 
     
 }
@@ -58,19 +57,11 @@ a.linkButton {
         font-size: 1.2em;
     }
     .symptoms-results-container div {
-        margin: 5px 0 25px 0;
-    }
-	.symptoms-results-container div a {
-        font-size: 1.8rem;
-    }
-	.symptoms-results-container div p {
-        font-size: 1.6rem;
+        margin: 5px 0;
     }
 
 .common-symptoms {
-    background-color: #e4f1f9;
-    float: right;
-    width: 100%;
+    /*background-color: #fff;*/
 }
 
 .common-symptoms ul{
@@ -94,7 +85,7 @@ a.linkButton {
         width:100%
     }
          .form-control, .ui-autocomplete-input {
-        width: 75%; 
+        width: 900px; 
     }
 }
 @media (max-width: 1200px) {
@@ -416,20 +407,47 @@ a.category {
 span.underline {
     text-decoration: underline;
 }
-em.highlight-term {
-    color: red;
-    font-weight: bold;
+
+.input-symptoms {
+    height: 100px;
+    background: url("search-icon-blue.gif") no-repeat;
+    background-position: right 2px top 2px;
+    font-size: 200%;
+    color: #333;
 }
-em.score {
-    font-weight: bold;
+
+.searching-icon {
+    width: 100px;
+    margin: 50px 400px;
 }
-.also-descriptions{
-    display: none;
-    font-style: italic;
-    font-weight: bold;
-    color: #0072C6;
-    font-size: 1.2rem !important;
+
+
+@media (min-width: 769px) {
+    #content {
+        padding-bottom: 100px;
+    }
 }
-.also-descriptions.show{
-    display: block;
+.symptoms-find-header h2 {
+    font-size: 3em;
+    margin-top: 70px;
+}
+
+.search-panel {
+    padding-top: 50px;
+}
+
+.search-panel ul {
+    margin-top: 20px;
+}
+
+.search-results li {
+    background-color: hsla(187, 13%, 96%, 1);
+    padding: 20px;
+    width: 800px;
+    margin: 10px;
+}
+
+.no-results h3 {
+    color: #e44c4c;
+    margin-bottom: 20px;
 }
