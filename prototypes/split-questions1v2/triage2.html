@@ -83,7 +83,7 @@
 
         <form >
             <h2 class="question-header">Do you have a new rash, like bruising or bleeding under the skin?</h2>
-            <p style="padding-bottom: 10px; margin-top: -20px; font-size: 18px">This rash won't disappear or go white when you press it.<br/>The rash may be red-blue, purple, brown, pin prick size or larger blotches.<br/>On darker skin, check the paler areas such as the mouth, palms or soles.<br/></p>
+            <p style="padding-bottom: 10px; margin-top: -20px; font-size: 18px">This rash won't disappear or go white when you press it. The rash may be red-blue, purple, brown, pin prick size or larger blotches. On darker skin, check the paler areas such as the mouth, palms or soles.</p>
             <div id="answers">
                 <p class="answer">
                     <label for="Yes - I have a rash that doesn't disappear if I press it"><input name="SelectedAnswer" type="radio" value="999.html" id="Yes - I have a rash that doesn't disappear if I press it" /><span class="answer-text">Yes - I have a rash that doesn't disappear if I press it</span></label>
@@ -95,7 +95,7 @@
                     <label for="No"><input name="SelectedAnswer" type="radio" value="end.html" id="No" /><span class="answer-text">No</span></label>
                 </p>
             </div>
-            <button class="button previous-question" id="previousScreen" type="submit" name="PreviousQuestion" onclick="history.go(-1);">Previous</button>
+            <button class="button previous-question" id="previousScreen" type="submit" name="PreviousQuestion" onclick="window.history.go(-1); return false;">Previous</button>
             <button class="button button-next" id="nextScreen" type="button" name="Question" value="Question">Next</button>
         </form>
         <script type="text/javascript">
