@@ -142,21 +142,20 @@
                 $("#search-term-no").text($SearchTags.val());
                 $SymptomsResultsContainer.empty()
                 $.ajax({
-                    url: 'http://nhs111-business-api-integration.azurewebsites.net/pathwaysearch/' + gender + '/' + age + '/' + $("#searchTags").val() + '?highlight=true&score=true',
+                    url: 'http://localhost:9001/pathwaysearch/' + gender + '/' + age + '/' + $("#searchTags").val() + '?highlight=true&score=true',
                     type: "GET",
                     success: function (data, textStatus, jqXHR) {
                         if (data.length > 0 && data.length < ALL_PATHWAYS) {
                             $.each(data, function (i, item) {
-							   var desc = item.Description;
-								desc = desc.replace(/\\n\\n/g, ". ")
-								desc = desc.replace(" . ", ". ")
-								var title = item.Title[0];
-								var otherDescriptions = ""
+                                var desc = item.Description;
+                                desc = desc.replace(/\\n\\n/g, ". ");
+                                desc = desc.replace(" . ", ". ");
+                                var title = item.Title[0];
+                                var otherDescriptions = "";
 								var visible = "";
-                                if (item.Title.length > 1)
-								{
-                                    for (j = 1; j < item.Title.length; j++)
-								        otherDescriptions += item.Title[j] + "; ";
+								if (item.Title.length > 1) {
+								    for (j = 1; j < item.Title.length; j++)
+                                        otherDescriptions += item.Title[j] + "; ";
 								    visible = "show";
 								}
 								$SymptomsResultsContainer.append('<div><a href="#' + item.PathwayNo + '">' + title + "</a><p class='also-descriptions " + visible + "'>Also used for : " + otherDescriptions + "</p><p>" + desc + "</p><p><em class='score'>" + item.Score + "</em></p></div>");
