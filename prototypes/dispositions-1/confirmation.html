@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -43,22 +43,12 @@
         <section>
             <div id="strap-line" class="strap-line"></div>
             <div class="outcome-header">
-                <h2 id="disposition" class="heading-large">We recommend you speak to your GP within 6 hours</h2>
+                <h2 id="confirmation" class="heading-large">Your callback is confirmed</h2>
                 <div class="inner-service" id="inner-service">
-                    <span id="service-message-inner" class="service-message--inner">If you can't see your GP find a service</span><a href="./find.html" class="service-find">Search</a>
+                    <span id="service-message-inner" class="service-message--inner">If you don't hear anyhting within 6 hours please call 111</span>
                 </div>
             </div>
         </section>
-
-        <div class="itk-message">
-            <ul>
-                <li>You should contact your GP practice first. GPs are normally open from 8.30am to 6.00pm.</li>
-            </ul>
-        </div>
-
-        <div class="outer-service" id="outer-service">
-            <span id="service-message" class="service-message">If you can't see your GP find a service</span><a href="./find.html" class="service-find">Search</a>
-        </div>
 
         <div class="care-advice">
 
@@ -91,7 +81,7 @@
                 </ul>
             </div>
         </div>
-       
+
         <div class="worsening-advice-icon">
             <p>If there are any new symptoms, or if the condition gets worse, changes or you have any other concerns, call NHS 111 for advice. Calls to 111 are free.</p>
         </div>
@@ -159,29 +149,17 @@
                 $("#strap-line").show();
             }
 
-            var dispositionText = getParameterByName("disposition-text");
-            if (dispositionText) {
-                $("#disposition").html(dispositionText);
-                $("#disposition").show();
+            var confirmationText = getParameterByName("confirmation-text");
+            if (confirmationText) {
+                $("#confirmation").html(confirmationText);
+                $("#confirmation").show();
             }
 
             var serviceText = getParameterByName("service-text");
             if (serviceText) {
                 $("#service-message-inner").html(serviceText);
-                $("#service-message").html(serviceText);
             }
-
-            var innerService = getParameterByName("inner-service");
-            if (innerService != null) {
-                $("#inner-service").show();
-            }
-
-            var outerService = getParameterByName("outer-service");
-            if (outerService != null) {
-                $("#outer-service").show();
-            }
-
-            if (innerService == null && outerService == null) $("#inner-service").show();
+            $("#inner-service").show();
         });
     </script>
 
