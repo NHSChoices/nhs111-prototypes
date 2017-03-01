@@ -104,19 +104,20 @@
 }
 .outer-service {
     display: none;
-    margin: 0;
+    margin: 40px 0;
 }
 .service-message--inner {
-    padding: 10px;
+    padding: 10px 0 0 10px;
 }
 .service-message{
-    padding: 10px;
+    padding: 10px 0;
 }
 .service-find:link, .service-find:hover, .service-find:visited {
     border: 1px solid white;
     text-decoration: none;
     color: #fff;
     padding: 5px 20px;
+    margin-left: 10px;
 }
 .outer-service .service-find:link, .service-find:hover, .service-find:visited {
     border: 1px solid #006647;
