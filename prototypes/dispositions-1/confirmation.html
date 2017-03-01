@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -43,23 +43,45 @@
         <section>
             <div id="strap-line" class="strap-line"></div>
             <div class="outcome-header">
-                <h2 id="disposition" class="heading-large">We recommend you speak to your GP within 6 hours</h2>
+                <h2 id="confirmation" class="heading-large">Your callback is confirmed</h2>
                 <div class="inner-service" id="inner-service">
-                    <span id="service-message-inner" class="service-message--inner">If you can't see your GP find a service</span><a href="./find.html" class="service-find">Search</a>
+                    <span id="service-message-inner" class="service-message--inner">If you don't hear anyhting within 6 hours please call 111</span>
                 </div>
             </div>
         </section>
 
-        <div class="itk-message">
-            <ul>
-                <li>You should contact your GP practice first. GPs are normally open from 8.30am to 6.00pm.</li>
-            </ul>
+        <div class="care-advice">
+
+            <h3 class="self-care-title">What can I do in the meantime?</h3>
+            <div class="care-advice-keywords">
+                <ol>
+                    <li><a href="#Advice_CX221161-Adult-Male">Abdominal pain</a></li>
+                    <li><a href="#Advice_CX220960-Adult-Male">Medication, pain and/or fever, abdominal pain</a></li>
+                </ol>
+            </div>
+
+            <div>
+                <h4 id="Advice_CX221161-Adult-Male" class="self-care-title">Abdominal pain</h4>
+                <input id="CX221161-Adult-Male" name="CX221161-Adult-Male" type="hidden" value="">                    <ul>
+                    <li>
+                        Try a heated pad or covered hot water bottle on the painful area.
+                    </li>
+                    <li>
+                        Exercising regularly can help.
+                    </li>
+                </ul>
+                <h4 id="Advice_CX220960-Adult-Male" class="self-care-title">Medication, pain and/or fever, abdominal pain</h4>
+                <input id="CX220960-Adult-Male" name="CX220960-Adult-Male" type="hidden" value="">                    <ul>
+                    <li>
+                        Paracetamol can be used to relieve abdominal pain or reduce a fever. Don't take if you've been told not to, or you've already taken some. Read the instructions on the packet, or talk to a pharmacist.
+                    </li>
+                    <li>
+                        Don't use ibuprofen or any other anti-inflammatory medicine like aspirin, as these can irritate your stomach.
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <div class="outer-service" id="outer-service">
-            <span id="service-message" class="service-message">If you can't see your GP find a service</span><a href="./find.html" class="service-find">Search</a>
-        </div>
-        
         <div class="worsening-advice-icon">
             <p>If there are any new symptoms, or if the condition gets worse, changes or you have any other concerns, call NHS 111 for advice. Calls to 111 are free.</p>
         </div>
@@ -127,27 +149,17 @@
                 $("#strap-line").show();
             }
 
-            var dispositionText = getParameterByName("disposition-text");
-            if (dispositionText) {
-                $("#disposition").html(dispositionText);
-                $("#disposition").show();
+            var confirmationText = getParameterByName("confirmation-text");
+            if (confirmationText) {
+                $("#confirmation").html(confirmationText);
+                $("#confirmation").show();
             }
 
             var serviceText = getParameterByName("service-text");
             if (serviceText) {
                 $("#service-message-inner").html(serviceText);
-                $("#service-message").html(serviceText);
             }
-
-            var innerService = getParameterByName("inner-service");
-            if (innerService != null) {
-                $("#inner-service").show();
-            }
-
-            var outerService = getParameterByName("outer-service");
-            if (outerService != null) {
-                $("#outer-service").show();
-            }
+            $("#inner-service").show();
         });
     </script>
 

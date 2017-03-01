@@ -119,7 +119,7 @@
     padding: 5px 20px;
     margin-left: 10px;
 }
-.outer-service .service-find:link, .service-find:hover, .service-find:visited {
+.outer-service .service-find:link, .outer-service .service-find:hover, .outer-service .service-find:visited {
     border: 1px solid #006647;
     text-decoration: none;
     color: #fff;
