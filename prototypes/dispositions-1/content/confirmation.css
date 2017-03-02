@@ -9,8 +9,8 @@
 }
 
 .care-advice .care-advice-keywords ol {
-    padding: 0 20px;
-    list-style-type: decimal;
+    padding: 0;
+    list-style-type: none;
     line-height: 32px;
 }
 @media (max-width: 640px) {
@@ -20,9 +20,9 @@
 }
 
 .care-advice  ul  {
-    padding: 0 20px; 
+    padding: 0; 
     list-style-type:disc;
-    margin: 0 0 20px 20px;
+    margin: 0 0 40px 20px;
 }
 
 .care-advice  ul li ul  {
@@ -57,7 +57,7 @@
 }
 
 .self-care-title {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .service-booking-message {
