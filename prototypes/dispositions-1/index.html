@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -45,19 +45,17 @@
             <div class="outcome-header">
                 <h2 id="disposition" class="heading-large">We recommend you speak to your GP within 6 hours</h2>
                 <div class="inner-service" id="inner-service">
-                    <span id="service-message-inner" class="service-message--inner">If you can't see your GP find a service</span><a href="./find.html" class="service-find">Search</a>
+                    <a id="service-message-inner" href="./find.html" class="service-find">If you can't see your GP find a service</a>
                 </div>
             </div>
         </section>
 
-        <div class="itk-message">
-            <ul>
-                <li>You should contact your GP practice first. GPs are normally open from 8.30am to 6.00pm.</li>
-            </ul>
+        <div class="outer-rationale" id="outer-rationale">
+            <span id="rationale">The advice above is based on what you've told us</span>
         </div>
 
         <div class="outer-service" id="outer-service">
-            <span id="service-message" class="service-message">If you can't see your GP find a service</span><a href="./find.html" class="service-find">Search</a>
+            <a id="service-message" href="./find.html" class="service-find">If you can't see your GP find a service</a>
         </div>
 
         <div class="care-advice">
@@ -163,6 +161,12 @@
             if (dispositionText) {
                 $("#disposition").html(dispositionText);
                 $("#disposition").show();
+            }
+
+            var rationaleText = getParameterByName("rationale-text");
+            if (rationaleText) {
+                $("#rationale").html(rationaleText);
+                $("#outer-rationale").show();
             }
 
             var serviceText = getParameterByName("service-text");
