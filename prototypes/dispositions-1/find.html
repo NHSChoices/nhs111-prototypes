@@ -52,14 +52,14 @@
             <div id="wrapper">
                 <div class="content-container">
                     <div>
-                        <form action="findResults.html" method="post" novalidate="novalidate">
+                        <form action="findResults.html" method="get" novalidate="novalidate">
                             <div class="symptoms-find-header">
                                 <h2 id="strap-line">Search for service that can help you</h2>
                             </div>
                             <div class="symptoms-find-container">
                                 <div class="symptoms-search">
 						
-                                    <label class="heading-small" for="searchforservice">Postcode</label>
+                                    <label id="pcodeLabel" class="heading-small" for="searchforservice">Postcode</label>
 									<input type="text" class="ui-autocomplete-input input-find-services" id="searchforservice" autocomplete="off" name="searchforservice" placeholder="Postcode">
                                     <input type="submit" class="button button-get-started go" value="Search" id="submitSearch" >
                                 </div>
@@ -97,6 +97,12 @@
             if (straplineText) {
                 $("#strap-line").html(straplineText);
                 $("#strap-line").show();
+            }
+			
+			var postcodeLabelText = getParameterByName("pcode-label-text");
+            if (postcodeLabelText) {
+                $("#pcodeLabel").html(postcodeLabelText);
+                $("#pcodeLabel").show();
             }
         });
     </script>
