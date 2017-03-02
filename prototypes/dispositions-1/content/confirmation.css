@@ -100,7 +100,7 @@
 }
 .inner-service {
     display: none;
-    margin-top: 20px 0;
+    margin: 40px 10px 20px;
 }
 .outer-service {
     display: none;
@@ -112,17 +112,29 @@
 .service-message{
     padding: 10px 0;
 }
-.service-find:link, .service-find:hover, .service-find:visited {
+.service-find:link, .service-find:visited {
     border: 1px solid white;
     text-decoration: none;
-    color: #fff;
-    padding: 5px 20px;
-    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
 }
-.outer-service .service-find:link, .outer-service .service-find:hover, .outer-service .service-find:visited {
-    border: 1px solid #006647;
+.service-find:hover {
+    background-color: #768692;
+    border: 1px solid #768692;
+}
+.outer-service .service-find:link, .outer-service .service-find:visited {
+    border: 1px solid #4c9c39;
     text-decoration: none;
     color: #fff;
-    padding: 5px 20px;
+    padding: 10px 20px;
+    background-color: #4c9c39;
+}
+.outer-service .service-find:hover {
     background-color: #006647;
+    border: 1px solid #006647;
+}
+.outer-rationale {
+    display: none;
+    margin: 20px 0 40px;
 }
