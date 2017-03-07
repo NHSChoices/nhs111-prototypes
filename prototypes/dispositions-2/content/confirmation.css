@@ -141,6 +141,7 @@
 .alternative-care {
     font-size: 20px;
     line-height: 32px;
+    display: none;
 }
 .alternative-care h3 {
     font-size: 38px;
@@ -152,7 +153,7 @@
     line-height: 32px;
 }
 .alternative-care.service-hidden {
-    display: none;
+    display: block;
 }
 .alternative-care.service-hidden h5 {
     font-size: 20px;
