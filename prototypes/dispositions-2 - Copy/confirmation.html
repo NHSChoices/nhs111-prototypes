@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NHS 111 - Contact a healthcare service</title>
+    <!-- css -->
+    <link href="./content/govuk-template.css" media="all" rel="stylesheet" type="text/css">
+    <link href="./content/application.css" media="all" rel="stylesheet" type="text/css">
+    <script src="./content/jquery2.1.1.min.js"></script>
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) {
+                url = window.location.href;
+            }
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+    </script>
+</head>
+<body class="js-enabled">
+    <header role="banner" id="global-header">
+        <div class="header-container">
+            <a href="http://nhs111-web-beta-integration.azurewebsites.net/" class="header-logo" title="Go to the NHS 111 homepage">
+                <img src="./content/nhs-rev-logotype.jpg" alt="">
+            </a>
+            <div class="header-title">
+                111 <strong class="phase-tag beta"></strong>
+            </div>
+        </div>
+    </header>
+    <section class="outer-section"></section>
+    <main id="content" role="main">
+        <link href="./content/confirmation.css" media="all" rel="stylesheet" type="text/css">
+        <link href="./content/disposition.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="./content/signposting-outcome.css" media="all" rel="stylesheet" type="text/css">
+        <link href="./content/signposting-outcome-print.css" media="print" rel="stylesheet" type="text/css">
+
+        <section>
+            <div id="strap-line" class="strap-line"></div>
+            <div class="outcome-header">
+                <h2 id="confirmation" class="heading-large">Your call is confirmed</h2>
+                <h3 class="heading-medium">If you haven't heard anything within 2 hours, please call 111</h3>
+            </div>
+        </section>
+
+        <div class="care-advice">
+
+            <h3 class="self-care-title">What you can do in the meantime</h3>
+            <div class="care-advice-keywords">
+                <ol>
+                    <li><a href="#Advice_CX221161-Adult-Male">Abdominal pain</a></li>
+                    <li><a href="#Advice_CX220960-Adult-Male">Medication, pain and/or fever, abdominal pain</a></li>
+                </ol>
+            </div>
+
+            <div>
+                <h4 id="Advice_CX221161-Adult-Male" class="self-care-title">Abdominal pain</h4>
+                <input id="CX221161-Adult-Male" name="CX221161-Adult-Male" type="hidden" value="">                    <ul>
+                    <li>
+                        Try a heated pad or covered hot water bottle on the painful area.
+                    </li>
+                    <li>
+                        Exercising regularly can help.
+                    </li>
+                </ul>
+                <h4 id="Advice_CX220960-Adult-Male" class="self-care-title">Medication, pain and/or fever, abdominal pain</h4>
+                <input id="CX220960-Adult-Male" name="CX220960-Adult-Male" type="hidden" value="">                    <ul>
+                    <li>
+                        Paracetamol can be used to relieve abdominal pain or reduce a fever. Don't take if you've been told not to, or you've already taken some. Read the instructions on the packet, or talk to a pharmacist.
+                    </li>
+                    <li>
+                        Don't use ibuprofen or any other anti-inflammatory medicine like aspirin, as these can irritate your stomach.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="worsening-advice-icon">
+            <p>If there are any new symptoms, or if the condition gets worse, changes or you have any other concerns, call NHS 111 for advice. Calls to 111 are free.</p>
+        </div>
+
+
+        <form action="http://nhs111-web-beta-integration.azurewebsites.net/Question/Navigation" method="post" novalidate="novalidate">
+            <input id="SessionId" name="SessionId" type="hidden" value="d452cd45-52c8-42e9-96cd-e7979c4844cb">
+            <input id="JourneyId" name="JourneyId" type="hidden" value="495e9656-889b-4ec5-ad58-700e8bdeff1c">
+            <input id="Id" name="Id" type="hidden" value="Dx06">
+            <input id="JourneyJson" name="JourneyJson" type="hidden" value="{&quot;steps&quot;:[{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;reportText&quot;:&quot;There was no blistering rash.&quot;,&quot;dispoDisplayText&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Is your rash made up of blisters?&quot;,&quot;questionNo&quot;:&quot;TX221200&quot;,&quot;questionId&quot;:&quot;PW1620.0&quot;,&quot;jtbs&quot;:false,&quot;state&quot;:&quot;{\&quot;PATIENT_AGEGROUP\&quot;:\&quot;Adult\&quot;,\&quot;PATIENT_PARTY\&quot;:\&quot;1\&quot;,\&quot;PATIENT_GENDER\&quot;:\&quot;\\\&quot;M\\\&quot;\&quot;,\&quot;PATIENT_AGE\&quot;:\&quot;40\&quot;,\&quot;SYSTEM_ONLINE\&quot;:\&quot;online\&quot;}&quot;},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;reportText&quot;:&quot;The rash had appeared more than 4 hours previously.&quot;,&quot;dispoDisplayText&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Has the rash appeared within the last 4 hours?&quot;,&quot;questionNo&quot;:&quot;TX221163&quot;,&quot;questionId&quot;:&quot;PW1620.100&quot;,&quot;jtbs&quot;:false,&quot;state&quot;:&quot;{\&quot;PATIENT_AGEGROUP\&quot;:\&quot;Adult\&quot;,\&quot;PATIENT_PARTY\&quot;:\&quot;1\&quot;,\&quot;PATIENT_GENDER\&quot;:\&quot;\\\&quot;M\\\&quot;\&quot;,\&quot;PATIENT_AGE\&quot;:\&quot;40\&quot;,\&quot;SYSTEM_ONLINE\&quot;:\&quot;online\&quot;}&quot;},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;reportText&quot;:&quot;Severe illness was not described.&quot;,&quot;dispoDisplayText&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Do you look and feel severely ill?&quot;,&quot;questionNo&quot;:&quot;TX220460&quot;,&quot;questionId&quot;:&quot;PW1620.200&quot;,&quot;jtbs&quot;:false,&quot;state&quot;:&quot;{\&quot;PATIENT_AGEGROUP\&quot;:\&quot;Adult\&quot;,\&quot;PATIENT_PARTY\&quot;:\&quot;1\&quot;,\&quot;PATIENT_GENDER\&quot;:\&quot;\\\&quot;M\\\&quot;\&quot;,\&quot;PATIENT_AGE\&quot;:\&quot;40\&quot;,\&quot;SYSTEM_ONLINE\&quot;:\&quot;online\&quot;}&quot;},{&quot;answer&quot;:{&quot;title&quot;:&quot;It was not caused by any sort of deliberate attack or assault&quot;,&quot;titleWithoutSpaces&quot;:&quot;Itwasnotcausedbyanysortofdeliberateattackorassault&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;reportText&quot;:&quot;The skin problem did not relate to an assault.&quot;,&quot;dispoDisplayText&quot;:&quot;&quot;,&quot;order&quot;:5},&quot;questionTitle&quot;:&quot;To make sure you get the support you need, we just need to check if any of the following caused this problem:&quot;,&quot;questionNo&quot;:&quot;TX220966&quot;,&quot;questionId&quot;:&quot;PW1620.180&quot;,&quot;jtbs&quot;:false,&quot;state&quot;:&quot;{\&quot;PATIENT_AGEGROUP\&quot;:\&quot;Adult\&quot;,\&quot;PATIENT_PARTY\&quot;:\&quot;1\&quot;,\&quot;PATIENT_GENDER\&quot;:\&quot;\\\&quot;M\\\&quot;\&quot;,\&quot;PATIENT_AGE\&quot;:\&quot;40\&quot;,\&quot;SYSTEM_ONLINE\&quot;:\&quot;online\&quot;}&quot;},{&quot;answer&quot;:{&quot;title&quot;:&quot;No&quot;,&quot;titleWithoutSpaces&quot;:&quot;No&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;reportText&quot;:&quot;The individual did not have a petechial/purpuric rash.&quot;,&quot;dispoDisplayText&quot;:&quot;&quot;,&quot;order&quot;:3},&quot;questionTitle&quot;:&quot;Does the rash look like little blood spots or bruises in the skin?&quot;,&quot;questionNo&quot;:&quot;TX41123&quot;,&quot;questionId&quot;:&quot;PW1620.900&quot;,&quot;jtbs&quot;:false,&quot;state&quot;:&quot;{\&quot;PATIENT_AGEGROUP\&quot;:\&quot;Adult\&quot;,\&quot;PATIENT_PARTY\&quot;:\&quot;1\&quot;,\&quot;PATIENT_GENDER\&quot;:\&quot;\\\&quot;M\\\&quot;\&quot;,\&quot;PATIENT_AGE\&quot;:\&quot;40\&quot;,\&quot;SYSTEM_ONLINE\&quot;:\&quot;online\&quot;}&quot;},{&quot;answer&quot;:{&quot;title&quot;:&quot;Yes&quot;,&quot;titleWithoutSpaces&quot;:&quot;Yes&quot;,&quot;symptomDiscriminator&quot;:&quot;&quot;,&quot;supportingInfo&quot;:&quot;This means lots of blisters or ulcers, not just one or two cold sores or mouth ulcers on the lips or tongue.&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;excludeKeywords&quot;:&quot;&quot;,&quot;reportText&quot;:&quot;There was severe oropharyngeal ulceration.&quot;,&quot;dispoDisplayText&quot;:&quot;Severe oropharyngeal ulceration&quot;,&quot;order&quot;:1},&quot;questionTitle&quot;:&quot;Have you got lots of blisters or ulcers in your mouth?&quot;,&quot;questionNo&quot;:&quot;TX220449&quot;,&quot;questionId&quot;:&quot;PW1620.1300&quot;,&quot;jtbs&quot;:false,&quot;state&quot;:&quot;{\&quot;PATIENT_AGEGROUP\&quot;:\&quot;Adult\&quot;,\&quot;PATIENT_PARTY\&quot;:\&quot;1\&quot;,\&quot;PATIENT_GENDER\&quot;:\&quot;\\\&quot;M\\\&quot;\&quot;,\&quot;PATIENT_AGE\&quot;:\&quot;40\&quot;,\&quot;SYSTEM_ONLINE\&quot;:\&quot;online\&quot;}&quot;}]}">
+            <input id="PathwayId" name="PathwayId" type="hidden" value="PW1620MaleAdult">
+            <input id="JourneyId" name="JourneyId" type="hidden" value="495e9656-889b-4ec5-ad58-700e8bdeff1c">
+            <input id="PathwayNo" name="PathwayNo" type="hidden" value="PW1620">
+            <input id="PathwayTitle" name="PathwayTitle" type="hidden" value="Skin, Rash">
+            <input id="DigitalTitle" name="DigitalTitle" type="hidden" value="Skin, Rash">
+            <input id="SymptomGroup" name="SymptomGroup" type="hidden" value="1152">
+            <input data-val="true" data-val-age="Age restriction violated" data-val-age-prefixelement="Age" data-val-number="The field Age must be a number." data-val-required="&#39;Age&#39; must not be empty." id="UserInfo_Demography_Age" name="UserInfo.Demography.Age" type="hidden" value="40">
+            <input id="UserInfo_Demography_Gender" name="UserInfo.Demography.Gender" type="hidden" value="Male">
+            <input id="SymptomDiscriminatorCode" name="SymptomDiscriminatorCode" type="hidden" value="4003">
+            <input id="Title" name="Title" type="hidden" value="To contact a Primary Care Service within 6 hours">
+            <input data-val="true" data-val-allowedpostcode="Sorry, this service is not currently available in your area.  Please call NHS 111 for advice now." data-val-allowedpostcode-prefixelement="Postcode" data-val-validpostcode="Please enter a valid UK postcode" data-val-validpostcode-prefixelement="Postcode" id="UserInfo_CurrentAddress_Postcode" name="UserInfo.CurrentAddress.Postcode" type="hidden" value="">
+            <input id="StateJson" name="StateJson" type="hidden" value="{&quot;PATIENT_AGEGROUP&quot;:&quot;Adult&quot;,&quot;PATIENT_PARTY&quot;:&quot;1&quot;,&quot;PATIENT_GENDER&quot;:&quot;\&quot;M\&quot;&quot;,&quot;PATIENT_AGE&quot;:&quot;40&quot;,&quot;SYSTEM_ONLINE&quot;:&quot;online&quot;}">
+            <input id="TimeFrameText" name="TimeFrameText" type="hidden" value="6 hours">
+            <input id="SymptomDiscriminator_ReasoningText" name="SymptomDiscriminator.ReasoningText" type="hidden" value="">
+            <input id="OutcomeGroup_Text" name="OutcomeGroup.Text" type="hidden" value="contact a healthcare service">
+            <input data-val="true" data-val-number="The field TimeFrameMinutes must be a number." id="TimeFrameMinutes" name="TimeFrameMinutes" type="hidden" value="360">
+            <input id="WaitTimeText" name="WaitTimeText" type="hidden" value="6 hours">
+            <input data-val="true" data-val-date="The field DispositionTime must be a date." id="DispositionTime" name="DispositionTime" type="hidden" value="3/1/2017 10:35:57 AM">
+            <input id="SurveyLink_PathwayNo" name="SurveyLink.PathwayNo" type="hidden" value="PW1620">
+            <input id="SurveyLink_EndPathwayNo" name="SurveyLink.EndPathwayNo" type="hidden" value="PW1620">
+            <input id="SurveyLink_EndPathwayTitle" name="SurveyLink.EndPathwayTitle" type="hidden" value="Skin, Rash">
+            <input id="SurveyLink_DigitalTitle" name="SurveyLink.DigitalTitle" type="hidden" value="Skin, Rash">
+            <input id="SurveyLink_DispositionCode" name="SurveyLink.DispositionCode" type="hidden" value="Dx06">
+            <input id="SurveyLink_JourneyId" name="SurveyLink.JourneyId" type="hidden" value="495e9656-889b-4ec5-ad58-700e8bdeff1c">
+            <input data-val="true" data-val-date="The field DispositionDateTime must be a date." id="SurveyLink_DispositionDateTime" name="SurveyLink.DispositionDateTime" type="hidden" value="3/1/2017 10:35:57 AM">
+            <input id="SurgeryViewModel_SelectedSurgery" name="SurgeryViewModel.SelectedSurgery" type="hidden" value="">
+
+
+
+            <hr>
+        </form>
+        <div class="alt-view">
+            <a href="./confirmation-b.html">alternative view</a>
+        </div>
+    </main>
+    <section class="feedback-section"></section>
+    <footer id="footer" role="contentinfo">
+        <div class="footer-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="http://nhs111-web-beta-integration.azurewebsites.net/Help/Terms" target="_blank">Terms and conditions</a></li>
+                    <li><a href="http://nhs111-web-beta-integration.azurewebsites.net/Help/Privacy" target="_blank">Privacy statement</a></li>
+                    <li><a href="http://nhs111-web-beta-integration.azurewebsites.net/Help/Cookies" target="_blank">Cookies</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <div id="global-app-error" class="app-error hidden"></div>
+
+    <script>
+        $(document).ready(function () {
+            var straplineText = getParameterByName("strapline-text");
+            if (straplineText) {
+                $("#strap-line").html(straplineText);
+                $("#strap-line").show();
+            }
+
+            var confirmationText = getParameterByName("confirmation-text");
+            if (confirmationText) {
+                $("#confirmation").html(confirmationText);
+                $("#confirmation").show();
+            }
+
+            var serviceText = getParameterByName("service-text");
+            if (serviceText) {
+                $("#service-message-inner").html(serviceText);
+            }
+            $("#inner-service").show();
+        });
+    </script>
+
+</body>
+</html>

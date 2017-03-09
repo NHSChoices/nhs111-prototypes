@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="" class="">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NHS 111 Digital</title>
+    <!-- css -->
+    <link href="./index_files/govuk-template.css" media="all" rel="stylesheet" type="text/css">
+    <link href="./content/application.css" media="all" rel="stylesheet" type="text/css">
+
+    <!-- Javascript -->
+    <script src="./index_files/modernizr-custom.js"></script>
+    <!--[if lt IE 9]>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <![endif]-->
+    <script src="./index_files/jquery2.1.1.min.js"></script>
+
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) {
+                url = window.location.href;
+            }
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+    </script>
+
+</head>
+<body class="js-enabled">
+    <header role="banner" id="global-header">
+        <div class="header-container">
+            <a href="http://nhs111-web-beta-integration.azurewebsites.net/" class="header-logo" title="Go to the NHS 111 homepage">
+                <img src="./index_files/nhs-rev-logotype.jpg" alt="">
+            </a>
+            <div class="header-title">
+                111 <strong class="phase-tag beta"></strong>
+            </div>
+        </div>
+    </header>
+
+    <section class="outer-section"></section>
+    <main id="content" role="main">
+
+        <link href="./index_files/search.css" media="screen" rel="stylesheet" type="text/css">
+
+        <div id="search">
+
+            <div id="wrapper">
+                <div class="content-container">
+                    <div>
+                        <form action="disposition.html" method="get" novalidate="novalidate">
+                            <div class="symptoms-find-header">
+                                <h2 id="strap-line">Thank you for answering the questions</h2>
+                            </div>
+                            <div class="symptoms-find-header">
+                                <h3 id="strap-line">Now we can tell you what to do next</h3>
+                            </div>
+                            <div class="symptoms-find-container">
+                                <div class="symptoms-search">
+                                    <label id="pcodeLabel" class="heading-small" for="searchforservice">Please enter your postcode so we can tell you about available services (optional)</label>
+                                    <input type="text" class="ui-autocomplete-input input-find-services" id="searchforservice" autocomplete="off" placeholder="Postcode">
+                                    <input type="submit" class="button button-get-started go" value="Next" id="submitSearch">
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <!--content end-->
+                </div>
+
+            </div>
+            <!--wrapper ends-->
+
+            <script>
+
+
+            
+            </script>
+        </div>
+        <hr/>
+        <div class="alt-view">
+            <a href="./index.html">alternative view</a>
+        </div>
+    </main>
+
+    <footer id="footer" role="contentinfo">
+        <div class="footer-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="#" target="_blank">Terms and conditions</a></li>
+                    <li><a href="#" target="_blank">Privacy statement</a></li>
+                    <li><a href="#" target="_blank">Cookies</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <div id="global-app-error" class="app-error hidden"></div>
+    <script>
+        $(document).ready(function () {
+            var straplineText = getParameterByName("strapline-text");
+            if (straplineText) {
+                $("#strap-line").html(straplineText);
+                $("#strap-line").show();
+            }
+
+			var postcodeLabelText = getParameterByName("pcode-label-text");
+            if (postcodeLabelText) {
+                $("#pcodeLabel").html(postcodeLabelText);
+                $("#pcodeLabel").show();
+            }
+        });
+    </script>
+</body>
+</html>
