@@ -42,52 +42,11 @@
 
         <section>
             <div id="strap-line" class="strap-line"></div>
-            <div class="outcome-header">
-                <h2 id="disposition" class="heading-large">You should visit your GP within the next 6 hours</h2>
+            <div class="outcome-header--b">
+                <h2 id="confirmation" class="heading-large">Your call is confirmed</h2>
+                <h3 class="heading-medium">If you haven't heard anything within 2 hours, please call 111</h3>
             </div>
         </section>
-
-        <div id="hidden-alternative-care" class="alternative-care service-hidden">
-            <h3 class="alternative-care-title">If you can't see your GP</h3>
-            <h5>
-                <a class="category linkButton bullet" href="javascript:void(0);">
-                    <img class="arrow" src="./Content/images/blue-arrow-right.png"/>
-                    <span class="underline">There are 2 places you can visit</span>
-                </a>
-            </h5>
-            <div class="alternative-care-service content">
-                <h4 class="service-title">Cohens Chemist</h4>
-                <div class="service-address">5a Shafton Lane, Leeds, Holbeck, LS11 9LY</div>
-                <div class="service-address">Open today until: 22:00</div>
-                <div class="service-direction">
-                    <a class="button button-next button-link" href="#">Get directions</a>
-                </div>
-                <h4 class="service-title">Beeston Hill Pharmacy</h4>
-                <div class="service-address">134 Beeston Road, Beeston, Leeds, LS11 8BB</div>
-                <div class="service-address">Open today until: 18:00</div>
-                <div class="service-direction">
-                    <a class="button button-next button-link" href="#">Get directions</a>
-                </div>
-            </div>
-        </div>
-
-        <div id="hidden-alternative-care" class="alternative-care service-hidden">
-            <h5>
-                <a class="category linkButton bullet" href="javascript:void(0);">
-                    <img class="arrow" src="./Content/images/blue-arrow-right.png" />
-                    <span class="underline">Get a call for advice on what to do next</span>
-                </a>
-            </h5>
-            <div class="alternative-care-service content">
-                <p>The out of hours service can call you.</p>
-                <p>They will have the answers you've given.</p>
-                <div class="service-direction">
-                    <a class="button button-next button-link" href="./contact.html">Book a call</a>
-                </div>
-            </div>
-        </div>
-
-        <hr/>
 
         <div class="care-advice">
 
@@ -120,7 +79,7 @@
                 </ul>
             </div>
         </div>
-       
+
         <div class="worsening-advice-icon">
             <p>If there are any new symptoms, or if the condition gets worse, changes or you have any other concerns, call NHS 111 for advice. Calls to 111 are free.</p>
         </div>
@@ -161,10 +120,9 @@
 
 
             <hr>
-      
         </form>
         <div class="alt-view">
-            <a href="./disposition-b.html">alternative view</a>
+            <a href="./confirmation.html">alternative view</a>
         </div>
     </main>
     <section class="feedback-section"></section>
@@ -188,32 +146,18 @@
                 $("#strap-line").html(straplineText);
                 $("#strap-line").show();
             }
-            
-            var hiddenAlternatives = getParameterByName("hidden-alternatives");
-            if (hiddenAlternatives != null) {
-                $("#hidden-alternative-care").hide();
-                $("#static-alternative-care").show();
+
+            var confirmationText = getParameterByName("confirmation-text");
+            if (confirmationText) {
+                $("#confirmation").html(confirmationText);
+                $("#confirmation").show();
             }
-        });
 
-        $(document).on("click", "#show-categories", function () {
-            $("#categories").show();
-            $(".results-list").hide();
-            $("#category-option").hide();
-            $("#search-results-heading").hide();
-        });
-
-        $('.category').click(function () {
-            var $this = $(this);
-
-            var $helpTextLinkMessage = $this.parent().next('.content');
-            $helpTextLinkMessage.slideToggle("fast");
-            var arrow = $this.children(".arrow");
-            if (arrow.attr("src") == "./Content/images/blue-arrow-right.png") {
-                arrow.attr("src", "./Content/images/blue-arrow-down.png");
-            } else {
-                arrow.attr("src", "./Content/images/blue-arrow-right.png");
+            var serviceText = getParameterByName("service-text");
+            if (serviceText) {
+                $("#service-message-inner").html(serviceText);
             }
+            $("#inner-service").show();
         });
     </script>
 

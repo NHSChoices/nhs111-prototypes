@@ -41,7 +41,7 @@
       margin: 0 30px; } }
   @media (min-width: 1020px) {
     #content {
-      max-width: 66%;
+      max-width: 75%;
       margin: 0 auto; } }
 
 .grid-row {
@@ -121,10 +121,10 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, small, strike, strong, sub, sup, tt,
   font-weight: inherit; }
 
 #content {
-  padding-bottom: 30px; }
+  padding-bottom: 130px; }
   @media (min-width: 769px) {
     #content {
-      padding-bottom: 90px; } }
+      padding-bottom: 290px; } }
 
 .column-quarter {
   padding: 0 15px;
@@ -1438,7 +1438,7 @@ body {
 
 @media (min-width: 1020px)  {
     #global-header .header-container {
-        max-width: 66%;
+        max-width: 75%;
     }
 }
 @media (min-width: 641px) {
@@ -1524,7 +1524,7 @@ html, #footer {
   #footer a {
     color: #d9dbdd; }
   #footer .footer-wrapper {
-    max-width: 66%;
+    max-width: 75%;
     margin: 0 15px;
     padding: 0; }
     @media (min-width: 641px) {
@@ -1891,6 +1891,7 @@ button[type=submit].previous-question, input[type=submit].previous-question {
     float: left;
     margin-right: 10px;
 }
+
 button[disabled=disabled] {
     background: #A4B192;
 }
@@ -1902,12 +1903,11 @@ button[disabled=disabled] {
 .feedback-banner {
     display: inline-block;
     margin: 0 15px;
-    width: 80%;
 }
 @media (min-width: 641px) {
     .feedback-banner {
         margin: 0 30px;
-        max-width: 66%;
+        max-width: 75%;
     }
 }
 @media (min-width: 1020px) {
@@ -2355,9 +2355,6 @@ button[disabled=disabled] {
 .outcome-header h2 {
     margin: 10px;
 }
-.outcome-header h3 {
-    margin: 10px;
-}
 
 .outcome-header .button {
     color: black;
@@ -2375,15 +2372,13 @@ button[disabled=disabled] {
 
 
 .worsening-advice-icon {
-    background-image: url("./images/icons/warning.png");
-    background-position: 20px center;
+    background-image: url("/content/images/icons/warning.png");
+    background-position: left center;
     background-repeat: no-repeat;
     padding-top: 0;
+    padding-left: 44px;
     margin-top: 40px;
     min-height:34px;
-    color: #0072C6;
-    border : 2px solid #0072C6;
-    padding: 20px 70px;
 }
 
 .worsening-advice-icon.confirmation {
@@ -2436,7 +2431,7 @@ button[disabled=disabled] {
     line-height: inherit;
     height: inherit;
     padding-left: 20px !important;
-    background-image: url("./images/icons/icon-link-back.png");
+    background-image: url("/content/images/icons/icon-link-back.png");
     background-position: 0;
 
 }
@@ -2448,13 +2443,7 @@ button[disabled=disabled] {
         margin: 20px 0;
     }
     .form-control {
-        width: 100%;
-    }
-    .form-control .date-2-chars {
-        width:5rem;
-    }
-    .form-control .date-4-chars {
-        width:10rem;
+        width: 100% !important;
     }
 }
 @media (max-width: 360px) {
@@ -2471,19 +2460,4 @@ button[disabled=disabled] {
         padding-right: 5em;
     }
 
-}
-.alt-view a {
-    float: right;
-}
-.outcome-header--b {
-    background-color: #fff;
-    margin: 40px 0;
-}
-.outcome-header--b h2 {
-    background-color: #fff;
-    margin: 0;
-}
-.outcome-header--b h3 {
-    background-color: #fff;
-    margin-top: 10px;
 }
