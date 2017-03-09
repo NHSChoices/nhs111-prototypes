@@ -2355,6 +2355,9 @@ button[disabled=disabled] {
 .outcome-header h2 {
     margin: 10px;
 }
+.outcome-header h3 {
+    margin: 10px;
+}
 
 .outcome-header .button {
     color: black;
@@ -2468,4 +2471,19 @@ button[disabled=disabled] {
         padding-right: 5em;
     }
 
+}
+.alt-view a {
+    float: right;
+}
+.outcome-header--b {
+    background-color: #fff;
+    margin: 40px 0;
+}
+.outcome-header--b h2 {
+    background-color: #fff;
+    margin: 0;
+}
+.outcome-header--b h3 {
+    background-color: #fff;
+    margin-top: 10px;
 }

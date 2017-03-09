@@ -117,7 +117,7 @@ p {
     cursor: pointer;
     color: #0072C6;
     background-color: white !important;
-    background-image: url("/content/images/icons/icon-link-go.png");
+    background-image: url("./images/icons/icon-link-go.png");
     background-repeat: no-repeat;
     background-position: 100% 50%;
 }

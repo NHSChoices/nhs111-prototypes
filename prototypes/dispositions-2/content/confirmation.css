@@ -34,8 +34,7 @@
     margin-left: 0;
 }
 .care-advice h3, .care-advice-section-header {
-    font-size: 38px;
-    line-height: 32px;
+    font-size: 28px;
     padding-bottom: 20px;
 }
 @media (max-width: 640px) {
@@ -46,13 +45,12 @@
 }
 
 .care-advice h4 {
-    font-size: 28px;
-    line-height: 32px;
+    font-size: 24px;
 }
 @media (max-width: 640px) {
     .care-advice h4 {
-        font-size: 24px;
-        line-height: 28px;
+        font-size: 20px;
+        line-height: 24px;
     }
 }
 
@@ -140,28 +138,30 @@
 }
 .alternative-care {
     font-size: 20px;
-    line-height: 32px;
+    line-height: 28px;
     display: none;
 }
 .alternative-care h3 {
-    font-size: 38px;
-    line-height: 32px;
+    font-size: 28px;
     padding-bottom: 20px;
 }
 .alternative-care h4 {
     font-size: 20px;
-    line-height: 32px;
+    line-height: 28px;
 }
 .alternative-care.service-hidden {
     display: block;
 }
 .alternative-care.service-hidden h5 {
     font-size: 20px;
-    line-height: 32px;
 }
 .alternative-care-service.content {
+    margin-left: 14px;
     padding-top: 20px;
     display: none;
+}
+.alternative-care-service.content p:last-of-type {
+    padding-bottom: 20px;
 }
 .service-direction {
     padding-bottom: 20px;

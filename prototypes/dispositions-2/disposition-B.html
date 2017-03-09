@@ -42,7 +42,7 @@
 
         <section>
             <div id="strap-line" class="strap-line"></div>
-            <div class="outcome-header">
+            <div class="outcome-header--b">
                 <h2 id="disposition" class="heading-large">You should visit your GP within the next 6 hours</h2>
             </div>
         </section>
@@ -51,7 +51,7 @@
             <h3 class="alternative-care-title">If you can't see your GP</h3>
             <h5>
                 <a class="category linkButton bullet" href="javascript:void(0);">
-                    <img class="arrow" src="./Content/images/blue-arrow-right.png"/>
+                    <img class="arrow" src="./Content/images/blue-arrow-right.png" />
                     <span class="underline">There are 2 places you can visit</span>
                 </a>
             </h5>
@@ -82,12 +82,12 @@
                 <p>The out of hours service can call you.</p>
                 <p>They will have the answers you've given.</p>
                 <div class="service-direction">
-                    <a class="button button-next button-link" href="./contact.html">Book a call</a>
+                    <a class="button button-next button-link" href="./contact-B.html">Book a call</a>
                 </div>
             </div>
         </div>
 
-        <hr/>
+        <hr />
 
         <div class="care-advice">
 
@@ -120,7 +120,7 @@
                 </ul>
             </div>
         </div>
-       
+
         <div class="worsening-advice-icon">
             <p>If there are any new symptoms, or if the condition gets worse, changes or you have any other concerns, call NHS 111 for advice. Calls to 111 are free.</p>
         </div>
@@ -161,10 +161,10 @@
 
 
             <hr>
-      
+
         </form>
         <div class="alt-view">
-            <a href="./disposition-b.html">alternative view</a>
+            <a href="./disposition.html">alternative view</a>
         </div>
     </main>
     <section class="feedback-section"></section>
@@ -188,7 +188,7 @@
                 $("#strap-line").html(straplineText);
                 $("#strap-line").show();
             }
-            
+
             var hiddenAlternatives = getParameterByName("hidden-alternatives");
             if (hiddenAlternatives != null) {
                 $("#hidden-alternative-care").hide();

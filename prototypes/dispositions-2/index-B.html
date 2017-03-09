@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NHS 111 Digital</title>
     <!-- css -->
-    <link href="./content/govuk-template.css" media="all" rel="stylesheet" type="text/css">
+    <link href="./index_files/govuk-template.css" media="all" rel="stylesheet" type="text/css">
     <link href="./content/application.css" media="all" rel="stylesheet" type="text/css">
 
     <!-- Javascript -->
@@ -15,7 +15,7 @@
     <![endif]-->
     <script src="./index_files/jquery2.1.1.min.js"></script>
 
-	    <script>
+    <script>
         function getParameterByName(name, url) {
             if (!url) {
                 url = window.location.href;
@@ -54,11 +54,14 @@
                     <div>
                         <form action="disposition.html" method="get" novalidate="novalidate">
                             <div class="symptoms-find-header">
-                                <h2 id="strap-line">Now you've answered the questions, we can tell you what to do next</h2>
+                                <h2 id="strap-line">Thank you for answering the questions</h2>
+                            </div>
+                            <div class="symptoms-find-header">
+                                <h3 id="strap-line">Now we can tell you what to do next</h3>
                             </div>
                             <div class="symptoms-find-container">
                                 <div class="symptoms-search">
-                                    <label id="pcodeLabel" class="heading-small" for="searchforservice">Enter your postcode for services near you (optional)</label>
+                                    <label id="pcodeLabel" class="heading-small" for="searchforservice">Please enter your postcode so we can tell you about available services (optional)</label>
                                     <input type="text" class="ui-autocomplete-input input-find-services" id="searchforservice" autocomplete="off" placeholder="Postcode">
                                     <input type="submit" class="button button-get-started go" value="Next" id="submitSearch">
                                 </div>
@@ -78,9 +81,9 @@
             
             </script>
         </div>
-        <hr />
+        <hr/>
         <div class="alt-view">
-            <a href="./index-b.html">alternative view</a>
+            <a href="./index.html">alternative view</a>
         </div>
     </main>
 
@@ -96,14 +99,14 @@
         </div>
     </footer>
     <div id="global-app-error" class="app-error hidden"></div>
-	<script>
+    <script>
         $(document).ready(function () {
             var straplineText = getParameterByName("strapline-text");
             if (straplineText) {
                 $("#strap-line").html(straplineText);
                 $("#strap-line").show();
             }
-			
+
 			var postcodeLabelText = getParameterByName("pcode-label-text");
             if (postcodeLabelText) {
                 $("#pcodeLabel").html(postcodeLabelText);
