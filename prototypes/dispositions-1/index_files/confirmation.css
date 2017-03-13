@@ -34,7 +34,7 @@
     margin-left: 0;
 }
 .care-advice h3, .care-advice-section-header {
-    font-size: 38px;
+    font-size: 28px;
     line-height: 32px;
     padding-bottom: 20px;
 }
@@ -46,7 +46,7 @@
 }
 
 .care-advice h4 {
-    font-size: 28px;
+    font-size: 22px;
     line-height: 32px;
 }
 @media (max-width: 640px) {
@@ -59,7 +59,9 @@
 .self-care-title {
     padding-bottom: 20px;
 }
-
+.self-care-title {
+  font-size: 22px;
+}
 .service-booking-message {
     background-color: #fffabf;
     padding: 20px;

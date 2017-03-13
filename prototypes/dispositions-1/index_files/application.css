@@ -2351,6 +2351,10 @@ button[disabled=disabled] {
     padding: 40px;
     color: #fff;
 }
+.outcome-header--b {
+    background-color: #fff;
+    margin: 40px 0;
+}
 
 .outcome-header h2 {
     margin: 10px;
@@ -2434,6 +2438,9 @@ button[disabled=disabled] {
     background-image: url("/content/images/icons/icon-link-back.png");
     background-position: 0;
 
+}
+.alternative-care-title, .self-care-title{
+font-size: 28px;
 }
 
 @media (max-width:480px) {
