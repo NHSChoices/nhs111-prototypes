@@ -34,8 +34,7 @@
     margin-left: 0;
 }
 .care-advice h3, .care-advice-section-header {
-    font-size: 38px;
-    line-height: 32px;
+font-size: 28px;
     padding-bottom: 20px;
 }
 @media (max-width: 640px) {
@@ -46,9 +45,9 @@
 }
 
 .care-advice h4 {
-    font-size: 28px;
-    line-height: 32px;
+    font-size: 22px;
 }
+
 @media (max-width: 640px) {
     .care-advice h4 {
         font-size: 24px;
@@ -59,6 +58,11 @@
 .self-care-title {
     padding-bottom: 10px;
 }
+.self-care-title--b {
+    padding-bottom: 10px;
+	margin-top:40px;
+}
+
 
 .service-booking-message {
     background-color: #fffabf;
@@ -115,7 +119,7 @@
 .service-find:link, .service-find:visited {
     border: 1px solid white;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 15px 30px;
     background-color: #fff;
     color: #000;
 }
@@ -123,6 +127,19 @@
     background-color: #768692;
     border: 1px solid #768692;
 }
+
+.service-find--b:link, .service-find--b:visited {
+    border: 1px solid white;
+    text-decoration: none;
+    padding: 15px 30px;
+    background-color: #4c9c39;
+    color: #fff;
+}
+.service-find--b:hover {
+    background-color: #006647;
+    border: 1px solid #006647;
+}
+
 .outer-service .service-find:link, .outer-service .service-find:visited {
     border: 1px solid #4c9c39;
     text-decoration: none;
@@ -130,6 +147,15 @@
     padding: 10px 20px;
     background-color: #4c9c39;
 }
+
+.outer-service .service-find--b:link, .outer-service .service-find--b:visited {
+    border: 1px solid #4c9c39;
+    text-decoration: none;
+    color: #4c9c39;
+    padding: 10px 20px;
+    background-color: #4c9c39;
+}
+
 .outer-service .service-find:hover {
     background-color: #006647;
     border: 1px solid #006647;
@@ -137,4 +163,30 @@
 .outer-rationale {
     display: none;
     margin: 20px 0 40px;
+}
+
+.heading-with-sub{
+    margin: 40px 0 0 0;
+}
+.advice-sub-header{
+	 margin: 40px 0 0 8px;
+}
+.advice-sub-header--b{
+	margin-bottom: 40px;
+}
+
+@media (max-width: 360px)
+{
+.advice-sub-header , .advice-sub-header--b{
+    font-size: 18px;
+    line-height: 26px;
+	
+}
+
+.advice-sub-header{
+	margin: 20px 0 0 8px;
+}
+.advice-sub-header--b{
+	margin: 15px 0 15px 0;
+}
 }

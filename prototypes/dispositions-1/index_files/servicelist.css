@@ -2,6 +2,10 @@
     padding: 10px 10px 0 10px;
     max-width: 45.8333333333rem;
 }
+.service-list-content--b {
+		padding: 20px 0 0 0;
+
+}
 @media screen and (min-width: 40em) {
     .service-list-content {
         max-width: none;

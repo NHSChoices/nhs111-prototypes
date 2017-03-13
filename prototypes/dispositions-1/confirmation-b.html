@@ -42,27 +42,17 @@
 
         <section>
             <div id="strap-line" class="strap-line"></div>
-            <div class="outcome-header">
-                <h2 id="disposition" class="heading-large">We recommend you speak to your GP within 6 hours</h2>
-				
+            <div class="outcome-header--b">
+                <h2 id="confirmation" class="heading-large">Your callback is confirmed</h2>
                 <div class="inner-service" id="inner-service">
-                    <a id="service-message-inner" href="./find.html" class="service-find">I'm unable to see a GP</a>
+                    <span id="service-message-inner" class="">If you don't hear anyhting within 6 hours please call 111</span>
                 </div>
-				<h3 class="advice-sub-header">This advice is based on your answers</h3>
             </div>
         </section>
 
-        <div class="outer-rationale" id="outer-rationale">
-            <span id="rationale">The advice above is based on what you've told us</span>
-        </div>
-
-        <div class="outer-service" id="outer-service">
-            <a id="service-message" href="./find.html" class="service-find">If you can't see your GP find a service</a>
-        </div>
-
         <div class="care-advice">
 
-            <h3 class="self-care-title">What you can do in the meantime</h3>
+            <h3 class="self-care-title">What can I do in the meantime?</h3>
             <div class="care-advice-keywords">
                 <ol>
                     <li><a href="#Advice_CX221161-Adult-Male">Abdominal pain</a></li>
@@ -91,7 +81,7 @@
                 </ul>
             </div>
         </div>
-       
+
         <div class="worsening-advice-icon">
             <p>If there are any new symptoms, or if the condition gets worse, changes or you have any other concerns, call NHS 111 for advice. Calls to 111 are free.</p>
         </div>
@@ -132,11 +122,10 @@
 
 
             <hr>
-
+            <div class="changeAnswers row">
+                <input class="button button-next button-link" type="submit" name="PreviousQuestion" value="Change my previous answer">
+            </div>
         </form>
-				<div class="alt-view">
-            <a href="./index-b.html">alternative view</a>
-        </div>
     </main>
     <section class="feedback-section"></section>
     <footer id="footer" role="contentinfo">
@@ -160,35 +149,17 @@
                 $("#strap-line").show();
             }
 
-            var dispositionText = getParameterByName("disposition-text");
-            if (dispositionText) {
-                $("#disposition").html(dispositionText);
-                $("#disposition").show();
-            }
-
-            var rationaleText = getParameterByName("rationale-text");
-            if (rationaleText) {
-                $("#rationale").html(rationaleText);
-                $("#outer-rationale").show();
+            var confirmationText = getParameterByName("confirmation-text");
+            if (confirmationText) {
+                $("#confirmation").html(confirmationText);
+                $("#confirmation").show();
             }
 
             var serviceText = getParameterByName("service-text");
             if (serviceText) {
                 $("#service-message-inner").html(serviceText);
-                $("#service-message").html(serviceText);
             }
-
-            var innerService = getParameterByName("inner-service");
-            if (innerService != null) {
-                $("#inner-service").show();
-            }
-
-            var outerService = getParameterByName("outer-service");
-            if (outerService != null) {
-                $("#outer-service").show();
-            }
-
-            if (innerService == null && outerService == null) $("#inner-service").show();
+            $("#inner-service").show();
         });
     </script>
 
