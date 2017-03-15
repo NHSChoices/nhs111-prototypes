@@ -2456,7 +2456,7 @@ button[disabled=disabled] {
 }
 @media (max-width: 360px) {
     .heading-large {
-        font-size: 20px;
+        font-size: 24px;
         line-height: 28px;
     }
     .heading-medium {
