@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NHS 111 online - Accessible design guidelines for NHS 111 online</title>
+    <meta charset="utf-8"/>
+    <link href="https://nhs-design.herokuapp.com/css/main.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="main.css" media="screen" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header role="banner" id="global-header">
+        <div class="header-container">
+
+            <a href="/" class="header-logo" title="Go to the NHS.UK homepage">
+                <img src="https://nhs-design.herokuapp.com/images/nhs-logotype.svg" alt="NHS" width="79" height="32"> <!--width="104" height="42" -->
+            </a>
+            <div class="header-title">111 <strong class="phase-tag beta"></strong></div>
+
+        </div>
+    </header>
+    <main>
+
+
+        <div class="content">
+            <h1>
+                Accessible design guidelines
+            </h1>
+            <p>Designing a service to be accessible affords two primary benefits to the end user. Firstly it increases the ability to access the service for all users, not just those with disabilities. And secondly it can lead to an overall simplification of the design and structure of the content.</p>
+            <h2>Consistency</h2>
+            <p>The importance of consistency cannot be overstated. Consistency in layout, in theme, and in language allow the user to quickly comprehend what you are telling them. Context switching can be jarring even for users with the luxury of visual cues, but these sudden changes can be even more confusing for users with limited access.</p>
+            <p>Keeping layout consistent so that text is aligned evenly down the whole length of the page and calls to action are kept in logical locations such as left aligned, all aid users who have low visibility and are forced to explore the page to find what they need.</p>
+            <p>If the content jumps around the page unexpectedly, the user will be forced to do the same.</p>
+            <p>If the switch is required such as when transitioning from one descreet part of a service to another, a textual description of the change can help guide the user. Such as informing them that they have completed their triage.</p>
+            <p>If a layout requires information to be displayed in columns it can be useful to show visual clues that there is information off to the right of the screen by simply adding a horizontal rule.</p>
+            <h2>Meta data</h2>
+            <h3>Language</h3>
+            <p>The language attribute allows HTML parsers (such as screen readers) to understand what the intended language of the content is. This extra information can be used by those applications to tailor their experience for the end user. Such as more accurate announcement.</p>
+            <p>See the <a href="https://www.w3.org/International/questions/qa-html-language-declarations">W3C</a> for further information.</p>
+            <h3>Title</h3>
+            <p>Every page must have a title which describes the page concisely. More advanced users appreciate the title being prefixed with the site's name, allowing them to identify and group browser tabs.</p>
+            <h2>General semantics</h2>
+            <h3>Headings</h3>
+            <p>All pages must have a H1 tag. Also, appropriate use of header tags that follow the document structure help to navigate the page at a high level.</p>
+            <p>Users of screen reading software such as <a href="https://www.apple.com/uk/accessibility/iphone/vision/">Apple's VoiceOver</a> will more likely browse the site in <a href="https://www.apple.com/voiceover/info/guide/_1134.html#mchlp2711">group mode</a>, which allows them to navigate the DOM at a much high level and therefore more quickly. For this to work well it is important to ensure consistency across HTML elements. So don't start by using links to describe a collection of elements and then switch to buttons. Even if that makes more visual sense to a sighted person.</p>
+            <h3>Keyboard only users</h3>
+            <p>Users of keyboards only will rely heavily on the tab key and the tab index of page elements. Ensure navigation can be completed intuitively with appropriate tab indexing of fields and elements.</p>
+            <h2>Forms and interactions</h2>
+            <p>If something changes when a user interacts with the page it is important to inform them of the change and place their focus where they would expect to now be placed. If a button shows some new content or form fields, it would be unexpected if their focus was suddenly placed beneath the new content.</p>
+            <p>One way to inform screen readers of the change is the <a href="https://www.w3.org/WAI/GL/wiki/Using_aria-expanded_to_indicate_the_state_of_a_collapsible_element">aria-expanded attribute</a> which will announce the change to supported agents.</p>
+            <h3>Fields</h3>
+            <p>Fields should be clearly marked as either optional or mandatory. If all fields are the same then the whole form can be marked accordingly.</p>
+            <h3>Fieldsets and legends</h3>
+            <p>Group related form fields into <a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/fieldset">fieldsets</a> and supply legends that describe the collection. If you don't want the legend text to be visible you can always hide it with styles.</p>
+            <h3>Labels</h3>
+            <p>Ensure all fields have relevent labels.</p>
+            <p>Try not to repeat information when using labels. For instance, don't ask the user for their full name and then label two text boxes as first name and last name. This could suggest two conflicting pieces of information to someone who can't see the layout of the page.</p>
+            <!--<h3>Textboxes</h3>
+            <input title="Month" alt="Month" aria- placeholder="MM"/>-->
+            <h3>Validation</h3>
+            <p>When validation is displayed after an interaction, it should be announced. Ideally as a summary. And focus should placed accordingly.</p>
+            <h2>Colour and contrast</h2>
+            <p>Tools such as <a href="https://www.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a> can assist in identifying areas of the site which will impact users with colour contrast sensitivity. Ensuring that the mix of background colours and foreground colours have a high enough contrast ratio for legibility.
+            </p>
+            <h2>Full screen overlays</h2>
+            <p>If the user is using a screen magnifier, a full screen overlay can create an abrupt switch in context forcing them to explore the page to understand what happened. Often it can be more immediately intuitive to simply up-date the button they just clicked with information about what is happening.</p>
+            <h2>Additional suggestions</h2>
+            <ul>
+                <li>When designing pages it's important to remember - the goal of accessibility is to increase the ability for all users to complete what they need to when using the service.</li>
+                <li>Simply running a page through a screen reader will show up a great deal of issues early on in development.</li>
+                <li>Ensure all elements on a page are being announced fully and as intended. Especially telephone numbers.</li>
+            </ul>
+            <h2>Further reading</h2>
+            <ul>
+                <li><a href="https://govuk-elements.herokuapp.com/">GOV.UK elements</a></li>
+                <li><a href="https://www.gov.uk/government/organisations/hm-revenue-customs/">HRMC</a> - case study of high accessibility</li>
+                
+            </ul>
+        </div>
+
+    </main>
+    <footer id="footer" role="contentinfo">
+        <div class="footer-wrapper">
+            <nav>
+
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
