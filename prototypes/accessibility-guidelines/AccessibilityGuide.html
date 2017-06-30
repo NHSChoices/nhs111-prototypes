@@ -18,8 +18,6 @@
         </div>
     </header>
     <main>
-
-
         <div class="content">
             <h1>
                 Accessible design guidelines
@@ -29,7 +27,7 @@
             <p>The importance of consistency cannot be overstated. Consistency in layout, in theme, and in language allow the user to quickly comprehend what you are telling them. Context switching can be jarring even for users with the luxury of visual cues, but these sudden changes can be even more confusing for users with limited access.</p>
             <p>Keeping layout consistent so that text is aligned evenly down the whole length of the page and calls to action are kept in logical locations such as left aligned, all aid users who have low visibility and are forced to explore the page to find what they need.</p>
             <p>If the content jumps around the page unexpectedly, the user will be forced to do the same.</p>
-            <p>If the switch is required such as when transitioning from one descreet part of a service to another, a textual description of the change can help guide the user. Such as informing them that they have completed their triage.</p>
+            <p>If the switch is required such as when transitioning from one discreet part of a service to another, a textual description of the change can help guide the user. Such as informing them that they have completed their triage.</p>
             <p>If a layout requires information to be displayed in columns it can be useful to show visual clues that there is information off to the right of the screen by simply adding a horizontal rule.</p>
             <h2>Meta data</h2>
             <h3>Language</h3>
@@ -41,6 +39,8 @@
             <h3>Headings</h3>
             <p>All pages must have a H1 tag. Also, appropriate use of header tags that follow the document structure help to navigate the page at a high level.</p>
             <p>Users of screen reading software such as <a href="https://www.apple.com/uk/accessibility/iphone/vision/">Apple's VoiceOver</a> will more likely browse the site in <a href="https://www.apple.com/voiceover/info/guide/_1134.html#mchlp2711">group mode</a>, which allows them to navigate the DOM at a much high level and therefore more quickly. For this to work well it is important to ensure consistency across HTML elements. So don't start by using links to describe a collection of elements and then switch to buttons. Even if that makes more visual sense to a sighted person.</p>
+            <h3>Strong tag</h3>
+            <p>Using the HTML strong tag to emphasis content will ensure that screen readers apply the correct emphasis to wording. The bold tag will often not by announced with extra emphasis.</p>
             <h3>Keyboard only users</h3>
             <p>Users of keyboards only will rely heavily on the tab key and the tab index of page elements. Ensure navigation can be completed intuitively with appropriate tab indexing of fields and elements.</p>
             <h2>Forms and interactions</h2>
@@ -51,12 +51,12 @@
             <h3>Fieldsets and legends</h3>
             <p>Group related form fields into <a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/fieldset">fieldsets</a> and supply legends that describe the collection. If you don't want the legend text to be visible you can always hide it with styles.</p>
             <h3>Labels</h3>
-            <p>Ensure all fields have relevent labels.</p>
+            <p>Ensure all fields have relevant labels.</p>
             <p>Try not to repeat information when using labels. For instance, don't ask the user for their full name and then label two text boxes as first name and last name. This could suggest two conflicting pieces of information to someone who can't see the layout of the page.</p>
             <!--<h3>Textboxes</h3>
             <input title="Month" alt="Month" aria- placeholder="MM"/>-->
             <h3>Validation</h3>
-            <p>When validation is displayed after an interaction, it should be announced. Ideally as a summary. And focus should placed accordingly.</p>
+            <p>When validation is displayed after an interaction, it should be announced. Ideally as a summary. And focus should be placed accordingly.</p>
             <h2>Colour and contrast</h2>
             <p>Tools such as <a href="https://www.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a> can assist in identifying areas of the site which will impact users with colour contrast sensitivity. Ensuring that the mix of background colours and foreground colours have a high enough contrast ratio for legibility.
             </p>
@@ -72,7 +72,17 @@
             <ul>
                 <li><a href="https://govuk-elements.herokuapp.com/">GOV.UK elements</a></li>
                 <li><a href="https://www.gov.uk/government/organisations/hm-revenue-customs/">HRMC</a> - case study of high accessibility</li>
-                
+            </ul>
+            <h2>Accessibility tools</h2>
+            <ul>
+                <li><a href="https://www.zoomtext.com/products/zoomtext-magnifierreader/">ZoomText</a> zoom tool - 60 day free trial</li>
+                <li><a href="http://www.freedomscientific.com/Products/Blindness/JAWS">Jaws</a> screen reader - free trial</li>
+                <li><a href="https://www.nvaccess.org/">NVDA</a> *free* screenreader</li>
+                <li><a href="https://www.nuance.com/">Dragonspeak naturally speaking</a> voice activation software</li>
+                <li><a href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh">wave</a> accessibility checker - Chrome plugin</li>
+                <li><a href="https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd">axe</a> accessibility checker</li>
+                <li><a href="https://www.paciellogroup.com/resources/contrastanalyser/">Colour contrast analyser</a></li>
+                <li><a href="https://tenon.io/">Tenon.io</a> accessibility checker</li>
             </ul>
         </div>
 
